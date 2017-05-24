@@ -10,7 +10,7 @@ public class SessionRequestContent {
     // конструкторы
     // метод извлечения информации из запроса
     public void extractValues(HttpServletRequest request) {
-        // реализация
+        // реализацияadasdasd
     }
 
     // метод добавления в запрос данных для передачи в jsp
