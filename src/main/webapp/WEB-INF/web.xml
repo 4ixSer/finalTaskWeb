@@ -18,7 +18,7 @@
 	Context listener
 =============================================================-->
 	<listener>
-		<listener-class>com.listener.ContextListener</listener-class>
+		<listener-class>ua.nure.gnuchykh.web.listener.ContextListener</listener-class>
 	</listener>
 
 <!--============================================================
