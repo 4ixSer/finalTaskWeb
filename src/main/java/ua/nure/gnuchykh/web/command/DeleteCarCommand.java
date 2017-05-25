@@ -7,25 +7,31 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.DAO.UserDAO;
-import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.DAO.CarDAO;
+import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 
-public class FindUserCommand implements ActionCommand {
+public class DeleteCarCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindUserCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
-        LOG.info("Начало работы " + request.getParameter("command"));
+        LOG.info("Начало работы");
+
+        // TODO валидация данных
+        Integer id = Integer.valueOf(request.getParameter("id"));
 
         HttpSession session = request.getSession();
 
-        UserDAO dao = new UserDAO();
-        List<User> users = dao.findAll();
+        CarDAO dao = new CarDAO();
+
+        LOG.info("Статус удаления " + dao.delete(id));
+
+        List<Car> cars = dao.findAll();
 
         LOG.debug("Нашли всех зареистрированыых юзерров.");
-        session.setAttribute("users", users);
+        session.setAttribute("cars", cars);
 
         return ConfigurationManager.getProperty("path.page.admin");
 

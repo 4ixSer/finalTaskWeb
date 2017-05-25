@@ -33,7 +33,6 @@ public class ConnectionPool {
         return connection;
     }
 
-
     public static void close(Statement st) {
         try {
             if (st != null) {
@@ -63,6 +62,5 @@ public class ConnectionPool {
             // генераци€ исключени€, т.к. нарушаетс€ работа пула
         }
     }
-
 
 }

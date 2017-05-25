@@ -68,7 +68,7 @@ ADD CONSTRAINT `fk_type`
   
   CREATE TABLE `summarytask4`.`status_car` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `sstatus` VARCHAR(45) NOT NULL,
+  `status` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `sstatus_UNIQUE` (`sstatus` ASC));
 

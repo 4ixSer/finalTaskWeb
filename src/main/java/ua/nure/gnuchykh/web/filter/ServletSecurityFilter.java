@@ -35,32 +35,37 @@ public class ServletSecurityFilter implements Filter {
             type = ClientType.GUEST;
         }
 
-
         System.err.println(" Filter=> Данные сесии " + type);
-//        if (req.getParameter("command")==null) {
-//            if (type == ClientType.ADMINISTRATOR) {
-//                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/jsp/work/adminPage.jsp");
-//                System.err.println(" Filter=> сесия для " + type);
-//                System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
-//                dispatcher.forward(req, resp);
-//                return;
-//
-//            } else if (type == ClientType.DISPATCHER) {
-//                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/jsp/work/dispatcherPage.jsp");
-//                System.err.println(" Filter=> сесия для " + type);
-//                System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
-//                dispatcher.forward(req, resp);
-//                return;
-//
-//            } else if (type == ClientType.DRIVER) {
-//                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/jsp/work/driverPage.jsp");
-//                System.err.println(" Filter=> сесия для " + type);
-//                System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
-//                dispatcher.forward(req, resp);
-//                return;
-//
-//            }
-//        }
+        // if (req.getParameter("command")==null) {
+        // if (type == ClientType.ADMINISTRATOR) {
+        // RequestDispatcher dispatcher =
+        // request.getServletContext().getRequestDispatcher("/jsp/work/adminPage.jsp");
+        // System.err.println(" Filter=> сесия для " + type);
+        // System.err.println(" Filter=> Перенаправление на
+        // /jsp/work/adminPage.jsp");
+        // dispatcher.forward(req, resp);
+        // return;
+        //
+        // } else if (type == ClientType.DISPATCHER) {
+        // RequestDispatcher dispatcher =
+        // request.getServletContext().getRequestDispatcher("/jsp/work/dispatcherPage.jsp");
+        // System.err.println(" Filter=> сесия для " + type);
+        // System.err.println(" Filter=> Перенаправление на
+        // /jsp/work/adminPage.jsp");
+        // dispatcher.forward(req, resp);
+        // return;
+        //
+        // } else if (type == ClientType.DRIVER) {
+        // RequestDispatcher dispatcher =
+        // request.getServletContext().getRequestDispatcher("/jsp/work/driverPage.jsp");
+        // System.err.println(" Filter=> сесия для " + type);
+        // System.err.println(" Filter=> Перенаправление на
+        // /jsp/work/adminPage.jsp");
+        // dispatcher.forward(req, resp);
+        // return;
+        //
+        // }
+        // }
 
         // if (type == null) {
         // type = ClientType.GUEST;

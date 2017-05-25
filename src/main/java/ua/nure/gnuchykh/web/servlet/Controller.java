@@ -15,12 +15,10 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.factory.ActionFactory;
 
-
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
 
     private static final Logger LOG = Logger.getLogger(Controller.class);
-
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,9 +50,10 @@ public class Controller extends HttpServlet {
         // метод возвращает страницу ответа
         // page = null; // поэксперементировать!
         if (page != null) {
-//            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
+            // RequestDispatcher dispatcher =
+            // getServletContext().getRequestDispatcher(page);
             // вызов страницы ответа на запрос
-//            dispatcher.forward(request, response);
+            // dispatcher.forward(request, response);
 
             LOG.trace("Перход на станицу: " + page);
 
@@ -72,6 +71,5 @@ public class Controller extends HttpServlet {
     public void init() throws ServletException {
 
     }
-
 
 }

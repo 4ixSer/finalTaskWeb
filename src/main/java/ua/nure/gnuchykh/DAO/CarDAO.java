@@ -16,11 +16,11 @@ import ua.nure.gnuchykh.util.ConnectionPool;
 
 public class CarDAO {
     private static final String SQL_SELECT_ALL_CAR = "SELECT * FROM car";
-    private static final String SQL_INSERT_CAR = "INSERT INTO car (namber, type, carryingCar, amountCar, enginePower, defective, comments) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private static final String SQL_INSERT_CAR = "INSERT INTO car (namber, type, carryingCar, amountCar, enginePower, statusCar, comments) VALUES (?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_DELETE_CAR = "DELETE FROM car WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_NAMBER = "SELECT * FROM car WHERE namber=?";
-    private static final String SQL_UPDETE_CAR ="UPDATE car SET namber=?, type=?, carryingCar=?, amountCar=?, enginePower=?, defective=?, comments=? WHERE id=?";
+    private static final String SQL_UPDETE_CAR ="UPDATE car SET namber=?, type=?, carryingCar=?, amountCar=?, enginePower=?, statusCar=?, comments=? WHERE id=?";
 
     private Connection connector;
 
@@ -83,21 +83,12 @@ public class CarDAO {
 
 
     public boolean delete(int id) {
-     // Данный метод мне пока не нужен.
-        throw new IllegalArgumentException();
-    }
-
-    /**
-     * Метод для удаления машины с БД.
-     */
-
-    public boolean delete(Car entity) {
         connector = null;
         PreparedStatement ps = null;
         try {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_DELETE_CAR);
-            ps.setInt(1, entity.getId());
+            ps.setInt(1, id);
             ps.execute();
 
         } catch (SQLException e) {
@@ -108,8 +99,16 @@ public class CarDAO {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
-
         return true;
+    }
+
+    /**
+     * Метод для удаления машины с БД.
+     */
+
+    public boolean delete(Car entity) {
+        return delete(entity.getId());
+
     }
 
     /**

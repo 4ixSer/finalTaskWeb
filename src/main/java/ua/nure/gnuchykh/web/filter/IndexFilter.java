@@ -35,7 +35,7 @@ public class IndexFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-       // response.setCharacterEncoding("Cp1251");
+        // response.setCharacterEncoding("Cp1251");
         System.out.println("работает IndexFilter");
         HttpServletRequest req = (HttpServletRequest) request;
         req.setCharacterEncoding("Cp1251");
@@ -51,15 +51,17 @@ public class IndexFilter implements Filter {
                 System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
                 dispatcher.forward(req, resp);
                 return;
-            }  else if (type == ClientType.DISPATCHER) {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(ConfigurationManager.getProperty("path.page.dispatcher"));
+            } else if (type == ClientType.DISPATCHER) {
+                RequestDispatcher dispatcher = request.getServletContext()
+                        .getRequestDispatcher(ConfigurationManager.getProperty("path.page.dispatcher"));
                 System.err.println(" Filter=> сесия для " + type);
                 System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
                 dispatcher.forward(req, resp);
                 return;
 
             } else if (type == ClientType.DRIVER) {
-                RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(ConfigurationManager.getProperty("path.page.driver"));
+                RequestDispatcher dispatcher = request.getServletContext()
+                        .getRequestDispatcher(ConfigurationManager.getProperty("path.page.driver"));
                 System.err.println(" Filter=> сесия для " + type);
                 System.err.println(" Filter=> Перенаправление на /jsp/work/adminPage.jsp");
                 dispatcher.forward(req, resp);

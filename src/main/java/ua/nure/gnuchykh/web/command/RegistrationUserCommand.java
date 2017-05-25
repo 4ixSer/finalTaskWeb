@@ -8,7 +8,7 @@ import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
 
-public class RegistrationUserCommand implements ActionCommand  {
+public class RegistrationUserCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(RegistrationUserCommand.class);
 
@@ -21,9 +21,9 @@ public class RegistrationUserCommand implements ActionCommand  {
     @Override
     public String execute(HttpServletRequest request) {
 
-        LOG.info("Ќјчало работы "+request.getParameter("command"));
+        LOG.info("Ќјчало работы " + request.getParameter("command"));
 
-//        String page = null;
+        // String page = null;
         // извлечение из запроса логина и парол€
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
@@ -31,15 +31,13 @@ public class RegistrationUserCommand implements ActionCommand  {
         String name = request.getParameter(PARAM_NAME_NAME);
         Integer role = Integer.parseInt(request.getParameter(PARAM_NAME_ROLE));
         // регистраци€ прошла не успешно
-        if(!RegistationManager.registaticonNewUser(login, pass,name,email,role)) {
+        if (!RegistationManager.registaticonNewUser(login, pass, name, email, role)) {
             request.setAttribute("Message", MessageManager.getProperty("message.regitation"));
         } else {
             request.setAttribute("Message", MessageManager.getProperty("message.regitation.successfully"));
         }
 
-
         return ConfigurationManager.getProperty("path.page.admin");
-
 
     }
 

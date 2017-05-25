@@ -19,22 +19,21 @@ public class DeleteUserCommand implements ActionCommand {
     public String execute(HttpServletRequest request) {
         LOG.info("Начало работы");
 
-        //TODO валидация данных
+        // TODO валидация данных
         Integer id = Integer.valueOf(request.getParameter("id"));
 
         HttpSession session = request.getSession();
 
         UserDAO dao = new UserDAO();
 
-        LOG.info("Статус удаления " +dao.delete(id));
+        LOG.info("Статус удаления " + dao.delete(id));
 
-        List<User> users= dao.findAll();
+        List<User> users = dao.findAll();
 
         LOG.debug("Нашли всех зареистрированыых юзерров.");
         session.setAttribute("users", users);
 
         return ConfigurationManager.getProperty("path.page.admin");
-
 
     }
 

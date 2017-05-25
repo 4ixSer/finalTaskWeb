@@ -19,25 +19,24 @@ public class LoginCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        LOG.info("Начало работы " +request.getParameter("command"));
+        LOG.info("Начало работы " + request.getParameter("command"));
 
         String page = null;
 
-        //TODO валидацию входных парметров
+        // TODO валидацию входных парметров
         // извлечение из запроса логина и пароля
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
 
-        //получение логина
+        // получение логина
         User user = LoginManager.getUSer(login);
 
-
         // проверка логина и пароля
-        if(user == null||LoginManager.loginIsFalse(user, pass)) {
+        if (user == null || LoginManager.loginIsFalse(user, pass)) {
 
             LOG.debug("Юзера с login не сушествует");
 
-            //передалать отправку ошибки.
+            // передалать отправку ошибки.
             request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
             page = ConfigurationManager.getProperty("path.page.login");
 
@@ -45,34 +44,34 @@ public class LoginCommand implements ActionCommand {
 
             HttpSession session = request.getSession();
             request.setAttribute("user", user.getType());
+            // request.setAttribute("language", "en_US");
 
-            //TODO придумать переключение языков
-               //получение локали
-//            request.setAttribute("language", Locale.getDefault());
+            // TODO придумать переключение языков
+            // получение локали
+            // request.setAttribute("language", Locale.getDefault());
 
             session.setAttribute("userType", user.getType());
-
-            LOG.debug("Открытие сесии для "+ user.getType()+"; login= "+user.getLogin()+"; password= "+user.getPassword() +"; idSession= "+ session.getId());
+            session.setAttribute("language", "en_US");
+            LOG.debug("Открытие сесии для " + user.getType() + "; login= " + user.getLogin() + "; password= "
+                    + user.getPassword() + "; idSession= " + session.getId());
 
             // определение пути к main.jsp
             page = getPageRole(user.getType().toString());
         }
 
-
-      /* было     if (LoginLogic.checkLogin(login, pass)) {
-            request.setAttribute("user", ClientType.ADMINISTRATOR);
-            HttpSession session = request.getSession();
-            System.err.println(" Login=> Запись в сесию значения " + ClientType.ADMINISTRATOR);
-            session.setAttribute("userType", ClientType.ADMINISTRATOR);
-            // определение пути к main.jsp
-            String role = request.getParameter(PARAM_NAME_ROLE);
-            page = getPageRole(role);
-        } else {
-            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
-            page = ConfigurationManager.getProperty("path.page.login");
-        }
-
-        */
+        /*
+         * было if (LoginLogic.checkLogin(login, pass)) {
+         * request.setAttribute("user", ClientType.ADMINISTRATOR); HttpSession
+         * session = request.getSession();
+         * System.err.println(" Login=> Запись в сесию значения " +
+         * ClientType.ADMINISTRATOR); session.setAttribute("userType",
+         * ClientType.ADMINISTRATOR); // определение пути к main.jsp String role
+         * = request.getParameter(PARAM_NAME_ROLE); page = getPageRole(role); }
+         * else { request.setAttribute("errorLoginPassMessage",
+         * MessageManager.getProperty("message.loginerror")); page =
+         * ConfigurationManager.getProperty("path.page.login"); }
+         *
+         */
         return page;
     }
 

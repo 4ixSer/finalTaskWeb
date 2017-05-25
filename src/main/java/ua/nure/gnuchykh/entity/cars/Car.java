@@ -1,12 +1,15 @@
 package ua.nure.gnuchykh.entity.cars;
 
+import java.io.Serializable;
 
 /**
  * Класс реализуюший описание поведение машины.
  * @author qny4ix
  *
  */
-public class Car {
+public class Car implements Serializable {
+
+
     /**
      * ID машины для хранения в базе.
      */

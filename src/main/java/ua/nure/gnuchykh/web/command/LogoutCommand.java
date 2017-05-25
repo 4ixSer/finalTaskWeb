@@ -15,10 +15,10 @@ public class LogoutCommand implements ActionCommand {
 
         LOG.info("Ќјчало работы");
 
-        //возврат на страницу »ндеркса.
+        // возврат на страницу »ндеркса.
         String page = ConfigurationManager.getProperty("path.page.index");
 
-        LOG.trace("”ничтожение сесии: " +request.getSession().getId());
+        LOG.trace("”ничтожение сесии: " + request.getSession().getId());
         // уничтожение сессии
         request.getSession().invalidate();
         return page;

@@ -1,11 +1,16 @@
 package ua.nure.gnuchykh.entity.users;
 
+import java.io.Serializable;
+
 /**
  * Класс родитель для пользователей данного сервиса.
  * @author qny4i
  *
  */
-public class User  {
+public class User implements Serializable  {
+
+    private static final long serialVersionUID = 8466252310808346236L;
+
     /**
      * Айди юзера. Для записи его БД. Будет генериться автоматом в таблице.
      *

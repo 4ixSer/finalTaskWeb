@@ -7,13 +7,13 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.DAO.UserDAO;
-import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.DAO.CarDAO;
+import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 
-public class FindUserCommand implements ActionCommand {
+public class FindAllCarsCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(FindUserCommand.class);
+    private static final Logger LOG = Logger.getLogger(FindAllCarsCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -21,11 +21,12 @@ public class FindUserCommand implements ActionCommand {
 
         HttpSession session = request.getSession();
 
-        UserDAO dao = new UserDAO();
-        List<User> users = dao.findAll();
+        CarDAO dao = new CarDAO();
+        List<Car> cars = dao.findAll();
 
-        LOG.debug("Нашли всех зареистрированыых юзерров.");
-        session.setAttribute("users", users);
+        LOG.debug("Нашли все машины.");
+        session.setAttribute("cars", cars);
+        LOG.info(cars);
 
         return ConfigurationManager.getProperty("path.page.admin");
 
