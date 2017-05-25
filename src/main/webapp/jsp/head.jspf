@@ -1,20 +1,8 @@
+<div align="right">
 
+	<a href="http://localhost:8080/WEB/controller?command=changelanguage&language=<fmt:message key="label.language" bundle="${rb}" />">
+		<fmt:message key="label.language" bundle="${rb}" />
+	</a>
+	<hr>
+</div>
 
-<head>
-
-	<title>
-		Заголовок страницы
-	</title>
-
-<%--===========================================================================
-Bind CSS document.
-===========================================================================--%>
-	<%--  <link rel="stylesheet" type="text/css" media="screen" href="style/st4.css"/> --%>
-
-<%--===========================================================================
-If you define http-equiv attribute, set the content type and the charset the same
-as you set them in a page directive.
-===========================================================================--%>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-</head>

@@ -1154,3 +1154,724 @@
 2017-05-25 16:03:34,214 [TRACE]             LogoutCommand: - Уничтожение сесии: FF7A12C5CF69E83D4075C91F921E21A7
 2017-05-25 16:03:34,215 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
 2017-05-25 16:24:49,109 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 17:43:20,623 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 17:43:50,503 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:43:50,536 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 17:43:50,539 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 17:43:50,979 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 782258E18C63BA022936ADEA09EB0170
+2017-05-25 17:43:50,985 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 17:43:58,586 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:43:58,586 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 17:43:58,591 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 17:43:58,592 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 17:43:59,429 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:43:59,430 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 17:43:59,443 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 17:43:59,443 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 17:43:59,444 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 17:45:21,994 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:45:21,998 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 17:45:21,998 [TRACE]             LogoutCommand: - Уничтожение сесии: 782258E18C63BA022936ADEA09EB0170
+2017-05-25 17:45:22,000 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 17:45:27,056 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:45:27,057 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 17:45:27,057 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 17:45:27,071 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 062C29E7BFF686B68B2F87FD25B18B9A
+2017-05-25 17:45:27,071 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 17:48:59,015 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 17:48:59,016 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 17:48:59,019 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 17:48:59,020 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 17:52:20,938 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:02:13,286 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:02:13,308 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:02:13,310 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 18:02:13,332 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 062C29E7BFF686B68B2F87FD25B18B9A
+2017-05-25 18:02:13,336 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:02:34,088 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:02:34,089 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 18:02:34,102 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 18:02:34,103 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 18:02:34,103 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:02:35,522 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:02:35,523 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 18:02:35,534 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 18:02:35,534 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:03:26,384 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:03:31,885 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:03:31,913 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:03:31,915 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 18:03:32,390 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 062C29E7BFF686B68B2F87FD25B18B9A
+2017-05-25 18:03:32,395 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:05:48,239 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:06:03,219 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:06:03,244 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:06:03,249 [TRACE]             LogoutCommand: - Уничтожение сесии: 062C29E7BFF686B68B2F87FD25B18B9A
+2017-05-25 18:06:03,251 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:06:07,857 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:06:07,858 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:06:07,861 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 18:06:08,318 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 201F6AD8691C3B2D0FA6D8823DCD4903
+2017-05-25 18:06:08,318 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:07:41,253 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:08:46,129 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:08:46,152 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 18:08:46,180 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 18:08:46,180 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 18:08:46,184 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:08:46,707 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:08:46,708 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 18:08:46,722 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 18:08:46,722 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:10:23,815 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:10:23,816 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:10:23,816 [TRACE]             LogoutCommand: - Уничтожение сесии: 201F6AD8691C3B2D0FA6D8823DCD4903
+2017-05-25 18:10:23,817 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:12:19,895 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:12:19,895 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:12:19,896 [TRACE]             LogoutCommand: - Уничтожение сесии: 6CD015C785C5B93EBC6B5F0227AA7123
+2017-05-25 18:12:19,896 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:12:26,195 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:16:38,927 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:16:59,693 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:17:36,565 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:17:36,588 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:17:36,594 [TRACE]             LogoutCommand: - Уничтожение сесии: D5A75740F03022A577BDEFF2801057FD
+2017-05-25 18:17:36,595 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:18:00,240 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:18:00,241 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 18:18:00,596 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 18:18:00,597 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:18:01,467 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:18:01,467 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 18:18:01,484 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 18:18:01,484 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 18:18:01,485 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:18:04,561 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:18:04,561 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:18:04,563 [TRACE]             LogoutCommand: - Уничтожение сесии: BF3260D6EDBE0FB23A4031FF7A6589A6
+2017-05-25 18:18:04,564 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:19:35,639 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:20:04,326 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:20:50,608 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:22:09,848 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:25:37,495 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:25:44,522 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:25:44,550 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:25:44,552 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 18:25:44,886 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 18:25:44,892 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 18:25:49,356 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:25:49,357 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:25:49,358 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 18:25:49,366 [TRACE]              LoginManager: - Пароль не тот roor а нужен root
+2017-05-25 18:25:49,367 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 18:25:49,367 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 18:25:55,716 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:25:55,717 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:25:55,718 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 18:25:55,720 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 5A23F314DD4CD5BBAAD52EB2F3AA0F45
+2017-05-25 18:25:55,722 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:26:20,281 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:26:20,282 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 18:26:20,296 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 18:26:20,296 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 18:26:20,297 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:26:21,608 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:26:21,609 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 18:26:21,626 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 18:26:21,626 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 18:27:31,313 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:27:31,314 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:27:31,314 [TRACE]             LogoutCommand: - Уничтожение сесии: 5A23F314DD4CD5BBAAD52EB2F3AA0F45
+2017-05-25 18:27:31,317 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:28:42,909 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:28:42,910 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 18:28:42,910 [TRACE]             LogoutCommand: - Уничтожение сесии: 5E7DC97311395AC0AA090C3BA82AFD1C
+2017-05-25 18:28:42,911 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 18:28:46,217 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:28:46,217 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 18:28:46,218 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 18:28:46,220 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 18:28:46,220 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 18:58:33,791 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 18:58:44,443 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:58:44,474 [ INFO]     СhangeLanguageCommand: - 
+2017-05-25 18:58:44,477 [TRACE]                Controller: - Перход на станицу: 0:0:0:0:0:0:0:1
+2017-05-25 18:58:46,595 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:58:46,596 [ INFO]     СhangeLanguageCommand: - 
+2017-05-25 18:58:46,596 [TRACE]                Controller: - Перход на станицу: 0:0:0:0:0:0:0:1
+2017-05-25 18:58:53,940 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 18:58:53,941 [ INFO]     СhangeLanguageCommand: - 
+2017-05-25 18:58:53,941 [TRACE]                Controller: - Перход на станицу: 0:0:0:0:0:0:0:1
+2017-05-25 19:00:16,518 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:00:41,400 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:00:47,687 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:47,716 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:00:47,716 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:00:47,721 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:47,727 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:00:50,067 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:50,067 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:00:50,068 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:00:50,075 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:50,076 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:00:53,841 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:53,841 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:00:53,841 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:00:53,851 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:53,852 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:00:59,797 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:00:59,798 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:00:59,803 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:01:00,139 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:01:00,139 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:01:31,603 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:01:44,872 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:01:44,896 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:01:44,898 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:01:45,223 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:01:45,228 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:01:47,625 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:01:47,626 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:01:47,627 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:01:47,634 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:01:47,634 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:02:33,800 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:02:36,802 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:36,830 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:02:36,831 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос ru_RU
+2017-05-25 19:02:36,831 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:02:36,838 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:36,845 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:02:49,158 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:49,159 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:02:49,160 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос en_US
+2017-05-25 19:02:49,160 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:02:49,169 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:49,170 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:02:52,183 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:52,184 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:02:52,184 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос ru_RU
+2017-05-25 19:02:52,184 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:02:52,193 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:52,194 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:02:54,602 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:02:59,237 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:02:59,261 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:02:59,262 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:02:59,287 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:02:59,291 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:03:03,183 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:03,184 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:03:03,184 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:03:03,184 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:03:03,192 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:03,192 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:03:19,965 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:19,965 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:03:19,965 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:03:19,969 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:03:19,969 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:03:23,894 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:23,895 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:03:23,895 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:03:23,896 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:03:23,902 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:23,903 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:03:46,054 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:46,054 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:03:46,055 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:03:46,055 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:03:46,063 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:03:46,064 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:04,804 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:04,805 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:04:04,805 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:04:04,805 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:04:04,813 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:04,814 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:09,484 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:09,485 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:04:09,485 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:04:09,487 [TRACE]              LoginManager: - Пароль не тот ROOT а нужен root
+2017-05-25 19:04:09,487 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 19:04:09,497 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:17,422 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:17,422 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:04:17,423 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:04:17,425 [TRACE]              LoginManager: - Пароль не тот ROOT а нужен root
+2017-05-25 19:04:17,425 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 19:04:17,425 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:26,980 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:26,981 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:04:26,981 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:04:26,983 [TRACE]              LoginManager: - Пароль не тот ROOT а нужен root
+2017-05-25 19:04:26,983 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 19:04:26,983 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:41,130 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:41,131 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:04:41,131 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:04:41,132 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:04:41,133 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:04:52,970 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:52,971 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:04:52,971 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:04:52,971 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:04:52,978 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:52,979 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:54,798 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:54,799 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:04:54,799 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:04:54,799 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:04:54,806 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:54,806 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:04:55,938 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:55,938 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:04:55,939 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:04:55,939 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:04:55,946 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:04:55,946 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:05:04,637 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:05:04,637 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:05:04,637 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:05:04,639 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:05:04,639 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:06:06,358 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:06:06,358 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:06:06,359 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:06:06,359 [TRACE]                Controller: - Перход на станицу: /WEB/controller
+2017-05-25 19:06:06,370 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:06:06,370 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:07:09,172 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:07:32,049 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 19:07:34,375 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:34,400 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:07:34,402 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 19:07:34,839 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 19:07:34,850 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 19:07:38,795 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:38,796 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:07:38,796 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:07:38,803 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:07:38,804 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:40,474 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:40,475 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:07:40,475 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:40,476 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:41,491 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:41,493 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:07:41,494 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:41,494 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:42,061 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:42,062 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:07:42,062 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:42,062 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:42,695 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:42,696 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:07:42,697 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:42,697 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:43,154 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:43,154 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:07:43,155 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:43,155 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:43,976 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:43,977 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:07:43,977 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:43,978 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:45,515 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:45,515 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:07:45,516 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:45,516 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:46,436 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:46,436 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:07:46,437 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:46,437 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:47,162 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:47,162 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:07:47,163 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:07:47,163 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:07:49,554 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:07:49,554 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 19:07:49,555 [TRACE]             LogoutCommand: - Уничтожение сесии: 599004220BCAF7E5DDADF15524738EE7
+2017-05-25 19:07:49,556 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 19:08:03,752 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:03,752 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 19:08:03,753 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 19:08:03,755 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 35CE3AA83718F3425A033E56739987D7
+2017-05-25 19:08:03,755 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:07,800 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:07,800 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:08:07,801 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:07,801 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:26,269 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:26,269 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:08:26,270 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:26,270 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:27,910 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:27,911 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:08:27,911 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:27,912 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:29,254 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:29,254 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:08:29,255 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:29,255 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:30,660 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:30,660 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:08:30,660 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:30,661 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:31,348 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:31,348 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:08:31,348 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:31,349 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:32,512 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:32,512 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:08:32,512 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:32,513 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:33,667 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:33,668 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:08:33,668 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:33,668 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:40,450 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:40,451 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 19:08:40,453 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 19:08:40,453 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:41,387 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:41,387 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 19:08:41,388 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:41,388 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:42,762 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:42,763 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-25 19:08:42,776 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-25 19:08:42,777 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=4, namber=XS2564AD, type=VAN, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=null], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-25 19:08:42,777 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 19:08:43,911 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 19:08:43,912 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 19:08:43,912 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 19:08:43,912 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:32:58,811 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 20:33:06,585 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:06,610 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 20:33:07,060 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 20:33:07,063 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:33:08,481 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:08,483 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:33:08,483 [TRACE]             LogoutCommand: - Уничтожение сесии: A4D1F4D44B2705EA05204872C87AD7EC
+2017-05-25 20:33:08,484 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:33:13,849 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:13,850 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:33:13,852 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 20:33:13,868 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= пароль; idSession= 35C2DAA8FDCFE5971B1DE1CB7076E191
+2017-05-25 20:33:13,869 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:33:17,018 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:17,019 [ INFO]     СhangeLanguageCommand: - language <fmt:message key=
+2017-05-25 20:33:17,020 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:33:17,021 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:33:18,456 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:18,456 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:33:18,456 [TRACE]             LogoutCommand: - Уничтожение сесии: 35C2DAA8FDCFE5971B1DE1CB7076E191
+2017-05-25 20:33:18,457 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:33:23,882 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:23,883 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:33:23,883 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 20:33:23,886 [TRACE]              LoginManager: - Пароль не тот gfhjkm а нужен пароль
+2017-05-25 20:33:23,886 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 20:33:23,894 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 20:33:29,104 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:33:29,104 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:33:29,105 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 20:33:29,107 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= пароль; idSession= B21EE02EA08F8AC73AFFEE888B8E19CF
+2017-05-25 20:33:29,108 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:35:59,302 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:35:59,302 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:35:59,303 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:35:59,303 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:36:05,371 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:36:05,372 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:36:05,372 [TRACE]             LogoutCommand: - Уничтожение сесии: B21EE02EA08F8AC73AFFEE888B8E19CF
+2017-05-25 20:36:05,372 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:36:21,215 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:36:21,216 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:36:21,216 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 20:36:21,218 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= пароль; idSession= E406B4691E39317DE64B702F1EB08B3D
+2017-05-25 20:36:21,219 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:38:05,808 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:38:05,809 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:38:05,809 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:38:05,809 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:38:35,495 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 20:40:16,961 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:16,983 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:40:16,983 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:16,989 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:19,724 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:19,724 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:40:19,725 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:19,725 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:20,412 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:20,412 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:40:20,412 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:20,413 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:21,162 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:21,162 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:40:21,162 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:21,163 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:22,285 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:22,286 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:40:22,286 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:22,286 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:23,646 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:23,647 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:40:23,647 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:40:23,648 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:40:25,568 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:25,568 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:40:25,568 [TRACE]             LogoutCommand: - Уничтожение сесии: E406B4691E39317DE64B702F1EB08B3D
+2017-05-25 20:40:25,568 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:40:32,093 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:32,094 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:40:32,098 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-25 20:40:32,121 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 2A3FBB5ECD3E203C4EB33BF995A8B82E
+2017-05-25 20:40:32,121 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-25 20:40:33,131 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:33,132 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:40:33,132 [TRACE]             LogoutCommand: - Уничтожение сесии: 2A3FBB5ECD3E203C4EB33BF995A8B82E
+2017-05-25 20:40:33,132 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:40:37,225 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:37,226 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:40:37,226 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 20:40:37,229 [TRACE]              LoginManager: - Пароль не тот  а нужен root
+2017-05-25 20:40:37,230 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 20:40:37,236 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 20:40:40,180 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:40:40,181 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:40:40,181 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 20:40:40,183 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 6B525F949B45A7187017624D39AF8112
+2017-05-25 20:40:40,183 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:18,224 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 20:41:20,054 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:20,080 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:20,082 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:20,086 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:21,000 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:21,001 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:21,001 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:21,001 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:21,593 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:21,594 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:21,594 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:21,594 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:22,055 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:22,055 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:22,055 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:22,056 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:23,164 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:23,164 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:23,165 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:23,165 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:23,625 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:23,625 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:23,625 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:23,625 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:40,838 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:40,838 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:40,838 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:40,839 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:42,057 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:42,057 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:42,058 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:42,058 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:41:43,525 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:43,526 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:41:43,526 [TRACE]             LogoutCommand: - Уничтожение сесии: 6B525F949B45A7187017624D39AF8112
+2017-05-25 20:41:43,527 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:41:53,447 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:53,448 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:41:53,452 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 20:41:53,479 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= пароль; idSession= 8AE197A5F981EA26A0161D67EE6B5B10
+2017-05-25 20:41:53,479 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:41:57,065 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:57,066 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:57,066 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:57,066 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:41:57,782 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:57,782 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:57,782 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:57,782 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:41:58,424 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:58,424 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:58,425 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:58,425 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:41:58,978 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:58,978 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:41:58,978 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:58,979 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:41:59,524 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:41:59,524 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:41:59,524 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:41:59,525 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:00,004 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:00,006 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:00,006 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:00,006 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:00,572 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:00,573 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:42:00,573 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:00,573 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:01,104 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:01,105 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:01,105 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:01,105 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:01,618 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:01,619 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:42:01,619 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:01,619 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:02,026 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:02,027 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:02,027 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:02,027 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:02,409 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:02,409 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:42:02,409 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:02,410 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:02,877 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:02,877 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:02,878 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:02,878 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:03,401 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:03,401 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:42:03,401 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:03,401 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:03,855 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:03,855 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:03,855 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:03,856 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:04,338 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:04,338 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 20:42:04,339 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:04,339 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:42:04,854 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:42:04,854 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 20:42:04,855 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 20:42:04,855 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 20:50:03,102 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:50:03,102 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 20:50:03,103 [TRACE]             LogoutCommand: - Уничтожение сесии: 8AE197A5F981EA26A0161D67EE6B5B10
+2017-05-25 20:50:03,103 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 20:50:07,400 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:50:07,400 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 20:50:07,400 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 20:50:07,405 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 96AF33D36AB0310A48E5B61F7DF203A4
+2017-05-25 20:50:07,405 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 20:50:22,412 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 20:50:22,412 [ INFO]   RegistrationUserCommand: - НАчало работы REGISTRATIONUSER
+2017-05-25 20:50:22,415 [DEBUG]        RegistationManager: - Создать нового юзера dasda
+2017-05-25 20:50:22,428 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 21:55:42,087 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 21:55:55,520 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 21:55:55,549 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 21:55:55,551 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 21:55:56,009 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 1; idSession= 5770CD97A79A47B934AD2D0BCEEC0183
+2017-05-25 21:55:56,016 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 21:57:14,134 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 22:15:42,402 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:15:42,433 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 22:25:51,821 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 22:27:58,121 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 22:28:14,929 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:28:14,957 [ INFO]         AddRequestCommand: - date 2017-04-10
+2017-05-25 22:28:14,964 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:48:22,281 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:48:22,282 [ INFO]         AddRequestCommand: - date 2012-04-10T20:37:40
+2017-05-25 22:48:22,283 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:24,196 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:24,197 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 22:50:24,198 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:24,198 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:26,312 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:26,313 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 22:50:26,314 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:26,315 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:27,241 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:27,243 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 22:50:27,243 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:27,243 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:27,974 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:27,975 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 22:50:27,975 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:27,975 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:28,876 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:28,876 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 22:50:28,877 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:28,877 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:30,883 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:30,883 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 22:50:30,884 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:30,884 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:31,550 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:31,550 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 22:50:31,551 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:31,551 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:33,635 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:33,635 [ INFO]         AddRequestCommand: - date 2012-04-10T20:37:40
+2017-05-25 22:50:33,636 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:40,953 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:40,954 [ INFO]     СhangeLanguageCommand: - language ru_RU
+2017-05-25 22:50:40,954 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:40,954 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:42,429 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:42,430 [ INFO]         AddRequestCommand: - date 2012-04-10T20:37:40
+2017-05-25 22:50:42,430 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:43,418 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:43,418 [ INFO]     СhangeLanguageCommand: - language en_US
+2017-05-25 22:50:43,419 [ INFO]     СhangeLanguageCommand: - Страница от куда пришел запрос /WEB/controller
+2017-05-25 22:50:43,419 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:50:44,002 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:50:44,003 [ INFO]         AddRequestCommand: - date 2012-04-10T20:37:40
+2017-05-25 22:50:44,003 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:54:45,590 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 22:55:43,435 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 22:55:43,465 [ INFO]         AddRequestCommand: - date 2012-04-10T20:37:40
+2017-05-25 22:55:43,498 [ INFO]         AddRequestCommand: - date now2017-05-25T22:55:43.482
+2017-05-25 22:55:43,506 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 22:59:54,033 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 23:00:08,406 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:00:08,438 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-25 23:00:08,474 [ INFO]         AddRequestCommand: - date now2017-05-25T23:00:08.471
+2017-05-25 23:00:08,474 [ INFO]         AddRequestCommand: - date parse2017-04-10T20:37:40
+2017-05-25 23:00:36,723 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 23:00:47,954 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:00:47,985 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-25 23:00:47,986 [ INFO]         AddRequestCommand: - date now2017-05-25T23:00:47.986
+2017-05-25 23:01:18,242 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 23:01:18,534 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:01:18,565 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 23:01:18,571 [TRACE]             LogoutCommand: - Уничтожение сесии: 6A0658226BB87B8831FAE339E233B0C2
+2017-05-25 23:01:18,571 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 23:01:22,829 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:01:22,830 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 23:01:22,834 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-25 23:01:23,296 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 1; idSession= C4B3FFA9B71B3F31ABD7E43A03596F6C
+2017-05-25 23:01:23,296 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 23:01:24,305 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:01:24,305 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-25 23:01:24,306 [ INFO]         AddRequestCommand: - date now2017-05-25T23:01:24.306
+2017-05-25 23:01:24,307 [ INFO]         AddRequestCommand: - date parse2017-04-10T20:37:40
+2017-05-25 23:01:24,307 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 23:01:55,319 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:01:55,320 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-25 23:01:55,320 [ INFO]         AddRequestCommand: - date now2017-05-25T23:01:55.320
+2017-05-25 23:01:55,321 [ INFO]         AddRequestCommand: - date parse2017-04-10T20:37:40
+2017-05-25 23:01:55,321 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 23:02:02,942 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:02:02,942 [ INFO]         AddRequestCommand: - date 2017-04-20T20:37:40
+2017-05-25 23:02:02,943 [ INFO]         AddRequestCommand: - date now2017-05-25T23:02:02.943
+2017-05-25 23:02:02,943 [ INFO]         AddRequestCommand: - date parse2017-04-20T20:37:40
+2017-05-25 23:02:02,944 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-25 23:04:03,806 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:04:03,807 [ INFO]         AddRequestCommand: - date 
+2017-05-25 23:04:19,068 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 23:04:19,070 [ INFO]         AddRequestCommand: - date 2017-05-25T00:00
+2017-05-25 23:04:19,071 [ INFO]         AddRequestCommand: - date now2017-05-25T23:04:19.071
+2017-05-25 23:04:19,072 [ INFO]         AddRequestCommand: - date parse2017-05-25T00:00
+2017-05-25 23:04:19,072 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp

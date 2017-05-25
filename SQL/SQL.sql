@@ -197,5 +197,7 @@ INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('6', 'PROCESSE
 
 /* запись машин */
 INSERT INTO `summarytask4`.`car` (`namber`, `type`, `carryingCar`, `amountCar`, `enginePower`, `statusCar`) VALUES ('AD2156AD', '1', '13.5', '15.5', '1', '1');
+INSERT INTO `summarytask4`.`car` (`namber`, `type`, `carryingCar`, `amountCar`, `enginePower`, `statusCar`) VALUES ('XS2564AD', '2', '76', '364', '113', '1');
+INSERT INTO `summarytask4`.`car` (`namber`, `type`, `carryingCar`, `amountCar`, `enginePower`, `statusCar`) VALUES ('DS2564DE', '4', '15', '15.5', '18', '1');
 
 

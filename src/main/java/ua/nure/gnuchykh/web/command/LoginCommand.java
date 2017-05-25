@@ -1,5 +1,7 @@
 package ua.nure.gnuchykh.web.command;
 
+import java.util.Locale;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -51,7 +53,8 @@ public class LoginCommand implements ActionCommand {
             // request.setAttribute("language", Locale.getDefault());
 
             session.setAttribute("userType", user.getType());
-            session.setAttribute("language", "en_US");
+            session.setAttribute("name", user.getName());
+            session.setAttribute("language", Locale.getDefault());
             LOG.debug("Открытие сесии для " + user.getType() + "; login= " + user.getLogin() + "; password= "
                     + user.getPassword() + "; idSession= " + session.getId());
 

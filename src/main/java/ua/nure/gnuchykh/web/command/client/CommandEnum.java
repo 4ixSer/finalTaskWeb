@@ -1,6 +1,7 @@
 package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
+import ua.nure.gnuchykh.web.command.AddRequestCommand;
 import ua.nure.gnuchykh.web.command.CreateCarCommand;
 import ua.nure.gnuchykh.web.command.DeleteCarCommand;
 import ua.nure.gnuchykh.web.command.DeleteUserCommand;
@@ -10,6 +11,7 @@ import ua.nure.gnuchykh.web.command.FindUserCommand;
 import ua.nure.gnuchykh.web.command.LoginCommand;
 import ua.nure.gnuchykh.web.command.LogoutCommand;
 import ua.nure.gnuchykh.web.command.RegistrationUserCommand;
+import ua.nure.gnuchykh.web.command.ÑhangeLanguageCommand;
 
 public enum CommandEnum {
     LOGIN {
@@ -20,6 +22,11 @@ public enum CommandEnum {
     FINDALLUSER {
         {
             this.command = new FindUserCommand();
+        }
+    },
+    ADDREQUEST {
+        {
+            this.command = new AddRequestCommand();
         }
     },
     REGISTRATIONUSER {
@@ -50,6 +57,11 @@ public enum CommandEnum {
     ADDCAR {
         {
             this.command = new CreateCarCommand();
+        }
+    },
+    CHANGELANGUAGE {
+        {
+            this.command = new ÑhangeLanguageCommand();
         }
     },
     LOGOUT {
