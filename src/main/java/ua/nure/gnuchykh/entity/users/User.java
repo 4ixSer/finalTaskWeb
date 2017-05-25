@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.entity;
+package ua.nure.gnuchykh.entity.users;
 
 /**
  *  ласс родитель дл€ пользователей данного сервиса.

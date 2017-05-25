@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.nure.gnuchykh.entity.ClientType;
-import ua.nure.gnuchykh.entity.User;
+import ua.nure.gnuchykh.entity.users.ClientType;
+import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
 public class UserDAO {
@@ -51,8 +51,8 @@ public class UserDAO {
             System.err.println("Error createStatement: " + e);
             // TODO Сюда систему логирования
         } finally {
-            close(st);
-            close(connector);
+            ConnectionPool.close(st);
+            ConnectionPool.close(connector);
         }
         return users;
     }
@@ -100,28 +100,19 @@ public class UserDAO {
             System.err.println("Error createStatement: " + e);
             // TODO Сюда систему логирования
         } finally {
-            close(ps);
-            close(connector);
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
         }
         return user;
     }
 
     public boolean delete(int id) {
-        // Данный метод мне пока не нужен.
-        throw new IllegalArgumentException();
-    }
-
-    /**
-     * Метод удаляет юзера с базы данных.
-     */
-
-    public boolean delete(User entity) {
         connector = null;
         PreparedStatement ps = null;
         try {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_DELETE_USER);
-            ps.setInt(1, entity.getId());
+            ps.setInt(1, id);
             ps.execute();
 
         } catch (SQLException e) {
@@ -129,11 +120,19 @@ public class UserDAO {
             System.err.println("SQL exception: " + e);
             return false;
         } finally {
-            close(ps);
-            close(connector);
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
         }
 
         return true;
+    }
+
+    /**
+     * Метод удаляет юзера с базы данных.
+     */
+
+    public boolean delete(User entity) {
+        return delete(entity.getId());
     }
 
     /**
@@ -161,8 +160,8 @@ public class UserDAO {
             // TODO Сюда систему логирования
             return false;
         } finally {
-            close(ps);
-            close(connector);
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
         }
         return true;
     }
@@ -191,8 +190,8 @@ public class UserDAO {
             // TODO Сюда систему логирования
             return null;
         } finally {
-            close(ps);
-            close(connector);
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
         }
         return entity;
     }
@@ -211,7 +210,6 @@ public class UserDAO {
         try {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_SELECT_USER_BY_LOGIN);
-            System.err.println(" userDAO lt connection");
             ps.setString(1, login);
             ResultSet resultSet = ps.executeQuery();
             if (resultSet.next()) {
@@ -221,42 +219,14 @@ public class UserDAO {
             System.err.println("Error createStatement: " + e);
             // TODO Сюда систему логирования
         } finally {
-            close(ps);
-            close(connector);
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
 
         }
         return user;
 
     }
 
-    public void close(Statement st) {
-        try {
-            if (st != null) {
-                st.close();
-            }
-        } catch (SQLException e) {
-            // лог о невозможности закрытия Statement
-        }
-    }
 
-    public void close(PreparedStatement ps) {
-        try {
-            if (ps != null) {
-                ps.close();
-            }
-        } catch (SQLException e) {
-            // лог о невозможности PreparedStatement
-        }
-    }
-
-    public void close(Connection connection) {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (SQLException e) {
-            // генерация исключения, т.к. нарушается работа пула
-        }
-    }
 
 }

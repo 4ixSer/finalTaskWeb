@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.entity.User;
+import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.manager.LoginManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
@@ -19,7 +19,7 @@ public class LoginCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        LOG.info("Начало работы");
+        LOG.info("Начало работы " +request.getParameter("command"));
 
         String page = null;
 
@@ -35,7 +35,7 @@ public class LoginCommand implements ActionCommand {
         // проверка логина и пароля
         if(user == null||LoginManager.loginIsFalse(user, pass)) {
 
-            LOG.debug("Юзера с login "+user.getLogin()+"; password "+user.getPassword() +" не сушествует");
+            LOG.debug("Юзера с login не сушествует");
 
             //передалать отправку ошибки.
             request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
@@ -52,7 +52,7 @@ public class LoginCommand implements ActionCommand {
 
             session.setAttribute("userType", user.getType());
 
-            LOG.debug("Открытие сесии для "+ user.getType()+"; login= "+user.getLogin()+";\npassword= "+user.getPassword() +"; idSession= "+ session.getId());
+            LOG.debug("Открытие сесии для "+ user.getType()+"; login= "+user.getLogin()+"; password= "+user.getPassword() +"; idSession= "+ session.getId());
 
             // определение пути к main.jsp
             page = getPageRole(user.getType().toString());

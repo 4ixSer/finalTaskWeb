@@ -1,7 +1,9 @@
 package ua.nure.gnuchykh.util;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -29,6 +31,37 @@ public class ConnectionPool {
     public static Connection getConnection() throws SQLException {
         Connection connection = dataSource.getConnection();
         return connection;
+    }
+
+
+    public static void close(Statement st) {
+        try {
+            if (st != null) {
+                st.close();
+            }
+        } catch (SQLException e) {
+            // лог о невозможности закрытия Statement
+        }
+    }
+
+    public static void close(PreparedStatement ps) {
+        try {
+            if (ps != null) {
+                ps.close();
+            }
+        } catch (SQLException e) {
+            // лог о невозможности PreparedStatement
+        }
+    }
+
+    public static void close(Connection connection) {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            // генерация исключения, т.к. нарушается работа пула
+        }
     }
 
 

@@ -17,7 +17,7 @@
 
 
 	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
-		<input type="hidden" name="command" value="REGISTRATION" /> <input
+		<input type="hidden" name="command" value="REGISTRATIONUSER" /> <input
 			type="text" name="login" value="login" /> <input type="password"
 			name="password" value="password" /> <input type="text" name="email"
 			value="Email" /> <input type="text" name="name" value="name" /> <select
@@ -34,7 +34,7 @@
 
 	<form align="center" name="findAllForm" method="POST"
 		action="http://localhost:8080/WEB/controller"">
-		<input type="hidden" name="command" value="findall" /> </select> <input
+		<input type="hidden" name="command" value="FINDALLUSER" /> </select> <input
 			type="submit" value="найти всех юзеров">
 	</form>
 	<br />
@@ -43,21 +43,54 @@
 		<tr>
 			<th>ID</th>
 			<th>Login</th>
-			<th>Password</th>
 			<th>Name</th>
-			<th>email</th>
-			<th>role</th>
+			<th>Email</th>
+			<th>Role</th>
 		</tr>
 
 		<c:forEach var="elem" items="${users}" varStatus="status">
-			<tr>
+			<tr align="center">
 				<td><c:out value="${ elem.id }" /></td>
 				<td><c:out value="${ elem.login }" /></td>
-				<td><c:out value="${ elem.password }" /></td>
 				<td><c:out value="${ elem.name }" /></td>
 				<td><c:out value="${ elem.email }" /></td>
 				<td><c:out value="${ elem.type }" /></td>
+				<td><a href="http://localhost:8080/WEB/controller?command=DELETEUSER&id=${elem.id }">Delete</a></td>
+			</tr>
+		</c:forEach>
 
+	</table>
+
+
+	<form align="center" name="findAllCarForm" method="POST"
+		action="http://localhost:8080/WEB/controller"">
+		<input type="hidden" name="command" value="ADDCAR" /> </select> <input
+			type="submit" value="найти все машины">
+	</form>
+	<br />
+	<table align="center">
+		<tr>
+			<th>ID</th>
+			<th>namber</th>
+			<th>type</th>
+			<th>carryingCar</th>
+			<th>amountCar</th>
+			<th>enginePower</th>
+			<th>statuc</th>
+			<th>comments</th>
+		</tr>
+
+		<c:forEach var="elem" items="${cars}" varStatus="status">
+			<tr align="center">
+				<td><c:out value="${ elem.id }" /></td>
+				<td><c:out value="${ elem.namber }" /></td>
+				<td><c:out value="${ elem.type }" /></td>
+				<td><c:out value="${ elem.carryingCar }" /></td>
+				<td><c:out value="${ elem.amountCar }" /></td>
+				<td><c:out value="${ elem.enginePower }" /></td>
+				<td><c:out value="${ elem.statusCar }" /></td>
+				<td><c:out value="${ elem.comments }" /></td>
+				<td><a href="http://localhost:8080/WEB/controller?command=deleteCar&id=${elem.id }">Delete</a></td>
 			</tr>
 		</c:forEach>
 

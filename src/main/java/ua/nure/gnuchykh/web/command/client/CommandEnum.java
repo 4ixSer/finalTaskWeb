@@ -1,10 +1,12 @@
 package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
-import ua.nure.gnuchykh.web.command.FindCommand;
+import ua.nure.gnuchykh.web.command.DeleteUserCommand;
+import ua.nure.gnuchykh.web.command.FindUserCommand;
 import ua.nure.gnuchykh.web.command.LoginCommand;
 import ua.nure.gnuchykh.web.command.LogoutCommand;
-import ua.nure.gnuchykh.web.command.RegistrationCommand;
+import ua.nure.gnuchykh.web.command.RegistrationUserCommand;
+import ua.nure.gnuchykh.web.command.addCarCommand;
 
 public enum CommandEnum {
     LOGIN {
@@ -12,14 +14,24 @@ public enum CommandEnum {
             this.command = new LoginCommand();
         }
     },
-    FINDALL {
+    FINDALLUSER {
         {
-            this.command = new FindCommand();
+            this.command = new FindUserCommand();
         }
     },
-    REGISTRATION {
+    REGISTRATIONUSER {
         {
-            this.command = new RegistrationCommand();
+            this.command = new RegistrationUserCommand();
+        }
+    },
+    DELETEUSER {
+        {
+            this.command = new DeleteUserCommand();
+        }
+    },
+    ADDCAR {
+        {
+            this.command = new addCarCommand();
         }
     },
     LOGOUT {

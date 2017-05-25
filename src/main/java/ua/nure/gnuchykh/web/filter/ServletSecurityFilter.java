@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import ua.nure.gnuchykh.entity.ClientType;
+import ua.nure.gnuchykh.entity.users.ClientType;
 
 //TODO òóò èñïğàâèòü
-@WebFilter(urlPatterns = { "/controller" }, servletNames = { "MainServlet" })
+@WebFilter(urlPatterns = { "/controllerâûôâôûâ" }, servletNames = { "MainServlet" })
 public class ServletSecurityFilter implements Filter {
     @Override
     public void destroy() {

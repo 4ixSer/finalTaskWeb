@@ -1,0 +1,481 @@
+2017-05-25 07:40:13,801 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:40:20,612 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:40:20,631 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 07:40:20,634 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 07:40:21,199 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 031C8563A2CD5E14558B5DCFD5BC19C2
+2017-05-25 07:40:21,211 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:40:22,789 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:40:22,798 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:41:11,833 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:41:11,840 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:41:31,008 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:41:39,202 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:41:39,596 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:45:57,394 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:48:30,312 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:55:44,867 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:55:53,672 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:55:53,692 [ INFO]               FindCommand: - Начало работы
+2017-05-25 07:55:54,045 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 07:55:54,051 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:56:35,045 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:56:49,244 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:56:49,262 [ INFO]               FindCommand: - Начало работы
+2017-05-25 07:56:49,601 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 07:56:49,605 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:57:58,342 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 07:58:02,721 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:58:02,737 [ INFO]               FindCommand: - Начало работы
+2017-05-25 07:58:03,109 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 07:58:03,114 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:58:05,456 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:58:05,464 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 07:58:38,809 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:58:38,809 [ INFO]               FindCommand: - Начало работы
+2017-05-25 07:58:38,817 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 07:58:38,817 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 07:59:12,340 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:59:12,341 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 07:59:53,788 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 07:59:53,789 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 07:59:53,795 [DEBUG]              LoginManager: - Найти юзера с loginom  = null
+2017-05-25 08:03:10,126 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:03:19,330 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:03:19,353 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 08:03:19,355 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 08:03:19,839 [TRACE]              LoginManager: - Пароль не тот admin а нужен root
+2017-05-25 08:03:19,839 [DEBUG]              LoginCommand: - Юзера с login admin; password root не сушествует
+2017-05-25 08:03:19,849 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 08:03:27,072 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:03:27,073 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 08:03:27,074 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 08:03:27,082 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 031C8563A2CD5E14558B5DCFD5BC19C2
+2017-05-25 08:03:27,083 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:03:29,745 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:03:29,746 [ INFO]               FindCommand: - Начало работы
+2017-05-25 08:03:29,750 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:03:29,751 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:03:31,424 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:03:31,425 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 08:03:31,425 [DEBUG]              LoginManager: - Найти юзера с loginom  = null
+2017-05-25 08:04:10,838 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:04:15,027 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:04:15,048 [ INFO]               FindCommand: - Начало работы
+2017-05-25 08:04:15,470 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:04:15,475 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:04:19,717 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:06:34,744 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:06:50,242 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:06:51,233 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:06:51,262 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:06:51,270 [TRACE]             LogoutCommand: - Уничтожение сесии: 031C8563A2CD5E14558B5DCFD5BC19C2
+2017-05-25 08:06:51,271 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 08:06:56,519 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:06:56,522 [ INFO]              LoginCommand: - Начало работы
+2017-05-25 08:06:56,530 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 08:06:57,009 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= D6D3E2F249FAF93ECAB92CAF759D957D
+2017-05-25 08:06:57,009 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:07:03,400 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:07:03,402 [ INFO]               FindCommand: - Начало работы
+2017-05-25 08:07:03,410 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:07:03,410 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:07:12,053 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:07:12,054 [ INFO]       RegistrationCommand: - НАчало работыdelete
+2017-05-25 08:08:03,157 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:08:13,264 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:08:14,163 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:08:14,197 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:08:14,207 [TRACE]             LogoutCommand: - Уничтожение сесии: D6D3E2F249FAF93ECAB92CAF759D957D
+2017-05-25 08:08:14,209 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 08:08:20,703 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:08:20,707 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 08:08:20,712 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-25 08:08:21,195 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= BE4AFCF91D499FC98F3B21D47FC8A8BF
+2017-05-25 08:08:21,195 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-25 08:09:05,875 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:09:42,084 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:09:58,209 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:09:59,956 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:16,263 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 08:10:18,311 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:18,331 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:10:18,338 [TRACE]             LogoutCommand: - Уничтожение сесии: BE4AFCF91D499FC98F3B21D47FC8A8BF
+2017-05-25 08:10:18,339 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 08:10:23,839 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:23,841 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 08:10:23,846 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 08:10:24,307 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 6EAF94AF6E4E031EDDDEC58DBE405B75
+2017-05-25 08:10:24,307 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:10:25,441 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:25,442 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 08:10:25,451 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:10:25,452 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:10:27,870 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:27,871 [ INFO]               FindCommand: - Начало работы
+2017-05-25 08:10:27,884 [ INFO]               FindCommand: - Статус удаления true
+2017-05-25 08:10:27,888 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:10:27,888 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:10:52,999 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:10:53,000 [ INFO]               FindCommand: - Начало работы
+2017-05-25 08:10:53,005 [ INFO]               FindCommand: - Статус удаления true
+2017-05-25 08:10:53,008 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:10:53,008 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:11:49,271 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:11:49,272 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 08:11:49,275 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:11:49,276 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:12:17,071 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:17,072 [ INFO]       RegistrationCommand: - НАчало работы REGISTRATION
+2017-05-25 08:12:17,092 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:12:19,094 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:19,094 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 08:12:19,098 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:12:19,098 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:12:29,642 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:29,643 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:12:29,643 [TRACE]             LogoutCommand: - Уничтожение сесии: 6EAF94AF6E4E031EDDDEC58DBE405B75
+2017-05-25 08:12:29,644 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 08:12:33,191 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:33,192 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 08:12:33,194 [DEBUG]              LoginManager: - Найти юзера с loginom  = login312
+2017-05-25 08:12:33,197 [TRACE]              LoginManager: - Пароль не тот пароль а нужен вфывфы
+2017-05-25 08:12:33,197 [DEBUG]              LoginCommand: - Юзера с login login312; password вфывфы не сушествует
+2017-05-25 08:12:33,197 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 08:12:44,128 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:44,129 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 08:12:44,129 [DEBUG]              LoginManager: - Найти юзера с loginom  = login312
+2017-05-25 08:12:44,131 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= login312; password= вфывфы; idSession= 5B1B1D3BB6F21FBDA2E30B67F2D95FB9
+2017-05-25 08:12:44,131 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:12:45,005 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:12:45,006 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 08:12:45,009 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 08:12:45,009 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 08:13:17,443 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:13:17,444 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:13:17,444 [TRACE]             LogoutCommand: - Уничтожение сесии: 5B1B1D3BB6F21FBDA2E30B67F2D95FB9
+2017-05-25 08:13:17,445 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 08:13:24,037 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:13:24,038 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 08:13:24,038 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-25 08:13:24,041 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= D3A5872F2EA06509FD09920132759D85
+2017-05-25 08:13:24,041 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-25 08:13:27,481 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 08:13:27,482 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 08:13:27,482 [TRACE]             LogoutCommand: - Уничтожение сесии: D3A5872F2EA06509FD09920132759D85
+2017-05-25 08:13:27,483 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 09:02:18,956 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:02:18,957 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:02:18,957 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 09:03:01,414 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 09:03:04,087 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:04,106 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:03:04,108 [DEBUG]              LoginManager: - Найти юзера с loginom  = dasd
+2017-05-25 09:03:04,135 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 09:03:04,146 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 09:03:08,480 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:08,480 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:03:08,481 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 09:03:08,491 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 03A7F7CD6430F37481ABAF1F2FF1E97D
+2017-05-25 09:03:08,491 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:03:10,227 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:10,228 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 09:03:10,231 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:03:10,232 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:03:14,939 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:14,940 [ INFO]               FindCommand: - Начало работы
+2017-05-25 09:03:14,949 [ INFO]               FindCommand: - Статус удаления true
+2017-05-25 09:03:14,951 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:03:14,951 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:03:16,668 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:16,668 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 09:03:16,670 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:03:16,671 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:03:18,729 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:18,730 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 09:03:18,730 [TRACE]             LogoutCommand: - Уничтожение сесии: 03A7F7CD6430F37481ABAF1F2FF1E97D
+2017-05-25 09:03:18,731 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 09:03:21,910 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:21,911 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:03:21,911 [DEBUG]              LoginManager: - Найти юзера с loginom  = dasd
+2017-05-25 09:03:21,912 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 09:03:21,913 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 09:03:22,668 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:03:22,669 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:03:22,669 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 09:03:22,671 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 09:03:22,671 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 09:13:12,141 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 09:28:01,796 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 09:28:10,467 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:10,493 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:28:10,495 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 09:28:10,950 [TRACE]              LoginManager: - Пароль не тот roor а нужен root
+2017-05-25 09:28:10,951 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 09:28:10,960 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 09:28:18,591 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:18,592 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:28:18,593 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 09:28:18,599 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 63C963E57E25C6AE919DF19198FA5EEA
+2017-05-25 09:28:18,599 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:28:22,639 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:22,640 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 09:28:22,643 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:28:22,643 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:28:27,029 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:27,030 [ INFO]       RegistrationCommand: - НАчало работы REGISTRATION
+2017-05-25 09:28:27,044 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:28:28,567 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:28,568 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 09:28:28,570 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:28:28,571 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:28:47,830 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:28:47,831 [ INFO]               FindCommand: - Начало работы
+2017-05-25 09:28:47,836 [ INFO]               FindCommand: - Статус удаления true
+2017-05-25 09:28:47,838 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:28:47,839 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:29:44,924 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 09:32:05,733 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:32:05,755 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:32:05,758 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-25 09:32:05,788 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 63C963E57E25C6AE919DF19198FA5EEA
+2017-05-25 09:32:05,793 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-25 09:32:07,549 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:32:07,550 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 09:32:07,550 [TRACE]             LogoutCommand: - Уничтожение сесии: 63C963E57E25C6AE919DF19198FA5EEA
+2017-05-25 09:32:07,552 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 09:32:23,344 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:32:23,344 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 09:32:23,347 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 09:32:23,355 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= EC40256CAED75607FD742DE785428F56
+2017-05-25 09:32:23,355 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:32:27,557 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:32:27,557 [ INFO]       RegistrationCommand: - НАчало работы REGISTRATION
+2017-05-25 09:32:27,561 [DEBUG]        RegistationManager: - Создать нового юзера 123
+2017-05-25 09:32:27,576 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:32:28,280 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 09:32:28,280 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 09:32:28,284 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 09:32:28,284 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 09:58:23,664 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:05:28,767 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:05:32,773 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:32,792 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 10:05:32,804 [TRACE]             LogoutCommand: - Уничтожение сесии: 98402D1DDDACA1B22B0BAEF5A307A7C1
+2017-05-25 10:05:32,804 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 10:05:36,440 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:36,441 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:05:36,445 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 10:05:36,910 [TRACE]              LoginManager: - Пароль не тот dsadd а нужен root
+2017-05-25 10:05:36,911 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:05:36,915 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:05:41,661 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:41,661 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:05:41,662 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 10:05:41,667 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= D5EB073518950A1953E889C02AACCC71
+2017-05-25 10:05:41,667 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:42,747 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:42,748 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:42,751 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:42,751 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:43,535 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:43,535 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:43,539 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:43,539 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:44,309 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:44,310 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:44,313 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:44,313 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:44,918 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:44,919 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:44,921 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:44,921 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:45,419 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:45,419 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:45,421 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:45,422 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:45,949 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:45,949 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:45,952 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:45,952 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:46,464 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:46,465 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:46,467 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:46,467 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:46,942 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:46,942 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:46,944 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:46,944 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:47,457 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:47,458 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:47,460 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:47,460 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:47,887 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:47,888 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:47,890 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:47,891 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:48,292 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:48,293 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:48,295 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:48,295 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:48,491 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:48,492 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:48,494 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:48,495 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:48,817 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:48,817 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:48,819 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:48,819 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:49,013 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:49,013 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:49,015 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:49,015 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:49,316 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:49,316 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:49,318 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:49,319 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:49,509 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:49,509 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:49,511 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:49,511 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:49,831 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:49,832 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:49,833 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:49,834 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:50,092 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:50,092 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:50,094 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:50,094 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:50,316 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:50,317 [ INFO]               FindCommand: - Начало работы findall
+2017-05-25 10:05:50,319 [DEBUG]               FindCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:05:50,319 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:05:53,520 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:05:53,520 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 10:05:53,520 [TRACE]             LogoutCommand: - Уничтожение сесии: D5EB073518950A1953E889C02AACCC71
+2017-05-25 10:05:53,521 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 10:09:13,741 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:09:24,472 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:09:55,453 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:11:17,139 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:11:27,713 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:11:38,271 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:19:10,477 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:19:20,901 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:20,934 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:20,936 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 10:19:21,141 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:21,142 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:21,143 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 10:19:21,460 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:19:21,460 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:19:21,470 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:19:21,470 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:19:22,964 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:22,965 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:22,966 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 10:19:22,969 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:19:22,969 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:19:31,451 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:31,452 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:31,453 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 10:19:31,455 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:19:31,455 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:19:36,920 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:36,920 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:36,920 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 10:19:36,934 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 1195026E21A6B8A7F7110402551F08E1
+2017-05-25 10:19:36,934 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:19:40,297 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:40,298 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:19:40,300 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:19:40,301 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:19:44,311 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:44,312 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-25 10:19:44,312 [TRACE]             LogoutCommand: - Уничтожение сесии: 1195026E21A6B8A7F7110402551F08E1
+2017-05-25 10:19:44,314 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-25 10:19:49,045 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:49,045 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:19:49,046 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-25 10:19:49,048 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 122C8B92440D7EE210F97B1C6175CC84
+2017-05-25 10:19:49,048 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:19:49,781 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:49,781 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:19:49,783 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:19:49,784 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:19:52,764 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:19:52,764 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:19:52,771 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:19:52,771 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:03,595 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:03,595 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:20:03,599 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:20:03,599 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:09,274 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:09,275 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:20:09,287 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:20:09,288 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:22,648 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:22,649 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:20:22,662 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:20:22,662 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:26,886 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:26,887 [ INFO]   RegistrationUserCommand: - НАчало работы REGISTRATIONUSER
+2017-05-25 10:20:26,891 [DEBUG]        RegistationManager: - Создать нового юзера loginsdas
+2017-05-25 10:20:26,904 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:30,916 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:30,917 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:20:30,919 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:20:30,920 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:38,549 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:38,550 [ INFO]   RegistrationUserCommand: - НАчало работы REGISTRATIONUSER
+2017-05-25 10:20:38,551 [DEBUG]        RegistationManager: - Создать нового юзера logindad
+2017-05-25 10:20:38,560 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:40,239 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:40,241 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:20:40,245 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:20:40,246 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:20:42,377 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:20:42,377 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:20:42,380 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:20:42,381 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:22:24,906 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-25 10:22:33,320 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:22:33,365 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:22:33,799 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:22:33,799 [ INFO]             addCarCommand: - []
+2017-05-25 10:22:33,805 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:22:36,308 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:22:36,309 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:22:36,322 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:22:36,322 [ INFO]             addCarCommand: - []
+2017-05-25 10:22:36,323 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:25:30,051 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:25:30,052 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:25:30,078 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:25:30,079 [ INFO]             addCarCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=2, namber=AD2156AD, type=PLATFORM, carryingCar=13.5, amountCar=15.5, enginePower=1.0, statusCar=FREE, comments=null]]
+2017-05-25 10:25:30,080 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:26:50,950 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:26:50,952 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:26:50,973 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:26:50,973 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:26:53,161 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:26:53,162 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:26:53,176 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:26:53,177 [ INFO]             addCarCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=2, namber=AD2156AD, type=PLATFORM, carryingCar=13.5, amountCar=15.5, enginePower=1.0, statusCar=FREE, comments=null]]
+2017-05-25 10:26:53,177 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:26:53,786 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:26:53,786 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-25 10:26:53,799 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-25 10:26:53,800 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:26:54,818 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:26:54,820 [ INFO]             addCarCommand: - Начало работы ADDCAR
+2017-05-25 10:26:54,828 [DEBUG]             addCarCommand: - Нашли все машины.
+2017-05-25 10:26:54,828 [ INFO]             addCarCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=FREE, comments=null], Car [id=2, namber=AD2156AD, type=PLATFORM, carryingCar=13.5, amountCar=15.5, enginePower=1.0, statusCar=FREE, comments=null]]
+2017-05-25 10:26:54,829 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-25 10:26:59,457 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:26:59,465 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-25 10:27:04,996 [ INFO]                Controller: - Начало рабоыт
+2017-05-25 10:27:04,997 [ INFO]              LoginCommand: - Начало работы login
+2017-05-25 10:27:05,002 [DEBUG]              LoginManager: - Найти юзера с loginom  = 
+2017-05-25 10:27:05,033 [DEBUG]              LoginCommand: - Юзера с login не сушествует
+2017-05-25 10:27:05,033 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp

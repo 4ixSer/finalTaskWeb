@@ -2,11 +2,16 @@ package ua.nure.gnuchykh.web.command;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+
 import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
 
-public class RegistrationCommand implements ActionCommand  {
+public class RegistrationUserCommand implements ActionCommand  {
+
+    private static final Logger LOG = Logger.getLogger(RegistrationUserCommand.class);
+
     private static final String PARAM_NAME_LOGIN = "login";
     private static final String PARAM_NAME_PASSWORD = "password";
     private static final String PARAM_NAME_EMAIL = "email";
@@ -15,7 +20,8 @@ public class RegistrationCommand implements ActionCommand  {
 
     @Override
     public String execute(HttpServletRequest request) {
-        System.err.println("зашли в RegistrationCommand");
+
+        LOG.info("Ќјчало работы "+request.getParameter("command"));
 
 //        String page = null;
         // извлечение из запроса логина и парол€

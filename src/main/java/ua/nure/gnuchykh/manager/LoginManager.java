@@ -3,7 +3,7 @@ package ua.nure.gnuchykh.manager;
 import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.UserDAO;
-import ua.nure.gnuchykh.entity.User;
+import ua.nure.gnuchykh.entity.users.User;
 
 public class LoginManager {
 

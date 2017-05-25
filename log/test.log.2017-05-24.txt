@@ -1,0 +1,13 @@
+2017-05-24 18:11:51,209 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-24 18:12:05,091 [ INFO]                Controller: - Начало рабоыт
+2017-05-24 18:12:05,106 [ INFO]              LoginCommand: - Начало работы
+2017-05-24 18:12:05,108 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-24 18:12:05,610 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin;
+password= root; idSession= 1B81075732C550E885EB48C67124653D
+2017-05-24 18:12:05,615 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-24 18:27:22,834 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-24 18:28:25,568 [ INFO]                Controller: - Начало рабоыт
+2017-05-24 18:28:25,587 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-24 18:28:25,594 [TRACE]             LogoutCommand: - Уничтожение сесии: 1B81075732C550E885EB48C67124653D
+2017-05-24 18:28:25,595 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-24 18:29:33,834 [TRACE]           ContextListener: - Log4j has been initialized
