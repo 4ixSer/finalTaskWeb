@@ -7,6 +7,7 @@ import ua.nure.gnuchykh.web.command.DeleteCarCommand;
 import ua.nure.gnuchykh.web.command.DeleteUserCommand;
 import ua.nure.gnuchykh.web.command.FindALLRequestCommand;
 import ua.nure.gnuchykh.web.command.FindAllCarsCommand;
+import ua.nure.gnuchykh.web.command.FindRequestByUserID;
 import ua.nure.gnuchykh.web.command.FindUserCommand;
 import ua.nure.gnuchykh.web.command.LoginCommand;
 import ua.nure.gnuchykh.web.command.LogoutCommand;
@@ -27,6 +28,11 @@ public enum CommandEnum {
     ADDREQUEST {
         {
             this.command = new AddRequestCommand();
+        }
+    },
+    FINDREQUESTBYUSERID {
+        {
+            this.command = new FindRequestByUserID();
         }
     },
     REGISTRATIONUSER {

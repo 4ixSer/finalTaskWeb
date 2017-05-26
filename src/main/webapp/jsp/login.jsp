@@ -13,11 +13,11 @@
 		<input type="hidden" name="command" value="login" />
 		<fmt:message key="label.login" bundle="${rb}" />:
 		<br />
-		<input type="text" name="login" value="" />
+		<input type="text" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" name="login" placeholder="login" />
 		<br />
-		<fmt:message key="label.password" bundle="${rb}" />:
+		<fmt:message key="label.password"  bundle="${rb}" />:
 		<br />
-		<input type="password" name="password" value="" />
+		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" placeholder="password" />
 		<br />
 		${errorLoginPassMessage} <br /> ${wrongAction} <br /> ${nullPage} <br />
 		<input type="submit"

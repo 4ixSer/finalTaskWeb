@@ -6,7 +6,7 @@
 <fmt:setBundle basename="pagecontent" var="rb" />
 <!DOCTYPE html>
 <head>
-<title><fmt:message key="label.title" bundle="${rb}" /></title>
+<title><fmt:message key="label.title.admin" bundle="${rb}" /></title>
 </head>
 <body>
 	<%@ include file="/jsp/head.jspf"%>
@@ -18,11 +18,11 @@
 
 		<!-- регистрация пользователей  -->
 	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
-		<input type="hidden" name="command" value="REGISTRATIONUSER" />
-		<input type="text" name="login" value="login" />
-		<input type="password" name="password" value="password" />
-		<input type="email" name="email"	value="Email" />
-		<input type="text" name="name" value="name" />
+		<input type="hidden" name="command"  value="REGISTRATIONUSER" />
+		<input type="text" name="login" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" placeholder="login" />
+		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" placeholder="password" />
+		<input type="email" name="email"	placeholder="Email" />
+		<input type="text" name="name"  pattern="[A-Za-zА-Яа-яёЁ0-9]{2,20}" placeholder="name" />
 		<select	name="role"required ">
 			<option value="1"> <fmt:message key="label.admin" bundle="${rb}" /> </option>
 			<option value="2"> <fmt:message key="label.dispatcher" bundle="${rb}" /></option>
@@ -38,7 +38,7 @@
 	<!-- регистарция новых автомобилей  -->
 	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
 		<input type="hidden" name="command" value="ADDCAR" />
-		<input type="text" name="namber" value="namber" />
+		<input type="text" name="namber"  pattern="[A-Z]{2}[0-9]{4}[A-Z]{2}" placeholder="namber" />
 
 		<select name="type" required ">
 			<option  selected value="1"> <fmt:message key="car.type.PLATFORM" bundle="${rb}" /> </option>
@@ -57,10 +57,10 @@
 
 		</select>
 
-		<input type="text" name="carrying" value="Carrying" />
-		<input type="text" name="amount"	value="Amount" />
-		<input type="text" name="engine" value="Engine" />
-		<input type="text" name="comments" value="Comments" />
+		<input type="number"  name="carrying" step="0.1" placeholder="Carrying" />
+		<input type="number" name="amount" step="0.1"	placeholder="Amount" />
+		<input type="number" name="engine" step="0.1" placeholder="Engine" />
+		<input type="text" name="comments" placeholder="Comments" />
 
 		<select
 			name="statusCar" required ">

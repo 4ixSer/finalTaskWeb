@@ -139,5 +139,15 @@ public class Car implements Serializable {
         this.comments = comments;
     }
 
+    public Car( TYPE type, Double carryingCar, Double amountCar, Double enginePower,
+            String comments) {
+        super();
+        this.type = type;
+        this.carryingCar = carryingCar;
+        this.amountCar = amountCar;
+        this.enginePower = enginePower;
+        this.comments = comments;
+    }
+
 
 }

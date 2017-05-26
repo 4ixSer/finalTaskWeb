@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import ua.nure.gnuchykh.entity.cars.Car;
-import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.entity.cars.TYPE;
 
 
 /**
@@ -23,7 +22,7 @@ public class Request implements Serializable {
     /**
      * Âëàäåëåö çàÿêè.
      */
-    private User ownerRequest;
+    private Integer ownerRequest;
 
     /**
      * Äàòà ïîäà÷è çàÿâêè.
@@ -38,7 +37,25 @@ public class Request implements Serializable {
     /**
      * Õàğàêòåğèñòèêè ïğåäïîëàãàåìîé ìàøûíû.
      */
-    private Car characteristicsÑar;
+    /**
+     * Òèï ìàøûíû.
+     */
+    private TYPE type;
+
+    /**
+     * Ãğóçîïîäüåìíîñòü ìàøûíû.
+     */
+    private Double carryingCar;
+
+    /**
+     * Îáüåì ìàøûíû.
+     */
+    private Double amountCar;
+
+    /**
+     * Ìîøüíîñòü äâèãàòåëñÿ
+     */
+    private Double enginePower;
 
     /**
      * Ñòàòóñ
@@ -58,14 +75,6 @@ public class Request implements Serializable {
         this.note = note;
     }
 
-    public Car getCharacteristicsÑak() {
-        return characteristicsÑar;
-    }
-
-    public void setCharacteristicsÑar(Car characteristicsÑar) {
-        this.characteristicsÑar = characteristicsÑar;
-    }
-
     public Integer getNamberRequest() {
         return namberRequest;
     }
@@ -74,11 +83,11 @@ public class Request implements Serializable {
         this.namberRequest = namberRequest;
     }
 
-    public User getOwnerRequest() {
+    public Integer getOwnerRequest() {
         return ownerRequest;
     }
 
-    public void setOwnerRequest(User ownerRequest) {
+    public void setOwnerRequest(Integer ownerRequest) {
         this.ownerRequest = ownerRequest;
     }
 
@@ -119,17 +128,6 @@ public class Request implements Serializable {
         this.status = status;
     }
 
-    public Request(User ownerRequest, LocalDateTime dataRequest, LocalDateTime dataDeparture, Car characteristicsÑak,
-            Status status, String note) {
-        super();
-        this.ownerRequest = ownerRequest;
-        this.dataRequest = dataRequest;
-        this.dataDeparture = dataDeparture;
-        this.characteristicsÑar = characteristicsÑak;
-        this.status = status;
-        this.note = note;
-    }
-
     //TODO ïåğåïèñàòü ìåòîä äëÿ èçìåíåíèé ïàğàìåòğîâ âğåìåíè â çàâèñèìîñòè îò ÿçûêà
     //TODO âûíåñòè âìåñòå ñ ğåéñîâ â îòäåëüíûé êëàññ
      public String toStringDataRequest() {
@@ -163,8 +161,57 @@ public class Request implements Serializable {
     @Override
     public String toString() {
         return "Request [namberRequest=" + namberRequest + ", ownerRequest=" + ownerRequest + ", dataRequest="
-                + dataRequest + ", dataDeparture=" + dataDeparture + ", characteristicsÑak=" + characteristicsÑar
-                + ", status=" + status + ", note=" + note + "]";
+                + dataRequest + ", dataDeparture=" + dataDeparture + ", type=" + type + ", carryingCar=" + carryingCar
+                + ", amountCar=" + amountCar + ", enginePower=" + enginePower + ", status=" + status + ", note=" + note
+                + "]";
     }
+
+    public Request(Integer ownerRequest, LocalDateTime dataRequest, LocalDateTime dataDeparture, TYPE type,
+            Double carryingCar, Double amountCar, Double enginePower, Status status, String note) {
+        super();
+        this.ownerRequest = ownerRequest;
+        this.dataRequest = dataRequest;
+        this.dataDeparture = dataDeparture;
+        this.type = type;
+        this.carryingCar = carryingCar;
+        this.amountCar = amountCar;
+        this.enginePower = enginePower;
+        this.status = status;
+        this.note = note;
+    }
+
+    public TYPE getType() {
+        return type;
+    }
+
+    public void setType(TYPE type) {
+        this.type = type;
+    }
+
+    public Double getCarryingCar() {
+        return carryingCar;
+    }
+
+    public void setCarryingCar(Double carryingCar) {
+        this.carryingCar = carryingCar;
+    }
+
+    public Double getAmountCar() {
+        return amountCar;
+    }
+
+    public void setAmountCar(Double amountCar) {
+        this.amountCar = amountCar;
+    }
+
+    public Double getEnginePower() {
+        return enginePower;
+    }
+
+    public void setEnginePower(Double enginePower) {
+        this.enginePower = enginePower;
+    }
+
+
 
 }

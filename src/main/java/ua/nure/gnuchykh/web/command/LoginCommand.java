@@ -54,6 +54,7 @@ public class LoginCommand implements ActionCommand {
 
             session.setAttribute("userType", user.getType());
             session.setAttribute("name", user.getName());
+            session.setAttribute("userID", user.getId());
             session.setAttribute("language", Locale.getDefault());
             LOG.debug("Открытие сесии для " + user.getType() + "; login= " + user.getLogin() + "; password= "
                     + user.getPassword() + "; idSession= " + session.getId());

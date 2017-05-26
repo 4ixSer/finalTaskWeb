@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
@@ -19,6 +18,7 @@ public class RequestDAO {
     private static final String SQL_INSERT_REQUEST = "INSERT INTO request (ownerRequest, dataRequest, dataDeparture, car_type, carrying_car, amount_car, enginePower, status, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_SELECT_All_REQUEST = "SELECT * FROM request";
     private static final String SQL_SELECT_REQUEST_BY_ID = "SELECT * FROM request where id=?";
+    private static final String SQL_SELECT_REQUEST_BY_USER_ID = "SELECT * FROM request where ownerRequest=?";
     private static final String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
     private static final String SQL_UPDETE_REQUEST = "UPDATE request SET ownerRequest=?, dataRequest=?, dataDeparture=?, car_type=?, carrying_car=?, amount_car=?, enginePower=?, status=?, note=? WHERE id=?";
 
@@ -62,16 +62,15 @@ public class RequestDAO {
 
         // Cушьность временной машины взятой с заявки Важный пользователю ёё
         // характеристики
-        Car charCar = new Car();
-        charCar.setType(TYPE.fromValue(resultSet.getInt("car_type")));
-        charCar.setCarryingCar(resultSet.getDouble("carrying_car"));
-        charCar.setAmountCar(resultSet.getDouble("amount_car"));
-        charCar.setEnginePower(resultSet.getDouble("enginePower"));
-        request.setCharacteristicsСar(charCar);
+        request.setType(TYPE.fromValue(resultSet.getInt("car_type")));
+        request.setCarryingCar(resultSet.getDouble("carrying_car"));
+        request.setAmountCar(resultSet.getDouble("amount_car"));
+        request.setEnginePower(resultSet.getDouble("enginePower"));
+
 
         // получение юзера создавшего запрос
         User driver = new UserDAO().findEntityById(resultSet.getInt("ownerRequest"));
-        request.setOwnerRequest(driver);
+        request.setOwnerRequest(driver.getId());
 
         // Преобразлование и запись времени в запрос
         request.setDataRequest(Request.fromValueDataRequest(resultSet.getString("dataRequest")));
@@ -106,6 +105,38 @@ public class RequestDAO {
 
     }
 
+
+    public  List<Request> findEntityByUserId(int id) {
+        connector = null;
+        PreparedStatement ps = null;
+
+        List<Request> requests = new ArrayList<Request>();
+
+        try {
+            connector = ConnectionPool.getConnection();
+            ps = connector.prepareStatement(SQL_SELECT_REQUEST_BY_USER_ID);
+            ps.setInt(1, id);
+
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                Request request = createRequest(resultSet);
+                requests.add(request);
+
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error createStatement: " + e);
+            // TODO Сюда систему логирования
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+
+        }
+
+        return requests;
+
+    }
+
     public boolean delete(int id) {
         // Данный метод мне пока не нужен.
         throw new IllegalArgumentException();
@@ -137,16 +168,16 @@ public class RequestDAO {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_INSERT_REQUEST);
 
-            ps.setInt(1, entity.getOwnerRequest().getId());
+            ps.setInt(1, entity.getOwnerRequest());
 
-            ps.setString(2, entity.toStringDataDeparture());
-            ps.setString(3, entity.toStringDataRequest());
+            ps.setString(2, entity.toStringDataRequest());
+            ps.setString(3, entity.toStringDataDeparture());
 
             // тут мы вытягиевам предпологаемые данные для машины
-            ps.setInt(4, entity.getCharacteristicsСak().getType().value());
-            ps.setDouble(5, entity.getCharacteristicsСak().getCarryingCar());
-            ps.setDouble(6, entity.getCharacteristicsСak().getAmountCar());
-            ps.setDouble(7, entity.getCharacteristicsСak().getEnginePower());
+            ps.setInt(4, entity.getType().value());
+            ps.setDouble(5, entity.getCarryingCar());
+            ps.setDouble(6, entity.getAmountCar());
+            ps.setDouble(7, entity.getEnginePower());
             ps.setInt(8, entity.getStatus().value());
             ps.setString(9, entity.getNote());
             ps.execute();
@@ -169,16 +200,16 @@ public class RequestDAO {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_UPDETE_REQUEST);
 
-            ps.setInt(1, entity.getOwnerRequest().getId());
+            ps.setInt(1, entity.getOwnerRequest());
             ps.setString(2, entity.toStringDataRequest());
             ps.setString(3, entity.toStringDataDeparture());
-            ps.setInt(4, entity.getCharacteristicsСak().getType().value());
+            ps.setInt(4, entity.getType().value());
 
             // обнавляем запрашиваемые типы машын
-            ps.setDouble(5, entity.getCharacteristicsСak().getCarryingCar());
-            ps.setDouble(6, entity.getCharacteristicsСak().getAmountCar());
+            ps.setDouble(5, entity.getCarryingCar());
+            ps.setDouble(6, entity.getAmountCar());
 
-            ps.setDouble(7, entity.getCharacteristicsСak().getEnginePower());
+            ps.setDouble(7, entity.getEnginePower());
             ps.setInt(8, entity.getStatus().value());
             ps.setString(9, entity.getNote());
 
