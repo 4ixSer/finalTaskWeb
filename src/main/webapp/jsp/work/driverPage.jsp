@@ -57,36 +57,40 @@
 		<input	type="submit" value="<fmt:message key="menu.find.request" bundle="${rb}" />">
 	</form>
 	<br />
+	<c:if test="${not empty userRequest}">
+		<div>
+			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=userRequest">	&times;</a>
+			<!--Таблица дял отрисовки запросов   -->
+			<table align="center">
+				<tr>
+					<th>namberRequest</th>
+					<th>dataRequest</th>
+					<th>dataDeparture</th>
+					<th>type</th>
+					<th>carrying</th>
+					<th>amount</th>
+					<th>engine</th>
+					<th>status</th>
 
-	<!--Таблица дял отрисовки запросов   -->
-	<table align="center">
-		<tr>
-			<th>namberRequest</th>
-			<th>dataRequest</th>
-			<th>dataDeparture</th>
-			<th>type</th>
-			<th>carrying</th>
-			<th>amount</th>
-			<th>engine</th>
-			<th>status</th>
+				</tr>
 
-		</tr>
+			<c:forEach var="elem" items="${userRequest}" varStatus="status">
+					<tr align="center">
+						<td><c:out value="${ elem.namberRequest }" /></td>
+						<td><c:out value="${ elem.dataRequest }" /></td>
+						<td><c:out value="${ elem.dataDeparture }" /></td>
+						<td><c:out value="${ elem.type }" /></td>
+						<td><c:out value="${ elem.carryingCar }" /></td>
+						<td><c:out value="${ elem.amountCar }" /></td>
+						<td><c:out value="${ elem.enginePower }" /></td>
+						<td><c:out value="${ elem.status }" /></td>
 
-	<c:forEach var="elem" items="${userRequest}" varStatus="status">
-			<tr align="center">
-				<td><c:out value="${ elem.namberRequest }" /></td>
-				<td><c:out value="${ elem.dataRequest }" /></td>
-				<td><c:out value="${ elem.dataDeparture }" /></td>
-				<td><c:out value="${ elem.type }" /></td>
-				<td><c:out value="${ elem.carryingCar }" /></td>
-				<td><c:out value="${ elem.amountCar }" /></td>
-				<td><c:out value="${ elem.enginePower }" /></td>
-				<td><c:out value="${ elem.status }" /></td>
+					</tr>
+				</c:forEach>
 
-			</tr>
-		</c:forEach>
-
-	</table>
+			</table>
+		</div>
+	</c:if>
 
 	<!-- logout -->
 	<p align="right">

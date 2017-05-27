@@ -2,6 +2,7 @@ package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.AddRequestCommand;
+import ua.nure.gnuchykh.web.command.CloseCommand;
 import ua.nure.gnuchykh.web.command.CreateCarCommand;
 import ua.nure.gnuchykh.web.command.DeleteCarCommand;
 import ua.nure.gnuchykh.web.command.DeleteUserCommand;
@@ -12,6 +13,9 @@ import ua.nure.gnuchykh.web.command.FindUserCommand;
 import ua.nure.gnuchykh.web.command.LoginCommand;
 import ua.nure.gnuchykh.web.command.LogoutCommand;
 import ua.nure.gnuchykh.web.command.RegistrationUserCommand;
+import ua.nure.gnuchykh.web.command.SortCommand;
+import ua.nure.gnuchykh.web.command.UpdateCarCommand;
+import ua.nure.gnuchykh.web.command.UpdateUserCommand;
 import ua.nure.gnuchykh.web.command.ÑhangeLanguageCommand;
 
 public enum CommandEnum {
@@ -23,6 +27,11 @@ public enum CommandEnum {
     FINDALLUSER {
         {
             this.command = new FindUserCommand();
+        }
+    },
+    SORT {
+        {
+            this.command = new SortCommand();
         }
     },
     ADDREQUEST {
@@ -70,9 +79,24 @@ public enum CommandEnum {
             this.command = new ÑhangeLanguageCommand();
         }
     },
+    CLOSE {
+        {
+            this.command = new CloseCommand();
+        }
+    },
     LOGOUT {
         {
             this.command = new LogoutCommand();
+        }
+    },
+    UPDATECAR {
+        {
+            this.command = new UpdateCarCommand();
+        }
+    },
+    UPDATEUSER {
+        {
+            this.command = new UpdateUserCommand();
         }
     };
     ActionCommand command;

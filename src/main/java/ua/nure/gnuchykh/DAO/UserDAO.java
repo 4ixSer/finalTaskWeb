@@ -179,8 +179,8 @@ public class UserDAO {
             ps.setString(2, entity.getPassword());
             ps.setString(3, entity.getName());
             ps.setString(4, entity.getEmail());
-            // TODO тут заплатка удалить
-            ps.setInt(5, 3);
+
+            ps.setInt(5, entity.getType().value());
             ps.setInt(6, entity.getId());
             ps.executeUpdate();
             ps.close();
