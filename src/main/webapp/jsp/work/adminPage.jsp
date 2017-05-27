@@ -141,11 +141,11 @@ function updateForm(f) {
 				<!--Таблица дял отрисовки юзеров   -->
 			<table align="center">
 				<tr>
-					<th>ID</th>
-					<th>Login</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Role</th>
+					<th>ID <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=users">&#11015</a></th>
+					<th>Login <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYLOGIN&object=users">&#11015</a></th>
+					<th>Name <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYNAME&object=users">&#11015</a></th>
+					<th>Email <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYEMAIL&object=users">&#11015</a></th>
+					<th>Role<a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYROLE&object=users">&#11015</a></th>
 				</tr>
 
 				<c:forEach var="elem" items="${users}" varStatus="status">
@@ -153,10 +153,10 @@ function updateForm(f) {
 						<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
 							<input type="hidden" name="command"  value="UPDATEUSER" />
 							<td><c:out value="${ elem.id }" /> <input type="hidden" name="id"  value="${ elem.id }" /></td>
-							<td><c:out value="${ elem.login }" /> </td>
-							<td><input type="text" name="name"  pattern="[A-Za-zА-Яа-яёЁ0-9]{2,20}"  value="${ elem.name }" disabled /></td>
-							<td><input type="email" name="email"	  value="${ elem.email }" disabled /></td>
-							<td><c:out value="${ elem.type }" /></td>
+							<td><c:out value="${ elem.login }" />   </td>
+							<td><input type="text" name="name"  pattern="[A-Za-zА-Яа-яёЁ0-9]{2,20}"  value="${ elem.name }" disabled /> </td>
+							<td><input type="email" name="email"	  value="${ elem.email }" disabled /> </td>
+							<td><c:out value="${ elem.type }" />  </td>
 							<td><a href="http://localhost:8080/WEB/controller?command=DELETEUSER&id=${elem.id }"><fmt:message key="label.delete" bundle="${rb}" /></a></td>
 							<td><input type="checkbox" name="agree" onclick="agreeForm(this.form)"></td>
 							<td><input type="submit" name="change" value="Изменить" disabled></td>
@@ -182,12 +182,12 @@ function updateForm(f) {
 			<table align="center">
 				<tr>
 					<th>ID</th>
-					<th><fmt:message key="car.Namber" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=text&object=cars">&#11015</a></th>
-					<th><fmt:message key="car.Type" bundle="${rb}" /></th>
-					<th><fmt:message key="car.Carrying" bundle="${rb}" /></th>
-					<th><fmt:message key="car.Amount" bundle="${rb}" /></th>
-					<th><fmt:message key="car.EnginePower" bundle="${rb}" /></th>
-					<th><fmt:message key="car.Statuc" bundle="${rb}" /></th>
+					<th><fmt:message key="car.Namber" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYNAMBER&object=cars">&#11015</a></th>
+					<th><fmt:message key="car.Type" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYTYPE&object=cars">&#11015</a></th>
+					<th><fmt:message key="car.Carrying" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYCARRYING&object=cars">&#11015</a></th>
+					<th><fmt:message key="car.Amount" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYAMOUNT&object=cars">&#11015</a></th>
+					<th><fmt:message key="car.EnginePower" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYENGINE&object=cars">&#11015</a></th>
+					<th><fmt:message key="car.Statuc" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=cars">&#11015</a></th>
 					<th><fmt:message key="car.Comments" bundle="${rb}" /></th>
 				</tr>
 

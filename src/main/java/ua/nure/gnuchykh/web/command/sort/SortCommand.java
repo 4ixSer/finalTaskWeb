@@ -1,7 +1,6 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.sort;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +9,9 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.entity.cars.Car;
+import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class SortCommand implements ActionCommand {
 
@@ -22,18 +23,22 @@ public class SortCommand implements ActionCommand {
         LOG.info("Начало работы " + request.getParameter("command"));
         LOG.info("type "+ request.getParameter("typeSort")+"; object "+request.getParameter("object"));
 
+        String typeSort =request.getParameter("typeSort");
+        String object =request.getParameter("object");
         HttpSession session = request.getSession();
 
+        if(object.equals("cars")) {
+            List<Car> list = (List<Car>) session.getAttribute("cars");
+            Collections.sort(list, SortFactory.getCarComparator(typeSort));
+            session.setAttribute("cars", list);
 
-        List<Car> list = (List<Car>) session.getAttribute("cars");
-        Collections.sort(list, new Comparator<Car>() {
-                @Override
-                public int compare(Car o1, Car o2) {
-                        return o1.getNamber().toString().compareTo(o2.getNamber().toString());
-                }
-        });
 
-        session.setAttribute("cars", list);
+        } else if(object.equals("users")) {
+            List<User> list = (List<User>) session.getAttribute("users");
+            Collections.sort(list, SortFactory.getUserComparator(typeSort));
+            session.setAttribute("users", list);
+
+        }
 
         return getPageRole(session.getAttribute("userType").toString());
     }

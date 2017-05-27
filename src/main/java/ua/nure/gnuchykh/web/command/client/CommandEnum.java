@@ -13,10 +13,10 @@ import ua.nure.gnuchykh.web.command.FindUserCommand;
 import ua.nure.gnuchykh.web.command.LoginCommand;
 import ua.nure.gnuchykh.web.command.LogoutCommand;
 import ua.nure.gnuchykh.web.command.RegistrationUserCommand;
-import ua.nure.gnuchykh.web.command.SortCommand;
 import ua.nure.gnuchykh.web.command.UpdateCarCommand;
 import ua.nure.gnuchykh.web.command.UpdateUserCommand;
 import ua.nure.gnuchykh.web.command.ÑhangeLanguageCommand;
+import ua.nure.gnuchykh.web.command.sort.SortCommand;
 
 public enum CommandEnum {
     LOGIN {
