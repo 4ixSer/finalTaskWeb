@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.common;
 
 import java.util.Locale;
 
@@ -11,6 +11,7 @@ import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.manager.LoginManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class LoginCommand implements ActionCommand {
 

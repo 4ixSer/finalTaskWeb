@@ -56,7 +56,7 @@
 						<td><c:out value="${ requestUser.amountCar }" />   </td>
 						<td><c:out value="${ requestUser.enginePower }" />   </td>
 						<td><c:out value="${ requestUser.note }" />   </td>
-						<td><a href="http://localhost:8080/WEB/controller?command=FINDBYCHARACTERISTICS">Найти машину</a>   </td>
+						<td><a href="http://localhost:8080/WEB/controller?command=FINDCARBYCHARACTERISTICS">Найти машину</a>   </td>
 						<td><a  href="http://localhost:8080/WEB/controller?command=DENYREQUEST&id=${requestUser.namberRequest }">Отказать</a></td>
 
 
@@ -64,7 +64,7 @@
 			</table>
 				<c:if test="${not empty requestCar}">
 					<dib align="center">
-						<form align="center" name="formRequest" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+						<form align="center" name="formRequest" method="POST" action="http://localhost:8080/WEB/controller" >
 						<input type="hidden" name="command" value="ADDFLIGHT" />
 
 							<select name="selectedCar" required ">
@@ -96,7 +96,7 @@
 	<c:if test="${not empty allFlight}">
 
 		<table align="center">
-			<a  href="http://localhost:8080/WEB/controller?command=close&table=allFlight">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&table=allFlight">	&times;</a>
 				<tr>
 					<th>namber <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
 					<th>date  <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
@@ -126,7 +126,7 @@
 
 	<!-- logout -->
 	<p align="right">
-		<a href="http://localhost:8080/WEB/controller?command=logout"><fmt:message
+		<a href="http://localhost:8080/WEB/controller?command=LOGOUT"><fmt:message
 				key="label.logout" bundle="${rb}" /></a>
 	</p>
 	<%@ include file="/jsp/footer.jspf"%>

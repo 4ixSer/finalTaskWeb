@@ -17,7 +17,7 @@
 	</h2>
 
 		<!-- регистрация пользователей  -->
-	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" >
 		<input type="hidden" name="command"  value="REGISTRATIONUSER" />
 		<input type="text" name="login" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" placeholder="login" />
 		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" placeholder="password" />
@@ -36,7 +36,7 @@
 
 
 	<!-- регистарция новых автомобилей  -->
-	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+	<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" >
 		<input type="hidden" name="command" value="ADDCAR" />
 		<input type="text" name="namber"  pattern="[A-Z]{2}[0-9]{4}[A-Z]{2}" placeholder="namber" />
 
@@ -87,7 +87,7 @@
 	<br />
 	<c:if test="${not empty users}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=users">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&amp;table=users">	&times;</a>
 				<!--Таблица дял отрисовки юзеров   -->
 			<table align="center">
 				<tr>
@@ -122,7 +122,7 @@
 	<br />
 	<c:if test="${not empty cars}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=cars">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&amp;table=cars">	&times;</a>
 			<!--Таблица дял отрисовки машин   -->
 			<table align="center">
 				<tr>

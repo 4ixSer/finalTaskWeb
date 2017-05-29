@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.administrator;
 
 import java.util.List;
 
@@ -12,10 +12,11 @@ import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindByCharacteristicsCommand implements ActionCommand {
+public class FindCarByCharacteristicsCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(FindByCharacteristicsCommand.class);
+    private static final Logger LOG = Logger.getLogger(FindCarByCharacteristicsCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {

@@ -8,9 +8,10 @@
 <title>Login</title>
 </head>
 <body>
+	<%@ include file="/jsp/head.jspf"%>
 
-	<form align="center" name="loginForm" method="POST"		action="/WEB/controller"		accept-charset="Windows-1251">
-		<input type="hidden" name="command" value="login" />
+	<form align="center" name="loginForm" method="POST"	action="/WEB/controller" >
+		<input type="hidden" name="command" value="LOGIN" />
 		<fmt:message key="label.login" bundle="${rb}" />:
 		<br />
 		<input type="text" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" name="login" placeholder="login" />

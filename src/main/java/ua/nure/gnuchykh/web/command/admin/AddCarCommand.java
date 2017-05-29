@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.admin;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,10 +9,11 @@ import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class CreateCarCommand implements ActionCommand {
+public class AddCarCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(CreateCarCommand.class);
+    private static final Logger LOG = Logger.getLogger(AddCarCommand.class);
 
     private static final String PARAM_NAME_NAMBER = "namber";
     private static final String PARAM_NAME_TYPE = "type";

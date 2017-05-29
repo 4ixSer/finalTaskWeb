@@ -1,6 +1,6 @@
 <div align="right">
 
-	<a href="http://localhost:8080/WEB/controller?command=changelanguage&language=<fmt:message key="label.language" bundle="${rb}" />">
+	<a href="http://localhost:8080/WEB/controller?command=CHANGELANGUAGE&language=<fmt:message key="label.language" bundle="${rb}" />">
 		<fmt:message key="label.language" bundle="${rb}" />
 	</a>
 	<hr>

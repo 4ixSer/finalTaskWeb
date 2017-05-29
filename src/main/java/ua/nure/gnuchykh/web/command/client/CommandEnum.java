@@ -1,152 +1,183 @@
 package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
-import ua.nure.gnuchykh.web.command.AddFlightCommand;
-import ua.nure.gnuchykh.web.command.AddRequestCommand;
-import ua.nure.gnuchykh.web.command.CancelRequestCommand;
-import ua.nure.gnuchykh.web.command.CloseCommand;
-import ua.nure.gnuchykh.web.command.CreateCarCommand;
-import ua.nure.gnuchykh.web.command.DeleteCarCommand;
-import ua.nure.gnuchykh.web.command.DeleteUserCommand;
-import ua.nure.gnuchykh.web.command.DenyRequestCommand;
 import ua.nure.gnuchykh.web.command.FindALLRequestCommand;
-import ua.nure.gnuchykh.web.command.FindAllCarsCommand;
-import ua.nure.gnuchykh.web.command.FindAllFlightCommand;
-import ua.nure.gnuchykh.web.command.FindByCharacteristicsCommand;
-import ua.nure.gnuchykh.web.command.FindRequestByUserID;
-import ua.nure.gnuchykh.web.command.FindRequestCommand;
-import ua.nure.gnuchykh.web.command.FindUserCommand;
-import ua.nure.gnuchykh.web.command.FindUserFlightCommand;
-import ua.nure.gnuchykh.web.command.LoginCommand;
-import ua.nure.gnuchykh.web.command.LogoutCommand;
-import ua.nure.gnuchykh.web.command.RegistrationUserCommand;
-import ua.nure.gnuchykh.web.command.UpdateCarCommand;
-import ua.nure.gnuchykh.web.command.UpdateFlightCommand;
-import ua.nure.gnuchykh.web.command.UpdateUserCommand;
-import ua.nure.gnuchykh.web.command.СhangeLanguageCommand;
+import ua.nure.gnuchykh.web.command.admin.AddCarCommand;
+import ua.nure.gnuchykh.web.command.admin.DeleteCarCommand;
+import ua.nure.gnuchykh.web.command.admin.DeleteUserCommand;
+import ua.nure.gnuchykh.web.command.admin.FindAllCarsCommand;
+import ua.nure.gnuchykh.web.command.admin.FindAllUsersCommand;
+import ua.nure.gnuchykh.web.command.admin.RegisteringUserCommand;
+import ua.nure.gnuchykh.web.command.admin.UpdateCarCommand;
+import ua.nure.gnuchykh.web.command.admin.UpdateUserCommand;
+import ua.nure.gnuchykh.web.command.administrator.AddFlightCommand;
+import ua.nure.gnuchykh.web.command.administrator.DenyRequestCommand;
+import ua.nure.gnuchykh.web.command.administrator.FindAllFlightCommand;
+import ua.nure.gnuchykh.web.command.administrator.FindCarByCharacteristicsCommand;
+import ua.nure.gnuchykh.web.command.administrator.FindRequestCommand;
+import ua.nure.gnuchykh.web.command.common.CloseCommand;
+import ua.nure.gnuchykh.web.command.common.LoginCommand;
+import ua.nure.gnuchykh.web.command.common.LogoutCommand;
+import ua.nure.gnuchykh.web.command.common.СhangeLanguageCommand;
+import ua.nure.gnuchykh.web.command.driver.AddRequestCommand;
+import ua.nure.gnuchykh.web.command.driver.CancelRequestCommand;
+import ua.nure.gnuchykh.web.command.driver.FindRequestByUserId;
+import ua.nure.gnuchykh.web.command.driver.FindUserFlightCommand;
+import ua.nure.gnuchykh.web.command.driver.UpdateFlightCommand;
 import ua.nure.gnuchykh.web.command.sort.SortCommand;
 
 public enum CommandEnum {
+    // логин
     LOGIN {
         {
             this.command = new LoginCommand();
         }
     },
-    FINDALLUSER {
-        {
-            this.command = new FindUserCommand();
-        }
-    },
-    SORT {
-        {
-            this.command = new SortCommand();
-        }
-    },
-    ADDFLIGHT {
-        {
-            this.command = new AddFlightCommand();
-        }
-    },
-    ADDREQUEST {
-        {
-            this.command = new AddRequestCommand();
-        }
-    },
-    FINDREQUESTBYUSERID {
-        {
-            this.command = new FindRequestByUserID();
-        }
-    },
-    REGISTRATIONUSER {
-        {
-            this.command = new RegistrationUserCommand();
-        }
-    },
-    DELETEUSER {
-        {
-            this.command = new DeleteUserCommand();
-        }
-    },
-    FINDALLREQUEST {
-        {
-            this.command = new FindALLRequestCommand();
-        }
-    },
-    DELETECAR {
-        {
-            this.command = new DeleteCarCommand();
-        }
-    },
-    FINDALLCARS {
-        {
-            this.command = new FindAllCarsCommand();
-        }
-    },
-    ADDCAR {
-        {
-            this.command = new CreateCarCommand();
-        }
-    },
-    CHANGELANGUAGE {
-        {
-            this.command = new СhangeLanguageCommand();
-        }
-    },
-    CLOSE {
-        {
-            this.command = new CloseCommand();
-        }
-    },
+    // Выход
     LOGOUT {
         {
             this.command = new LogoutCommand();
         }
     },
-    CANCELREQUEST {
+    // Смена языка
+    CHANGELANGUAGE {
         {
-            this.command = new CancelRequestCommand();
+            this.command = new СhangeLanguageCommand();
         }
     },
-    DENYREQUEST {
+    // регистрация пользователся
+    REGISTERINGUSER {
         {
-            this.command = new DenyRequestCommand();
+            this.command = new RegisteringUserCommand();
         }
     },
+    //Добавить автомобиль
+    ADDCAR {
+        {
+            this.command = new AddCarCommand();
+        }
+    },
+    //Удалить машину
+    DELETECAR {
+        {
+            this.command = new DeleteCarCommand();
+        }
+    },
+    //удалить юзера
+    DELETEUSER {
+        {
+            this.command = new DeleteUserCommand();
+        }
+    },
+    //найти всех пользователей
+    FINDALLUSERS {
+        {
+            this.command = new FindAllUsersCommand();
+        }
+    },
+    //найти все машины
+    FINDALLCARS {
+        {
+            this.command = new FindAllCarsCommand();
+        }
+    },
+    //обновить характеристики юзера
+    UPDATEUSER {
+        {
+            this.command = new UpdateUserCommand();
+        }
+    },
+    //Обноить характеристики машины
     UPDATECAR {
         {
             this.command = new UpdateCarCommand();
         }
     },
-    FINDREQUEST {
+    //вспомогательная команда для закрытия окон таблиц (удаления данных с сессии)
+    CLOSE {
         {
-            this.command = new FindRequestCommand();
+            this.command = new CloseCommand();
         }
     },
-    FINDALLFLIGHT {
+    //вспомогательная команда для сортировки таблиц
+    SORT {
         {
-            this.command = new FindAllFlightCommand();
+            this.command = new SortCommand();
         }
     },
-    UPDATEFLIGHT {
+    // Просмотреть список своих заявок
+    FINDREQUESTBYUSERID {
         {
-            this.command = new UpdateFlightCommand();
+            this.command = new FindRequestByUserId();
         }
     },
+    //подать заяку может только юзер
+    ADDREQUEST {
+        {
+            this.command = new AddRequestCommand();
+        }
+    },
+    //отменить заявку может только юзер
+    //TODO возможно обьеденить с отказом у диспечера
+    CANCELREQUEST {
+        {
+            this.command = new CancelRequestCommand();
+        }
+    },
+    //найти все рейсы водителя
     FINDUSERFLIGHT {
         {
             this.command = new FindUserFlightCommand();
         }
     },
-    FINDBYCHARACTERISTICS {
+
+    //Диспечер
+    //команда для взятия заявки диспечером
+    FINDREQUEST {
         {
-            this.command = new FindByCharacteristicsCommand();
+            this.command = new FindRequestCommand();
         }
     },
-    UPDATEUSER {
+    //Команда для поска машин подходяших для заявки
+    //TODO возможно обьеденить с бвзятием заявки
+    FINDCARBYCHARACTERISTICS {
         {
-            this.command = new UpdateUserCommand();
+            this.command = new FindCarByCharacteristicsCommand();
+        }
+    },
+    // отказать в заявке
+    DENYREQUEST {
+        {
+            this.command = new DenyRequestCommand();
+        }
+    },
+    //создать рейс
+    ADDFLIGHT {
+        {
+            this.command = new AddFlightCommand();
+        }
+    },
+    // найти все рейсы
+    FINDALLFLIGHT {
+        {
+            this.command = new FindAllFlightCommand();
+        }
+    },
+    //TODO не используеться
+    FINDALLREQUEST {
+        {
+            this.command = new FindALLRequestCommand();
+        }
+    },
+
+    //водитель оставляет коментарии об рейсе и закрывает рейс
+    UPDATEFLIGHT {
+        {
+            this.command = new UpdateFlightCommand();
         }
     };
+
+
     ActionCommand command;
 
     public ActionCommand getCurrentCommand() {

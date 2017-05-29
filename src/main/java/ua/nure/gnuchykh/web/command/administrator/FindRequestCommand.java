@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.administrator;
 
 import java.time.LocalDateTime;
 
@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import ua.nure.gnuchykh.DAO.RequestDAO;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindRequestCommand implements ActionCommand {
 

@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.driver;
 
 import java.util.List;
 
@@ -13,6 +13,7 @@ import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.subject.Flight;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class UpdateFlightCommand implements ActionCommand {
 

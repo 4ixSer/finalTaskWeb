@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.admin;
 
 import java.util.List;
 
@@ -7,13 +7,14 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.DAO.CarDAO;
-import ua.nure.gnuchykh.entity.cars.Car;
+import ua.nure.gnuchykh.DAO.UserDAO;
+import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class DeleteCarCommand implements ActionCommand {
+public class DeleteUserCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(FindUserCommand.class);
+    private static final Logger LOG = Logger.getLogger(FindAllUsersCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -24,14 +25,14 @@ public class DeleteCarCommand implements ActionCommand {
 
         HttpSession session = request.getSession();
 
-        CarDAO dao = new CarDAO();
+        UserDAO dao = new UserDAO();
 
         LOG.info("Статус удаления " + dao.delete(id));
 
-        List<Car> cars = dao.findAll();
+        List<User> users = dao.findAll();
 
         LOG.debug("Нашли всех зареистрированыых юзерров.");
-        session.setAttribute("cars", cars);
+        session.setAttribute("users", users);
 
         return ConfigurationManager.getProperty("path.page.admin");
 

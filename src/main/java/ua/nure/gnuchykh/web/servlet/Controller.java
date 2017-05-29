@@ -36,7 +36,7 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         LOG.info("Начало рабоыт");
-        request.setCharacterEncoding("cp1251");
+
 
         String page = null;
         // определение команды, пришедшей из JSP

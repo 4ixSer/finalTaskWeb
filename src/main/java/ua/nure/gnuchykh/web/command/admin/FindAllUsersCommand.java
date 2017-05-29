@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.admin;
 
 import java.util.List;
 
@@ -10,10 +10,11 @@ import org.apache.log4j.Logger;
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindUserCommand implements ActionCommand {
+public class FindAllUsersCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(FindUserCommand.class);
+    private static final Logger LOG = Logger.getLogger(FindAllUsersCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {

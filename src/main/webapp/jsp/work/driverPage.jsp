@@ -39,8 +39,8 @@ function agreeForm(f) {
 	</h2>
 
 		<!-- регистрация заявки   -->
-	<form align="center" name="formRequest" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
-		<input type="hidden" name="command" value="addRequest" />
+	<form align="center" name="formRequest" method="POST" action="/WEB/controller" >
+		<input type="hidden" name="command" value="ADDREQUEST" />
 		<input type="datetime-local" name="date" value="2017-04-10T20:37:40" />
 		<select name="type" required ">
 			<option  selected value="1"> <fmt:message key="car.type.PLATFORM" bundle="${rb}" /> </option>
@@ -72,7 +72,7 @@ function agreeForm(f) {
 
 		<!--Запрос на поиск своих запросов   -->
 	<form align="center" name="findAllREQForm" method="POST"
-		action="http://localhost:8080/WEB/controller"">
+		action="/WEB/controller"">
 		<input type="hidden" name="command" value="FINDREQUESTBYUSERID" />
 
 		<input	type="submit" value="<fmt:message key="menu.find.request" bundle="${rb}" />">
@@ -80,18 +80,18 @@ function agreeForm(f) {
 	<br />
 	<c:if test="${not empty userRequest}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&table=userRequest">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&table=userRequest">	&times;</a>
 			<!--Таблица дял отрисовки запросов   -->
 			<table align="center">
 				<tr>
-					<th>№ <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=userRequest">&#11015</a> </th>
-					<th>dataRequest <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATAREQUEST&object=userRequest">&#11015</a></th>
-					<th>dataDeparture <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATADEPARTURE&object=userRequest">&#11015</a></th>
-					<th>type <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYTYPE&object=userRequest">&#11015</a> </th>
-					<th>carrying <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYCARRYING&object=userRequest">&#11015</a></th>
-					<th>amount <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYAMOUNT&object=userRequest">&#11015</a>	</th>
-					<th>engine <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYENGINEPOWER&object=userRequest">&#11015</a> </th>
-					<th>status <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=userRequest">&#11015</a> </th>
+					<th>№ <a href="/WEB/controller?command=SORT&typeSort=SORTBYID&object=userRequest">&#11015</a> </th>
+					<th>dataRequest <a href="/WEB/controller?command=SORT&typeSort=SORTBYDATAREQUEST&object=userRequest">&#11015</a></th>
+					<th>dataDeparture <a href="/WEB/controller?command=SORT&typeSort=SORTBYDATADEPARTURE&object=userRequest">&#11015</a></th>
+					<th>type <a href="/WEB/controller?command=SORT&typeSort=SORTBYTYPE&object=userRequest">&#11015</a> </th>
+					<th>carrying <a href="/WEB/controller?command=SORT&typeSort=SORTBYCARRYING&object=userRequest">&#11015</a></th>
+					<th>amount <a href="/WEB/controller?command=SORT&typeSort=SORTBYAMOUNT&object=userRequest">&#11015</a>	</th>
+					<th>engine <a href="/WEB/controller?command=SORT&typeSort=SORTBYENGINEPOWER&object=userRequest">&#11015</a> </th>
+					<th>status <a href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=userRequest">&#11015</a> </th>
 
 				</tr>
 
@@ -105,7 +105,7 @@ function agreeForm(f) {
 						<td><c:out value="${ elem.amountCar }" /></td>
 						<td><c:out value="${ elem.enginePower }" /></td>
 						<td><c:out value="${ elem.status }" /></td>
-						<td><a  href="http://localhost:8080/WEB/controller?command=CANCELREQUEST&id=${elem.namberRequest }">Отменить</a></td>
+						<td><a  href="/WEB/controller?command=CANCELREQUEST&id=${elem.namberRequest }">Отменить</a></td>
 					</tr>
 				</c:forEach>
 
@@ -115,7 +115,7 @@ function agreeForm(f) {
 
 	<!--Запрос на просмотр всех рейсов   -->
 	<form align="center" name="findFlight" method="POST"
-		action="http://localhost:8080/WEB/controller">
+		action="/WEB/controller">
 		<input type="hidden" name="command" value="FINDUSERFLIGHT" />
 
 		<input	type="submit" value="Найти все рейсы">
@@ -125,11 +125,11 @@ function agreeForm(f) {
 	<c:if test="${not empty allFlight}">
 
 		<table align="center">
-			<a  href="http://localhost:8080/WEB/controller?command=close&table=allFlight">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&table=allFlight">	&times;</a>
 				<tr>
-					<th>namber <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
-					<th>date  <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
-					<th>status <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+					<th>namber <a href="/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
+					<th>date  <a href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
+					<th>status <a href="/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
 					<th>driver</th>
 					<th>dispatcher</th>
 					<th>car</th>
@@ -140,7 +140,7 @@ function agreeForm(f) {
 				<c:forEach var="elem" items="${allFlight}" varStatus="status">
 
 					<tr align="center">
-						<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+						<form align="center" name="loginForm" method="POST" action="/WEB/controller" >
 							<input type="hidden" name="command"  value="UPDATEFLIGHT" />
 							<input type="hidden" name="idFlight"  value="${ elem.namberFlight }" />
 							<td><c:out value="${ elem.namberFlight }" /></td>
@@ -170,7 +170,7 @@ function agreeForm(f) {
 
 	<!-- logout -->
 	<p align="right">
-		<a href="http://localhost:8080/WEB/controller?command=logout"><fmt:message key="label.logout" bundle="${rb}" /></a>
+		<a href="/WEB/controller?command=LOGOUT"><fmt:message key="label.logout" bundle="${rb}" /></a>
 	</p>
 	<%@ include file="/jsp/footer.jspf"%>
 </body>

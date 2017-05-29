@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.admin;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,10 +7,11 @@ import org.apache.log4j.Logger;
 import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class RegistrationUserCommand implements ActionCommand {
+public class RegisteringUserCommand implements ActionCommand {
 
-    private static final Logger LOG = Logger.getLogger(RegistrationUserCommand.class);
+    private static final Logger LOG = Logger.getLogger(RegisteringUserCommand.class);
 
     private static final String PARAM_NAME_LOGIN = "login";
     private static final String PARAM_NAME_PASSWORD = "password";

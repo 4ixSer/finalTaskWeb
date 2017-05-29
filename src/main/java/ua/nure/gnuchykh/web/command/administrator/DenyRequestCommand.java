@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.administrator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -9,6 +9,7 @@ import ua.nure.gnuchykh.DAO.RequestDAO;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class DenyRequestCommand implements ActionCommand {
 

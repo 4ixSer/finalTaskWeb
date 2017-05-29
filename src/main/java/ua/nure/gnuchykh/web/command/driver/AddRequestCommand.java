@@ -1,4 +1,4 @@
-package ua.nure.gnuchykh.web.command;
+package ua.nure.gnuchykh.web.command.driver;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +12,7 @@ import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
 import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class AddRequestCommand implements ActionCommand {
 
