@@ -14,7 +14,7 @@ import ua.nure.gnuchykh.util.ConfigurationManager;
 public class FindALLRequestCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindALLRequestCommand.class);
-
+    //ÍÅÃÎÒÎÂ ÇÀÃÎÒÎÂÊÀ ÄË‗ ×ÅÃÎÒÎ
     @Override
     public String execute(HttpServletRequest request) {
         LOG.info("Íאקאכמ נאבמעû " + request.getParameter("command"));

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form align="center" name="loginForm" method="POST"		action="http://localhost:8080/WEB/controller"		accept-charset="Windows-1251">
+	<form align="center" name="loginForm" method="POST"		action="/WEB/controller"		accept-charset="Windows-1251">
 		<input type="hidden" name="command" value="login" />
 		<fmt:message key="label.login" bundle="${rb}" />:
 		<br />

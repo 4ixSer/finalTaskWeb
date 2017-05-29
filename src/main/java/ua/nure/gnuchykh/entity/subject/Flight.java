@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import ua.nure.gnuchykh.entity.cars.Car;
-import ua.nure.gnuchykh.entity.users.User;
-
 
 /**
  * Сушьность реализуюшая поведение рейса.
@@ -33,24 +30,24 @@ public class Flight implements Serializable{
     /**
      * Кто находится в данном рейсе.
      */
-    private User driver;
+    private Integer driver;
 
     /**
      * Кто расматривал данный рейс.
      */
-    private User dispatcher;
+    private Integer dispatcher;
 
     /**
      * Cылка на машину в рейсе.
      */
-    private Car car;
+    private Integer car;
 
     /**
      * примечание.
      */
     private String note;
 
-    public Flight(LocalDateTime date, Status status, User driver, User dispatcher, Car car, String note) {
+    public Flight(LocalDateTime date, Status status, Integer driver, Integer dispatcher, Integer car, String note) {
         super();
         this.date = date;
         this.status = status;
@@ -104,37 +101,37 @@ public class Flight implements Serializable{
 
 
 
-    public User getDriver() {
+    public Integer getDriver() {
         return driver;
     }
 
 
 
-    public void setDriver(User driver) {
+    public void setDriver(Integer driver) {
         this.driver = driver;
     }
 
 
 
-    public User getDispatcher() {
+    public Integer getDispatcher() {
         return dispatcher;
     }
 
 
 
-    public void setDispatcher(User dispatcher) {
+    public void setDispatcher(Integer dispatcher) {
         this.dispatcher = dispatcher;
     }
 
 
 
-    public Car getCar() {
+    public Integer getCar() {
         return car;
     }
 
 
 
-    public void setCar(Car car) {
+    public void setCar(Integer car) {
         this.car = car;
     }
 

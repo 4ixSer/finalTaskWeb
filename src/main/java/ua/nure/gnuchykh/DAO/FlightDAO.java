@@ -8,29 +8,24 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.subject.Flight;
 import ua.nure.gnuchykh.entity.subject.Status;
-import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
-
-
-public class FlightDAO  {
+public class FlightDAO {
 
     private static final String SQL_SELECT_All_FLIGHT = "SELECT * FROM flight";
     private static final String SQL_SELECT_FLIGHT_BY_ID = "SELECT * FROM flight where id=?";
+    private static final String SQL_SELECT_FLIGHT_BY_USER_ID = "SELECT * FROM flight where driver=?";
     private static final String SQL_INSERT_FLIGHT = "INSERT INTO flight (date, status, driver, car, dispatcher, note) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String SQL_DELETE_FLIGHT = "DELETE FROM flight WHERE id=?";
-    private static final String SQL_UPDARE_FLIGHT= "UPDATE flight SET date=?, status=?, driver=?, car=?, dispatcher=?, note=? WHERE id=?";
+    private static final String SQL_UPDARE_FLIGHT = "UPDATE flight SET date=?, status=?, driver=?, car=?, dispatcher=?, note=? WHERE id=?";
 
     private Connection connector;
 
     public FlightDAO() {
 
     }
-
-
 
     public List<Flight> findAll() {
 
@@ -65,21 +60,22 @@ public class FlightDAO  {
         flight.setStatus(Status.fromValue(resultSet.getInt("status")));
 
         // получение драйвера по id
-        User driver = new UserDAO().findEntityById(resultSet.getInt("driver"));
-        flight.setDriver(driver);
+        // User driver = new
+        // UserDAO().findEntityById(resultSet.getInt("driver"));
+        flight.setDriver(resultSet.getInt("driver"));
 
         // получение диспечера по id
-        User dispatcher = new UserDAO().findEntityById(resultSet.getInt("dispatcher"));
-        flight.setDispatcher(dispatcher);
+        // User dispatcher = new
+        // UserDAO().findEntityById(resultSet.getInt("dispatcher"));
+        flight.setDispatcher(resultSet.getInt("dispatcher"));
 
         // полученеи выбраной машыны
-        Car car = new CarDAO().findEntityById(resultSet.getInt("car"));
-        flight.setCar(car);
+//        Car car = new CarDAO().findEntityById(resultSet.getInt("car"));
+        flight.setCar(resultSet.getInt("car"));
 
         flight.setNote(resultSet.getString("note"));
         return flight;
     }
-
 
     public Flight findEntityById(int id) {
         connector = null;
@@ -107,7 +103,6 @@ public class FlightDAO  {
 
     }
 
-
     public boolean delete(int id) {
         connector = null;
         PreparedStatement ps = null;
@@ -130,11 +125,9 @@ public class FlightDAO  {
         return true;
     }
 
-
     public boolean delete(Flight entity) {
         return delete(entity.getNamberFlight());
     }
-
 
     public boolean create(Flight entity) {
         connector = null;
@@ -145,9 +138,9 @@ public class FlightDAO  {
             ps = connector.prepareStatement(SQL_INSERT_FLIGHT);
             ps.setString(1, entity.toStringDate());
             ps.setInt(2, entity.getStatus().value());
-            ps.setInt(3, entity.getDriver().getId());
-            ps.setInt(4, entity.getCar().getId());
-            ps.setInt(5, entity.getDispatcher().getId());
+            ps.setInt(3, entity.getDriver());
+            ps.setInt(4, entity.getCar());
+            ps.setInt(5, entity.getDispatcher());
             ps.setString(6, entity.getNote());
 
             ps.execute();
@@ -164,7 +157,6 @@ public class FlightDAO  {
         return true;
     }
 
-
     public Flight update(Flight entity) {
         connector = null;
         PreparedStatement ps = null;
@@ -174,9 +166,9 @@ public class FlightDAO  {
             ps = connector.prepareStatement(SQL_UPDARE_FLIGHT);
             ps.setString(1, entity.toStringDate());
             ps.setInt(2, entity.getStatus().value());
-            ps.setDouble(3, entity.getDriver().getId());
-            ps.setDouble(4, entity.getCar().getId());
-            ps.setDouble(5, entity.getDispatcher().getId());
+            ps.setDouble(3, entity.getDriver());
+            ps.setDouble(4, entity.getCar());
+            ps.setDouble(5, entity.getDispatcher());
             ps.setString(6, entity.getNote());
             ps.setInt(7, entity.getNamberFlight());
 
@@ -192,5 +184,36 @@ public class FlightDAO  {
             ConnectionPool.close(connector);
         }
         return entity;
+    }
+
+    public  List<Flight> findEntityByDriverId(int id) {
+        connector = null;
+        PreparedStatement ps = null;
+
+        List<Flight> flights = new ArrayList<Flight>();
+
+        try {
+            connector = ConnectionPool.getConnection();
+            ps = connector.prepareStatement(SQL_SELECT_FLIGHT_BY_USER_ID);
+            ps.setInt(1, id);
+
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                Flight flight = createFlight(resultSet);
+                flights.add(flight);
+
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error createStatement: " + e);
+            // TODO —юда систему логировани€
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+
+        }
+
+        return flights;
+
     }
 }

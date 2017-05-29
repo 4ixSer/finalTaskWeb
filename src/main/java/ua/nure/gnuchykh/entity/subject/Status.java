@@ -9,11 +9,11 @@ package ua.nure.gnuchykh.entity.subject;
 public enum Status {
 
     /**
-     * открыт, отклонен, отменен, в прогрессе, закрыт, обрабатываетьс€
+     * открыт, отклонен, отменен, в прогрессе, закрыт, обрабатываетьс€, отправлен
      *
      */
 
-    OPEN(1), REJEJECTED(2), CANCELED(3), INPROGRESS(4), CLOSED(5), PROCESSED(6);
+    OPEN(1), REJEJECTED(2), CANCELED(3), INPROGRESS(4), CLOSED(5), PROCESSED(6) ,SUBMITTED(7);
 
     private Integer value;
 

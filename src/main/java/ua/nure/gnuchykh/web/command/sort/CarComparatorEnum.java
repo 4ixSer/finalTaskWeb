@@ -26,6 +26,16 @@ public enum CarComparatorEnum {
             };
         }
     },
+    SORTBYID {
+        {
+            this.command = new Comparator<Car>() {
+                @Override
+                public int compare(Car o1, Car o2) {
+                    return o1.getId().compareTo(o2.getId());
+                }
+            };
+        }
+    },
     SORTBYAMOUNT {
         {
             this.command = new Comparator<Car>() {

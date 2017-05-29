@@ -25,10 +25,7 @@ public class FindRequestByUserID implements ActionCommand {
         RequestDAO dao = new  RequestDAO();
         List<Request> userReques = dao.findEntityByUserId((Integer) session.getAttribute("userID"));
 
-        LOG.info("Нашли всех заявки юзера.");
-        for (Request request2 : userReques) {
-            LOG.info(request2);
-        }
+
         session.setAttribute("userRequest", userReques);
 
         return ConfigurationManager.getProperty("path.page.driver");

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.entity.cars.Car;
+import ua.nure.gnuchykh.entity.subject.Flight;
+import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
@@ -37,6 +39,16 @@ public class SortCommand implements ActionCommand {
             List<User> list = (List<User>) session.getAttribute("users");
             Collections.sort(list, SortFactory.getUserComparator(typeSort));
             session.setAttribute("users", list);
+
+        } else if(object.equals("userRequest")) {
+            List<Request> list = (List<Request>) session.getAttribute("userRequest");
+            Collections.sort(list, SortFactory.getRequestComparator(typeSort));
+            session.setAttribute("users", list);
+
+        } else if(object.equals("allFlight")) {
+            List<Flight> list = (List<Flight>) session.getAttribute("allFlight");
+            Collections.sort(list, SortFactory.getFlightComparator(typeSort));
+            session.setAttribute("allFlight", list);
 
         }
 

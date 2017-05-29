@@ -137,7 +137,7 @@ function updateForm(f) {
 	<br />
 	<c:if test="${not empty users}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=users">	&times;</a>
+			<a  href="http://localhost:8080/WEB/controller?command=close&table=users">	&times;</a>
 				<!--Таблица дял отрисовки юзеров   -->
 			<table align="center">
 				<tr>
@@ -177,11 +177,11 @@ function updateForm(f) {
 	<br />
 	<c:if test="${not empty cars}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=cars">	&times;</a>
+			<a  href="http://localhost:8080/WEB/controller?command=close&table=cars">	&times;</a>
 			<!--Таблица дял отрисовки машин   -->
 			<table align="center">
 				<tr>
-					<th>ID</th>
+					<th>ID <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=cars">&#11015</a></th>
 					<th><fmt:message key="car.Namber" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYNAMBER&object=cars">&#11015</a></th>
 					<th><fmt:message key="car.Type" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYTYPE&object=cars">&#11015</a></th>
 					<th><fmt:message key="car.Carrying" bundle="${rb}" /> <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYCARRYING&object=cars">&#11015</a></th>
@@ -193,7 +193,7 @@ function updateForm(f) {
 
 				<c:forEach var="elem" items="${cars}" varStatus="status">
 					<tr align="center">
-						<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+						<form align="center" name="loginForm" method="POST" action="controller" accept-charset="Windows-1251">
 							<input type="hidden" name="command"  value="UPDATECAR" />
 
 							<td><c:out value="${ elem.id }" /> <input type="hidden" name="id"  value="${ elem.id }" /></td>

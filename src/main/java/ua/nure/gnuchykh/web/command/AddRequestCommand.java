@@ -26,6 +26,8 @@ public class AddRequestCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
+        LOG.info(request.getParameter(PARAM_NAME_DATA)+" "+request.getParameter(PARAM_NAME_TYPE)+" "+request.getParameter(PARAM_NAME_CARRYING)+
+                " "+request.getParameter(PARAM_NAME_AMOUNT)+" "+request.getParameter(PARAM_NAME_ENGINE)+" "+request.getParameter(PARAM_NAME_COMMENTS));
 
         // извлечение из запроса логина и пароля
         LocalDateTime dataDeparture = LocalDateTime.parse(request.getParameter(PARAM_NAME_DATA));
@@ -43,7 +45,7 @@ public class AddRequestCommand implements ActionCommand {
 
         RequestDAO dao = new RequestDAO();
 
-        Request userRequest = new Request((Integer)session.getAttribute("userID"), localDateNow, dataDeparture, TYPE.fromValue(type), carrying, amount, engine, Status.INPROGRESS, comments);
+        Request userRequest = new Request((Integer)session.getAttribute("userID"), localDateNow, dataDeparture, TYPE.fromValue(type), carrying, amount, engine, Status.SUBMITTED, comments);
 
 
         if (dao.create(userRequest)) {

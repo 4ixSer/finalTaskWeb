@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +23,7 @@ public class RequestDAO {
     private static final String SQL_SELECT_REQUEST_BY_USER_ID = "SELECT * FROM request where ownerRequest=?";
     private static final String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
     private static final String SQL_UPDETE_REQUEST = "UPDATE request SET ownerRequest=?, dataRequest=?, dataDeparture=?, car_type=?, carrying_car=?, amount_car=?, enginePower=?, status=?, note=? WHERE id=?";
-
+    private static final String SQL_SELECT_FIRST_REQUEST = "SELECT * FROM request where dataDeparture > ? and status  = 7  LIMIT 1";
     private Connection connector;
 
     public RequestDAO() {
@@ -138,17 +140,12 @@ public class RequestDAO {
     }
 
     public boolean delete(int id) {
-        // Данный метод мне пока не нужен.
-        throw new IllegalArgumentException();
-    }
-
-    public boolean delete(Request entity) {
         connector = null;
         PreparedStatement ps = null;
         try {
             connector = ConnectionPool.getConnection();
             ps = connector.prepareStatement(SQL_DELETE_REQUEST);
-            ps.setInt(1, entity.getNamberRequest());
+            ps.setInt(1, id);
             ps.execute();
         } catch (SQLException e) {
             // TODO Сюда систему логирования
@@ -159,6 +156,10 @@ public class RequestDAO {
             ConnectionPool.close(connector);
         }
         return true;
+    }
+
+    public boolean delete(Request entity) {
+        return delete(entity.getNamberRequest());
     }
 
     public boolean create(Request entity) {
@@ -225,6 +226,35 @@ public class RequestDAO {
             ConnectionPool.close(connector);
         }
         return entity;
+    }
+
+    public Request findFirstRequest(LocalDateTime time) {
+        connector = null;
+        Request request = null;
+        PreparedStatement ps = null;
+
+        try {
+            connector = ConnectionPool.getConnection();
+            ps = connector.prepareStatement(SQL_SELECT_FIRST_REQUEST);
+            //TODO возможно тут бред
+
+            ps.setString(1, time.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss")));
+
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                request = createRequest(resultSet);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error createStatement: " + e);
+            // TODO Сюда систему логирования
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+
+        }
+
+        return request;
+
     }
 
 }

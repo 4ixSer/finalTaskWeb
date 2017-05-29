@@ -2,12 +2,33 @@
 	pageEncoding="UTF-8" isELIgnored="false"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <fmt:setLocale value="${language}" scope="session" />
 <fmt:setBundle basename="pagecontent" var="rb" />
 <!DOCTYPE html>
 <html>
 <head>
 <title><fmt:message key="label.title.driver" bundle="${rb}" /></title>
+<script>
+
+function agreeForm(f) {
+    // Если поставлен флажок, снимаем блокирование кнопки
+   if (f.agree.checked) {
+
+	   f.comments.hidden = 0;
+	   f.statusCar.hidden = 0;
+	   f.change.disabled = 0;
+
+   }
+    // В противном случае вновь блокируем кнопку
+    else {
+    	f.comments.hidden = 1;
+ 	   	f.statusCar.hidden = 1;
+ 	   	f.change.disabled = 1;
+    }
+
+}
+</script>
 </head>
 <body>
 	<%@ include file="/jsp/head.jspf"%>
@@ -37,9 +58,9 @@
 			<option value="13"> <fmt:message key="car.type.OTHERS" bundle="${rb}" /></option>
 		</select>
 
-		<input type="number" name="carrying" step="0.1" placeholder="Carrying" />
-		<input type="number" name="amount" step="0.1"	placeholder="Amount" />
-		<input type="number" name="engine" step="0.1" placeholder="Engine" />
+		<input type="number" name="carrying" step="0.1" pattern="[a-z]" placeholder="Carrying" />
+		<input type="number" name="amount" step="0.1"	pattern="[0-9]{1,5},[0-9]{2}" placeholder="Amount" />
+		<input type="number" name="engine" step="0.1" pattern="[0-9]{1,5},[0-9]{2}" placeholder="Engine" />
 		<input type="text" name="comments" placeholder="Comments" />
 
 		<input type="submit" value="<fmt:message key="menu.add.request" bundle="${rb}" />">
@@ -59,18 +80,18 @@
 	<br />
 	<c:if test="${not empty userRequest}">
 		<div>
-			<a  href="http://localhost:8080/WEB/controller?command=close&amp;table=userRequest">	&times;</a>
+			<a  href="http://localhost:8080/WEB/controller?command=close&table=userRequest">	&times;</a>
 			<!--Таблица дял отрисовки запросов   -->
 			<table align="center">
 				<tr>
-					<th>namberRequest</th>
-					<th>dataRequest</th>
-					<th>dataDeparture</th>
-					<th>type</th>
-					<th>carrying</th>
-					<th>amount</th>
-					<th>engine</th>
-					<th>status</th>
+					<th>№ <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=userRequest">&#11015</a> </th>
+					<th>dataRequest <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATAREQUEST&object=userRequest">&#11015</a></th>
+					<th>dataDeparture <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATADEPARTURE&object=userRequest">&#11015</a></th>
+					<th>type <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYTYPE&object=userRequest">&#11015</a> </th>
+					<th>carrying <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYCARRYING&object=userRequest">&#11015</a></th>
+					<th>amount <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYAMOUNT&object=userRequest">&#11015</a>	</th>
+					<th>engine <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYENGINEPOWER&object=userRequest">&#11015</a> </th>
+					<th>status <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=userRequest">&#11015</a> </th>
 
 				</tr>
 
@@ -84,13 +105,68 @@
 						<td><c:out value="${ elem.amountCar }" /></td>
 						<td><c:out value="${ elem.enginePower }" /></td>
 						<td><c:out value="${ elem.status }" /></td>
-
+						<td><a  href="http://localhost:8080/WEB/controller?command=CANCELREQUEST&id=${elem.namberRequest }">Отменить</a></td>
 					</tr>
 				</c:forEach>
 
 			</table>
 		</div>
 	</c:if>
+
+	<!--Запрос на просмотр всех рейсов   -->
+	<form align="center" name="findFlight" method="POST"
+		action="http://localhost:8080/WEB/controller">
+		<input type="hidden" name="command" value="FINDUSERFLIGHT" />
+
+		<input	type="submit" value="Найти все рейсы">
+	</form>
+
+	<!--  Показать все рейсы -->
+	<c:if test="${not empty allFlight}">
+
+		<table align="center">
+			<a  href="http://localhost:8080/WEB/controller?command=close&table=allFlight">	&times;</a>
+				<tr>
+					<th>namber <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
+					<th>date  <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
+					<th>status <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+					<th>driver</th>
+					<th>dispatcher</th>
+					<th>car</th>
+					<th>note </th>
+				</tr>
+
+
+				<c:forEach var="elem" items="${allFlight}" varStatus="status">
+
+					<tr align="center">
+						<form align="center" name="loginForm" method="POST" action="http://localhost:8080/WEB/controller" accept-charset="Windows-1251">
+							<input type="hidden" name="command"  value="UPDATEFLIGHT" />
+							<input type="hidden" name="idFlight"  value="${ elem.namberFlight }" />
+							<td><c:out value="${ elem.namberFlight }" /></td>
+							<td><c:out value="${ elem.date }" /></td>
+							<td><c:out value="${ elem.status }" /> <c:set var = "status" value = "${ elem.status }"/></td>
+							<td><c:out value="${ elem.driver }" /></td>
+							<td><c:out value="${ elem.dispatcher }" /></td>
+							<td><c:out value="${ elem.car }" /></td>
+							<td><c:out value="${ elem.note }" /></td>
+							 <c:if  test = "${not fn:containsIgnoreCase(status, 'CLOSED')}">
+								<td><input type="checkbox" name="agree" onclick="agreeForm(this.form)" /></td>
+								<td><input type="text" name="comments" placeholder="Comments" hidden/> </td>
+								<td><select	name="statusCar" hidden required>
+									<option selected  value="1"> <fmt:message key="car.status.FREE" bundle="${rb}"  /> </option>
+									<option value="3"> <fmt:message key="car.status.BROKEN" bundle="${rb}" /></option>
+								</select>
+								</td>
+							</c:if>
+							<td><input type="submit" name="change" value="Изменить" disabled /></td>
+						</form>
+					</tr>
+
+				</c:forEach>
+			</table>
+	</c:if>
+
 
 	<!-- logout -->
 	<p align="right">

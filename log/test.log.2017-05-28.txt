@@ -1,0 +1,1414 @@
+2017-05-28 09:28:41,213 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:28:47,722 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:47,765 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:28:47,768 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 09:28:48,266 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= C3E33B7451C607992FC7F3AB684537DE
+2017-05-28 09:28:48,271 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:49,295 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:49,296 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 09:28:49,302 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 09:28:49,303 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:50,593 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:50,594 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:50,594 [ INFO]               SortCommand: - type SORTBYLOGIN; object users
+2017-05-28 09:28:50,611 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:52,343 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:52,344 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:52,346 [ INFO]               SortCommand: - type SORTBYNAME; object users
+2017-05-28 09:28:52,346 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:54,233 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:54,233 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:54,234 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 09:28:54,234 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:56,531 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:56,531 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:56,531 [ INFO]               SortCommand: - type SORTBYROLE; object users
+2017-05-28 09:28:56,531 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:58,350 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:58,351 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:58,351 [ INFO]               SortCommand: - type SORTBYID; object users
+2017-05-28 09:28:58,354 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:28:59,600 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:28:59,601 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:28:59,601 [ INFO]               SortCommand: - type SORTBYLOGIN; object users
+2017-05-28 09:28:59,602 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:00,560 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:00,560 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:00,560 [ INFO]               SortCommand: - type SORTBYNAME; object users
+2017-05-28 09:29:00,561 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:01,834 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:01,835 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:01,835 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 09:29:01,836 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:03,428 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:03,429 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:03,429 [ INFO]               SortCommand: - type SORTBYROLE; object users
+2017-05-28 09:29:03,429 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:04,179 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:04,180 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 09:29:04,192 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 09:29:04,193 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=BROKEN, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 09:29:04,193 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:05,936 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:05,936 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:05,937 [ INFO]               SortCommand: - type SORTBYTYPE; object cars
+2017-05-28 09:29:05,952 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:06,920 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:06,921 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:06,921 [ INFO]               SortCommand: - type SORTBYCARRYING; object cars
+2017-05-28 09:29:06,922 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:08,616 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:08,616 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:08,617 [ INFO]               SortCommand: - type SORTBYAMOUNT; object cars
+2017-05-28 09:29:08,617 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:09,834 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:09,834 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:09,835 [ INFO]               SortCommand: - type SORTBYSTATUS; object cars
+2017-05-28 09:29:09,835 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:13,759 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:13,760 [ INFO]          UpdateCarCommand: - Начало работы UPDATECAR
+2017-05-28 09:29:13,761 [ INFO]          UpdateCarCommand: - 4- id XS2564AD- namber 1- newtype 76.0- carrying 364.0-  amount 113.0- engine 1- newstatus - comments 
+2017-05-28 09:29:13,776 [ INFO]          UpdateCarCommand: - Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=]
+2017-05-28 09:29:13,792 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:15,358 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:15,358 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:15,358 [ INFO]               SortCommand: - type SORTBYSTATUS; object cars
+2017-05-28 09:29:15,358 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:17,264 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:17,265 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:17,265 [ INFO]               SortCommand: - type SORTBYENGINE; object cars
+2017-05-28 09:29:17,265 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:18,553 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:18,554 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:18,554 [ INFO]               SortCommand: - type SORTBYSTATUS; object cars
+2017-05-28 09:29:18,555 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:29:42,122 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:29:42,123 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:29:42,124 [ INFO]               SortCommand: - type SORTBYENGINE; object cars
+2017-05-28 09:29:42,124 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:30:36,207 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:30:36,208 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:30:36,208 [TRACE]             LogoutCommand: - Уничтожение сесии: C3E33B7451C607992FC7F3AB684537DE
+2017-05-28 09:30:36,209 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:30:39,464 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:30:39,464 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:30:39,464 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:30:39,470 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 7D76D49F3508E17967226AB281E6F6B6
+2017-05-28 09:30:39,470 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:30:40,635 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:30:40,636 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:30:40,709 [ INFO]       FindRequestByUserID: - Нашли всех заявки юзера.
+2017-05-28 09:30:40,709 [ INFO]       FindRequestByUserID: - Request [namberRequest=1, ownerRequest=3, dataRequest=2017-05-26T08:37:40, dataDeparture=2017-05-26T09:16:24, type=TANKER, carryingCar=0.4, amountCar=0.5, enginePower=0.5, status=INPROGRESS, note=]
+2017-05-28 09:30:40,710 [ INFO]       FindRequestByUserID: - Request [namberRequest=2, ownerRequest=3, dataRequest=2017-04-10T08:37:40, dataDeparture=2017-05-26T09:20:21, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note="]
+2017-05-28 09:30:40,710 [ INFO]       FindRequestByUserID: - Request [namberRequest=3, ownerRequest=3, dataRequest=2017-05-26T11:09:41, dataDeparture=2017-04-20T08:40:40, type=GASOLINE, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=INPROGRESS, note=.;xss]
+2017-05-28 09:30:40,710 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:31:18,481 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:31:38,497 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:31:38,516 [ INFO]         AddRequestCommand: - date 2017-05-28T20:38:40
+2017-05-28 09:31:38,524 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 09:31:38,524 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:31:42,902 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:33:57,301 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:34:10,649 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:34:10,682 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:34:10,688 [TRACE]             LogoutCommand: - Уничтожение сесии: 7D76D49F3508E17967226AB281E6F6B6
+2017-05-28 09:34:10,689 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:34:14,002 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:34:14,004 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:34:14,007 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:34:14,463 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 7CE15FB7E31F664AFDD81CA134823575
+2017-05-28 09:34:14,463 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:34:24,112 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:34:24,148 [ INFO]         AddRequestCommand: - date 2017-05-28T20:37:40
+2017-05-28 09:34:24,162 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 09:34:24,162 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:34:26,152 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:34:26,153 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:34:26,180 [ INFO]       FindRequestByUserID: - Нашли всех заявки юзера.
+2017-05-28 09:34:26,180 [ INFO]       FindRequestByUserID: - Request [namberRequest=1, ownerRequest=3, dataRequest=2017-05-26T08:37:40, dataDeparture=2017-05-26T09:16:24, type=TANKER, carryingCar=0.4, amountCar=0.5, enginePower=0.5, status=INPROGRESS, note=]
+2017-05-28 09:34:26,181 [ INFO]       FindRequestByUserID: - Request [namberRequest=2, ownerRequest=3, dataRequest=2017-04-10T08:37:40, dataDeparture=2017-05-26T09:20:21, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note="]
+2017-05-28 09:34:26,181 [ INFO]       FindRequestByUserID: - Request [namberRequest=3, ownerRequest=3, dataRequest=2017-05-26T11:09:41, dataDeparture=2017-04-20T08:40:40, type=GASOLINE, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=INPROGRESS, note=.;xss]
+2017-05-28 09:34:26,182 [ INFO]       FindRequestByUserID: - Request [namberRequest=4, ownerRequest=3, dataRequest=2017-05-28T09:31:38, dataDeparture=2017-05-28T08:38:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:34:26,182 [ INFO]       FindRequestByUserID: - Request [namberRequest=5, ownerRequest=3, dataRequest=2017-05-28T09:34:24, dataDeparture=2017-05-28T08:37:40, type=SORTEMENT, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:34:26,183 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:34:31,927 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:34:31,928 [ INFO]         AddRequestCommand: - date 2017-04-11T20:37:40
+2017-05-28 09:34:31,935 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 09:34:31,935 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:35:50,254 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:36:08,331 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:36:15,787 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:36:15,825 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:36:15,832 [TRACE]             LogoutCommand: - Уничтожение сесии: 7CE15FB7E31F664AFDD81CA134823575
+2017-05-28 09:36:15,833 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:36:18,658 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:36:18,659 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:36:18,662 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 09:37:07,962 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:37:21,292 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:37:21,328 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:37:21,331 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 09:37:21,776 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 549BC0B33AFD467400999EC2010DF3FB
+2017-05-28 09:37:21,781 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:37:55,556 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:37:55,557 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 09:37:55,562 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 09:37:55,563 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:37:56,714 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:37:56,714 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 09:37:56,734 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 09:37:56,734 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 09:37:56,736 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:37:57,596 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:37:57,599 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:37:57,599 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 09:37:57,614 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:10,725 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:10,726 [ INFO]   RegistrationUserCommand: - НАчало работы REGISTRATIONUSER
+2017-05-28 09:38:10,730 [DEBUG]        RegistationManager: - Создать нового юзера dsads
+2017-05-28 09:38:10,752 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:14,517 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:14,517 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 09:38:14,521 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 09:38:14,522 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:17,596 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:17,596 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:17,597 [ INFO]               SortCommand: - type SORTBYID; object users
+2017-05-28 09:38:17,598 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:18,572 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:18,573 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:18,573 [ INFO]               SortCommand: - type SORTBYLOGIN; object users
+2017-05-28 09:38:18,573 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:19,938 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:19,938 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:19,939 [ INFO]               SortCommand: - type SORTBYNAME; object users
+2017-05-28 09:38:19,939 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:21,189 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:21,189 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:21,189 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 09:38:21,190 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:22,149 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:22,150 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:22,150 [ INFO]               SortCommand: - type SORTBYROLE; object users
+2017-05-28 09:38:22,150 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:24,010 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:24,011 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:24,011 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 09:38:24,011 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:25,471 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:25,472 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:25,472 [ INFO]               SortCommand: - type SORTBYAMOUNT; object cars
+2017-05-28 09:38:25,489 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:26,464 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:26,464 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:26,465 [ INFO]               SortCommand: - type SORTBYENGINE; object cars
+2017-05-28 09:38:26,465 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:27,048 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:27,048 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:27,048 [ INFO]               SortCommand: - type SORTBYSTATUS; object cars
+2017-05-28 09:38:27,049 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:29,962 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:29,963 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:29,963 [ INFO]               SortCommand: - type SORTBYAMOUNT; object cars
+2017-05-28 09:38:29,963 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:31,440 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:31,441 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:31,441 [ INFO]               SortCommand: - type SORTBYCARRYING; object cars
+2017-05-28 09:38:31,441 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:32,924 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:32,924 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:32,925 [ INFO]               SortCommand: - type SORTBYTYPE; object cars
+2017-05-28 09:38:32,925 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:38:34,174 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:38:34,175 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:38:34,175 [ INFO]               SortCommand: - type SORTBYNAMBER; object cars
+2017-05-28 09:38:34,175 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:40:01,093 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:40:45,114 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:40:45,155 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:40:45,155 [ INFO]               SortCommand: - type SORTBYID; object cars
+2017-05-28 09:40:45,170 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:40:47,653 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:40:47,654 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:40:47,654 [ INFO]               SortCommand: - type SORTBYENGINE; object cars
+2017-05-28 09:40:47,655 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:40:49,442 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:40:49,442 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:40:49,443 [ INFO]               SortCommand: - type SORTBYID; object cars
+2017-05-28 09:40:49,443 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:41:00,967 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:41:00,968 [ INFO]          CreateCarCommand: - НАчало работы 
+2017-05-28 09:41:52,046 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:41:52,670 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:41:52,714 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:41:52,727 [TRACE]             LogoutCommand: - Уничтожение сесии: D2D52A6F16C2A25423F06A817405BE2B
+2017-05-28 09:41:52,728 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:42:17,076 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:42:17,078 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:42:17,082 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:42:17,575 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 3FB9834338B049297536F2FFE6CE3937
+2017-05-28 09:42:17,576 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:42:20,084 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:42:20,085 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:42:20,142 [ INFO]       FindRequestByUserID: - Нашли всех заявки юзера.
+2017-05-28 09:42:20,142 [ INFO]       FindRequestByUserID: - Request [namberRequest=1, ownerRequest=3, dataRequest=2017-05-26T08:37:40, dataDeparture=2017-05-26T09:16:24, type=TANKER, carryingCar=0.4, amountCar=0.5, enginePower=0.5, status=INPROGRESS, note=]
+2017-05-28 09:42:20,143 [ INFO]       FindRequestByUserID: - Request [namberRequest=2, ownerRequest=3, dataRequest=2017-04-10T08:37:40, dataDeparture=2017-05-26T09:20:21, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note="]
+2017-05-28 09:42:20,143 [ INFO]       FindRequestByUserID: - Request [namberRequest=3, ownerRequest=3, dataRequest=2017-05-26T11:09:41, dataDeparture=2017-04-20T08:40:40, type=GASOLINE, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=INPROGRESS, note=.;xss]
+2017-05-28 09:42:20,145 [ INFO]       FindRequestByUserID: - Request [namberRequest=4, ownerRequest=3, dataRequest=2017-05-28T09:31:38, dataDeparture=2017-05-28T08:38:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:20,146 [ INFO]       FindRequestByUserID: - Request [namberRequest=5, ownerRequest=3, dataRequest=2017-05-28T09:34:24, dataDeparture=2017-05-28T08:37:40, type=SORTEMENT, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:20,147 [ INFO]       FindRequestByUserID: - Request [namberRequest=6, ownerRequest=3, dataRequest=2017-05-28T09:34:31, dataDeparture=2017-04-11T08:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:20,147 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:42:22,723 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:42:22,724 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:42:22,742 [ INFO]       FindRequestByUserID: - Нашли всех заявки юзера.
+2017-05-28 09:42:22,742 [ INFO]       FindRequestByUserID: - Request [namberRequest=1, ownerRequest=3, dataRequest=2017-05-26T08:37:40, dataDeparture=2017-05-26T09:16:24, type=TANKER, carryingCar=0.4, amountCar=0.5, enginePower=0.5, status=INPROGRESS, note=]
+2017-05-28 09:42:22,743 [ INFO]       FindRequestByUserID: - Request [namberRequest=2, ownerRequest=3, dataRequest=2017-04-10T08:37:40, dataDeparture=2017-05-26T09:20:21, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note="]
+2017-05-28 09:42:22,743 [ INFO]       FindRequestByUserID: - Request [namberRequest=3, ownerRequest=3, dataRequest=2017-05-26T11:09:41, dataDeparture=2017-04-20T08:40:40, type=GASOLINE, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=INPROGRESS, note=.;xss]
+2017-05-28 09:42:22,747 [ INFO]       FindRequestByUserID: - Request [namberRequest=4, ownerRequest=3, dataRequest=2017-05-28T09:31:38, dataDeparture=2017-05-28T08:38:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:22,748 [ INFO]       FindRequestByUserID: - Request [namberRequest=5, ownerRequest=3, dataRequest=2017-05-28T09:34:24, dataDeparture=2017-05-28T08:37:40, type=SORTEMENT, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:22,748 [ INFO]       FindRequestByUserID: - Request [namberRequest=6, ownerRequest=3, dataRequest=2017-05-28T09:34:31, dataDeparture=2017-04-11T08:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:22,748 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:42:23,002 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:42:23,002 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:42:23,017 [ INFO]       FindRequestByUserID: - Нашли всех заявки юзера.
+2017-05-28 09:42:23,017 [ INFO]       FindRequestByUserID: - Request [namberRequest=1, ownerRequest=3, dataRequest=2017-05-26T08:37:40, dataDeparture=2017-05-26T09:16:24, type=TANKER, carryingCar=0.4, amountCar=0.5, enginePower=0.5, status=INPROGRESS, note=]
+2017-05-28 09:42:23,017 [ INFO]       FindRequestByUserID: - Request [namberRequest=2, ownerRequest=3, dataRequest=2017-04-10T08:37:40, dataDeparture=2017-05-26T09:20:21, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note="]
+2017-05-28 09:42:23,017 [ INFO]       FindRequestByUserID: - Request [namberRequest=3, ownerRequest=3, dataRequest=2017-05-26T11:09:41, dataDeparture=2017-04-20T08:40:40, type=GASOLINE, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=INPROGRESS, note=.;xss]
+2017-05-28 09:42:23,018 [ INFO]       FindRequestByUserID: - Request [namberRequest=4, ownerRequest=3, dataRequest=2017-05-28T09:31:38, dataDeparture=2017-05-28T08:38:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:23,018 [ INFO]       FindRequestByUserID: - Request [namberRequest=5, ownerRequest=3, dataRequest=2017-05-28T09:34:24, dataDeparture=2017-05-28T08:37:40, type=SORTEMENT, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:23,018 [ INFO]       FindRequestByUserID: - Request [namberRequest=6, ownerRequest=3, dataRequest=2017-05-28T09:34:31, dataDeparture=2017-04-11T08:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=INPROGRESS, note=]
+2017-05-28 09:42:23,018 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:46:26,298 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:51:39,383 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:52:31,058 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:52:36,334 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:52:36,372 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:52:36,374 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 09:52:36,802 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 3FB9834338B049297536F2FFE6CE3937
+2017-05-28 09:52:36,806 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:52:45,007 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:52:45,008 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 09:52:45,013 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 09:52:45,014 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:52:46,797 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:52:46,797 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:52:46,798 [TRACE]             LogoutCommand: - Уничтожение сесии: 3FB9834338B049297536F2FFE6CE3937
+2017-05-28 09:52:46,800 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:52:50,345 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:52:50,346 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:52:50,348 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:52:50,351 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 3C3E17CDDAD6BBC573C6A85BD1F07550
+2017-05-28 09:52:50,351 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:52:53,312 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:52:53,313 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:52:53,361 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:53:25,392 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:53:25,393 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:53:25,393 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:53:25,395 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 3C3E17CDDAD6BBC573C6A85BD1F07550
+2017-05-28 09:53:25,396 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:53:29,331 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:53:29,331 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:53:29,350 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:53:31,004 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:53:31,005 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:53:31,005 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:53:31,006 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:54:11,215 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:54:11,216 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:54:11,232 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:26,806 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:26,807 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:55:26,807 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:55:26,808 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:28,072 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:28,072 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:55:28,086 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:29,274 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:29,276 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:55:29,276 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:55:29,277 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:31,305 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:31,306 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:55:31,321 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:33,814 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:33,815 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:55:33,815 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:55:33,816 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:55:35,484 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:55:35,485 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:55:35,498 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:56:12,152 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:12,152 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:56:12,153 [TRACE]             LogoutCommand: - Уничтожение сесии: 3C3E17CDDAD6BBC573C6A85BD1F07550
+2017-05-28 09:56:12,154 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:56:17,361 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:17,361 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:56:17,361 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 09:56:17,363 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 12B5E384571EB3FB47E39BA1D5E15923
+2017-05-28 09:56:17,363 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:19,028 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:19,028 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 09:56:19,030 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 09:56:19,030 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:20,245 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:20,245 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:56:20,245 [ INFO]              CloseCommand: - Закрытие таблицы users
+2017-05-28 09:56:20,246 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:20,987 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:20,988 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 09:56:21,000 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 09:56:21,001 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 09:56:21,001 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:21,925 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:21,926 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:56:21,927 [ INFO]              CloseCommand: - Закрытие таблицы cars
+2017-05-28 09:56:21,927 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:22,713 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:22,714 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 09:56:22,717 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 09:56:22,717 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 09:56:22,718 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:24,822 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:24,822 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 09:56:24,823 [ INFO]               SortCommand: - type SORTBYSTATUS; object cars
+2017-05-28 09:56:24,840 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 09:56:26,707 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:26,707 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 09:56:26,708 [TRACE]             LogoutCommand: - Уничтожение сесии: 12B5E384571EB3FB47E39BA1D5E15923
+2017-05-28 09:56:26,708 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 09:56:29,659 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:29,659 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 09:56:29,660 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 09:56:29,671 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 6BEA21D6D629270D29D9E71E84678C03
+2017-05-28 09:56:29,672 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:56:31,106 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:56:31,106 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:56:31,124 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:57:53,142 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:57:53,142 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 09:58:08,432 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:58:08,432 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 09:59:28,450 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 09:59:31,898 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:31,940 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 09:59:31,964 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 09:59:31,989 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:33,116 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:33,116 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 09:59:33,124 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 09:59:33,134 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:35,764 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:35,765 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:59:35,765 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:59:35,766 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:36,866 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:36,866 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:59:36,874 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:38,366 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:38,366 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:59:38,367 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:59:38,368 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:39,796 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:39,796 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:59:39,807 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:40,748 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:40,748 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 09:59:40,748 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 09:59:40,749 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 09:59:42,178 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 09:59:42,179 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 09:59:42,187 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:12:58,983 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 10:13:02,841 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:13:02,879 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:13:02,918 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:13:15,448 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:13:15,450 [ INFO]         AddRequestCommand: - 2017-05-28T20:37:40 5 0.1 0.1 0.1 dda
+2017-05-28 10:13:15,467 [ INFO]         AddRequestCommand: - date 2017-05-28T20:37:40
+2017-05-28 10:13:15,478 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:13:15,478 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:14:38,474 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:14:38,475 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 1 0.1   
+2017-05-28 10:15:01,755 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:15:01,757 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 1 0.4 0.4 0.3 
+2017-05-28 10:15:01,757 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-28 10:15:01,768 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:15:01,769 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:15:15,269 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:15:15,269 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:15:15,281 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:15:38,370 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:15:38,371 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 1 0.9 0.7 0.5 
+2017-05-28 10:15:38,372 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-28 10:15:38,382 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:15:38,382 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:15:41,090 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:15:41,090 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 1    
+2017-05-28 10:18:41,771 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:18:41,771 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 5 0.1 0.1 0.1 
+2017-05-28 10:18:41,771 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-28 10:18:41,777 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:18:41,778 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:23,492 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:23,492 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:23,497 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:23,511 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:24,866 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:24,867 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:24,875 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:24,886 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:26,609 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:26,610 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:26,613 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:26,622 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:28,899 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:28,899 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:28,905 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:28,914 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:29,547 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:29,548 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:29,552 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:29,557 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:34,923 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:34,924 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 10:20:34,924 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 10:20:34,926 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:35,650 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:35,651 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:20:35,656 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:38,907 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:38,907 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 10:20:38,911 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 10:20:38,916 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:41,460 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:41,461 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:20:41,465 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:42,931 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:42,931 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 10:20:42,933 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 10:20:42,933 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:20:43,650 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:20:43,650 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:20:43,654 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:26:20,921 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 10:27:01,966 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 10:35:46,165 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 10:38:22,344 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:22,379 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:22,379 [ INFO]               SortCommand: - type SORTBYID; object userRequest
+2017-05-28 10:38:22,395 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:23,225 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:23,226 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:23,226 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 10:38:23,226 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:24,530 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:24,530 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:24,530 [ INFO]               SortCommand: - type SORTBYDATADEPARTURE; object userRequest
+2017-05-28 10:38:24,531 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:25,474 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:25,475 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:25,475 [ INFO]               SortCommand: - type SORTBYTYPE; object userRequest
+2017-05-28 10:38:25,475 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:27,827 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:27,827 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:27,828 [ INFO]               SortCommand: - type SORTBYID; object userRequest
+2017-05-28 10:38:27,828 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:29,443 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:29,443 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:29,443 [ INFO]               SortCommand: - type SORTBYTYPE; object userRequest
+2017-05-28 10:38:29,444 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:30,975 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:30,975 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:30,975 [ INFO]               SortCommand: - type SORTBYDATADEPARTURE; object userRequest
+2017-05-28 10:38:30,976 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:32,576 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:32,576 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:32,576 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 10:38:32,577 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:33,913 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:33,913 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:33,913 [ INFO]               SortCommand: - type SORTBYCARRYING; object userRequest
+2017-05-28 10:38:33,914 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:34,778 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:34,779 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:34,779 [ INFO]               SortCommand: - type SORTBYAMOUNT; object userRequest
+2017-05-28 10:38:34,780 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:35,404 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:35,404 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:35,405 [ INFO]               SortCommand: - type SORTBYENGINEPOWER; object userRequest
+2017-05-28 10:38:35,405 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:35,991 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:35,991 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:38:35,992 [ INFO]               SortCommand: - type SORTBYSTATUS; object userRequest
+2017-05-28 10:38:35,992 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:38:44,803 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:38:44,803 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:38:44,804 [TRACE]             LogoutCommand: - Уничтожение сесии: 6BEA21D6D629270D29D9E71E84678C03
+2017-05-28 10:38:44,804 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:39:57,047 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:39:57,048 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:39:57,053 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 10:39:57,078 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 3FA271537B40933D42483A3853BCE302
+2017-05-28 10:39:57,078 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:39:58,370 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:39:58,370 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 10:39:58,375 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 10:39:58,376 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:39:59,533 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:39:59,533 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 10:39:59,543 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 10:39:59,543 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 10:39:59,544 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:40:00,666 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:40:00,667 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:40:00,668 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 10:40:00,681 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:40:01,830 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:40:01,831 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:40:01,832 [TRACE]             LogoutCommand: - Уничтожение сесии: 3FA271537B40933D42483A3853BCE302
+2017-05-28 10:40:01,832 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:40:04,768 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:40:04,769 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:40:04,769 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 10:40:04,779 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 9F288F4CCE5F19CD771A8A399A2A3D06
+2017-05-28 10:40:04,780 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:40:05,708 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:40:05,708 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:40:05,730 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:41:52,645 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:41:52,646 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:41:52,646 [TRACE]             LogoutCommand: - Уничтожение сесии: 9F288F4CCE5F19CD771A8A399A2A3D06
+2017-05-28 10:41:52,646 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:44:21,527 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:44:21,527 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:44:21,529 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 10:44:21,531 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= D592ACBBD4757D68F9604F8E9BB27311
+2017-05-28 10:44:21,531 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:44:25,797 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:44:25,798 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:44:25,798 [TRACE]             LogoutCommand: - Уничтожение сесии: D592ACBBD4757D68F9604F8E9BB27311
+2017-05-28 10:44:25,798 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:44:29,273 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:44:29,273 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:44:29,273 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 10:44:29,274 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= FD15C054F9362765D738C68E1E336926
+2017-05-28 10:44:29,275 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:45:07,182 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:45:07,182 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:45:07,184 [TRACE]             LogoutCommand: - Уничтожение сесии: FD15C054F9362765D738C68E1E336926
+2017-05-28 10:45:07,186 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:45:15,377 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:45:15,377 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:45:15,378 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 10:45:15,379 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 4E0C78D4E8F0E6E0C819FC2779D45A5A
+2017-05-28 10:45:15,379 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 10:45:41,586 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:45:41,587 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:45:41,587 [TRACE]             LogoutCommand: - Уничтожение сесии: 4E0C78D4E8F0E6E0C819FC2779D45A5A
+2017-05-28 10:45:41,587 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:45:51,136 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:45:51,136 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:45:51,137 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 10:45:51,139 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= D232D47B11069ECDDD28EA1897E146DA
+2017-05-28 10:45:51,139 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:45:52,009 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:45:52,009 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:45:52,015 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:25,509 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:25,509 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:46:25,510 [DEBUG]              LoginManager: - Найти юзера с loginom  = rqwqq
+2017-05-28 10:46:25,512 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= rqwqq; password= dsdsa; idSession= 4CB00140AB014A58102523350E63B0E9
+2017-05-28 10:46:25,512 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:28,966 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:28,968 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 10:46:28,969 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 10:46:28,969 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:29,862 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:29,862 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:46:29,865 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:31,103 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:31,103 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:46:31,109 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:54,209 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:54,209 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 1 0.1 0.3 0.3 sdasdasd
+2017-05-28 10:46:54,210 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-28 10:46:54,216 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:46:54,216 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:55,194 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:55,195 [ INFO]         AddRequestCommand: - 2017-04-10T20:37:40 2 0.1 0.3 0.3 dasddasa
+2017-05-28 10:46:55,196 [ INFO]         AddRequestCommand: - date 2017-04-10T20:37:40
+2017-05-28 10:46:55,201 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 10:46:55,202 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:56,287 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:56,288 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:46:56,295 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:46:57,712 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:46:57,712 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 10:46:57,716 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:47:00,119 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:47:00,120 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:47:00,120 [ INFO]               SortCommand: - type SORTBYID; object userRequest
+2017-05-28 10:47:00,120 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:47:02,908 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:47:02,909 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 10:47:02,909 [ INFO]               SortCommand: - type SORTBYID; object userRequest
+2017-05-28 10:47:02,909 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 10:58:05,971 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:58:05,971 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 10:58:05,972 [TRACE]             LogoutCommand: - Уничтожение сесии: 4CB00140AB014A58102523350E63B0E9
+2017-05-28 10:58:05,972 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 10:58:10,033 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:58:10,034 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 10:58:10,034 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 10:58:10,036 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= BB246B2FEB95A8654A45F0BDC8C477D4
+2017-05-28 10:58:10,036 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 10:58:13,866 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 10:58:13,866 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 10:58:13,868 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 10:58:13,868 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:25,516 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:25,517 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:25,517 [ INFO]               SortCommand: - type SORTBYLOGIN; object users
+2017-05-28 11:02:25,517 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:26,392 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:26,392 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:26,392 [ INFO]               SortCommand: - type SORTBYNAME; object users
+2017-05-28 11:02:26,393 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:27,384 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:27,385 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:27,385 [ INFO]               SortCommand: - type SORTBYEMAIL; object users
+2017-05-28 11:02:27,385 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:28,179 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:28,180 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:28,180 [ INFO]               SortCommand: - type SORTBYROLE; object users
+2017-05-28 11:02:28,181 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:30,758 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:30,759 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 11:02:30,762 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 11:02:30,763 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 11:02:30,763 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:32,938 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:32,939 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:32,939 [ INFO]               SortCommand: - type SORTBYTYPE; object cars
+2017-05-28 11:02:32,950 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:35,086 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:35,087 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 11:02:35,087 [ INFO]               SortCommand: - type SORTBYTYPE; object cars
+2017-05-28 11:02:35,087 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:36,157 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:36,158 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 11:02:36,158 [ INFO]              CloseCommand: - Закрытие таблицы users
+2017-05-28 11:02:36,158 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:37,571 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:37,571 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 11:02:37,572 [ INFO]              CloseCommand: - Закрытие таблицы cars
+2017-05-28 11:02:37,572 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 11:02:38,609 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 11:02:38,610 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 11:02:38,613 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 11:02:38,613 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=SUGGESTION, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=TENT, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd]]
+2017-05-28 11:02:38,614 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 12:26:53,120 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:26:53,125 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 12:26:53,127 [TRACE]             LogoutCommand: - Уничтожение сесии: E128600478CAC60B7F5AD656F4CB1DDE
+2017-05-28 12:26:53,127 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 12:26:58,943 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:26:58,944 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 12:26:58,944 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 12:26:58,969 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= DF7542108A03C3D30F9F4D43841E7F7E
+2017-05-28 12:26:58,969 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:27:00,833 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:27:00,844 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-28 12:27:56,231 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:28:16,833 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:28:30,097 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:28:30,134 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUEST
+2017-05-28 12:28:30,187 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:50:35,764 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:53:01,819 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:53:13,053 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:53:13,093 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:53:13,572 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:53:13,575 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:53:27,703 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:53:27,705 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 12:53:27,706 [TRACE]             LogoutCommand: - Уничтожение сесии: DF7542108A03C3D30F9F4D43841E7F7E
+2017-05-28 12:53:27,715 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 12:53:32,620 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:53:32,621 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 12:53:32,625 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 12:53:32,637 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 4D4C8524C87F5D6ECB2C1CE5795CD0B3
+2017-05-28 12:53:32,637 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:53:53,212 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:53:53,214 [ INFO]         AddRequestCommand: - 2017-05-30T20:37:40 1 0.4 0.5 0.4 первая заявка
+2017-05-28 12:53:53,230 [ INFO]         AddRequestCommand: - date 2017-05-30T20:37:40
+2017-05-28 12:53:53,243 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 12:53:53,244 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:53:54,077 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:53:54,077 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 12:53:54,102 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:54:14,634 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:14,635 [ INFO]         AddRequestCommand: - 2017-06-01T20:37:40 1    Вторая заявка
+2017-05-28 12:54:36,977 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:36,979 [ INFO]         AddRequestCommand: - 2017-06-04T20:37:40 5 0.2 0.4 0.4 Вторая заявка
+2017-05-28 12:54:36,979 [ INFO]         AddRequestCommand: - date 2017-06-04T20:37:40
+2017-05-28 12:54:36,986 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 12:54:36,987 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:54:38,685 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:38,686 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 12:54:38,704 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:54:40,795 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:40,795 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:54:40,795 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 12:54:40,817 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:54:41,741 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:41,741 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:54:41,741 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 12:54:41,742 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:54:42,802 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:54:42,803 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:54:42,803 [ INFO]               SortCommand: - type SORTBYDATADEPARTURE; object userRequest
+2017-05-28 12:54:42,803 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:21,158 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:21,159 [ INFO]              CloseCommand: - Начало работы
+2017-05-28 12:55:21,160 [ INFO]              CloseCommand: - Закрытие таблицы userRequest
+2017-05-28 12:55:21,160 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:22,108 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:22,109 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 12:55:22,123 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:23,476 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:23,476 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:23,476 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 12:55:23,476 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:24,386 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:55:26,962 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:27,005 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:27,005 [ INFO]               SortCommand: - type SORTBYDATADEPARTURE; object userRequest
+2017-05-28 12:55:27,023 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:29,196 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:29,197 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:29,197 [ INFO]               SortCommand: - type SORTBYID; object userRequest
+2017-05-28 12:55:29,197 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:30,353 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:30,353 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:30,353 [ INFO]               SortCommand: - type SORTBYDATAREQUEST; object userRequest
+2017-05-28 12:55:30,354 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:31,890 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:31,890 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:31,891 [ INFO]               SortCommand: - type SORTBYDATADEPARTURE; object userRequest
+2017-05-28 12:55:31,891 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:32,578 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:32,579 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:32,579 [ INFO]               SortCommand: - type SORTBYTYPE; object userRequest
+2017-05-28 12:55:32,580 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:33,868 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:33,868 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:33,868 [ INFO]               SortCommand: - type SORTBYCARRYING; object userRequest
+2017-05-28 12:55:33,869 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:34,874 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:34,874 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:34,875 [ INFO]               SortCommand: - type SORTBYAMOUNT; object userRequest
+2017-05-28 12:55:34,875 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:36,265 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:36,266 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 12:55:36,266 [ INFO]               SortCommand: - type SORTBYENGINEPOWER; object userRequest
+2017-05-28 12:55:36,266 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 12:55:46,540 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:46,541 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 12:55:46,541 [TRACE]             LogoutCommand: - Уничтожение сесии: 4D4C8524C87F5D6ECB2C1CE5795CD0B3
+2017-05-28 12:55:46,541 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 12:55:52,127 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:52,127 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 12:55:52,132 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 12:55:52,159 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= B90D560DAAA37AB129F39AF34A7D56A9
+2017-05-28 12:55:52,159 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:55:53,095 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:55:53,095 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:55:53,103 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:55:53,104 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:57:10,709 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:57:10,709 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:57:10,711 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:57:10,712 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:58:00,506 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:58:05,670 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:58:05,707 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:58:05,727 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T12:58:05.720
+2017-05-28 12:58:06,196 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:58:06,200 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:58:59,468 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:59:02,503 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:59:02,540 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:59:02,560 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T12:59:02.552
+2017-05-28 12:59:03,031 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:59:03,035 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:59:41,031 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 12:59:41,832 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:59:41,913 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:59:41,916 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T12:59:41.916
+2017-05-28 12:59:41,935 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:59:41,941 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 12:59:44,216 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 12:59:44,217 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 12:59:44,217 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T12:59:44.217
+2017-05-28 12:59:44,223 [ INFO]        FindRequestCommand: - request null
+2017-05-28 12:59:44,225 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:00:02,310 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 13:00:04,056 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:00:04,110 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:00:04,113 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:00:04.113
+2017-05-28 13:00:04,172 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:00:04,179 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:04:40,031 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:04:40,032 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:04:40,033 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:04:40.033
+2017-05-28 13:04:40,041 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:04:40,042 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:19:55,200 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 13:34:27,619 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:34:27,655 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:34:27,658 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:34:27.658
+2017-05-28 13:34:27,694 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:34:27,697 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:35:05,363 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:35:05,364 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:35:05,366 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:35:05.365
+2017-05-28 13:35:05,373 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:35:05,374 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:35:08,183 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:35:08,184 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:35:08,184 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:35:08.184
+2017-05-28 13:35:08,188 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:35:08,188 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 13:35:09,715 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 13:35:09,715 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 13:35:09,715 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T13:35:09.715
+2017-05-28 13:35:09,720 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 13:35:09,720 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 17:53:52,438 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 17:53:54,817 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:53:54,849 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-28 17:54:00,582 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:54:00,627 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 17:54:00,629 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 17:54:00,973 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 30BD8BF329E98865AD16CF53FF5A7CD6
+2017-05-28 17:54:00,973 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 17:54:01,982 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:54:01,983 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 17:54:02,061 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 17:54:04,339 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:54:04,339 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 17:54:04,340 [TRACE]             LogoutCommand: - Уничтожение сесии: 30BD8BF329E98865AD16CF53FF5A7CD6
+2017-05-28 17:54:04,340 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 17:54:10,519 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:54:10,523 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 17:54:10,525 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 17:54:10,528 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= A60E367CB6F9B961AD23DEF85EF2B821
+2017-05-28 17:54:10,528 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 17:54:11,559 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 17:54:11,560 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 17:54:11,577 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T17:54:11.573
+2017-05-28 17:54:11,583 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 17:54:11,583 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:21:28,986 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 18:23:40,464 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 18:27:28,809 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 18:27:59,904 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:27:59,993 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:28:00,016 [TRACE]             LogoutCommand: - Уничтожение сесии: A60E367CB6F9B961AD23DEF85EF2B821
+2017-05-28 18:28:00,017 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:28:03,582 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:28:03,584 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:28:03,588 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:28:03,936 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 47B1C52F26898A869B709DDE1006B8B4
+2017-05-28 18:28:03,937 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:28:05,037 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:28:05,038 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:28:05,065 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:28:05.055
+2017-05-28 18:28:05,093 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:28:05,094 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:28:06,074 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:28:06,077 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:29:31,510 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 18:30:26,644 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:26,696 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:30:26,704 [TRACE]             LogoutCommand: - Уничтожение сесии: 47B1C52F26898A869B709DDE1006B8B4
+2017-05-28 18:30:26,704 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:30:31,104 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:31,105 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:30:31,108 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 18:30:31,134 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= E613F8C860B7705DC06F6E09B7370C21
+2017-05-28 18:30:31,134 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:30:32,727 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:32,728 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:30:32,728 [TRACE]             LogoutCommand: - Уничтожение сесии: E613F8C860B7705DC06F6E09B7370C21
+2017-05-28 18:30:32,728 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:30:35,354 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:35,355 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:30:35,355 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:30:35,363 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 17FDF0A0112346CCDEBC9A64E0C41B16
+2017-05-28 18:30:35,364 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:30:36,502 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:36,502 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:30:36,507 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:30:36.506
+2017-05-28 18:30:36,521 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:30:36,521 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:30:38,133 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:30:38,134 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:30:38,137 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:30:38,155 [ INFO] FindByCharacteristicsCommand: - list []
+2017-05-28 18:30:38,156 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:31:20,152 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:31:20,152 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:31:20,152 [TRACE]             LogoutCommand: - Уничтожение сесии: 17FDF0A0112346CCDEBC9A64E0C41B16
+2017-05-28 18:31:20,152 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:31:23,116 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 18:31:23,294 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:31:23,344 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:31:23,346 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:31:23,374 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= B21C6EA5BA1507575C24451A1A39E75B
+2017-05-28 18:31:23,380 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:31:24,831 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:31:24,831 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:31:24,834 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:31:24.834
+2017-05-28 18:31:24,859 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:31:24,859 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:31:26,276 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:31:26,277 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:31:26,279 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:31:26,286 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-28 18:31:26,287 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:43:05,253 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:43:05,253 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:43:05,254 [TRACE]             LogoutCommand: - Уничтожение сесии: B21C6EA5BA1507575C24451A1A39E75B
+2017-05-28 18:43:05,254 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:43:12,495 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:43:12,495 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:43:12,496 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:43:12,498 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= C77622DC38F7EF6ECB99D0EA15838C75
+2017-05-28 18:43:12,499 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:43:14,108 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:43:14,109 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:43:14,109 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:43:14.109
+2017-05-28 18:43:14,115 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:43:14,115 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:43:15,252 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:43:15,252 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:43:15,252 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:43:15,255 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-28 18:43:15,256 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:43:31,097 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:43:31,097 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-28 18:44:06,762 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:44:06,763 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:44:06,763 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:44:06,766 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= C77622DC38F7EF6ECB99D0EA15838C75
+2017-05-28 18:44:06,766 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:47:24,027 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:47:24,028 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:47:24,028 [TRACE]             LogoutCommand: - Уничтожение сесии: C77622DC38F7EF6ECB99D0EA15838C75
+2017-05-28 18:47:24,029 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:47:31,050 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:47:31,051 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:47:31,051 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 18:47:31,053 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 775885A743CDA5659DF81E13BC640968
+2017-05-28 18:47:31,053 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:47:47,055 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:47:47,056 [ INFO]          CreateCarCommand: - НАчало работы 
+2017-05-28 18:47:47,060 [DEBUG]        RegistationManager: - Создать новую машину 
+2017-05-28 18:47:47,074 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:48:02,053 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:02,053 [ INFO]          CreateCarCommand: - НАчало работы 
+2017-05-28 18:48:02,054 [DEBUG]        RegistationManager: - Создать новую машину 
+2017-05-28 18:48:02,060 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:48:17,310 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:17,311 [ INFO]          CreateCarCommand: - НАчало работы 
+2017-05-28 18:48:17,312 [DEBUG]        RegistationManager: - Создать новую машину 
+2017-05-28 18:48:17,318 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:48:18,693 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:18,694 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 18:48:18,697 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 18:48:18,697 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=], Car [id=8, namber=AD1331AD, type=PLATFORM, carryingCar=0.4, amountCar=0.4, enginePower=0.3, statusCar=BROKEN, comments=Какието коментарии], Car [id=9, namber=AD7356AD, type=PLATFORM, carryingCar=0.6, amountCar=0.2, enginePower=0.5, statusCar=USED, comments=]]
+2017-05-28 18:48:18,698 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:48:22,902 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:22,903 [ INFO]               SortCommand: - Начало работы SORT
+2017-05-28 18:48:22,903 [ INFO]               SortCommand: - type SORTBYTYPE; object cars
+2017-05-28 18:48:22,938 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 18:48:45,076 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:45,076 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:48:45,076 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:48:45,078 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 4B810C3902270295FA86479072D1427D
+2017-05-28 18:48:45,079 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:48:56,697 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:56,698 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:48:56,698 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:48:56.698
+2017-05-28 18:48:56,702 [ INFO]        FindRequestCommand: - request Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:48:56,703 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:48:59,146 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:48:59,147 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:48:59,147 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=13, ownerRequest=3, dataRequest=2017-05-28T12:53:53, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.4, amountCar=0.5, enginePower=0.4, status=SUBMITTED, note=первая заявка]
+2017-05-28 18:48:59,150 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null]]
+2017-05-28 18:48:59,150 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:49:12,537 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:12,537 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:49:12,538 [TRACE]             LogoutCommand: - Уничтожение сесии: 4B810C3902270295FA86479072D1427D
+2017-05-28 18:49:12,538 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:49:16,537 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:16,538 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:49:16,538 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 18:49:16,541 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 436D025B682E7E87CA8DD835693162EB
+2017-05-28 18:49:16,541 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:18,193 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:18,194 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 18:49:18,204 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:25,193 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:25,194 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 18:49:25,199 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 18:49:25,210 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:25,968 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:25,969 [ INFO]      CancelRequestCommand: - Начало работыCANCELREQUEST
+2017-05-28 18:49:25,972 [ INFO]      CancelRequestCommand: - Статус удаления true
+2017-05-28 18:49:25,979 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:53,955 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:53,955 [ INFO]         AddRequestCommand: - 2017-05-28T22:37:40 1 0.1 0.1 0.1 
+2017-05-28 18:49:53,956 [ INFO]         AddRequestCommand: - date 2017-05-28T22:37:40
+2017-05-28 18:49:53,962 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 18:49:53,963 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:56,431 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:56,432 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 18:49:56,443 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:49:58,468 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:49:58,469 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:49:58,469 [TRACE]             LogoutCommand: - Уничтожение сесии: 436D025B682E7E87CA8DD835693162EB
+2017-05-28 18:49:58,470 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:50:04,548 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:04,549 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:50:04,549 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 18:50:04,551 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= E976BA1C986A1599889FCEC14C8E6766
+2017-05-28 18:50:04,551 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:50:05,469 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:05,470 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 18:50:05,477 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:50:07,501 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:07,503 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:50:07,503 [TRACE]             LogoutCommand: - Уничтожение сесии: E976BA1C986A1599889FCEC14C8E6766
+2017-05-28 18:50:07,503 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:50:11,712 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:11,716 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:50:11,717 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:50:11,719 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 9FE0AEE22A2D24D1FEED7D131628D003
+2017-05-28 18:50:11,719 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:50:12,619 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:12,619 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:50:12,620 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:50:12.620
+2017-05-28 18:50:12,623 [ INFO]        FindRequestCommand: - request Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:50:12,624 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:50:14,829 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:14,829 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:50:14,829 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:50:14,832 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 18:50:14,832 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:50:31,345 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:50:31,345 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:50:31,345 [TRACE]             LogoutCommand: - Уничтожение сесии: 9FE0AEE22A2D24D1FEED7D131628D003
+2017-05-28 18:50:31,346 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:53:00,443 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:53:00,443 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:53:00,444 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 18:53:00,446 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 76EFAA78C78B6FB29A94F32907AEDD07
+2017-05-28 18:53:00,446 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 18:53:02,240 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:53:02,240 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:53:02,240 [TRACE]             LogoutCommand: - Уничтожение сесии: 76EFAA78C78B6FB29A94F32907AEDD07
+2017-05-28 18:53:02,241 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:53:06,015 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:53:06,015 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:53:06,016 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:53:06,017 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= B3C76157D82F6C26416323F033DEF753
+2017-05-28 18:53:06,017 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:53:06,786 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:53:06,786 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:53:06,787 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:53:06.787
+2017-05-28 18:53:06,792 [ INFO]        FindRequestCommand: - request Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:53:06,792 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:53:08,084 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:53:08,084 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:53:08,085 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:53:08,090 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 18:53:08,090 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:54:33,970 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:54:33,971 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 18:54:33,972 [TRACE]             LogoutCommand: - Уничтожение сесии: B3C76157D82F6C26416323F033DEF753
+2017-05-28 18:54:33,973 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 18:54:36,572 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:54:36,572 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 18:54:36,573 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 18:54:36,575 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 64F427F5190A3385B467E930D26252B0
+2017-05-28 18:54:36,575 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:54:37,571 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:54:37,572 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 18:54:37,572 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T18:54:37.572
+2017-05-28 18:54:37,576 [ INFO]        FindRequestCommand: - request Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:54:37,576 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:54:39,334 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:54:39,334 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 18:54:39,335 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 18:54:39,338 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 18:54:39,338 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 18:55:39,621 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 18:55:39,622 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/login.jsp
+2017-05-28 19:12:50,010 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:13:20,979 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:14:44,030 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:14:44,068 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:14:44,073 [TRACE]             LogoutCommand: - Уничтожение сесии: 775885A743CDA5659DF81E13BC640968
+2017-05-28 19:14:44,073 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:14:52,198 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:14:52,199 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:14:52,203 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 19:14:52,235 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 7D8CB8C7C2F0848644998DBFEB49BE99
+2017-05-28 19:14:52,236 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 19:21:56,392 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:41:39,152 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:41:39,799 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:41:39,845 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:41:39,856 [TRACE]             LogoutCommand: - Уничтожение сесии: 428CBCE31B0F043F17496CBC43EBB941
+2017-05-28 19:41:39,857 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:41:54,608 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:41:54,609 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:41:54,613 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 19:41:55,045 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= AE24EA99524D7C82AAAA23419F4F448F
+2017-05-28 19:41:55,046 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:41:57,320 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:41:57,321 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:41:57,353 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:41:57.340
+2017-05-28 19:41:57,384 [ INFO]        FindRequestCommand: - request Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 19:41:57,385 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:41:58,856 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:41:58,858 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 19:41:58,861 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=15, ownerRequest=3, dataRequest=2017-05-28T06:49:53, dataDeparture=2017-05-28T10:37:40, type=PLATFORM, carryingCar=0.1, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 19:41:58,870 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 19:41:58,871 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:42:16,481 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:42:16,482 [ INFO]          AddFlightCommand: - Начало работы ADDFLIGHT
+2017-05-28 19:42:16,497 [ INFO]          AddFlightCommand: - Запись заявки прошла успешно
+2017-05-28 19:42:16,503 [ INFO]          AddFlightCommand: - Статус удаления запросаtrue
+2017-05-28 19:42:16,503 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:46:04,002 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:53:17,812 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:53:17,853 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:53:17,855 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 19:53:17,876 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= AE7039A1F302A4150095B8ABBD860B73
+2017-05-28 19:53:17,880 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:53:19,627 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:53:19,628 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:53:19,630 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:53:19.630
+2017-05-28 19:53:19,635 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:53:19,635 [TRACE]                Controller: - Перход на станицу: EROO page
+2017-05-28 19:53:37,157 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:53:37,157 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:53:37,158 [TRACE]             LogoutCommand: - Уничтожение сесии: AE7039A1F302A4150095B8ABBD860B73
+2017-05-28 19:53:37,158 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:53:45,243 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:53:45,243 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:53:45,244 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 19:53:45,246 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 607747D8EF71546848FB4E0A30FCCF74
+2017-05-28 19:53:45,246 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 19:54:01,542 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:01,542 [ INFO]         AddRequestCommand: - 2017-05-30T20:37:40 1 0.2 0.1 0.1 
+2017-05-28 19:54:01,543 [ INFO]         AddRequestCommand: - date 2017-05-30T20:37:40
+2017-05-28 19:54:01,549 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 19:54:01,550 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 19:54:02,328 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:02,329 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 19:54:02,348 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 19:54:31,393 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:31,394 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:54:31,394 [TRACE]             LogoutCommand: - Уничтожение сесии: 607747D8EF71546848FB4E0A30FCCF74
+2017-05-28 19:54:31,395 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:54:34,024 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:34,024 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:54:34,025 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 19:54:34,028 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 7A522954B1972F65CFF8D1C4C86AB106
+2017-05-28 19:54:34,028 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:54:34,822 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:34,823 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:54:34,824 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:54:34.823
+2017-05-28 19:54:34,829 [ INFO]        FindRequestCommand: - request Request [namberRequest=16, ownerRequest=3, dataRequest=2017-05-28T07:54:01, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.2, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 19:54:34,829 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:54:38,618 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:54:38,619 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 19:54:38,622 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=16, ownerRequest=3, dataRequest=2017-05-28T07:54:01, dataDeparture=2017-05-30T08:37:40, type=PLATFORM, carryingCar=0.2, amountCar=0.1, enginePower=0.1, status=SUBMITTED, note=]
+2017-05-28 19:54:38,626 [ INFO] FindByCharacteristicsCommand: - list [Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=FREE, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 19:54:38,626 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:55:09,535 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:55:09,536 [ INFO]          AddFlightCommand: - Начало работы ADDFLIGHT
+2017-05-28 19:55:09,546 [ INFO]          AddFlightCommand: - Запись заявки прошла успешно
+2017-05-28 19:55:09,551 [ INFO]          AddFlightCommand: - Статус удаления запросаtrue
+2017-05-28 19:55:09,557 [ INFO]          AddFlightCommand: - Статус изменения статуса машиныCar [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=USED, comments=]
+2017-05-28 19:55:09,557 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:55:12,550 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:55:12,550 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:55:12,550 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:55:12.550
+2017-05-28 19:55:12,552 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:55:12,553 [TRACE]                Controller: - Перход на станицу: EROO page
+2017-05-28 19:56:09,274 [TRACE]           ContextListener: - Log4j has been initialized
+2017-05-28 19:56:16,876 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:16,916 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:56:16,921 [TRACE]             LogoutCommand: - Уничтожение сесии: AE24EA99524D7C82AAAA23419F4F448F
+2017-05-28 19:56:16,922 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:56:20,100 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:20,100 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:56:20,102 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 19:56:20,127 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 91EC661D8BE14AF2A1728797AD7943BB
+2017-05-28 19:56:20,128 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:56:20,779 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:20,780 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:56:20,782 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:56:20.782
+2017-05-28 19:56:20,785 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:56:20,786 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:56:21,529 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:21,529 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:56:21,530 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:56:21.530
+2017-05-28 19:56:21,532 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:56:21,532 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:56:21,733 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:21,734 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:56:21,734 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:56:21.734
+2017-05-28 19:56:21,736 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:56:21,737 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:56:22,097 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:22,097 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 19:56:22,098 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T19:56:22.098
+2017-05-28 19:56:22,099 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 19:56:22,100 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 19:56:23,123 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:23,124 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:56:23,124 [TRACE]             LogoutCommand: - Уничтожение сесии: 91EC661D8BE14AF2A1728797AD7943BB
+2017-05-28 19:56:23,124 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:56:52,865 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:52,865 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:56:52,865 [TRACE]             LogoutCommand: - Уничтожение сесии: 7A522954B1972F65CFF8D1C4C86AB106
+2017-05-28 19:56:52,866 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 19:56:57,963 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:57,964 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 19:56:57,964 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 19:56:57,966 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 84B5A96B3A3C9435133ADEAE7AAD0BAE
+2017-05-28 19:56:57,966 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 19:56:59,359 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:56:59,360 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 19:56:59,374 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 19:57:21,007 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 19:57:21,008 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 19:57:21,008 [TRACE]             LogoutCommand: - Уничтожение сесии: 84B5A96B3A3C9435133ADEAE7AAD0BAE
+2017-05-28 19:57:21,009 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 20:03:47,174 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:03:47,175 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:03:47,175 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 20:03:47,177 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 1BCDB2A0681AD0EC19D5895FD71B390D
+2017-05-28 20:03:47,178 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:03:48,632 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:03:48,632 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 20:03:48,642 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:04:24,059 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:24,060 [ INFO]         AddRequestCommand: - 2017-05-29T20:37:40 1 0.2 0.3 0.2 
+2017-05-28 20:04:24,061 [ INFO]         AddRequestCommand: - date 2017-05-29T20:37:40
+2017-05-28 20:04:24,067 [ INFO]         AddRequestCommand: - Запись заявки прошла успешно
+2017-05-28 20:04:24,067 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:04:26,146 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:26,146 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 20:04:26,156 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:04:29,245 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:29,246 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 20:04:29,246 [TRACE]             LogoutCommand: - Уничтожение сесии: 1BCDB2A0681AD0EC19D5895FD71B390D
+2017-05-28 20:04:29,246 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 20:04:37,024 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:37,024 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:04:37,024 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 20:04:37,026 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= F723111397A3373B1FD07A200B310C7B
+2017-05-28 20:04:37,026 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:04:38,847 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:38,848 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 20:04:38,856 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 20:04:38,856 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=USED, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=], Car [id=8, namber=AD1331AD, type=PLATFORM, carryingCar=0.4, amountCar=0.4, enginePower=0.3, statusCar=BROKEN, comments=Какието коментарии], Car [id=9, namber=AD7356AD, type=PLATFORM, carryingCar=0.6, amountCar=0.2, enginePower=0.5, statusCar=USED, comments=]]
+2017-05-28 20:04:38,859 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:04:57,660 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:57,661 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:04:57,663 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 20:04:57,665 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 0509786334650E3F6F09B5CD1F246FA2
+2017-05-28 20:04:57,666 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:04:58,926 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:04:58,927 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 20:04:58,927 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T20:04:58.927
+2017-05-28 20:04:58,931 [ INFO]        FindRequestCommand: - request Request [namberRequest=17, ownerRequest=3, dataRequest=2017-05-28T08:04:24, dataDeparture=2017-05-29T08:37:40, type=PLATFORM, carryingCar=0.2, amountCar=0.3, enginePower=0.2, status=SUBMITTED, note=]
+2017-05-28 20:04:58,931 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:05:00,971 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:05:00,972 [ INFO] FindByCharacteristicsCommand: - Начало работы FINDBYCHARACTERISTICS
+2017-05-28 20:05:00,972 [ INFO] FindByCharacteristicsCommand: - requestUser Request [namberRequest=17, ownerRequest=3, dataRequest=2017-05-28T08:04:24, dataDeparture=2017-05-29T08:37:40, type=PLATFORM, carryingCar=0.2, amountCar=0.3, enginePower=0.2, status=SUBMITTED, note=]
+2017-05-28 20:05:00,975 [ INFO] FindByCharacteristicsCommand: - list [Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=FREE, comments=null], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=]]
+2017-05-28 20:05:00,976 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:05:08,480 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:05:08,481 [ INFO]          AddFlightCommand: - Начало работы ADDFLIGHT
+2017-05-28 20:05:08,492 [ INFO]          AddFlightCommand: - Запись заявки прошла успешно
+2017-05-28 20:05:08,497 [ INFO]          AddFlightCommand: - Статус удаления запросаtrue
+2017-05-28 20:05:08,502 [ INFO]          AddFlightCommand: - Статус изменения статуса машиныCar [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=USED, comments=null]
+2017-05-28 20:05:08,502 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:05:09,567 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:05:09,567 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 20:05:09,567 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T20:05:09.567
+2017-05-28 20:05:09,570 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 20:05:09,570 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:05:13,290 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:05:13,291 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 20:05:13,294 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 20:05:13,294 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=USED, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=USED, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=], Car [id=8, namber=AD1331AD, type=PLATFORM, carryingCar=0.4, amountCar=0.4, enginePower=0.3, statusCar=BROKEN, comments=Какието коментарии], Car [id=9, namber=AD7356AD, type=PLATFORM, carryingCar=0.6, amountCar=0.2, enginePower=0.5, statusCar=USED, comments=]]
+2017-05-28 20:05:13,296 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:06:38,465 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:06:38,466 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 20:06:38,466 [TRACE]             LogoutCommand: - Уничтожение сесии: 0509786334650E3F6F09B5CD1F246FA2
+2017-05-28 20:06:38,467 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 20:07:38,982 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:38,983 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:07:38,983 [DEBUG]              LoginManager: - Найти юзера с loginom  = dispatcher
+2017-05-28 20:07:38,987 [DEBUG]              LoginCommand: - Открытие сесии для DISPATCHER; login= dispatcher; password= 123; idSession= 15EAA2D7A0A704BF85879B84226A3B80
+2017-05-28 20:07:38,988 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:07:40,658 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:40,659 [ INFO]        FindRequestCommand: - Начало работы FINDREQUEST
+2017-05-28 20:07:40,659 [ INFO]        FindRequestCommand: - LocalDateTime.now() =2017-05-28T20:07:40.659
+2017-05-28 20:07:40,661 [ INFO]        FindRequestCommand: - Send redirect на эро пейд
+2017-05-28 20:07:40,662 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/dispatcherPage.jsp
+2017-05-28 20:07:41,456 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:41,457 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 20:07:41,457 [TRACE]             LogoutCommand: - Уничтожение сесии: 15EAA2D7A0A704BF85879B84226A3B80
+2017-05-28 20:07:41,457 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 20:07:47,714 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:47,715 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:07:47,716 [DEBUG]              LoginManager: - Найти юзера с loginom  = admin
+2017-05-28 20:07:47,719 [DEBUG]              LoginCommand: - Открытие сесии для ADMINISTRATOR; login= admin; password= root; idSession= 295C3F6280E3C5096C9B990E14C3C9B8
+2017-05-28 20:07:47,720 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:07:48,973 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:48,973 [ INFO]        FindAllCarsCommand: - Начало работы FINDALLCARS
+2017-05-28 20:07:48,975 [DEBUG]        FindAllCarsCommand: - Нашли все машины.
+2017-05-28 20:07:48,975 [ INFO]        FindAllCarsCommand: - [Car [id=1, namber=AD2856AD, type=PLATFORM, carryingCar=12.5, amountCar=125.5, enginePower=1.0, statusCar=BROKEN, comments=ret], Car [id=4, namber=XS2564AD, type=PLATFORM, carryingCar=76.0, amountCar=364.0, enginePower=113.0, statusCar=USED, comments=], Car [id=5, namber=DS2564DE, type=PLATFORM, carryingCar=15.0, amountCar=15.5, enginePower=18.0, statusCar=USED, comments=null], Car [id=6, namber=AD5112AA, type=PLATFORM, carryingCar=1.4, amountCar=0.1, enginePower=156.5, statusCar=FREE, comments=sd], Car [id=7, namber=AD1356AD, type=PLATFORM, carryingCar=0.2, amountCar=0.4, enginePower=0.4, statusCar=FREE, comments=], Car [id=8, namber=AD1331AD, type=PLATFORM, carryingCar=0.4, amountCar=0.4, enginePower=0.3, statusCar=BROKEN, comments=Какието коментарии], Car [id=9, namber=AD7356AD, type=PLATFORM, carryingCar=0.6, amountCar=0.2, enginePower=0.5, statusCar=USED, comments=]]
+2017-05-28 20:07:48,976 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:07:50,632 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:07:50,633 [ INFO]           FindUserCommand: - Начало работы FINDALLUSER
+2017-05-28 20:07:50,635 [DEBUG]           FindUserCommand: - Нашли всех зареистрированыых юзерров.
+2017-05-28 20:07:50,636 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/adminPage.jsp
+2017-05-28 20:08:12,096 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:08:12,097 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 20:08:12,097 [TRACE]             LogoutCommand: - Уничтожение сесии: 295C3F6280E3C5096C9B990E14C3C9B8
+2017-05-28 20:08:12,098 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp
+2017-05-28 20:08:15,126 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:08:15,126 [ INFO]              LoginCommand: - Начало работы login
+2017-05-28 20:08:15,127 [DEBUG]              LoginManager: - Найти юзера с loginom  = driver
+2017-05-28 20:08:15,129 [DEBUG]              LoginCommand: - Открытие сесии для DRIVER; login= driver; password= 123; idSession= 2179197C47021E2B9B720B0A3A174B48
+2017-05-28 20:08:15,129 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:08:15,931 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:08:15,936 [ INFO]       FindRequestByUserID: - Начало работы FINDREQUESTBYUSERID
+2017-05-28 20:08:15,942 [TRACE]                Controller: - Перход на станицу: /WEB/jsp/work/driverPage.jsp
+2017-05-28 20:08:28,718 [ INFO]                Controller: - Начало рабоыт
+2017-05-28 20:08:28,719 [ INFO]             LogoutCommand: - НАчало работы
+2017-05-28 20:08:28,719 [TRACE]             LogoutCommand: - Уничтожение сесии: 2179197C47021E2B9B720B0A3A174B48
+2017-05-28 20:08:28,720 [TRACE]                Controller: - Перход на станицу: /WEB/index.jsp

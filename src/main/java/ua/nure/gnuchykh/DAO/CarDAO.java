@@ -21,6 +21,7 @@ public class CarDAO {
     private static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_NAMBER = "SELECT * FROM car WHERE namber=?";
     private static final String SQL_UPDETE_CAR ="UPDATE car SET namber=?, type=?, carryingCar=?, amountCar=?, enginePower=?, statusCar=?, comments=? WHERE id=?";
+    private static final String SQL_SELECT_CAR_BY_CHARACTERISTICS = "SELECT * FROM car where type = ? and statusCar = ? and carryingCar >= ? and amountCar >= ? and  enginePower >=?";
 
     private Connection connector;
 
@@ -47,12 +48,8 @@ public class CarDAO {
          // TODŒ ÎÓ„ËÓ‚‡ÌËÂ
             e.printStackTrace();
         } finally {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                // TODŒ ÎÓ„ËÓ‚‡ÌËÂ
-                e.printStackTrace();
-            }
+            ConnectionPool.close(statement);
+            ConnectionPool.close(connector);
         }
         return cars;
     }
@@ -212,5 +209,39 @@ public class CarDAO {
         }
         return car;
     }
+
+    public List<Car> findCarBy—haracteristics(TYPE type, Status statusCar,Double carryingCar, Double amountCar, Double enginePower) {
+        connector = null;
+        List<Car> cars = new ArrayList<Car>();
+        PreparedStatement ps = null;
+
+        try {
+            connector = ConnectionPool.getConnection();
+            ps = connector.prepareStatement(SQL_SELECT_CAR_BY_CHARACTERISTICS);
+
+
+            ps.setInt(1, type.value());
+            ps.setInt(2, statusCar.value());
+            ps.setDouble(3, carryingCar);
+            ps.setDouble(4, amountCar);
+            ps.setDouble(5, enginePower);
+
+            ResultSet resultSet = ps.executeQuery();
+            while(resultSet.next()) {
+                Car car =createCar(resultSet);
+                cars.add(car);
+            }
+        } catch (SQLException e) {
+         // TODŒ ÎÓ„ËÓ‚‡ÌËÂ
+            e.printStackTrace();
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+        }
+        return cars;
+    }
+
+
+
 
 }
