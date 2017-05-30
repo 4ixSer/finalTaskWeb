@@ -10,6 +10,8 @@ import java.util.List;
 
 import ua.nure.gnuchykh.entity.subject.Flight;
 import ua.nure.gnuchykh.entity.subject.Status;
+import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
 public class FlightDAO {
@@ -23,17 +25,13 @@ public class FlightDAO {
 
     private Connection connector;
 
-    public FlightDAO() {
-
-    }
-
-    public List<Flight> findAll() {
+    public List<Flight> findAll() throws DBException {
 
         List<Flight> flights = new ArrayList<Flight>();
         connector = null;
         Statement st = null;
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             st = connector.createStatement();
             ResultSet resultSet = st.executeQuery(SQL_SELECT_All_FLIGHT);
 
@@ -42,13 +40,11 @@ public class FlightDAO {
                 flights.add(flight);
             }
         } catch (SQLException e) {
-            // TODO Сюда систему логирования
-            System.err.println("Error createStatement: " + e);
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_ALL_FLIGHT, e);
         } finally {
             ConnectionPool.close(st);
             ConnectionPool.close(connector);
         }
-
         return flights;
     }
 
@@ -70,19 +66,19 @@ public class FlightDAO {
         flight.setDispatcher(resultSet.getInt("dispatcher"));
 
         // полученеи выбраной машыны
-//        Car car = new CarDAO().findEntityById(resultSet.getInt("car"));
+        // Car car = new CarDAO().findEntityById(resultSet.getInt("car"));
         flight.setCar(resultSet.getInt("car"));
 
         flight.setNote(resultSet.getString("note"));
         return flight;
     }
 
-    public Flight findEntityById(int id) {
+    public Flight findEntityById(int id) throws DBException {
         connector = null;
         Flight flight = null;
         PreparedStatement ps = null;
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_FLIGHT_BY_ID);
             ps.setInt(1, id);
             ResultSet resultSet = ps.executeQuery();
@@ -93,48 +89,43 @@ public class FlightDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO Сюда систему логирования
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_FLIGHT_BY_ID, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
         return flight;
-
     }
 
-    public boolean delete(int id) {
+    public boolean delete(int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_DELETE_FLIGHT);
             ps.setInt(1, id);
             ps.execute();
 
         } catch (SQLException e) {
-            // TODО логирование
-            System.err.println("SQL exception: " + e);
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_DELETE_FLIGHT, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
-
         return true;
     }
 
-    public boolean delete(Flight entity) {
+    public boolean delete(Flight entity) throws DBException {
         return delete(entity.getNamberFlight());
     }
 
-    public boolean create(Flight entity) {
+    public boolean create(Flight entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_INSERT_FLIGHT);
             ps.setString(1, entity.toStringDate());
             ps.setInt(2, entity.getStatus().value());
@@ -146,23 +137,20 @@ public class FlightDAO {
             ps.execute();
             ps.close();
         } catch (SQLException e) {
-            // TODО логирование
-            System.err.println("SQL exception: " + e);
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_CREATE_FLIGHT, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
-
         return true;
     }
 
-    public Flight update(Flight entity) {
+    public Flight update(Flight entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_UPDARE_FLIGHT);
             ps.setString(1, entity.toStringDate());
             ps.setInt(2, entity.getStatus().value());
@@ -176,9 +164,7 @@ public class FlightDAO {
             ps.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            // TODO Сюда систему логирования
-            return null;
+            throw new DBException(Messages.ERR_CANNOT_UPDATE_FLIGHT, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -186,14 +172,14 @@ public class FlightDAO {
         return entity;
     }
 
-    public  List<Flight> findEntityByDriverId(int id) {
+    public List<Flight> findEntityByDriverId(int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         List<Flight> flights = new ArrayList<Flight>();
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_FLIGHT_BY_USER_ID);
             ps.setInt(1, id);
 
@@ -205,15 +191,11 @@ public class FlightDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO Сюда систему логирования
+            throw new DBException(Messages.ERR_CANNOT_FIND_FLIGHT_BY_DRIVER, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
-
         }
-
         return flights;
-
     }
 }

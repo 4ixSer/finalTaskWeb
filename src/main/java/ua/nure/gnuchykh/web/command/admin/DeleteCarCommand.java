@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -17,7 +18,7 @@ public class DeleteCarCommand implements ActionCommand {
     private static final Logger LOG = Logger.getLogger(FindAllUsersCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Начало работы");
 
         // TODO валидация данных

@@ -11,6 +11,7 @@ import ua.nure.gnuchykh.DAO.RequestDAO;
 import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -26,7 +27,7 @@ public class AddRequestCommand implements ActionCommand {
     private static final String PARAM_NAME_COMMENTS = "comments";
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
         LOG.info(request.getParameter(PARAM_NAME_DATA)+" "+request.getParameter(PARAM_NAME_TYPE)+" "+request.getParameter(PARAM_NAME_CARRYING)+
                 " "+request.getParameter(PARAM_NAME_AMOUNT)+" "+request.getParameter(PARAM_NAME_ENGINE)+" "+request.getParameter(PARAM_NAME_COMMENTS));
 

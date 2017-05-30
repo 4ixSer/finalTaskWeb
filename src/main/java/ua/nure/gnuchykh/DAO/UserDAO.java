@@ -10,6 +10,8 @@ import java.util.List;
 
 import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
 public class UserDAO {
@@ -22,34 +24,28 @@ public class UserDAO {
 
     private Connection connector;
 
-    public UserDAO() {
-
-    }
-
     /**
      * ћетод дл€ получени€ списка всех пользователй.
+     *
+     * @throws DBException
      */
-
-    public List<User> findAll() {
+    public List<User> findAll() throws DBException {
         connector = null;
         List<User> users = new ArrayList<User>();
         Statement st = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             st = connector.createStatement();
             ResultSet resultSet = st.executeQuery(SQL_SELECT_All_USER);
 
             while (resultSet.next()) {
-
                 User user = createUser(resultSet);
                 users.add(user);
-
             }
 
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO —юда систему логировани€
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_ALL_USERS, e);
         } finally {
             ConnectionPool.close(st);
             ConnectionPool.close(connector);
@@ -81,15 +77,16 @@ public class UserDAO {
 
     /**
      * ћетод дл€ получени€ юзера по его ID
+     * @throws DBException
      */
 
-    public User findEntityById(int id) {
+    public User findEntityById(int id) throws DBException {
         connector = null;
         User user = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_USER_BY_id);
             ps.setInt(1, id);
             ResultSet resultSet = ps.executeQuery();
@@ -97,8 +94,7 @@ public class UserDAO {
                 user = createUser(resultSet);
             }
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO —юда систему логировани€
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_USER_BY_ID, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -106,45 +102,44 @@ public class UserDAO {
         return user;
     }
 
-    public boolean delete(int id) {
+    public boolean delete(int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_DELETE_USER);
             ps.setInt(1, id);
             ps.execute();
 
         } catch (SQLException e) {
-            // TODO —юда систему логировани€
-            System.err.println("SQL exception: " + e);
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_DELETE_USER, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
-
         return true;
     }
 
     /**
      * ћетод удал€ет юзера с базы данных.
+     * @throws DBException
      */
 
-    public boolean delete(User entity) {
+    public boolean delete(User entity) throws DBException {
         return delete(entity.getId());
     }
 
     /**
      * ћетод создает сушьность User в базе данных.
+     * @throws DBException
      */
 
-    public boolean create(User entity) {
+    public boolean create(User entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_INSERT_USER);
             ps.setString(1, entity.getLogin());
             ps.setString(2, entity.getPassword());
@@ -156,24 +151,21 @@ public class UserDAO {
             ps.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            // TODO —юда систему логировани€
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_CREATE_USER, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
         }
         return true;
     }
-    // "UPDATE user SET login=?, password=?, name=?, email=?, role=? WHERE
-    // id=?"
 
-    public User update(User entity) {
+
+    public User update(User entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_UPDETE_USER);
             ps.setString(1, entity.getLogin());
             ps.setString(2, entity.getPassword());
@@ -186,9 +178,7 @@ public class UserDAO {
             ps.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            // TODO —юда систему логировани€
-            return null;
+            throw new DBException(Messages.ERR_CANNOT_UPDATE_USER, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -201,14 +191,15 @@ public class UserDAO {
      *
      * @param login
      * @return
+     * @throws DBException
      */
-    public User findEntityByLogin(String login) {
+    public User findEntityByLogin(String login) throws DBException {
         connector = null;
         User user = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_USER_BY_LOGIN);
             ps.setString(1, login);
             ResultSet resultSet = ps.executeQuery();
@@ -216,17 +207,12 @@ public class UserDAO {
                 user = createUser(resultSet);
             }
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO —юда систему логировани€
+            throw new DBException(Messages.ERR_CANNOT_FIND_USER_BY_ID, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
-
         }
         return user;
-
     }
-
-
 
 }

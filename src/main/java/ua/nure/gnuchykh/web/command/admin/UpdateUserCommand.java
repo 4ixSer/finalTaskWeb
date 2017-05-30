@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -17,7 +18,7 @@ public class UpdateUserCommand implements ActionCommand {
     private static final Logger LOG = Logger.getLogger(UpdateUserCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Начало работы " + request.getParameter("command"));
         LOG.info(request.getParameter("id")+" "+request.getParameter("name")+" "+request.getParameter("email"));

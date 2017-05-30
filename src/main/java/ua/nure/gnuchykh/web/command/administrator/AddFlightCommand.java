@@ -15,6 +15,7 @@ import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.subject.Flight;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -24,7 +25,7 @@ public class AddFlightCommand implements ActionCommand {
 
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Начало работы " + request.getParameter("command"));
 
         Integer idCar = Integer.parseInt(request.getParameter("selectedCar"));

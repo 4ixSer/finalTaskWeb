@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import ua.nure.gnuchykh.exception.AppException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
@@ -17,6 +18,8 @@ import ua.nure.gnuchykh.web.command.factory.ActionFactory;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
+
+    private static final long serialVersionUID = 4604597013190449264L;
 
     private static final Logger LOG = Logger.getLogger(Controller.class);
 
@@ -46,7 +49,12 @@ public class Controller extends HttpServlet {
          * вызов реализованного метода execute() и передача параметров
          * классу-обработчику конкретной команды
          */
-        page = command.execute(request);
+        try {
+            page = command.execute(request);
+        } catch (AppException e) {
+            //TODO тут передалать на сесию или куки
+            request.setAttribute("errorMessage", e.getMessage());
+        }
         // метод возвращает страницу ответа
         // page = null; // поэксперементировать!
         if (page != null) {

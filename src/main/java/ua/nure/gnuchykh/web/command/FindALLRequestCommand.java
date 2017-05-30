@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 
 public class FindALLRequestCommand implements ActionCommand {
@@ -16,7 +17,7 @@ public class FindALLRequestCommand implements ActionCommand {
     private static final Logger LOG = Logger.getLogger(FindALLRequestCommand.class);
     //ÍÅÃÎÒÎÂ ÇÀÃÎÒÎÂÊÀ ÄË‗ ×ÅÃÎÒÎ
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Íאקאכמ נאבמעû " + request.getParameter("command"));
 
         HttpSession session = request.getSession();

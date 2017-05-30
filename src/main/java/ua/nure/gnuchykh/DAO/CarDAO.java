@@ -11,6 +11,8 @@ import java.util.List;
 import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
+import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
 
@@ -25,19 +27,14 @@ public class CarDAO {
 
     private Connection connector;
 
-    public CarDAO() {
 
-    }
-
-
-
-    public List<Car> findAll() {
+    public List<Car> findAll() throws DBException {
         connector = null;
         List<Car> cars = new ArrayList<Car>();
         Statement statement = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             statement = connector.createStatement();
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL_CAR);
             while(resultSet.next()) {
@@ -45,8 +42,7 @@ public class CarDAO {
                 cars.add(car);
             }
         } catch (SQLException e) {
-         // TODО логирование
-            e.printStackTrace();
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_ALL_CAR, e);
         } finally {
             ConnectionPool.close(statement);
             ConnectionPool.close(connector);
@@ -55,13 +51,13 @@ public class CarDAO {
     }
 
 
-    public Car findEntityById(int id) {
+    public Car findEntityById(int id) throws DBException {
         connector = null;
         Car car = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_CAR_BY_ID);
             ps.setInt(1, id);
             ResultSet resultSet = ps.executeQuery();
@@ -69,8 +65,7 @@ public class CarDAO {
                 car = createCar(resultSet);
             }
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO Сюда систему логирования
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_CAR_BY_ID, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -79,19 +74,17 @@ public class CarDAO {
     }
 
 
-    public boolean delete(int id) {
+    public boolean delete(int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_DELETE_CAR);
             ps.setInt(1, id);
             ps.execute();
 
         } catch (SQLException e) {
-            // TODО логирование
-            System.err.println("SQL exception: " + e);
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_DELETE_CAR, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -101,23 +94,25 @@ public class CarDAO {
 
     /**
      * Метод для удаления машины с БД.
+     * @throws DBException
      */
 
-    public boolean delete(Car entity) {
+    public boolean delete(Car entity) throws DBException {
         return delete(entity.getId());
 
     }
 
     /**
      * Метод создает машину.
+     * @throws DBException
      */
 
-    public boolean create(Car entity) {
+    public boolean create(Car entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_INSERT_CAR);
 
             ps.setString(1, entity.getNamber());
@@ -130,9 +125,7 @@ public class CarDAO {
             ps.execute();
 
         } catch (SQLException e) {
-            // TODО логирование
-            e.printStackTrace();
-            return false;
+            throw new DBException(Messages.ERR_CANNOT_CREATE_CAR, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -156,11 +149,11 @@ public class CarDAO {
     }
 
 
-    public Car update(Car entity) {
+    public Car update(Car entity) throws DBException {
         PreparedStatement ps = null;
         connector = null;
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_UPDETE_CAR);
             ps.setString(1, entity.getNamber());
             ps.setInt(2, entity.getType().value());
@@ -175,9 +168,7 @@ public class CarDAO {
             ps.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            // TODO Сюда систему логирования
-            return null;
+            throw new DBException(Messages.ERR_CANNOT_UPDATE_CAR, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -185,14 +176,14 @@ public class CarDAO {
         return entity;
     }
 
-    public Car findEntityByNamber(String namber) {
+    public Car findEntityByNamber(String namber) throws DBException {
 
         Car car = null;
         PreparedStatement ps = null;
         connector = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_CAR_BY_NAMBER);
             ps.setString(1, namber);
             ResultSet resultSet = ps.executeQuery();
@@ -200,8 +191,7 @@ public class CarDAO {
                 car = createCar(resultSet);
             }
         } catch (SQLException e) {
-            System.err.println("Error createStatement: " + e);
-            // TODO Сюда систему логирования
+            throw new DBException(Messages.ERR_CANNOT_FIND_CAR_BY_NAMBER, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);
@@ -210,13 +200,13 @@ public class CarDAO {
         return car;
     }
 
-    public List<Car> findCarByСharacteristics(TYPE type, Status statusCar,Double carryingCar, Double amountCar, Double enginePower) {
+    public List<Car> findCarByСharacteristics(TYPE type, Status statusCar,Double carryingCar, Double amountCar, Double enginePower) throws DBException {
         connector = null;
         List<Car> cars = new ArrayList<Car>();
         PreparedStatement ps = null;
 
         try {
-            connector = ConnectionPool.getConnection();
+            connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_CAR_BY_CHARACTERISTICS);
 
 
@@ -232,8 +222,7 @@ public class CarDAO {
                 cars.add(car);
             }
         } catch (SQLException e) {
-         // TODО логирование
-            e.printStackTrace();
+            throw new DBException(Messages.ERR_CANNOT_FIND_CAR_BY_CHARACTERISTICS, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);

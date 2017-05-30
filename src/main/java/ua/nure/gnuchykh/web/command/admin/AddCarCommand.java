@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
+import ua.nure.gnuchykh.exception.AppException;
 import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
@@ -24,7 +25,7 @@ public class AddCarCommand implements ActionCommand {
     private static final String PARAM_NAME_COMMENTS = "comments";
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws AppException {
 
         // TODO валидация данных
         LOG.info("НАчало работы ");

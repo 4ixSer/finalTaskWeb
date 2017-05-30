@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.RequestDAO;
 import ua.nure.gnuchykh.entity.subject.Request;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -17,7 +18,7 @@ public class CancelRequestCommand implements ActionCommand {
     private static final Logger LOG = Logger.getLogger(CancelRequestCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Начало работы"+ request.getParameter("command") );
 
         // TODO валидация данных

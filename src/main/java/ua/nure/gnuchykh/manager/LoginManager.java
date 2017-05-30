@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.exception.DBException;
 
 public class LoginManager {
 
@@ -31,7 +32,7 @@ public class LoginManager {
      *
      * return true; }
      */
-    public static User getUSer(String enterLogin) {
+    public static User getUSer(String enterLogin) throws DBException {
 
         LOG.debug("Найти юзера с loginom  = " + enterLogin);
 

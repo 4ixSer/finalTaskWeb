@@ -9,12 +9,13 @@ import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.entity.users.User;
+import ua.nure.gnuchykh.exception.DBException;
 
 public class RegistationManager {
 
     private static final Logger LOG = Logger.getLogger(RegistationManager.class);
 
-    public static boolean registaticonNewUser(String login, String pass, String name, String email, Integer role) {
+    public static boolean registaticonNewUser(String login, String pass, String name, String email, Integer role) throws DBException {
 
         LOG.debug("Создать нового юзера " + login);
         UserDAO userDAO = new UserDAO();
@@ -29,7 +30,7 @@ public class RegistationManager {
     }
 
     public static boolean registaticonNewCar(String namber, TYPE type, Double carryingCar, Double amountCar,
-            Double enginePower, Status statusCar, String comments) {
+            Double enginePower, Status statusCar, String comments) throws DBException {
 
         LOG.debug("Создать новую машину ");
         CarDAO dao = new CarDAO();

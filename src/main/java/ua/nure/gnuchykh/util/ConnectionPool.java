@@ -10,56 +10,70 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class ConnectionPool {
-    private static final String DATASOURCE_NAME = "jdbc/autobase";
-    private static DataSource dataSource;
+import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.exception.Messages;
 
-    static {
+public class ConnectionPool {
+
+    private static final String DATASOURCE_NAME = "jdbc/autobase";
+    private DataSource dataSource;
+
+    private static ConnectionPool instance;
+
+    public static synchronized ConnectionPool getInstance() throws DBException {
+        if (instance == null) {
+            instance = new ConnectionPool();
+        }
+        return instance;
+    }
+
+    private ConnectionPool() throws DBException {
         try {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:/comp/env");
             dataSource = (DataSource) envContext.lookup(DATASOURCE_NAME);
-
         } catch (NamingException e) {
-            e.printStackTrace();
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_DATA_SOURCE, e);
         }
     }
 
-    private ConnectionPool() {
-    }
-
-    public static Connection getConnection() throws SQLException {
-        Connection connection = dataSource.getConnection();
+    public Connection getConnection() throws DBException {
+        Connection connection = null;
+        try {
+            connection = dataSource.getConnection();
+        } catch (SQLException e) {
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_CONNECTION, e);
+        }
         return connection;
     }
 
-    public static void close(Statement st) {
+    public static void close(Statement st) throws DBException {
         try {
             if (st != null) {
                 st.close();
             }
         } catch (SQLException e) {
-            // лог о невозможности закрытия Statement
+            throw new DBException(Messages.ERR_CANNOT_CLOSE_STATEMENT, e);
         }
     }
 
-    public static void close(PreparedStatement ps) {
+    public static void close(PreparedStatement ps) throws DBException {
         try {
             if (ps != null) {
                 ps.close();
             }
         } catch (SQLException e) {
-            // лог о невозможности PreparedStatement
+            throw new DBException(Messages.ERR_CANNOT_CLOSE_PREPARED_STATEMENT, e);
         }
     }
 
-    public static void close(Connection connection) {
+    public static void close(Connection connection) throws DBException {
         try {
             if (connection != null) {
                 connection.close();
             }
         } catch (SQLException e) {
-            // генерация исключения, т.к. нарушается работа пула
+            throw new DBException(Messages.ERR_CANNOT_OBTAIN_CONNECTION, e);
         }
     }
 

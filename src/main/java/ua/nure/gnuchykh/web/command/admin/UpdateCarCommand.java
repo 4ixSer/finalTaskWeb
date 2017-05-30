@@ -11,6 +11,7 @@ import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -27,7 +28,7 @@ public class UpdateCarCommand implements ActionCommand {
     private static final String PARAM_NAME_COMMENTS = "comments";
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Начало работы " + request.getParameter("command"));
 

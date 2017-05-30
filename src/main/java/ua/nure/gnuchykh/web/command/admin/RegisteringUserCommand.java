@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.manager.RegistationManager;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.util.MessageManager;
@@ -20,7 +21,7 @@ public class RegisteringUserCommand implements ActionCommand {
     private static final String PARAM_NAME_ROLE = "role";
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Ќјчало работы " + request.getParameter("command"));
 

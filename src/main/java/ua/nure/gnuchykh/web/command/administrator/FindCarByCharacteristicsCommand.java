@@ -11,6 +11,7 @@ import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.subject.Request;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
@@ -19,7 +20,7 @@ public class FindCarByCharacteristicsCommand implements ActionCommand {
     private static final Logger LOG = Logger.getLogger(FindCarByCharacteristicsCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Начало работы " + request.getParameter("command"));
 
