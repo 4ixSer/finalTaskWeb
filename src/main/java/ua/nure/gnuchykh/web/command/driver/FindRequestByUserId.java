@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.RequestDAO;
 import ua.nure.gnuchykh.entity.subject.Request;
+import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindRequestByUserId implements ActionCommand {
@@ -19,19 +21,17 @@ public class FindRequestByUserId implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-
         LOG.info("Начало работы " + request.getParameter("command"));
 
         HttpSession session = request.getSession();
+        Integer idUser = (Integer) session.getAttribute("userID");
 
         RequestDAO dao = new  RequestDAO();
-        List<Request> userReques = dao.findEntityByUserId((Integer) session.getAttribute("userID"));
-
-
+        List<Request> userReques = dao.findEntityByUserId(idUser);
+        LOG.debug("Нашли все заявки водителя");
         session.setAttribute("userRequest", userReques);
+        session.setAttribute("Message", MessageManager.getProperty("message.findUserRequest"));
 
-        return ConfigurationManager.getProperty("path.page.driver");
-
+        return Path.getPage((ClientType) session.getAttribute("userType"));
     }
-
 }

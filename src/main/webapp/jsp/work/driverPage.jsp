@@ -37,7 +37,7 @@ function agreeForm(f) {
 			<fmt:message key="label.welcome" bundle="${rb}" />, ${name}.
 		</p>
 	</h2>
-
+	${Message} <br><br>
 		<!-- регистрация заявки   -->
 	<form align="center" name="formRequest" method="POST" action="/WEB/controller" >
 		<input type="hidden" name="command" value="ADDREQUEST" />

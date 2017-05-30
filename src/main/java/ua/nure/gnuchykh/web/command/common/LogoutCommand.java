@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class LogoutCommand implements ActionCommand {
@@ -14,14 +14,12 @@ public class LogoutCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
 
-        LOG.info("НАчало работы");
+        LOG.info("Начало работы " + request.getParameter("command"));
 
-        // возврат на страницу Индеркса.
-        String page = ConfigurationManager.getProperty("path.page.index");
-
-        LOG.trace("Уничтожение сесии: " + request.getSession().getId());
         // уничтожение сессии
+        LOG.trace("Уничтожение сесии: " + request.getSession().getId());
+
         request.getSession().invalidate();
-        return page;
+        return Path.PAGE_INDEX;
     }
 }

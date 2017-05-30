@@ -5,7 +5,10 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.entity.users.ClientType;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
+import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class CloseCommand  implements ActionCommand {
@@ -14,43 +17,22 @@ public class CloseCommand  implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        LOG.info("Начало работы");
 
-        // TODO валидация данных
-        String table = request.getParameter("table");
+        LOG.info("НАчало работы " + request.getParameter("command"));
 
         HttpSession session = request.getSession();
+        String table = request.getParameter("table");
 
-        session.removeAttribute(table);
-
-        LOG.info("Закрытие таблицы " +table);
-
-
-        return getPageRole(session.getAttribute("userType").toString());
-
-    }
-
-    private String getPageRole(String role) {
-
-        String propertiesName = null;
-
-        switch (role) {
-        case "ADMINISTRATOR":
-            propertiesName = "path.page.admin";
-            break;
-        case "DISPATCHER":
-            propertiesName = "path.page.dispatcher";
-            break;
-        case "DRIVER":
-            propertiesName = "path.page.driver";
-            break;
-        default:
-            propertiesName = "path.page.login";
-            System.out.println("Eroor");
-            break;
+        if(!Validation.validateString(table)) {
+            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            LOG.info("Данные не коректны");
+            return Path.PAGE_ADMIN;
         }
 
-        return ConfigurationManager.getProperty(propertiesName);
+        session.removeAttribute(table);
+        LOG.info("Закрытие таблицы " +table);
+        session.setAttribute("Message", MessageManager.getProperty("message.closeTable"));
+        return Path.getPage((ClientType) session.getAttribute("userType"));
 
     }
 

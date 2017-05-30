@@ -65,21 +65,21 @@ function updateForm(f) {
 			<fmt:message key="label.welcome" bundle="${rb}" />, ${name}.
 		</p>
 	</h2>
-
+	${Message} <br>
 		<!-- регистрация пользователей  -->
 	<form align="center" name="loginForm" method="POST" action="/WEB/controller" >
 		<input type="hidden" name="command"  value="REGISTERINGUSER" />
 		<input type="text" name="login" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" placeholder="login" required title="5 и более символов A-Za-zА-Яа-яёЁ0-9" />
 		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" placeholder="password" required />
 		<input type="email" name="email"	placeholder="Email" required />
-		<input type="text" name="name"  pattern="[A-Za-zА-Яа-яёЁ0-9]{2,20}" placeholder="name" />
-		<select	name="role"required ">
+		<input type="text" name="name"  pattern="[A-Za-zА-Яа-яёЁ0-9]{2,20}" placeholder="name" required />
+		<select	name="role" required ">
 			<option value="1"> <fmt:message key="label.admin" bundle="${rb}" /> </option>
 			<option value="2"> <fmt:message key="label.dispatcher" bundle="${rb}" /></option>
 			<option selected value="3"> <fmt:message key="label.driver" bundle="${rb}" /></option>
 		</select> <input type="submit" value="<fmt:message key="menu.register.user" bundle="${rb}" />">
 		<p align="center">
-			${Message1} <br>
+
 		</p>
 	</form>
 	<br />

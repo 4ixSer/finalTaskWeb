@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
+import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindAllCarsCommand implements ActionCommand {
@@ -20,7 +22,6 @@ public class FindAllCarsCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Начало работы " + request.getParameter("command"));
-
         HttpSession session = request.getSession();
 
         CarDAO dao = new CarDAO();
@@ -28,10 +29,8 @@ public class FindAllCarsCommand implements ActionCommand {
 
         LOG.debug("Нашли все машины.");
         session.setAttribute("cars", cars);
-        LOG.info(cars);
+        session.setAttribute("Message", MessageManager.getProperty("message.findCar"));
 
-        return ConfigurationManager.getProperty("path.page.admin");
-
+        return Path.getPage((ClientType) session.getAttribute("userType"));
     }
-
 }

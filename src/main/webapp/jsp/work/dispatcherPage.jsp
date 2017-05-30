@@ -17,7 +17,7 @@
 			, ${name}.
 		</p>
 	</h2>
-
+	${Message} <br><br>
 	<!--Запрос на поиск зявок   -->
 	<form align="center" name="findRequest" method="POST"
 		action="http://localhost:8080/WEB/controller">

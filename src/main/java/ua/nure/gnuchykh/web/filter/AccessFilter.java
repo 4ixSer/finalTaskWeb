@@ -59,7 +59,7 @@ public class AccessFilter implements Filter {
             LOG.trace("Set the request attribute: errorMessage --> " + errorMessasge);
 
             HttpServletResponse httpresponse = (HttpServletResponse) response;
-            httpresponse.sendRedirect("/WEB/JSP/ERROR/error.jsp");
+            httpresponse.sendRedirect("/WEB/jsp/error/error.jsp");
 
         }
     }

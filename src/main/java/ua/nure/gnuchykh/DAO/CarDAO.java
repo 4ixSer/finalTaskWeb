@@ -165,7 +165,6 @@ public class CarDAO {
 
             ps.setInt(8, entity.getId());
             ps.executeUpdate();
-            ps.close();
 
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_UPDATE_CAR, e);

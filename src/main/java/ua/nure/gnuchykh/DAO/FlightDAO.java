@@ -135,7 +135,6 @@ public class FlightDAO {
             ps.setString(6, entity.getNote());
 
             ps.execute();
-            ps.close();
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_CREATE_FLIGHT, e);
         } finally {
@@ -161,8 +160,6 @@ public class FlightDAO {
             ps.setInt(7, entity.getNamberFlight());
 
             ps.executeUpdate();
-            ps.close();
-
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_UPDATE_FLIGHT, e);
         } finally {

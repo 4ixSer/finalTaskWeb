@@ -32,8 +32,10 @@ public class LoginCommand implements ActionCommand {
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         //Проверить входяшие параметры
-        if (login == null || pass == null || login.isEmpty() || pass.isEmpty()||Validation.validateString(login,pass)) {
+        if (login == null || pass == null || login.isEmpty() || pass.isEmpty()||
+                !Validation.loginIsCorrect(login)||!Validation.passwordIsCorrect(pass)) {
             session.setAttribute("errorMessage", MessageManager.getProperty("message.loginOrPasswordIsEmty"));
+            LOG.info("Начальные данные не правильны");
             page = Path.PAGE_INDEX;
         } else {
             // получение юзера
@@ -61,7 +63,6 @@ public class LoginCommand implements ActionCommand {
                 page = Path.getPage(user.getType());
             }
         }
-        LOG.info("Отправлено на " + page);
         return page;
     }
 }

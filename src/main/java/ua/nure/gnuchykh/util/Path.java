@@ -18,6 +18,10 @@ public final class Path {
 
     public static String getPage(ClientType type) {
 
+
+        if(type == null)
+            return PAGE_INDEX;
+
         String page = null;
         // TODO Подумать как красивей это поменять
         switch (type.value()) {

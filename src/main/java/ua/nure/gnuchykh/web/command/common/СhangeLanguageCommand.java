@@ -5,7 +5,8 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.entity.users.ClientType;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class СhangeLanguageCommand implements ActionCommand {
@@ -20,35 +21,8 @@ public class СhangeLanguageCommand implements ActionCommand {
         session.setAttribute("language", language);
         LOG.info("language " + language);
         LOG.info("Страница от куда пришел запрос " + request.getRequestURI());
-        //TODO передать красивый вывод
-        if (session.getAttribute("userType") == null) {
-            return ConfigurationManager.getProperty("path.page.login");
-        } else {
-            return getPageRole(session.getAttribute("userType").toString());
-        }
-    }
 
-    private String getPageRole(String role) {
-
-        String propertiesName = null;
-
-        switch (role) {
-        case "ADMINISTRATOR":
-            propertiesName = "path.page.admin";
-            break;
-        case "DISPATCHER":
-            propertiesName = "path.page.dispatcher";
-            break;
-        case "DRIVER":
-            propertiesName = "path.page.driver";
-            break;
-        default:
-
-            break;
-        }
-
-        return ConfigurationManager.getProperty(propertiesName);
+        return Path.getPage((ClientType) session.getAttribute("userType"));
 
     }
-
 }

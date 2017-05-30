@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.FlightDAO;
 import ua.nure.gnuchykh.entity.subject.Flight;
+import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindAllFlightCommand implements ActionCommand {
@@ -20,7 +22,6 @@ public class FindAllFlightCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws DBException {
         LOG.info("Начало работы " + request.getParameter("command"));
-
         HttpSession session = request.getSession();
 
         FlightDAO dao = new FlightDAO();
@@ -28,10 +29,8 @@ public class FindAllFlightCommand implements ActionCommand {
 
         LOG.debug("Нашли все рейсы.");
         session.setAttribute("allFlight", list);
-        LOG.info(list);
+        session.setAttribute("Message", MessageManager.getProperty("message.findFlight"));
 
-        return ConfigurationManager.getProperty("path.page.dispatcher");
-
+        return Path.getPage((ClientType) session.getAttribute("userType"));
     }
-
 }

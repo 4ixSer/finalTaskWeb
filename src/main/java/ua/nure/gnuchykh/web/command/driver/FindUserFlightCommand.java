@@ -9,8 +9,10 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.FlightDAO;
 import ua.nure.gnuchykh.entity.subject.Flight;
+import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindUserFlightCommand implements ActionCommand {
@@ -23,15 +25,14 @@ public class FindUserFlightCommand implements ActionCommand {
 
         HttpSession session = request.getSession();
         Integer idUser = (Integer) session.getAttribute("userID");
+
         FlightDAO dao = new FlightDAO();
         List<Flight> list = dao.findEntityByDriverId(idUser);
 
         LOG.debug("Нашли все рейсы водителя");
         session.setAttribute("allFlight", list);
-        LOG.info(list);
+        session.setAttribute("Message", MessageManager.getProperty("message.findUserFlight"));
 
-        return ConfigurationManager.getProperty("path.page.driver");
-
+        return Path.getPage((ClientType) session.getAttribute("userType"));
     }
-
 }

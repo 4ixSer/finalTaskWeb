@@ -86,7 +86,6 @@ public class User implements Serializable  {
         return email;
     }
 
-    //TODO реализовать проверку email перед записью согласно патерну [A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$
     public void setEmail(String email) {
         this.email = email;
     }

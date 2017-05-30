@@ -164,7 +164,6 @@ public class RequestDAO {
             ps.setInt(8, entity.getStatus().value());
             ps.setString(9, entity.getNote());
             ps.execute();
-            ps.close();
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_CREATE_REQUEST, e);
         } finally {
@@ -197,7 +196,6 @@ public class RequestDAO {
 
             ps.setInt(10, entity.getNamberRequest());
             ps.executeUpdate();
-            ps.close();
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_UPDATE_REQUEST, e);
         } finally {

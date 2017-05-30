@@ -145,10 +145,8 @@ public class UserDAO {
             ps.setString(2, entity.getPassword());
             ps.setString(3, entity.getName());
             ps.setString(4, entity.getEmail());
-
             ps.setInt(5, entity.getType().value());
             ps.execute();
-            ps.close();
 
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_CREATE_USER, e);
@@ -175,7 +173,7 @@ public class UserDAO {
             ps.setInt(5, entity.getType().value());
             ps.setInt(6, entity.getId());
             ps.executeUpdate();
-            ps.close();
+
 
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_UPDATE_USER, e);
