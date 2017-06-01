@@ -11,7 +11,7 @@ public final class ParamName {
     public static final String PARAM_NAME_CAR_AMOUNT = "amount";
     public static final String PARAM_NAME_CAR_ENGINE = "engine";
     public static final String PARAM_NAME_CAR_STATUS = "status";
-    public static final String PARAM_NAME_CAR_COMMENTS = "comments";
+    public static final String PARAM_NAME_COMMENTS = "comments";
 
     public static final String PARAM_NAME_DATA = "date";
 
@@ -50,6 +50,11 @@ public final class ParamName {
 
     //2 1
     public static final String ATTRIBUTE_lANGUAGE ="language";
+
+    public static final String PARAM_NAME_SELECTED_CAR ="selectedCar";
+
+    public static final String PARAM_NAME_USER_ID ="idUser";
+
 
 
    // import static ua.nure.gnuchykh.util.ParamName.*;

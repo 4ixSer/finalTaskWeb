@@ -3,7 +3,7 @@ package ua.nure.gnuchykh.web.command.driver;
 import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS_ID;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
-import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_COMMENTS;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_TYPE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_DATA;
@@ -37,7 +37,7 @@ public class AddRequestCommand implements ActionCommand {
 
         // извлечение данных
 
-        String comments = request.getParameter(PARAM_NAME_CAR_COMMENTS);
+        String comments = request.getParameter(PARAM_NAME_COMMENTS);
         String dataDepartureS =request.getParameter(PARAM_NAME_DATA);
 
         String typeS = request.getParameter(PARAM_NAME_CAR_TYPE);

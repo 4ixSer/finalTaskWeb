@@ -36,6 +36,7 @@ public class DeleteCarCommand implements ActionCommand {
 
         // Валилация
         if (!Validation.parameterStringIsCorrect(idS)) {
+            LOG.info("Ошибка валидации");
             session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
         } else {
 

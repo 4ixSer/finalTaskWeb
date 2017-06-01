@@ -72,7 +72,7 @@
 									<option value="${elem.id}">${elem.type}_____carrying_____${elem.carryingCar}_____amount_____${elem.amountCar}_____engine_____${elem.enginePower} </option>
 								</c:forEach>
 							</select>
-							<input type="text" name="node" placeholder="Comments"/>
+							<input type="text" name="comments" placeholder="Comments"/>
 							<input type="submit" value="Назначить">
 
 						</form>

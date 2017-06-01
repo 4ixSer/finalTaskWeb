@@ -16,14 +16,14 @@ function agreeForm(f) {
    if (f.agree.checked) {
 
 	   f.comments.hidden = 0;
-	   f.statusCar.hidden = 0;
+	   f.status.hidden = 0;
 	   f.change.disabled = 0;
 
    }
     // В противном случае вновь блокируем кнопку
     else {
     	f.comments.hidden = 1;
- 	   	f.statusCar.hidden = 1;
+ 	   	f.status.hidden = 1;
  	   	f.change.disabled = 1;
     }
 
@@ -80,7 +80,7 @@ function agreeForm(f) {
 	<br />
 	<c:if test="${not empty allRequest}">
 		<div>
-			<a  href="/WEB/controller?command=CLOSE&table=userRequest">	&times;</a>
+			<a  href="/WEB/controller?command=CLOSE&table=allRequest">	&times;</a>
 			<!--Таблица дял отрисовки запросов   -->
 			<table align="center">
 				<tr>
@@ -104,8 +104,10 @@ function agreeForm(f) {
 						<td><c:out value="${ elem.carryingCar }" /></td>
 						<td><c:out value="${ elem.amountCar }" /></td>
 						<td><c:out value="${ elem.enginePower }" /></td>
-						<td><c:out value="${ elem.status }" /></td>
-						<td><a  href="/WEB/controller?command=CANCELREQUEST&id=${elem.namberRequest }">Отменить</a></td>
+						<td><c:out value="${ elem.status }" /><c:set var = "status" value = "${ elem.status }"/></td>
+						<c:if  test = "${not fn:containsIgnoreCase(status, 'PROCESSED')}">
+							<td><a  href="/WEB/controller?command=CANCELREQUEST&id=${elem.namberRequest }">Отменить</a></td>
+					</c:if>
 					</tr>
 				</c:forEach>
 
@@ -142,7 +144,7 @@ function agreeForm(f) {
 					<tr align="center">
 						<form align="center" name="loginForm" method="POST" action="/WEB/controller" >
 							<input type="hidden" name="command"  value="UPDATEFLIGHT" />
-							<input type="hidden" name="idFlight"  value="${ elem.namberFlight }" />
+							<input type="hidden" name="id"  value="${ elem.namberFlight }" />
 							<td><c:out value="${ elem.namberFlight }" /></td>
 							<td><c:out value="${ elem.date }" /></td>
 							<td><c:out value="${ elem.status }" /> <c:set var = "status" value = "${ elem.status }"/></td>
@@ -152,8 +154,8 @@ function agreeForm(f) {
 							<td><c:out value="${ elem.note }" /></td>
 							 <c:if  test = "${not fn:containsIgnoreCase(status, 'CLOSED')}">
 								<td><input type="checkbox" name="agree" onclick="agreeForm(this.form)" /></td>
-								<td><input type="text" name="comments" placeholder="Comments" hidden/> </td>
-								<td><select	name="statusCar" hidden required>
+								<td><input type="text" name="comments" placeholder="Comments" hidden required/> </td>
+								<td><select	name="status" hidden required>
 									<option selected  value="1"> <fmt:message key="car.status.FREE" bundle="${rb}"  /> </option>
 									<option value="3"> <fmt:message key="car.status.BROKEN" bundle="${rb}" /></option>
 								</select>

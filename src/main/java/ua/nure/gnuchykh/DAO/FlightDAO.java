@@ -223,4 +223,94 @@ public class FlightDAO {
         }
         return flights;
     }
+
+
+    public boolean create(Flight entity,Integer idCar,Integer idRequest) throws DBException {
+        connector = null;
+        PreparedStatement ps = null;
+        String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
+        String SQL_UPDETE_CAR ="UPDATE car SET statusCar=? WHERE id=?";
+
+        String SQL_SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id=?";
+
+
+        try {
+            connector = ConnectionPool.getInstance().getConnection();
+            connector.setAutoCommit(false);
+
+            ps = connector.prepareStatement(SQL_DELETE_REQUEST);
+            ps.setInt(1, idRequest);
+            ps.execute();
+
+//            ps = connector.prepareStatement(SQL_UPDETE_CAR);
+//            ps.setInt(1, ua.nure.gnuchykh.entity.cars.Status.USED.value());
+//            ps.setInt(2, idCar);
+//            ps.execute();
+
+
+
+            ps = connector.prepareStatement(SQL_SELECT_CAR_BY_ID);
+            ps.setInt(1, idCar);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                if(resultSet.getInt("statusCar")==2) {
+                    throw new SQLException();
+                }
+            }
+
+            ps = connector.prepareStatement(SQL_INSERT_FLIGHT);
+            ps.setString(1, entity.toStringDate());
+            ps.setInt(2, entity.getStatus().value());
+            ps.setInt(3, entity.getDriver());
+            ps.setInt(4, entity.getCar());
+            ps.setInt(5, entity.getDispatcher());
+            ps.setString(6, entity.getNote());
+            ps.execute();
+
+            connector.commit();
+        } catch (SQLException e) {
+            ConnectionPool.rollback(connector);
+            throw new DBException(Messages.ERR_CANNOT_CREATE_FLIGHT, e);
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+        }
+        return true;
+    }
+
+
+    public Flight update(Flight entity, Integer idCar, ua.nure.gnuchykh.entity.cars.Status status, String comments) throws DBException {
+        connector = null;
+        PreparedStatement ps = null;
+        String SQL_UPDETE_CAR ="UPDATE car SET statusCar=?, comments=? WHERE id=?";
+        String SQL_UPDARE_STATUS_FLIGHT = "UPDATE flight SET status=? , note=? WHERE id=?";
+
+        try {
+            connector = ConnectionPool.getInstance().getConnection();
+            connector.setAutoCommit(false);
+
+            ps = connector.prepareStatement(SQL_UPDARE_STATUS_FLIGHT);
+            ps.setInt(1, Status.CLOSED.value());
+            ps.setString(2, comments);
+            ps.setInt(3, entity.getNamberFlight());
+            ps.executeUpdate();
+
+            ps = connector.prepareStatement(SQL_UPDETE_CAR);
+            ps.setInt(1, status.value());
+            ps.setString(2, comments);
+            ps.setInt(3, idCar);
+            ps.executeUpdate();
+
+            connector.commit();
+        } catch (SQLException e) {
+            ConnectionPool.rollback(connector);
+            System.err.println(e);
+            throw new DBException(Messages.ERR_CANNOT_UPDATE_FLIGHT, e);
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+        }
+        return entity;
+    }
+
 }

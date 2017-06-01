@@ -2,7 +2,7 @@ package ua.nure.gnuchykh.web.command.admin;
 
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
-import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_COMMENTS;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_NAMBER;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_STATUS;
@@ -36,7 +36,7 @@ public class AddCarCommand implements ActionCommand {
         HttpSession session = request.getSession();
         // извлечение данных
         String namber = request.getParameter(PARAM_NAME_CAR_NAMBER);
-        String comments = request.getParameter(PARAM_NAME_CAR_COMMENTS);
+        String comments = request.getParameter(PARAM_NAME_COMMENTS);
 
         String typeS = request.getParameter(PARAM_NAME_CAR_TYPE);
         String carryingS = request.getParameter(PARAM_NAME_CAR_CARRYING);

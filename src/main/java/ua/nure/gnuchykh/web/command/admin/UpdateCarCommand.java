@@ -1,9 +1,9 @@
 package ua.nure.gnuchykh.web.command.admin;
 
-import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_CARS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
-import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_COMMENTS;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_NAMBER;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_STATUS;
@@ -39,7 +39,7 @@ public class UpdateCarCommand implements ActionCommand {
 
         // извлечение данных
         String namber = request.getParameter(PARAM_NAME_CAR_NAMBER);
-        String comments = request.getParameter(PARAM_NAME_CAR_COMMENTS);
+        String comments = request.getParameter(PARAM_NAME_COMMENTS);
 
         String idS = request.getParameter(PARAM_NAME_ID);
         String typeS = request.getParameter(PARAM_NAME_CAR_TYPE);
@@ -107,7 +107,7 @@ public class UpdateCarCommand implements ActionCommand {
 
                     car = dao.update(car);
                     LOG.info("ѕерезапись данных о машинне.");
-                    session.setAttribute(ATTRIBUTE_USERS, list);
+                    session.setAttribute(ATTRIBUTE_CARS, list);
                     session.setAttribute("Message", MessageManager.getProperty("message.car.update"));
                 }
             }
