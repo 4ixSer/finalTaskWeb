@@ -39,7 +39,7 @@ function agreeForm(f) {
 	</h2>
 	${Message} <br><br>
 		<!-- регистрация заявки   -->
-	<form align="center" name="formRequest" method="POST" action="/WEB/controller" >
+	<form align="center" name="formRequest" method="GET" action="/WEB/controller" >
 		<input type="hidden" name="command" value="ADDREQUEST" />
 		<input type="datetime-local" name="date" value="2017-04-10T20:37:40" />
 		<select name="type" required ">
@@ -78,7 +78,7 @@ function agreeForm(f) {
 		<input	type="submit" value="<fmt:message key="menu.find.request" bundle="${rb}" />">
 	</form>
 	<br />
-	<c:if test="${not empty userRequest}">
+	<c:if test="${not empty allRequest}">
 		<div>
 			<a  href="/WEB/controller?command=CLOSE&table=userRequest">	&times;</a>
 			<!--Таблица дял отрисовки запросов   -->
@@ -95,7 +95,7 @@ function agreeForm(f) {
 
 				</tr>
 
-			<c:forEach var="elem" items="${userRequest}" varStatus="status">
+			<c:forEach var="elem" items="${allRequest}" varStatus="status">
 					<tr align="center">
 						<td><c:out value="${ elem.namberRequest }" /></td>
 						<td><c:out value="${ elem.dataRequest }" /></td>

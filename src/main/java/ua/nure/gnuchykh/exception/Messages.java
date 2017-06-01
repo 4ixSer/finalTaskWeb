@@ -65,6 +65,8 @@ public class Messages {
 
     public static final String ERR_CANNOT_FIND_FLIGHT_BY_DRIVER = "Cannot find the flight by user";
 
+    public static final String ERR_CANNOT_FIND_FLIGHT_BY_CAR = "Cannot find the flight by car";
+
     // Ошибки машин
     public static final String ERR_CANNOT_OBTAIN_ALL_CAR = "Cannot obtain the all car";
 
@@ -83,6 +85,7 @@ public class Messages {
     //Ошибки приложений
 
     public static final String ERR_LOGIN_OR_PASSWORD_EMPTY = " Login/password cannot be empty";
+    public static final String ERR_ROLLBACK = "Eroro rollback";
 
 
 }

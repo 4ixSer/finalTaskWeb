@@ -77,4 +77,14 @@ public class ConnectionPool {
         }
     }
 
+    public static void rollback(Connection con) throws DBException {
+        if (con != null) {
+                try {
+                        con.rollback();
+                } catch (SQLException e) {
+                    throw new DBException(Messages.ERR_ROLLBACK, e);
+                }
+        }
+}
+
 }

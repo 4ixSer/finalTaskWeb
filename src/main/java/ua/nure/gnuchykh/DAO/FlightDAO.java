@@ -19,6 +19,7 @@ public class FlightDAO {
     private static final String SQL_SELECT_All_FLIGHT = "SELECT * FROM flight";
     private static final String SQL_SELECT_FLIGHT_BY_ID = "SELECT * FROM flight where id=?";
     private static final String SQL_SELECT_FLIGHT_BY_USER_ID = "SELECT * FROM flight where driver=?";
+    private static final String SQL_SELECT_FLIGHT_BY_CAR = "SELECT * FROM flight where car=?";
     private static final String SQL_INSERT_FLIGHT = "INSERT INTO flight (date, status, driver, car, dispatcher, note) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String SQL_DELETE_FLIGHT = "DELETE FROM flight WHERE id=?";
     private static final String SQL_UPDARE_FLIGHT = "UPDATE flight SET date=?, status=?, driver=?, car=?, dispatcher=?, note=? WHERE id=?";
@@ -189,6 +190,33 @@ public class FlightDAO {
 
         } catch (SQLException e) {
             throw new DBException(Messages.ERR_CANNOT_FIND_FLIGHT_BY_DRIVER, e);
+        } finally {
+            ConnectionPool.close(ps);
+            ConnectionPool.close(connector);
+        }
+        return flights;
+    }
+
+    public List<Flight> findEntityByCarId(int id) throws DBException {
+        connector = null;
+        PreparedStatement ps = null;
+
+        List<Flight> flights = new ArrayList<Flight>();
+
+        try {
+            connector = ConnectionPool.getInstance().getConnection();
+            ps = connector.prepareStatement(SQL_SELECT_FLIGHT_BY_CAR);
+            ps.setInt(1, id);
+
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                Flight flight = createFlight(resultSet);
+                flights.add(flight);
+
+            }
+
+        } catch (SQLException e) {
+            throw new DBException(Messages.ERR_CANNOT_FIND_FLIGHT_BY_CAR, e);
         } finally {
             ConnectionPool.close(ps);
             ConnectionPool.close(connector);

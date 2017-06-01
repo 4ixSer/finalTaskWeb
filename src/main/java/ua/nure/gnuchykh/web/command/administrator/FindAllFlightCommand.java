@@ -1,5 +1,8 @@
 package ua.nure.gnuchykh.web.command.administrator;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_ALL_FLIGHT;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +24,16 @@ public class FindAllFlightCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-        LOG.info("Начало работы " + request.getParameter("command"));
+        LOG.info("Начало работы");
         HttpSession session = request.getSession();
 
         FlightDAO dao = new FlightDAO();
         List<Flight> list = dao.findAll();
 
         LOG.debug("Нашли все рейсы.");
-        session.setAttribute("allFlight", list);
+        session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
         session.setAttribute("Message", MessageManager.getProperty("message.findFlight"));
 
-        return Path.getPage((ClientType) session.getAttribute("userType"));
+        return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

@@ -56,8 +56,8 @@
 						<td><c:out value="${ requestUser.amountCar }" />   </td>
 						<td><c:out value="${ requestUser.enginePower }" />   </td>
 						<td><c:out value="${ requestUser.note }" />   </td>
-						<td><a href="http://localhost:8080/WEB/controller?command=FINDCARBYCHARACTERISTICS">Найти машину</a>   </td>
-						<td><a  href="http://localhost:8080/WEB/controller?command=DENYREQUEST&id=${requestUser.namberRequest }">Отказать</a></td>
+						<!-- <td><a href="http://localhost:8080/WEB/controller?command=FINDCARBYCHARACTERISTICS">Найти машину</a>   </td> -->
+						<td><a  href="http://localhost:8080/WEB/controller?command=DENYREQUEST">Отказать</a></td>
 
 
 				</tr>

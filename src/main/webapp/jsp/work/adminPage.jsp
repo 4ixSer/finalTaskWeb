@@ -36,9 +36,9 @@ function updateForm(f) {
 	   f.engine.disabled = 0;
 	   f.comments.disabled = 0;
 	   f.oldtype.hidden = 1;
-	   f.newtype.hidden = 0;
+	   f.type.hidden = 0;
 	   f.oldstatus.hidden = 1;
-	   f.newstatus.hidden = 0;
+	   f.status.hidden = 0;
 	   f.change.disabled = 0;
    }
     // В противном случае вновь блокируем кнопку
@@ -49,9 +49,9 @@ function updateForm(f) {
   	   	f.engine.disabled = 1;
   	   	f.comments.disabled = 1;
   	   	f.oldtype.hidden = 0;
-  	 	f.newtype.hidden = 1;
+  	 	f.type.hidden = 1;
   	 	f.oldstatus.hidden = 0;
-  	 	f.newstatus.hidden = 1;
+  	 	f.status.hidden = 1;
   	 	f.change.disabled = 1;
     }
 
@@ -113,7 +113,7 @@ function updateForm(f) {
 		<input type="text" name="comments" placeholder="Comments" />
 
 		<select
-			name="statusCar" required ">
+			name="status" required ">
 			<option selected  value="1"> <fmt:message key="car.status.FREE" bundle="${rb}" /> </option>
 			<option value="2"> <fmt:message key="car.status.USED" bundle="${rb}" /></option>
 			<option value="3"> <fmt:message key="car.status.BROKEN" bundle="${rb}" /></option>
@@ -199,7 +199,7 @@ function updateForm(f) {
 							<td><c:out value="${ elem.id }" /> <input type="hidden" name="id"  value="${ elem.id }" /></td>
 							<td><input type="text" name="namber"  pattern="[A-Z]{2}[0-9]{4}[A-Z]{2}"  value="${ elem.namber }"  disabled /> </td>
 							<td > <input type="text"  name="oldtype"  value="${ elem.type }"  disabled />
-								<select hidden name="newtype"  required ">
+								<select hidden name="type"  required ">
 									<option  selected value="1"> <fmt:message key="car.type.PLATFORM" bundle="${rb}" /> </option>
 									<option value="2"> <fmt:message key="car.type.VAN" bundle="${rb}" /></option>
 									<option  value="3"> <fmt:message key="car.type.TANK" bundle="${rb}" /></option>
@@ -220,7 +220,7 @@ function updateForm(f) {
 							<td><input type="number" name="amount" step="0.1"	value="${ elem.amountCar }"  disabled/></td>
 							<td><input type="number" name="engine" step="0.1" value="${ elem.enginePower }" disabled /></td>
 							<td > <input type="text"  name="oldstatus"  value="${ elem.statusCar }"  disabled />
-								<select hidden name="newstatus" required ">
+								<select hidden name="status" required ">
 									<option selected  value="1"> <fmt:message key="car.status.FREE" bundle="${rb}" /> </option>
 									<option value="2"> <fmt:message key="car.status.USED" bundle="${rb}" /></option>
 									<option value="3"> <fmt:message key="car.status.BROKEN" bundle="${rb}" /></option>

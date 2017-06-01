@@ -140,6 +140,7 @@ public enum CommandEnum {
     },
     //Команда для поска машин подходяших для заявки
     //TODO возможно обьеденить с бвзятием заявки
+    //обьеденил
     FINDCARBYCHARACTERISTICS {
         {
             this.command = new FindCarByCharacteristicsCommand();

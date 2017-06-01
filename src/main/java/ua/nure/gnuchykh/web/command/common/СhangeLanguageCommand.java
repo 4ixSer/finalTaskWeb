@@ -1,5 +1,7 @@
 package ua.nure.gnuchykh.web.command.common;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_lANGUAGE;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -16,11 +18,12 @@ public class СhangeLanguageCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
 
+        //TODO тут чет не то
+        LOG.info("НАчало работы ");
         HttpSession session = request.getSession();
-        String language = request.getParameter("language");
-        session.setAttribute("language", language);
+        String language = request.getParameter(ATTRIBUTE_lANGUAGE);
+        session.setAttribute(ATTRIBUTE_lANGUAGE, language);
         LOG.info("language " + language);
-        LOG.info("Страница от куда пришел запрос " + request.getRequestURI());
 
         return Path.getPage((ClientType) session.getAttribute("userType"));
 

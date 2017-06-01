@@ -1,5 +1,13 @@
 package ua.nure.gnuchykh.web.command.driver;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS_ID;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_COMMENTS;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_TYPE;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_DATA;
+
 import java.time.LocalDateTime;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,75 +20,75 @@ import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.subject.Request;
 import ua.nure.gnuchykh.entity.subject.Status;
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
+import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.util.Path;
+import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class AddRequestCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(AddRequestCommand.class);
 
-    private static final String PARAM_NAME_DATA = "date";
-    private static final String PARAM_NAME_TYPE = "type";
-    private static final String PARAM_NAME_CARRYING = "carrying";
-    private static final String PARAM_NAME_AMOUNT = "amount";
-    private static final String PARAM_NAME_ENGINE = "engine";
-    private static final String PARAM_NAME_COMMENTS = "comments";
-
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-        LOG.info(request.getParameter(PARAM_NAME_DATA)+" "+request.getParameter(PARAM_NAME_TYPE)+" "+request.getParameter(PARAM_NAME_CARRYING)+
-                " "+request.getParameter(PARAM_NAME_AMOUNT)+" "+request.getParameter(PARAM_NAME_ENGINE)+" "+request.getParameter(PARAM_NAME_COMMENTS));
 
-        // извлечение из запроса логина и пароля
-        LocalDateTime dataDeparture = LocalDateTime.parse(request.getParameter(PARAM_NAME_DATA));
-        Integer type = Integer.parseInt(request.getParameter(PARAM_NAME_TYPE));
-        Double carrying = Double.parseDouble(request.getParameter(PARAM_NAME_CARRYING));
-        Double amount = Double.parseDouble(request.getParameter(PARAM_NAME_AMOUNT));
-        Double engine = Double.parseDouble(request.getParameter(PARAM_NAME_ENGINE));
-        String comments = request.getParameter(PARAM_NAME_COMMENTS);
-        // дата подачи заявки
-        LocalDateTime localDateNow = LocalDateTime.now();
-
+        LOG.info("НАчало работы ");
         HttpSession session = request.getSession();
 
-        LOG.info("date " + request.getParameter("date"));
+        // извлечение данных
 
-        RequestDAO dao = new RequestDAO();
+        String comments = request.getParameter(PARAM_NAME_CAR_COMMENTS);
+        String dataDepartureS =request.getParameter(PARAM_NAME_DATA);
 
-        Request userRequest = new Request((Integer)session.getAttribute("userID"), localDateNow, dataDeparture, TYPE.fromValue(type), carrying, amount, engine, Status.SUBMITTED, comments);
+        String typeS = request.getParameter(PARAM_NAME_CAR_TYPE);
+        String carryingS = request.getParameter(PARAM_NAME_CAR_CARRYING);
+        String amountS = request.getParameter(PARAM_NAME_CAR_AMOUNT);
+        String engineS = request.getParameter(PARAM_NAME_CAR_ENGINE);
 
-
-        if (dao.create(userRequest)) {
-
-            LOG.info("Запись заявки прошла успешно");
-            return getPageRole(session.getAttribute("userType").toString());
-
+        if (!Validation.parameterStringIsCorrect(typeS, carryingS, amountS, engineS,dataDepartureS )) {
+            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            LOG.info("Данные не коректны");
         } else {
-            return ConfigurationManager.getProperty("path.page.login");
+            LocalDateTime dataDeparture = null;
+            Integer type = null;
+            Double carrying = null;
+            Double amount = null;
+            Double engine = null;
+
+            // дата подачи заявки
+            LocalDateTime localDateNow = LocalDateTime.now();
+
+            // парсинг параметров
+            try {
+                dataDeparture = LocalDateTime.parse(dataDepartureS);
+                type = Integer.parseInt(typeS);
+                carrying = Double.parseDouble(carryingS);
+                amount = Double.parseDouble(amountS);
+                engine = Double.parseDouble(engineS);
+            } catch (NumberFormatException e) {
+                LOG.info("Ошибка валидации");
+                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                return Path.PAGE_DRIVER;
+            }
+
+            // Валидация данных
+            if (!Validation.validateDouble(carrying, amount, engine) || !Validation.typeCarIsCorrect(type)
+                    || !Validation.comentIsCorrect(comments)||!Validation.localDateTimeIsCorrect(dataDeparture)) {
+                session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+                LOG.info("Данные не коректны");
+
+            } else {
+
+                RequestDAO dao = new RequestDAO();
+                Request userRequest = new Request((Integer) session.getAttribute(ATTRIBUTE_USERS_ID), localDateNow, dataDeparture,
+                        TYPE.fromValue(type), carrying, amount, engine, Status.SUBMITTED, comments);
+
+                dao.create(userRequest);
+                session.setAttribute("Message", MessageManager.getProperty("message.regitation.requsetSuccessfully"));
+                LOG.info("Регистрация заявки прошла успещно");
+            }
         }
-    }
-
-    private String getPageRole(String role) {
-
-        String propertiesName = null;
-
-        switch (role) {
-        case "ADMINISTRATOR":
-            propertiesName = "path.page.admin";
-            break;
-        case "DISPATCHER":
-            propertiesName = "path.page.dispatcher";
-            break;
-        case "DRIVER":
-            propertiesName = "path.page.driver";
-            break;
-        default:
-            propertiesName = "path.page.login";
-            System.out.println("Eroor");
-            break;
-        }
-
-        return ConfigurationManager.getProperty(propertiesName);
+        return Path.PAGE_DRIVER;
 
     }
 

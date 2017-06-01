@@ -52,6 +52,24 @@ CREATE TABLE `summarytask4`.`type_car` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `type_UNIQUE` (`type` ASC));
   
+/*внешний ключ в машине*/
+ALTER TABLE `summarytask4`.`car` 
+ADD CONSTRAINT `fk_status_car`
+  FOREIGN KEY (`statusCar`)
+  REFERENCES `summarytask4`.`status_car` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
+  /*внешний клюк в рейсе*/
+  ALTER TABLE `summarytask4`.`flight` 
+DROP FOREIGN KEY `fk_car_car`;
+ALTER TABLE `summarytask4`.`flight` 
+ADD CONSTRAINT `fk_car_car`
+  FOREIGN KEY (`car`)
+  REFERENCES `summarytask4`.`car` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+
 
   
   /*задание связей машина -тип*/

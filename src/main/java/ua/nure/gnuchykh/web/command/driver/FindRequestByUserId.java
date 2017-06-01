@@ -1,5 +1,9 @@
 package ua.nure.gnuchykh.web.command.driver;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_ALL_REQUEST;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS_ID;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,17 +25,17 @@ public class FindRequestByUserId implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-        LOG.info("Начало работы " + request.getParameter("command"));
+        LOG.info("Начало работы ");
 
         HttpSession session = request.getSession();
-        Integer idUser = (Integer) session.getAttribute("userID");
+        Integer idUser = (Integer) session.getAttribute(ATTRIBUTE_USERS_ID);
 
         RequestDAO dao = new  RequestDAO();
         List<Request> userReques = dao.findEntityByUserId(idUser);
         LOG.debug("Нашли все заявки водителя");
-        session.setAttribute("userRequest", userReques);
+        session.setAttribute(ATTRIBUTE_ALL_REQUEST, userReques);
         session.setAttribute("Message", MessageManager.getProperty("message.findUserRequest"));
 
-        return Path.getPage((ClientType) session.getAttribute("userType"));
+        return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

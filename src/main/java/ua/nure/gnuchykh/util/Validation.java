@@ -1,5 +1,7 @@
 package ua.nure.gnuchykh.util;
 
+import java.time.LocalDateTime;
+
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
 import ua.nure.gnuchykh.entity.users.ClientType;
@@ -7,7 +9,7 @@ import ua.nure.gnuchykh.entity.users.ClientType;
 public final class Validation {
 
     private static final String simpleSrtingRegex = "^[à-ÿÀ-ß¸¨a-zA-Z][à-ÿÀ-ß¸¨a-zA-Z0-9-_]{1,20}$";
-    private static final String comentRegex = "^[à-ÿÀ-ß¸¨a-zA-Z][à-ÿÀ-ß¸¨a-zA-Z0-9-_.]{1,50}$";
+    private static final String comentRegex = "^[à-ÿÀ-ß¸¨a-zA-Z][à-ÿÀ-ß¸¨a-zA-Z0-9-_. ]{1,50}$";
     private static final String mailRegex = "^[-\\w.]+@([A-z0-9][-A-z0-9]+\\.)+[A-z]{2,4}$";
     private static final String loginRegex = "[A-Za-zÀ-ßà-ÿ¸¨0-9]{5,20}";
     private static final String passwordRegex = "[A-Za-zÀ-ßà-ÿ¸¨0-9]{3,20}";
@@ -20,6 +22,18 @@ public final class Validation {
      * @param values
      * @return
      */
+
+    public static boolean parameterStringIsCorrect(String... values){
+
+        for (String value : values) {
+            if (value==null||value.isEmpty()){
+                return false;
+            }
+        }
+        return true;
+
+    }
+
     public static boolean validateString(String... values) {
 
         for (String value : values) {
@@ -97,6 +111,15 @@ public final class Validation {
             return false;
         }
         return true;
+    }
+
+    public static boolean localDateTimeIsCorrect(LocalDateTime time) {
+        if(time.isAfter(LocalDateTime.now())){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 
 }

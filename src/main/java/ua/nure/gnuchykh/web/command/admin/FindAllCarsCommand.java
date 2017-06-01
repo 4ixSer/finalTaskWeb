@@ -1,5 +1,8 @@
 package ua.nure.gnuchykh.web.command.admin;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_CARS;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +24,16 @@ public class FindAllCarsCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-        LOG.info("Начало работы " + request.getParameter("command"));
+        LOG.info("Начало работы ");
         HttpSession session = request.getSession();
 
         CarDAO dao = new CarDAO();
         List<Car> cars = dao.findAll();
 
         LOG.debug("Нашли все машины.");
-        session.setAttribute("cars", cars);
+        session.setAttribute(ATTRIBUTE_CARS, cars);
         session.setAttribute("Message", MessageManager.getProperty("message.findCar"));
 
-        return Path.getPage((ClientType) session.getAttribute("userType"));
+        return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

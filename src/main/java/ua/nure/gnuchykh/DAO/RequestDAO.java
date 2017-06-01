@@ -212,16 +212,42 @@ public class RequestDAO {
 
         try {
             connector = ConnectionPool.getInstance().getConnection();
+            connector.setAutoCommit(false);
             ps = connector.prepareStatement(SQL_SELECT_FIRST_REQUEST);
-            // TODO возможно тут бред
 
             ps.setString(1, time.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss")));
 
             ResultSet resultSet = ps.executeQuery();
             if (resultSet.next()) {
                 request = createRequest(resultSet);
+
+                request.setStatus(Status.PROCESSED);
+
+                ps = connector.prepareStatement(SQL_UPDETE_REQUEST);
+
+                ps.setInt(1, request.getOwnerRequest());
+                ps.setString(2, request.toStringDataRequest());
+                ps.setString(3, request.toStringDataDeparture());
+                ps.setInt(4, request.getType().value());
+
+                // обнавляем запрашиваемые типы машын
+                ps.setDouble(5, request.getCarryingCar());
+                ps.setDouble(6, request.getAmountCar());
+
+                ps.setDouble(7, request.getEnginePower());
+                ps.setInt(8, request.getStatus().value());
+                ps.setString(9, request.getNote());
+
+                ps.setInt(10, request.getNamberRequest());
+                ps.executeUpdate();
             }
+
+
+
+            connector.commit();
         } catch (SQLException e) {
+            ConnectionPool.rollback(connector);
+
             throw new DBException(Messages.ERR_CANNOT_FIND_FIRST_REQUEST, e);
         } finally {
             ConnectionPool.close(ps);

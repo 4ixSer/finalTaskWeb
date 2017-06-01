@@ -38,7 +38,7 @@ public class Controller extends HttpServlet {
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        LOG.info("Начало рабоыт");
+        LOG.info("Начало работы");
 
 
         String page = null;

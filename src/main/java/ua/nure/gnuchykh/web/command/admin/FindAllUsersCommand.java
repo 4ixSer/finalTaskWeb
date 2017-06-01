@@ -1,5 +1,8 @@
 package ua.nure.gnuchykh.web.command.admin;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +24,16 @@ public class FindAllUsersCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
-        LOG.info("Начало работы " + request.getParameter("command"));
+        LOG.info("Начало работы ");
         HttpSession session = request.getSession();
 
         UserDAO dao = new UserDAO();
         List<User> users = dao.findAll();
 
         LOG.debug("Нашли всех зареистрированыых юзерров.");
-        session.setAttribute("users", users);
+        session.setAttribute(ATTRIBUTE_USERS, users);
         session.setAttribute("Message", MessageManager.getProperty("message.findUser"));
 
-        return Path.getPage((ClientType) session.getAttribute("userType"));
+        return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

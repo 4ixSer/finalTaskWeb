@@ -18,12 +18,12 @@ public class CloseCommand  implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
 
-        LOG.info("НАчало работы " + request.getParameter("command"));
+        LOG.info("НАчало работы ");
 
         HttpSession session = request.getSession();
         String table = request.getParameter("table");
 
-        if(!Validation.validateString(table)) {
+        if(!Validation.parameterStringIsCorrect(table)||!Validation.validateString(table)) {
             session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
             LOG.info("Данные не коректны");
             return Path.PAGE_ADMIN;
