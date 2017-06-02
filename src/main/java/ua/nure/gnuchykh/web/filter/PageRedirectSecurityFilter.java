@@ -13,9 +13,13 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter(urlPatterns = { "/jsp/dasdasda*" }, initParams = {
+import org.apache.log4j.Logger;
+
+@WebFilter(urlPatterns = { "/jsp/*" }, initParams = {
         @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
 public class PageRedirectSecurityFilter implements Filter {
+
+    private static final Logger LOG = Logger.getLogger(PageRedirectSecurityFilter.class);
     private String indexPath;
 
     @Override
@@ -26,12 +30,12 @@ public class PageRedirectSecurityFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        System.err.println(" PageRedirectSecurityFilter=== Перенаправление");
+
         HttpServletRequest httpRequest = (HttpServletRequest) request;
-        httpRequest.setCharacterEncoding("Cp1251");
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         // переход на заданную страницу
         httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
+        LOG.info("переход на "+httpRequest.getContextPath() + indexPath);
         chain.doFilter(request, response);
     }
 

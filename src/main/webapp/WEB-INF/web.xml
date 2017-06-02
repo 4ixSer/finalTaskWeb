@@ -56,6 +56,12 @@
 
 	<listener>
 		<listener-class>ua.nure.gnuchykh.web.listener.ContextListener</listener-class>
+
+	</listener>
+
+	<listener>
+		<listener-class>ua.nure.gnuchykh.web.listener.RequestListener</listener-class>
+
 	</listener>
 
 	<error-page>

@@ -20,7 +20,7 @@
 	${Message} <br><br>
 	<!--Запрос на поиск зявок   -->
 	<form align="center" name="findRequest" method="POST"
-		action="http://localhost:8080/WEB/controller">
+		action="/WEB/controller">
 		<input type="hidden" name="command" value="FINDREQUEST" />
 
 		<input	type="submit" value="Взять заявку">
@@ -56,15 +56,15 @@
 						<td><c:out value="${ requestUser.amountCar }" />   </td>
 						<td><c:out value="${ requestUser.enginePower }" />   </td>
 						<td><c:out value="${ requestUser.note }" />   </td>
-						<!-- <td><a href="http://localhost:8080/WEB/controller?command=FINDCARBYCHARACTERISTICS">Найти машину</a>   </td> -->
-						<td><a  href="http://localhost:8080/WEB/controller?command=DENYREQUEST">Отказать</a></td>
+						<!-- <td><a href="/WEB/controller?command=FINDCARBYCHARACTERISTICS">Найти машину</a>   </td> -->
+						<td><a  href="/WEB/controller?command=DENYREQUEST">Отказать</a></td>
 
 
 				</tr>
 			</table>
 				<c:if test="${not empty requestCar}">
 					<dib align="center">
-						<form align="center" name="formRequest" method="POST" action="http://localhost:8080/WEB/controller" >
+						<form align="center" name="formRequest" method="POST" action="/WEB/controller" >
 						<input type="hidden" name="command" value="ADDFLIGHT" />
 
 							<select name="selectedCar" required ">
@@ -86,7 +86,7 @@
 
 	<!--Запрос на просмотр всех рейсов   -->
 	<form align="center" name="findFlight" method="POST"
-		action="http://localhost:8080/WEB/controller">
+		action="/WEB/controller">
 		<input type="hidden" name="command" value="FINDALLFLIGHT" />
 
 		<input	type="submit" value="Найти все рейсы">
@@ -98,9 +98,9 @@
 		<table align="center">
 			<a  href="/WEB/controller?command=CLOSE&table=allFlight">	&times;</a>
 				<tr>
-					<th>namber <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
-					<th>date  <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
-					<th>status <a href="http://localhost:8080/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+					<th>namber <a href="/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
+					<th>date  <a href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
+					<th>status <a href="/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
 					<th>driver</th>
 					<th>dispatcher</th>
 					<th>car</th>
@@ -126,7 +126,7 @@
 
 	<!-- logout -->
 	<p align="right">
-		<a href="http://localhost:8080/WEB/controller?command=LOGOUT"><fmt:message
+		<a href="/WEB/controller?command=LOGOUT"><fmt:message
 				key="label.logout" bundle="${rb}" /></a>
 	</p>
 	<%@ include file="/jsp/footer.jspf"%>

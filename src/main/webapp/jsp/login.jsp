@@ -1,6 +1,8 @@
 <%@ page language="java" contentType='text/html; charset=UTF-8'
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <fmt:setLocale value="${language}" scope="session" />
 <fmt:setBundle basename="pagecontent" var="rb" />
 <!DOCTYPE html>
@@ -9,6 +11,24 @@
 </head>
 <body>
 	<%@ include file="/jsp/head.jspf"%>
+
+	<c:set var = "role" value = "${userType }"/>
+	<c:choose>
+		<c:when test="${fn:containsIgnoreCase(role, 'DRIVER')}" >
+			<jsp:forward page="/jsp/work/driverPage.jsp" />
+		</c:when>
+		<c:when test="${fn:containsIgnoreCase(role, 'DISPATCHER')}" >
+			<jsp:forward page="/jsp/work/dispatcherPage.jsp" />
+		</c:when>
+		<c:when test="${fn:containsIgnoreCase(role, 'ADMINISTRATOR')}" >
+			<jsp:forward page="/jsp/work/adminPage.jsp" />
+		</c:when>
+		<c:otherwise>
+
+		</c:otherwise>
+	</c:choose>
+
+
 
 	<form align="center" name="loginForm" method="POST"	action="/WEB/controller" >
 		<input type="hidden" name="command" value="LOGIN" />
