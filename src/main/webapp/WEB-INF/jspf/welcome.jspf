@@ -1,0 +1,10 @@
+<!--User greeting  -->
+<h2>
+	<p align="center">
+		<fmt:message key="label.welcome" bundle="${rb}" />
+		, ${name}.
+	</p>
+</h2>
+<!--Error or message from servlets  -->
+${Message}
+<br>

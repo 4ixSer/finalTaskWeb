@@ -1,0 +1,4 @@
+<!-- logout -->
+	<p align="right">
+		<a href="/WEB/controller?command=LOGOUT"><fmt:message key="label.logout" bundle="${rb}" /></a>
+	</p>
