@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.entity.users.ClientType;
+import ua.nure.gnuchykh.util.MessageManager;
 
 public class AccessFilter implements Filter {
     private static final Logger LOG = Logger.getLogger(AccessFilter.class);
@@ -39,8 +40,7 @@ public class AccessFilter implements Filter {
 
     @Override
     public void destroy() {
-        // do nothing
-        LOG.debug("Filter destruction finished");
+
     }
 
     @Override
@@ -52,11 +52,10 @@ public class AccessFilter implements Filter {
             LOG.debug("Filter finished");
             chain.doFilter(request, response);
         } else {
-            // TODO тут переделать
-            String errorMessasge = "You do not have permission to access the requested resource";
 
-            request.setAttribute("errorMessage", errorMessasge);
-            LOG.trace("Set the request attribute: errorMessage --> " + errorMessasge);
+            HttpServletRequest httpRequest = (HttpServletRequest) request;
+            httpRequest.getSession().setAttribute("errorMessage", MessageManager.getProperty("message.access.error"));
+            LOG.trace("Set the request attribute: errorMessage --> " + MessageManager.getProperty("message.access.error"));
 
             HttpServletResponse httpresponse = (HttpServletResponse) response;
             httpresponse.sendRedirect("/WEB/jsp/error/error.jsp");

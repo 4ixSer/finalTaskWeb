@@ -3,7 +3,6 @@ package ua.nure.gnuchykh.exception;
 /**
  * Holder for messages of exceptions.
  *
- * @author Dmytro_Kolesnikov
  *
  */
 public class Messages {
@@ -85,7 +84,6 @@ public class Messages {
     //Ошибки приложений
 
     public static final String ERR_LOGIN_OR_PASSWORD_EMPTY = " Login/password cannot be empty";
+
     public static final String ERR_ROLLBACK = "Eroro rollback";
-
-
 }

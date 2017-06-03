@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.exception.DBException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
 public class FindCarByCharacteristicsCommand implements ActionCommand {
@@ -14,6 +13,7 @@ public class FindCarByCharacteristicsCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
+        return null;
 
 //        LOG.info("Начало работы " + request.getParameter("command"));
 //
@@ -30,7 +30,7 @@ public class FindCarByCharacteristicsCommand implements ActionCommand {
 //            session.setAttribute("requestCar", list);
 //            LOG.info("list "+list);
 //        }
-    return ConfigurationManager.getProperty("path.page.dispatcher");
+//    return ConfigurationManager.getProperty("path.page.dispatcher");
 
     }
 

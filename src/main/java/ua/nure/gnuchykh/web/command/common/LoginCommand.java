@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
-import ua.nure.gnuchykh.exception.AppException;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
@@ -28,7 +28,7 @@ public class LoginCommand implements ActionCommand {
 
 
     @Override
-    public String execute(HttpServletRequest request) throws AppException {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Начало работы ");
         HttpSession session = request.getSession();

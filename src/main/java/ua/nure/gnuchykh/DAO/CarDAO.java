@@ -36,6 +36,7 @@ public class CarDAO {
         try {
             connector = ConnectionPool.getInstance().getConnection();
             statement = connector.createStatement();
+
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL_CAR);
             while(resultSet.next()) {
                 Car car =createCar(resultSet);

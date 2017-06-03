@@ -128,8 +128,6 @@ public class Request implements Serializable {
         this.status = status;
     }
 
-    //TODO переписать метод для изменений параметров времени в зависимости от языка
-    //TODO вынести вместе с рейсов в отдельный класс
      public String toStringDataRequest() {
 
          return dataRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
@@ -142,13 +140,11 @@ public class Request implements Serializable {
 
 
      public static LocalDateTime fromValueDataRequest(String time){
-         //TODO ПАтер будет меняться в зависимости от языка
          DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
          return LocalDateTime.parse(time, formatter);
      }
 
      public static LocalDateTime fromValueDataDeparture(String time){
-         //TODO ПАтер будет меняться в зависимости от языка
          DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
          return LocalDateTime.parse(time, formatter);
 

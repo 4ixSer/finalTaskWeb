@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-@WebFilter(urlPatterns = { "/jsp/*" }, initParams = {
-        @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
+@WebFilter(urlPatterns = { "/jsp/*" }, initParams = { @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
 public class PageRedirectSecurityFilter implements Filter {
 
     private static final Logger LOG = Logger.getLogger(PageRedirectSecurityFilter.class);
@@ -33,9 +32,12 @@ public class PageRedirectSecurityFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-        // переход на заданную страницу
-        httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
-        LOG.info("переход на "+httpRequest.getContextPath() + indexPath);
+        if (httpRequest.getRequestURI().equals("http://localhost:8080/WEB/jsp/error/error.jsp")) {
+            httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
+            LOG.info("переход на " + httpRequest.getContextPath() + indexPath);
+
+        }
+
         chain.doFilter(request, response);
     }
 

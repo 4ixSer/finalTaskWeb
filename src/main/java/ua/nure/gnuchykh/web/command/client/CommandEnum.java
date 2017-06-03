@@ -1,7 +1,6 @@
 package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
-import ua.nure.gnuchykh.web.command.FindALLRequestCommand;
 import ua.nure.gnuchykh.web.command.admin.AddCarCommand;
 import ua.nure.gnuchykh.web.command.admin.DeleteCarCommand;
 import ua.nure.gnuchykh.web.command.admin.DeleteUserCommand;
@@ -139,8 +138,7 @@ public enum CommandEnum {
         }
     },
     //Команда для поска машин подходяших для заявки
-    //TODO возможно обьеденить с бвзятием заявки
-    //обьеденил
+    //обьеденил обьеденить с бвзятием заявки
     FINDCARBYCHARACTERISTICS {
         {
             this.command = new FindCarByCharacteristicsCommand();
@@ -164,12 +162,7 @@ public enum CommandEnum {
             this.command = new FindAllFlightCommand();
         }
     },
-    //TODO не используеться
-    FINDALLREQUEST {
-        {
-            this.command = new FindALLRequestCommand();
-        }
-    },
+
 
     //водитель оставляет коментарии об рейсе и закрывает рейс
     UPDATEFLIGHT {

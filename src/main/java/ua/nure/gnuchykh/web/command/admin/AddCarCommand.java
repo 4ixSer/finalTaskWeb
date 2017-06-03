@@ -2,11 +2,11 @@ package ua.nure.gnuchykh.web.command.admin;
 
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
-import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_NAMBER;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_STATUS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_TYPE;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -17,7 +17,7 @@ import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
 import ua.nure.gnuchykh.entity.cars.Status;
 import ua.nure.gnuchykh.entity.cars.TYPE;
-import ua.nure.gnuchykh.exception.AppException;
+import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
@@ -29,7 +29,7 @@ public class AddCarCommand implements ActionCommand {
 
 
     @Override
-    public String execute(HttpServletRequest request) throws AppException {
+    public String execute(HttpServletRequest request) throws DBException {
 
         LOG.info("Ќјчало работы ");
 

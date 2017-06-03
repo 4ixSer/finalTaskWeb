@@ -4,8 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.web.command.ActionCommand;
-import ua.nure.gnuchykh.web.command.EmptyCommand;
 import ua.nure.gnuchykh.web.command.client.CommandEnum;
+import ua.nure.gnuchykh.web.command.common.EmptyCommand;
 
 public class ActionFactory {
     public ActionCommand defineCommand(HttpServletRequest request) {

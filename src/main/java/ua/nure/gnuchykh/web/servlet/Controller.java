@@ -7,12 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.gnuchykh.exception.AppException;
-import ua.nure.gnuchykh.util.ConfigurationManager;
-import ua.nure.gnuchykh.util.MessageManager;
+import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.factory.ActionFactory;
 
@@ -51,33 +51,25 @@ public class Controller extends HttpServlet {
          */
         try {
             page = command.execute(request);
-        } catch (AppException e) {
-            //TODO тут передалать на сесию или куки
-            request.setAttribute("errorMessage", e.getMessage());
+        } catch (DBException e) {
+            HttpSession session = request.getSession();
+            session.setAttribute("errorMessage", e.getMessage());
+            response.sendRedirect(Path.PAGE_ERROR);
         }
         // метод возвращает страницу ответа
-        // page = null; // поэксперементировать!
-        if (page != null) {
-            // RequestDispatcher dispatcher =
-            // getServletContext().getRequestDispatcher(page);
-            // вызов страницы ответа на запрос
-            // dispatcher.forward(request, response);
 
+//        if (page != null) {
             LOG.trace("Перход на станицу: " + page);
-
             response.sendRedirect(page);
-        } else {
-            LOG.trace("ветка ошибки");
-            // установка страницы c cообщением об ошибке
-            page = ConfigurationManager.getProperty("path.page.index");
-            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage"));
-            response.sendRedirect(page);
-        }
+//        }
+//        } else {
+//            LOG.trace("ветка ошибки");
+//            // установка страницы c cообщением об ошибке
+//            page = ConfigurationManager.getProperty("path.page.index");
+//            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage"));
+////            response.sendRedirect(Path.PAGE_ERROR);
+//        }
     }
 
-    @Override
-    public void init() throws ServletException {
-
-    }
 
 }

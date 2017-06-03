@@ -13,7 +13,7 @@ public class ContextListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent event) {
-        // TODO удалить потом
+
     }
 
     @Override
@@ -21,7 +21,6 @@ public class ContextListener implements ServletContextListener {
 
         ServletContext servletContext = event.getServletContext();
         initLog4J(servletContext);
-        initCommandContainer();
 
     }
 
@@ -39,13 +38,6 @@ public class ContextListener implements ServletContextListener {
         }
     }
 
-    /**
-     * Initializes CommandContainer.
-     *
-     * @param servletContext
-     */
-    private void initCommandContainer() {
-        // TODO удалить потом
-    }
+
 
 }

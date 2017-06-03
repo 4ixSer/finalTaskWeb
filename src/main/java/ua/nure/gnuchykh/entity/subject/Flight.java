@@ -4,14 +4,13 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
 /**
  * Сушьность реализуюшая поведение рейса.
  *
  * @author qny4ix
  *
  */
-public class Flight implements Serializable{
+public class Flight implements Serializable {
     /**
      * Номер рейса. Он же и ID.
      */
@@ -57,97 +56,65 @@ public class Flight implements Serializable{
         this.note = note;
     }
 
-
-
     public Flight() {
         super();
     }
-
-
 
     public Integer getNamberFlight() {
         return namberFlight;
     }
 
-
-
     public void setNamberFlight(Integer namberFlight) {
         this.namberFlight = namberFlight;
     }
-
-
 
     public LocalDateTime getDate() {
         return date;
     }
 
-
-
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
-
-
 
     public Status getStatus() {
         return status;
     }
 
-
-
     public void setStatus(Status status) {
         this.status = status;
     }
-
-
 
     public Integer getDriver() {
         return driver;
     }
 
-
-
     public void setDriver(Integer driver) {
         this.driver = driver;
     }
-
-
 
     public Integer getDispatcher() {
         return dispatcher;
     }
 
-
-
     public void setDispatcher(Integer dispatcher) {
         this.dispatcher = dispatcher;
     }
-
-
 
     public Integer getCar() {
         return car;
     }
 
-
-
     public void setCar(Integer car) {
         this.car = car;
     }
-
-
 
     public String getNote() {
         return note;
     }
 
-
-
     public void setNote(String note) {
         this.note = note;
     }
-
-
 
     @Override
     public String toString() {
@@ -155,23 +122,14 @@ public class Flight implements Serializable{
                 + ", dispatcher=" + dispatcher + ", car=" + car + ", note=" + note + "]";
     }
 
-
-    //TODO переписать метод для изменений параметров времени в зависимости от языка
-    //TODO вынести в отделный класс утил
     public String toStringDate() {
 
         return date.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
     }
 
-
-
-    public static LocalDateTime fromValueData(String time){
-        //TODO ПАтер будет меняться в зависимости от языка
+    public static LocalDateTime fromValueData(String time) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
         return LocalDateTime.parse(time, formatter);
     }
-
-
-
 
 }
