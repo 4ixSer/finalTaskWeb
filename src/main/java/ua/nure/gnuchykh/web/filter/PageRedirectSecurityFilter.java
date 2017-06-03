@@ -32,10 +32,13 @@ public class PageRedirectSecurityFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-        if (httpRequest.getRequestURI().equals("http://localhost:8080/WEB/jsp/error/error.jsp")) {
-            httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
+        System.err.println(httpRequest.getRequestURI());
+        if (httpRequest.getRequestURI().equals("/WEB/jsp/error/error.jsp")) {
+
             LOG.info("переход на " + httpRequest.getContextPath() + indexPath);
 
+        } else {
+            httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
         }
 
         chain.doFilter(request, response);

@@ -35,15 +35,14 @@
 		<input type="hidden" name="command" value="LOGIN" />
 		<fmt:message key="label.login" bundle="${rb}" />:
 		<br />
-		<input type="text" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" name="login" placeholder="login"  required/>
+		<input type="text" pattern="[A-Za-zА-Яа-яёЁ0-9]{5,20}" name="login" required/>
 		<br />
 		<fmt:message key="label.password"  bundle="${rb}" />:
 		<br />
-		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" placeholder="password"  required/>
+		<input type="password" name="password" pattern="[A-Za-zА-Яа-яёЁ0-9]{3,20}" required/>
 		<br />
-		${errorMessage} <br /> ${wrongAction} <br /> ${nullPage} <br />
-		<input type="submit"
-			value="<fmt:message key="label.logIN" bundle="${rb}" />" />
+		${errorMessage} <br />
+		<input type="submit" value="<fmt:message key="button.login" bundle="${rb}" />" />
 	</form>
 	<%@ include file="/jsp/footer.jspf"%>
 </body>

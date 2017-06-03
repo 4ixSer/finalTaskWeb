@@ -19,13 +19,13 @@ import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
 public class RequestDAO {
-    private static final String SQL_INSERT_REQUEST = "INSERT INTO request (ownerRequest, dataRequest, dataDeparture, car_type, carrying_car, amount_car, enginePower, status, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    private static final String SQL_INSERT_REQUEST = "INSERT INTO request (ownerRequest, dateRequest, dateDeparture, car_type, carrying_car, amount_car, enginePower, status, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_SELECT_All_REQUEST = "SELECT * FROM request";
     private static final String SQL_SELECT_REQUEST_BY_ID = "SELECT * FROM request where id=?";
     private static final String SQL_SELECT_REQUEST_BY_USER_ID = "SELECT * FROM request where ownerRequest=?";
     private static final String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
-    private static final String SQL_UPDETE_REQUEST = "UPDATE request SET ownerRequest=?, dataRequest=?, dataDeparture=?, car_type=?, carrying_car=?, amount_car=?, enginePower=?, status=?, note=? WHERE id=?";
-    private static final String SQL_SELECT_FIRST_REQUEST = "SELECT * FROM request where dataDeparture > ? and status  >= 6  LIMIT 1";
+    private static final String SQL_UPDETE_REQUEST = "UPDATE request SET ownerRequest=?, dateRequest=?, dateDeparture=?, car_type=?, carrying_car=?, amount_car=?, enginePower=?, status=?, note=? WHERE id=?";
+    private static final String SQL_SELECT_FIRST_REQUEST = "SELECT * FROM request where dateDeparture > ? and status  >= 6  LIMIT 1";
     private Connection connector;
 
     public List<Request> findAll() throws DBException {
@@ -70,8 +70,8 @@ public class RequestDAO {
         request.setOwnerRequest(driver.getId());
 
         // Преобразлование и запись времени в запрос
-        request.setDataRequest(Request.fromValueDataRequest(resultSet.getString("dataRequest")));
-        request.setDataDeparture(Request.fromValueDataDeparture(resultSet.getString("dataDeparture")));
+        request.setDateRequest(Request.fromValueDateRequest(resultSet.getString("dateRequest")));
+        request.setDateDeparture(Request.fromValueDateDeparture(resultSet.getString("dateDeparture")));
         return request;
     }
 
@@ -153,8 +153,8 @@ public class RequestDAO {
 
             ps.setInt(1, entity.getOwnerRequest());
 
-            ps.setString(2, entity.toStringDataRequest());
-            ps.setString(3, entity.toStringDataDeparture());
+            ps.setString(2, entity.toStringDateRequest());
+            ps.setString(3, entity.toStringDateDeparture());
 
             // тут мы вытягиевам предпологаемые данные для машины
             ps.setInt(4, entity.getType().value());
@@ -182,8 +182,8 @@ public class RequestDAO {
             ps = connector.prepareStatement(SQL_UPDETE_REQUEST);
 
             ps.setInt(1, entity.getOwnerRequest());
-            ps.setString(2, entity.toStringDataRequest());
-            ps.setString(3, entity.toStringDataDeparture());
+            ps.setString(2, entity.toStringDateRequest());
+            ps.setString(3, entity.toStringDateDeparture());
             ps.setInt(4, entity.getType().value());
 
             // обнавляем запрашиваемые типы машын
@@ -226,8 +226,8 @@ public class RequestDAO {
                 ps = connector.prepareStatement(SQL_UPDETE_REQUEST);
 
                 ps.setInt(1, request.getOwnerRequest());
-                ps.setString(2, request.toStringDataRequest());
-                ps.setString(3, request.toStringDataDeparture());
+                ps.setString(2, request.toStringDateRequest());
+                ps.setString(3, request.toStringDateDeparture());
                 ps.setInt(4, request.getType().value());
 
                 // обнавляем запрашиваемые типы машын

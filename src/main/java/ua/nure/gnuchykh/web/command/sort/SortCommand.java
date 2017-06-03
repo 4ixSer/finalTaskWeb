@@ -53,11 +53,14 @@ public class SortCommand implements ActionCommand {
                     session.setAttribute("users", list);
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }
-            } else if (object.equals("userRequest")) {
-                List<Request> list = (List<Request>) session.getAttribute("userRequest");
+            } else if (object.equals("allRequest")) {
+                System.err.println(1);
+                List<Request> list = (List<Request>) session.getAttribute("allRequest");
+                System.err.println(list);
                 if (list != null) {
                     Collections.sort(list, SortFactory.getRequestComparator(typeSort));
-                    session.setAttribute("users", list);
+                    session.setAttribute("allRequest", list);
+                    System.err.println(2);
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }
             } else if (object.equals("allFlight")) {

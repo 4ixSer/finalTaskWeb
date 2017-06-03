@@ -15,22 +15,22 @@ public enum RequestComparatorEnum {
             };
         }
     },
-    SORTBYDATAREQUEST {
+    SORTBYDATEREQUEST {
         {
             this.command = new Comparator<Request>() {
                 @Override
                 public int compare(Request o2, Request o1) {
-                    return o1.getDataRequest().compareTo(o2.getDataRequest());
+                    return o1.getDateRequest().compareTo(o2.getDateRequest());
                 }
             };
         }
     },
-    SORTBYDATADEPARTURE {
+    SORTBYDATEDEPARTURE {
         {
             this.command = new Comparator<Request>() {
                 @Override
                 public int compare(Request o2, Request o1) {
-                    return o1.getDataDeparture().compareTo(o2.getDataDeparture());
+                    return o1.getDateDeparture().compareTo(o2.getDateDeparture());
                 }
             };
         }

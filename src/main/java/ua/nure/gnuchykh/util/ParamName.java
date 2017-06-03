@@ -13,7 +13,7 @@ public final class ParamName {
     public static final String PARAM_NAME_CAR_STATUS = "status";
     public static final String PARAM_NAME_COMMENTS = "comments";
 
-    public static final String PARAM_NAME_DATA = "date";
+    public static final String PARAM_NAME_DATE = "date";
 
     public static final String PARAM_NAME_ID = "id";
 

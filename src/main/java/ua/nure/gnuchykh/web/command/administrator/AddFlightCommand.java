@@ -61,7 +61,7 @@ public class AddFlightCommand implements ActionCommand {
             //id заявки
             Integer idRequest =userRequest.getNamberRequest();
             //время отезда
-            LocalDateTime date= userRequest.getDataDeparture();
+            LocalDateTime date= userRequest.getDateDeparture();
 
 
             //взяли айди диспечера

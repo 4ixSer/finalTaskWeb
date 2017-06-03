@@ -30,7 +30,7 @@ public class Car implements Serializable {
     private Double carryingCar;
 
     /**
-     * ־בüול לארûםû.
+     * ־בתול לארטםû.
      */
     private Double amountCar;
 

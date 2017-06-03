@@ -22,15 +22,7 @@ CREATE TABLE `summarytask4`.`role` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `nae_UNIQUE` (`title` ASC));
 
-/*Связать таблицу ббзеров с ролями*/
-ALTER TABLE `summarytask4`.`user` 
-ADD INDEX `fk_roleName_idx` (`role` ASC);
-ALTER TABLE `summarytask4`.`user` 
-ADD CONSTRAINT `fk_roleName`
-  FOREIGN KEY (`role`)
-  REFERENCES `summarytask4`.`role` (`id`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE;
+
   
 /*Созадть таблицу Для машин*/
 CREATE TABLE `summarytask4`.`car` (
@@ -52,43 +44,14 @@ CREATE TABLE `summarytask4`.`type_car` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `type_UNIQUE` (`type` ASC));
   
-/*внешний ключ в машине*/
-ALTER TABLE `summarytask4`.`car` 
-ADD CONSTRAINT `fk_status_car`
-  FOREIGN KEY (`statusCar`)
-  REFERENCES `summarytask4`.`status_car` (`id`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE;
-  
-  /*внешний клюк в рейсе*/
-  ALTER TABLE `summarytask4`.`flight` 
-DROP FOREIGN KEY `fk_car_car`;
-ALTER TABLE `summarytask4`.`flight` 
-ADD CONSTRAINT `fk_car_car`
-  FOREIGN KEY (`car`)
-  REFERENCES `summarytask4`.`car` (`id`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE;
 
-
-  
-  /*задание связей машина -тип*/
-  ALTER TABLE `summarytask4`.`car` 
-ADD INDEX `fk_type_idx` (`type` ASC);
-ALTER TABLE `summarytask4`.`car` 
-ADD CONSTRAINT `fk_type`
-  FOREIGN KEY (`type`)
-  REFERENCES `summarytask4`.`type_car` (`id`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE;
-  
     /*создание таблицы статуса машины*/
   
   CREATE TABLE `summarytask4`.`status_car` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `status` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `sstatus_UNIQUE` (`sstatus` ASC));
+  UNIQUE INDEX `status_UNIQUE` (`status` ASC));
 
 
 /*Создание таблицы для  рейса*/
@@ -106,8 +69,8 @@ CREATE TABLE `summarytask4`.`flight` (
 CREATE TABLE `summarytask4`.`request` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `ownerRequest` INT NOT NULL,
-  `dataRequest` TIMESTAMP NOT NULL,
-  `dataDeparture` TIMESTAMP NOT NULL,
+  `dateRequest` TIMESTAMP NOT NULL,
+  `dateDeparture` TIMESTAMP NOT NULL,
   `car_type` INT NULL,
   `carrying_car` DOUBLE NULL,
   `amount_car` DOUBLE NULL,
@@ -171,6 +134,47 @@ ADD CONSTRAINT `fk_requst_status`
   REFERENCES `summarytask4`.`status` (`id`)
   ON DELETE CASCADE
   ON UPDATE CASCADE;
+  
+  
+/*внешний ключ в машине*/
+ALTER TABLE `summarytask4`.`car` 
+ADD CONSTRAINT `fk_status_car`
+  FOREIGN KEY (`statusCar`)
+  REFERENCES `summarytask4`.`status_car` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
+  /*внешний клюк в рейсе*/
+  ALTER TABLE `summarytask4`.`flight` 
+DROP FOREIGN KEY `fk_car_car`;
+ALTER TABLE `summarytask4`.`flight` 
+ADD CONSTRAINT `fk_car_car`
+  FOREIGN KEY (`car`)
+  REFERENCES `summarytask4`.`car` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+
+/*Связать таблицу ббзеров с ролями*/
+ALTER TABLE `summarytask4`.`user` 
+ADD INDEX `fk_roleName_idx` (`role` ASC);
+ALTER TABLE `summarytask4`.`user` 
+ADD CONSTRAINT `fk_roleName`
+  FOREIGN KEY (`role`)
+  REFERENCES `summarytask4`.`role` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+
+  
+  /*задание связей машина -тип*/
+  ALTER TABLE `summarytask4`.`car` 
+ADD INDEX `fk_type_idx` (`type` ASC);
+ALTER TABLE `summarytask4`.`car` 
+ADD CONSTRAINT `fk_type`
+  FOREIGN KEY (`type`)
+  REFERENCES `summarytask4`.`type_car` (`id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+  
 
 
 /*Вставить роли*/
@@ -188,21 +192,20 @@ INSERT INTO `summarytask4`.`user` (`login`, `password`, `name`, `role`) VALUES (
 INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('1', 'PLATFORM');
 INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('2', 'VAN');
 INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('3', 'TANK');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('4', 'SUGGESTION');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('4', 'TIPPER');
 INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('5', 'SORTEMENT');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('6', 'BOARD');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('7', 'CONTAINER');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('7', 'BOARD');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('6', 'CONTAINER');
 INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('8', 'GASOLINE');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('9', 'TANKER');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('10', 'TENT');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('11', 'AVTOVOSCH');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('12', 'REFRIGERATOR');
-INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('13', 'OTHERS');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('9', 'TENT');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('10', 'TRUCK');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('11', 'REFRIGERATOR');
+INSERT INTO `summarytask4`.`type_car` (`id`, `type`) VALUES ('12', 'OTHERS');
 
 /*Запись статусов машины */
-INSERT INTO `summarytask4`.`status_car` (`id`, `sstatus`) VALUES ('1', 'FREE');
-INSERT INTO `summarytask4`.`status_car` (`id`, `sstatus`) VALUES ('2', 'USED');
-INSERT INTO `summarytask4`.`status_car` (`id`, `sstatus`) VALUES ('3', 'BROKEN');
+INSERT INTO `summarytask4`.`status_car` (`id`, `status`) VALUES ('1', 'FREE');
+INSERT INTO `summarytask4`.`status_car` (`id`, `status`) VALUES ('2', 'USED');
+INSERT INTO `summarytask4`.`status_car` (`id`, `status`) VALUES ('3', 'BROKEN');
   
 /*задание типов статусо заявок и рейсов*/
 INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('1', 'OPEN');
@@ -211,7 +214,7 @@ INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('3', 'CANCELED
 INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('4', 'INPROGRESS');
 INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('5', 'CLOSED');
 INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('6', 'PROCESSED');
-
+INSERT INTO `summarytask4`.`status` (`id`, `status_name`) VALUES ('7', 'SUBMITTED');
 
 /* запись машин */
 INSERT INTO `summarytask4`.`car` (`namber`, `type`, `carryingCar`, `amountCar`, `enginePower`, `statusCar`) VALUES ('AD2156AD', '1', '13.5', '15.5', '1', '1');

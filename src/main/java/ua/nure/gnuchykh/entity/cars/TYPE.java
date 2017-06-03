@@ -8,20 +8,20 @@ package ua.nure.gnuchykh.entity.cars;
  */
 public enum TYPE {
     /**
-     * окюртнплю
-     * тспцнм
-     * жхярепмю
-     * яюлнябюк
-     * янпрхлемрнбнг
-     * йнмреимепнбнг
-     * аемгнбнг
-     * ремрнбюмши
-     * юбрнбн
-     * петпефепюрнп
+     * окюртнплю        PLATFORM
+     * тспцнм           VAN
+     * жхярепмю         TANK
+     * яюлнябюк         Tipper
+     * янпрхлемрнбнг    SORTEMENT
+     * йнмреимепнбнг    CONTAINER
+     * анпр             BOARD
+     * аемгнбнг         GASOLINE
+     * ремрнбюмши       TENT
+     * юбрнбн           Truck
+     * петпефепюрнп     REFRIGERATOR
      * дПСЦНЕ
      */
-    PLATFORM(1), VAN(2), TANK(3), SUGGESTION(4), SORTEMENT(5), BOARD(6),
-    CONTAINER(7), GASOLINE(8), TANKER(9), TENT(10), AVTOVOSCH(11), REFRIGERATOR(12), OTHERS(13);
+    PLATFORM(1), VAN(2), TANK(3), TIPPER(4), SORTEMENT(5), CONTAINER(6), BOARD(7), GASOLINE(8), TENT(9), TRUCK(10), REFRIGERATOR(11), OTHERS(12);
 
     private Integer value;
 

@@ -53,7 +53,7 @@ public class FlightDAO {
         Flight flight = new Flight();
 
         flight.setNamberFlight(resultSet.getInt("id"));
-        flight.setDate(Flight.fromValueData(resultSet.getString("date")));
+        flight.setDate(Flight.fromValueDate(resultSet.getString("date")));
         flight.setStatus(Status.fromValue(resultSet.getInt("status")));
 
         // получение драйвера по id
@@ -242,10 +242,7 @@ public class FlightDAO {
             ps.setInt(1, idRequest);
             ps.execute();
 
-//            ps = connector.prepareStatement(SQL_UPDETE_CAR);
-//            ps.setInt(1, ua.nure.gnuchykh.entity.cars.Status.USED.value());
-//            ps.setInt(2, idCar);
-//            ps.execute();
+
 
 
 
@@ -257,6 +254,12 @@ public class FlightDAO {
                     throw new SQLException();
                 }
             }
+
+            ps = connector.prepareStatement(SQL_UPDETE_CAR);
+            ps.setInt(1, ua.nure.gnuchykh.entity.cars.Status.USED.value());
+            ps.setInt(2, idCar);
+            ps.execute();
+
 
             ps = connector.prepareStatement(SQL_INSERT_FLIGHT);
             ps.setString(1, entity.toStringDate());

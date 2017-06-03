@@ -54,6 +54,7 @@ public class Controller extends HttpServlet {
         } catch (DBException e) {
             HttpSession session = request.getSession();
             session.setAttribute("errorMessage", e.getMessage());
+            LOG.info(e.getMessage());
             response.sendRedirect(Path.PAGE_ERROR);
         }
         // метод возвращает страницу ответа

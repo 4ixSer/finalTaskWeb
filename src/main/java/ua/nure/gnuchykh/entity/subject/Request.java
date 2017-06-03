@@ -27,12 +27,12 @@ public class Request implements Serializable {
     /**
      * Дата подачи заявки.
      */
-    private LocalDateTime dataRequest;
+    private LocalDateTime dateRequest;
 
     /**
      * Дата предпологаемого выезда.
      */
-    private LocalDateTime dataDeparture;
+    private LocalDateTime dateDeparture;
 
     /**
      * Характеристики предполагаемой машыны.
@@ -91,8 +91,8 @@ public class Request implements Serializable {
         this.ownerRequest = ownerRequest;
     }
 
-    public LocalDateTime getDataRequest() {
-        return dataRequest;
+    public LocalDateTime getDateRequest() {
+        return dateRequest;
     }
     // TODO тиуи чет еше поменять
     /*
@@ -107,17 +107,17 @@ public class Request implements Serializable {
      *
      */
 
-    public void setDataRequest(LocalDateTime dataRequest) {
+    public void setDateRequest(LocalDateTime dateRequest) {
 
-        this.dataRequest = dataRequest;
+        this.dateRequest = dateRequest;
     }
 
-    public LocalDateTime getDataDeparture() {
-        return dataDeparture;
+    public LocalDateTime getDateDeparture() {
+        return dateDeparture;
     }
 
-    public void setDataDeparture(LocalDateTime dataDeparture) {
-        this.dataDeparture = dataDeparture;
+    public void setDateDeparture(LocalDateTime dateDeparture) {
+        this.dateDeparture = dateDeparture;
     }
 
     public Status getStatus() {
@@ -128,23 +128,23 @@ public class Request implements Serializable {
         this.status = status;
     }
 
-     public String toStringDataRequest() {
+     public String toStringDateRequest() {
 
-         return dataRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
+         return dateRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
      }
 
-     public String toStringDataDeparture() {
+     public String toStringDateDeparture() {
 
-         return dataDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
+         return dateDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
      }
 
 
-     public static LocalDateTime fromValueDataRequest(String time){
+     public static LocalDateTime fromValueDateRequest(String time){
          DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
          return LocalDateTime.parse(time, formatter);
      }
 
-     public static LocalDateTime fromValueDataDeparture(String time){
+     public static LocalDateTime fromValueDateDeparture(String time){
          DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
          return LocalDateTime.parse(time, formatter);
 
@@ -156,18 +156,18 @@ public class Request implements Serializable {
 
     @Override
     public String toString() {
-        return "Request [namberRequest=" + namberRequest + ", ownerRequest=" + ownerRequest + ", dataRequest="
-                + dataRequest + ", dataDeparture=" + dataDeparture + ", type=" + type + ", carryingCar=" + carryingCar
+        return "Request [namberRequest=" + namberRequest + ", ownerRequest=" + ownerRequest + ", dateRequest="
+                + dateRequest + ", dateDeparture=" + dateDeparture + ", type=" + type + ", carryingCar=" + carryingCar
                 + ", amountCar=" + amountCar + ", enginePower=" + enginePower + ", status=" + status + ", note=" + note
                 + "]";
     }
 
-    public Request(Integer ownerRequest, LocalDateTime dataRequest, LocalDateTime dataDeparture, TYPE type,
+    public Request(Integer ownerRequest, LocalDateTime dateRequest, LocalDateTime dateDeparture, TYPE type,
             Double carryingCar, Double amountCar, Double enginePower, Status status, String note) {
         super();
         this.ownerRequest = ownerRequest;
-        this.dataRequest = dataRequest;
-        this.dataDeparture = dataDeparture;
+        this.dateRequest = dateRequest;
+        this.dateDeparture = dateDeparture;
         this.type = type;
         this.carryingCar = carryingCar;
         this.amountCar = amountCar;
