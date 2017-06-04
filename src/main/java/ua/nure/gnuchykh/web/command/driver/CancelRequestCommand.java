@@ -1,6 +1,7 @@
 package ua.nure.gnuchykh.web.command.driver;
 
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_ALL_REQUEST;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_ID;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class CancelRequestCommand implements ActionCommand {
 
         if(!Validation.parameterStringIsCorrect(idS)) {
             LOG.info("Ошибка валидации");
-            session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
             Integer id =null;
 
@@ -40,21 +41,22 @@ public class CancelRequestCommand implements ActionCommand {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
                 LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
             RequestDAO dao = new RequestDAO();
             Request requestUser = dao.findEntityById(id);
             if(requestUser.getStatus()==Status.PROCESSED) {
+                session.setAttribute("Message", MessageManager.getProperty("message.request.processed"));
                 LOG.info("Заявка обрабытываеться");
-                session.setAttribute("Message", MessageManager.getProperty("message.request.delete.failure"));
             } else {
                 dao.delete(id);
-                LOG.info("Удаление заявки упещно");
+
                 List<Request> list = dao.findEntityByUserId((Integer) session.getAttribute("userID"));
-                session.setAttribute("allRequest", list);
-                session.setAttribute("Message", MessageManager.getProperty("message.request.delete.successfully"));
+                session.setAttribute(ATTRIBUTE_ALL_REQUEST, list);
+                session.setAttribute("Message", MessageManager.getProperty("message.request.delete.successful"));
+                LOG.info("Заявка успешно отменена");
             }
         }
         return Path.PAGE_DRIVER;

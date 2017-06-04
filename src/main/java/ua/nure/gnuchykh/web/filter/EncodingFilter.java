@@ -10,7 +10,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
+
 public class EncodingFilter implements Filter {
+
+    private static final Logger LOG = Logger.getLogger(EncodingFilter.class);
 
     private String encoding;
 
@@ -27,7 +31,7 @@ public class EncodingFilter implements Filter {
 
         String requestEncoding = request.getCharacterEncoding();
         if (requestEncoding == null) {
-
+            LOG.info("Change encoding " + encoding);
             request.setCharacterEncoding(encoding);
         }
 
@@ -36,7 +40,7 @@ public class EncodingFilter implements Filter {
 
     @Override
     public void init(FilterConfig fConfig) throws ServletException {
-
+        LOG.info("Init encoding " + encoding);
         encoding = fConfig.getInitParameter("encoding");
 
     }

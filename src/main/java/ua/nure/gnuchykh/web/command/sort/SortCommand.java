@@ -1,5 +1,7 @@
 package ua.nure.gnuchykh.web.command.sort;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -33,7 +35,7 @@ public class SortCommand implements ActionCommand {
 
         if (typeSort == null || typeSort.isEmpty() || object == null || object.isEmpty()
                 || !Validation.validateString(typeSort, object)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("Данные не коректны");
 
         } else {
@@ -72,11 +74,11 @@ public class SortCommand implements ActionCommand {
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }
             } else {
-                session.setAttribute("Message", MessageManager.getProperty("message.sortError"));
+                session.setAttribute("Message", MessageManager.getProperty("message.sort.error"));
                 LOG.info("Данные не коректны");
             }
         }
 
-        return Path.getPage((ClientType) session.getAttribute("userType"));
+        return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

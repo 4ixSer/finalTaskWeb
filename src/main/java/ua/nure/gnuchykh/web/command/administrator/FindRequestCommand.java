@@ -37,7 +37,7 @@ public class FindRequestCommand implements ActionCommand {
         Request requestUser = dao.findFirstRequest(LocalDateTime.now());
         if (requestUser == null) {
             LOG.info("Заявок больше нет.");
-            session.setAttribute("Message", MessageManager.getProperty("message.flight.null"));
+            session.setAttribute("Message", MessageManager.getProperty("message.request.null"));
         } else {
             LOG.info("request " + requestUser);
             session.setAttribute(ATTRIBUTE_USER_REQUEST, requestUser);
@@ -48,11 +48,12 @@ public class FindRequestCommand implements ActionCommand {
                     requestUser.getCarryingCar(), requestUser.getAmountCar(), requestUser.getEnginePower());
             if (list.isEmpty()) {
                 session.setAttribute("Message", MessageManager.getProperty("message.car.null"));
+                LOG.info("Подходящих автомобилей больше нет.");
             } else {
                 session.setAttribute(ATTRIBUTE_REQUESTS_CAR, list);
-                session.setAttribute("Message", MessageManager.getProperty("message.flight.find"));
+                session.setAttribute("Message", MessageManager.getProperty("message.request.find"));
+                LOG.info("Получена новая заявка.");
             }
-
         }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }

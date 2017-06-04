@@ -38,7 +38,7 @@ public class RegisteringUserCommand implements ActionCommand {
         String roleS = request.getParameter(PARAM_NAME_USER_ROLE);
         // валидация параметров
         if (!Validation.parameterStringIsCorrect(login, pass, email, name, roleS)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("Данные не коректны");
         } else {
 
@@ -47,14 +47,14 @@ public class RegisteringUserCommand implements ActionCommand {
             try {
                 role = Integer.parseInt(roleS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
             // ВАлидация данных
             if (!Validation.roleIsCorrect(role) || !Validation.loginIsCorrect(login) || !Validation.mailIsCorrect(email)
                     || !Validation.passwordIsCorrect(pass)) {
-                session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
                 LOG.info("Данные не коректны");
             } else {
 
@@ -63,14 +63,14 @@ public class RegisteringUserCommand implements ActionCommand {
                 User user = dao.findEntityByLogin(login);
                 if (user != null) {
                     // логин занят
-                    session.setAttribute("Message", MessageManager.getProperty("message.loginExists"));
-                    LOG.info("Такой логин уже есть");
+                    session.setAttribute("Message", MessageManager.getProperty("message.user.login.exists"));
+                    LOG.info("Такой логин уже используеться.");
                 } else {
                     // регистарция успешна
                     user = new User(login, pass, name, email, ClientType.fromValue(role));
                     dao.create(user);
-                    session.setAttribute("Message", MessageManager.getProperty("message.regitation.successfully"));
-                    LOG.info("Регистрация user прошла успещкно");
+                    session.setAttribute("Message", MessageManager.getProperty("message.user.registration.successful"));
+                    LOG.info("Регистрация пользователся прошла успешо.");
                 }
             }
         }

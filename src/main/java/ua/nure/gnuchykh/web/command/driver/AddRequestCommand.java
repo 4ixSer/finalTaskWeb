@@ -32,7 +32,7 @@ public class AddRequestCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws DBException {
 
-        LOG.info("НАчало работы ");
+        LOG.info("НАчало работы");
         HttpSession session = request.getSession();
 
         // извлечение данных
@@ -46,7 +46,7 @@ public class AddRequestCommand implements ActionCommand {
         String engineS = request.getParameter(PARAM_NAME_CAR_ENGINE);
 
         if (!Validation.parameterStringIsCorrect(typeS, carryingS, amountS, engineS,dateDepartureS )) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("Данные не коректны");
         } else {
             LocalDateTime dateDeparture = null;
@@ -66,15 +66,15 @@ public class AddRequestCommand implements ActionCommand {
                 amount = Double.parseDouble(amountS);
                 engine = Double.parseDouble(engineS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_DRIVER;
             }
 
             // Валидация данных
             if (!Validation.validateDouble(carrying, amount, engine) || !Validation.typeCarIsCorrect(type)
                     || !Validation.comentIsCorrect(comments)||!Validation.localDateTimeIsCorrect(dateDeparture)) {
-                session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
                 LOG.info("Данные не коректны");
 
             } else {
@@ -84,7 +84,7 @@ public class AddRequestCommand implements ActionCommand {
                         TYPE.fromValue(type), carrying, amount, engine, Status.SUBMITTED, comments);
 
                 dao.create(userRequest);
-                session.setAttribute("Message", MessageManager.getProperty("message.regitation.requsetSuccessfully"));
+                session.setAttribute("Message", MessageManager.getProperty("message.request.registration.successful"));
                 LOG.info("Регистрация заявки прошла успешно");
             }
         }

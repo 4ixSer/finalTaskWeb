@@ -32,7 +32,7 @@ public class DeleteUserCommand implements ActionCommand {
 
         // Валилация
         if (!Validation.parameterStringIsCorrect(idS)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
 
             Integer id = null;
@@ -42,20 +42,16 @@ public class DeleteUserCommand implements ActionCommand {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
                 LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
             UserDAO dao = new UserDAO();
             dao.delete(id);
-
-            LOG.info("Удаление юзера");
-
             List<User> users = dao.findAll();
-
-            LOG.debug("Нашли всех зареистрированыых юзерров.");
             session.setAttribute(ATTRIBUTE_USERS, users);
-            session.setAttribute("Message", MessageManager.getProperty("message.user.delete"));
+            session.setAttribute("Message", MessageManager.getProperty("message.user.delete.successful"));
+            LOG.info("Successfully removed the user.");
 
         }
         return Path.PAGE_ADMIN;

@@ -29,11 +29,9 @@ public class FindAllCarsCommand implements ActionCommand {
 
         CarDAO dao = new CarDAO();
         List<Car> cars = dao.findAll();
-
-        LOG.debug("Нашли все машины.");
         session.setAttribute(ATTRIBUTE_CARS, cars);
-        session.setAttribute("Message", MessageManager.getProperty("message.findCar"));
-
+        session.setAttribute("Message", MessageManager.getProperty("message.search.all.cars"));
+        LOG.info("Successfully removed the user.");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

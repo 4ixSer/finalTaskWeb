@@ -37,7 +37,7 @@ public class UpdateUserCommand implements ActionCommand {
         //Начальная валидация
         if (!Validation.parameterStringIsCorrect(idS, name, email)||!Validation.mailIsCorrect(email)||
                 !Validation.validateString(name)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             System.out.println(idS+" "+name+" "+email);
             LOG.info("Данные не коректны");
         } else {
@@ -46,8 +46,8 @@ public class UpdateUserCommand implements ActionCommand {
             try {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
@@ -65,7 +65,7 @@ public class UpdateUserCommand implements ActionCommand {
             }
             user = dao.update(user);
             session.setAttribute(ATTRIBUTE_USERS, list);
-            session.setAttribute("Message", MessageManager.getProperty("message.user.update"));
+            session.setAttribute("Message", MessageManager.getProperty("message.user.update.successful"));
             LOG.info("Изминения успешно внесены в базу данных");
         }
 

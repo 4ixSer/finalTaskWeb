@@ -2,14 +2,18 @@ package ua.nure.gnuchykh.web.custom.tag;
 
 import java.io.IOException;
 import java.util.GregorianCalendar;
-import java.util.Locale;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
+import org.apache.log4j.Logger;
+
 @SuppressWarnings("serial")
 public class InfoTag extends TagSupport {
+
+    private static final Logger LOG = Logger.getLogger(InfoTag.class);
+
     @Override
     public int doStartTag() throws JspException {
         GregorianCalendar gc = new GregorianCalendar();
@@ -19,7 +23,9 @@ public class InfoTag extends TagSupport {
             JspWriter out = pageContext.getOut();
             out.write(info);
         } catch (IOException e) {
+            LOG.info(e.getMessage());
             throw new JspException(e.getMessage());
+
         }
         return SKIP_BODY;
     }

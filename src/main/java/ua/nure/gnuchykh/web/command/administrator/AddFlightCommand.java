@@ -1,6 +1,8 @@
 package ua.nure.gnuchykh.web.command.administrator;
 
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_REQUESTS_CAR;
 import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USERS_ID;
+import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_REQUEST;
 import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_USER_TYPE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_SELECTED_CAR;
@@ -40,7 +42,7 @@ public class AddFlightCommand implements ActionCommand {
         //проверили валидацию
         if(!Validation.parameterStringIsCorrect(idCarS)) {
             LOG.info("Ошибка валидации");
-            session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
 
             Integer idCar= null;
@@ -49,13 +51,13 @@ public class AddFlightCommand implements ActionCommand {
                 idCar = Integer.parseInt(idCarS);
             } catch (NumberFormatException e) {
                 LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
 
             //получили запрос
-            Request userRequest =  (Request) session.getAttribute("requestUser");
+            Request userRequest =  (Request) session.getAttribute(ATTRIBUTE_USER_REQUEST);
             //id  водителя
             Integer idDriver =userRequest.getOwnerRequest();
             //id заявки
@@ -71,9 +73,11 @@ public class AddFlightCommand implements ActionCommand {
             FlightDAO dao = new FlightDAO();
             //запись
             dao.create(flight, idCar, idRequest);
+
+            session.removeAttribute(ATTRIBUTE_USER_REQUEST);
+            session.removeAttribute(ATTRIBUTE_REQUESTS_CAR);
+            session.setAttribute("Message", MessageManager.getProperty("message.flight.registration.successful"));
             LOG.info("Запись заявки прошла успешно");
-            session.removeAttribute("requestUser");
-            session.setAttribute("Message", MessageManager.getProperty("message.flight.regitation.successfully"));
         }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }

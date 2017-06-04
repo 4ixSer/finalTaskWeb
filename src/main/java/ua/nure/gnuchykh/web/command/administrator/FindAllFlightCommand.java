@@ -30,10 +30,9 @@ public class FindAllFlightCommand implements ActionCommand {
         FlightDAO dao = new FlightDAO();
         List<Flight> list = dao.findAll();
 
-        LOG.debug("Нашли все рейсы.");
         session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
-        session.setAttribute("Message", MessageManager.getProperty("message.findFlight"));
-
+        session.setAttribute("Message", MessageManager.getProperty("message.search.all.flights"));
+        LOG.debug("Нашли все рейсы.");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

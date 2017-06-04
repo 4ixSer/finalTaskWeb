@@ -30,7 +30,7 @@ public class LoginCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) throws DBException {
 
-        LOG.info("Начало работы ");
+        LOG.info("Начало работы");
         HttpSession session = request.getSession();
         String page = null;
 
@@ -40,7 +40,7 @@ public class LoginCommand implements ActionCommand {
         //Проверить входяшие параметры
         if (!Validation.parameterStringIsCorrect(login, pass)||
                 !Validation.loginIsCorrect(login)||!Validation.passwordIsCorrect(pass)) {
-            session.setAttribute("errorMessage", MessageManager.getProperty("message.loginOrPasswordIsEmty"));
+            session.setAttribute("errorMessage", MessageManager.getProperty("message.login.emty"));
             LOG.info("Начальные данные не правильны");
             page = Path.PAGE_INDEX;
         } else {
@@ -50,7 +50,7 @@ public class LoginCommand implements ActionCommand {
             if (user == null || !pass.equals(user.getPassword())) {
                 LOG.info("Запрашиваемого юзера не сушествует или неправильный пароль");
                 session.setAttribute("errorMessage",
-                        MessageManager.getProperty("message.cannotFindUserWithLoginOrPassword"));
+                        MessageManager.getProperty("message.login.incorrect"));
                 page = Path.PAGE_INDEX;
             } else {
                 //создание сесии

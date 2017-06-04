@@ -37,7 +37,7 @@ public class DeleteCarCommand implements ActionCommand {
         // Валилация
         if (!Validation.parameterStringIsCorrect(idS)) {
             LOG.info("Ошибка валидации");
-            session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
 
             Integer id = null;
@@ -46,7 +46,7 @@ public class DeleteCarCommand implements ActionCommand {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
                 LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
             //проверка используется эта машина или нет
@@ -54,17 +54,15 @@ public class DeleteCarCommand implements ActionCommand {
             List<Flight> flights = flightDAO.findEntityByCarId(id);
             if (!flights.isEmpty()) {
                 LOG.info("Нужно закрыть или удалить рейсы связанные с этой машиной");
-                session.setAttribute("Message", MessageManager.getProperty("message.car.delete.error"));
+                session.setAttribute("Message", MessageManager.getProperty("message.car.close.flights"));
             } else {
 
                 CarDAO dao = new CarDAO();
                 dao.delete(id);
-                LOG.debug("Удалили машину.");
-
                 List<Car> cars = dao.findAll();
-                LOG.debug("Нашли все машины и занесли в сесию");
                 session.setAttribute(ATTRIBUTE_CARS, cars);
-                session.setAttribute("Message", MessageManager.getProperty("message.delete.car"));
+                session.setAttribute("Message", MessageManager.getProperty("message.car.delete.successful"));
+                LOG.debug("Successfully removed the car.");
             }
         }
         return Path.PAGE_ADMIN;

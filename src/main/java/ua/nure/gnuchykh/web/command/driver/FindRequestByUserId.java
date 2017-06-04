@@ -32,10 +32,10 @@ public class FindRequestByUserId implements ActionCommand {
 
         RequestDAO dao = new  RequestDAO();
         List<Request> userReques = dao.findEntityByUserId(idUser);
-        LOG.debug("Нашли все заявки водителя");
-        session.setAttribute(ATTRIBUTE_ALL_REQUEST, userReques);
-        session.setAttribute("Message", MessageManager.getProperty("message.findUserRequest"));
 
+        session.setAttribute(ATTRIBUTE_ALL_REQUEST, userReques);
+        session.setAttribute("Message", MessageManager.getProperty("message.search.all.request"));
+        LOG.debug("Нашли все заявки водителя");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

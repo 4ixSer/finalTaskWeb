@@ -30,10 +30,9 @@ public class FindAllUsersCommand implements ActionCommand {
         UserDAO dao = new UserDAO();
         List<User> users = dao.findAll();
 
-        LOG.debug("Нашли всех зареистрированыых юзерров.");
         session.setAttribute(ATTRIBUTE_USERS, users);
-        session.setAttribute("Message", MessageManager.getProperty("message.findUser"));
-
+        session.setAttribute("Message", MessageManager.getProperty("message.search.all.users"));
+        LOG.info("Успешный поиск всех людей.");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

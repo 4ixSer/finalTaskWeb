@@ -14,7 +14,7 @@ public class LogoutCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
 
-        LOG.info("Начало работы ");
+        LOG.info("Начало работы");
 
         // уничтожение сессии
         LOG.trace("Уничтожение сесии: " + request.getSession().getId());

@@ -79,8 +79,8 @@
 			<a href="/WEB/controller?command=CLOSE&table=allFlight"> &times;</a>
 			<tr>
 				<th><fmt:message key="placeholder.id" bundle="${rb}" /><a href="/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
-				<th><fmt:message key="placeholder.request.date.departure" bundle="${rb}" /><a href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
-				<th><fmt:message key="placeholder.car.status" bundle="${rb}" /><a href="/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+				<th><fmt:message key="placeholder.request.date.departure" bundle="${rb}" /><a href="/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+				<th><fmt:message key="placeholder.car.status" bundle="${rb}" /><a href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
 				<th><fmt:message key="placeholder.dispatcher" bundle="${rb}" /></th>
 				<th><fmt:message key="placeholder.car" bundle="${rb}" /></th>
 				<th><fmt:message key="placeholder.comment" bundle="${rb}" /></th>

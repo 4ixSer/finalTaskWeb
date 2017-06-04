@@ -122,4 +122,15 @@ public final class Validation {
 
     }
 
+    public static boolean languageIsCorrect(String local) {
+
+        if(local.equals("ru_RU")||local.equals("en_US")) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
 }

@@ -3,11 +3,11 @@ package ua.nure.gnuchykh.web.command.admin;
 import static ua.nure.gnuchykh.util.ParamName.ATTRIBUTE_CARS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_AMOUNT;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_CARRYING;
-import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_ENGINE;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_NAMBER;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_STATUS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_CAR_TYPE;
+import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_COMMENTS;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_ID;
 
 import java.util.List;
@@ -50,7 +50,7 @@ public class UpdateCarCommand implements ActionCommand {
 
         // ПРОВЕРКА на сушествоавание
         if (!Validation.parameterStringIsCorrect(idS, typeS, carryingS, amountS, engineS, statusS, namber)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("Данные не коректны");
         } else {
 
@@ -70,8 +70,8 @@ public class UpdateCarCommand implements ActionCommand {
                 engine = Double.parseDouble(engineS);
                 status = Integer.parseInt(statusS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
@@ -79,7 +79,7 @@ public class UpdateCarCommand implements ActionCommand {
             if (!Validation.comentIsCorrect(comments) || !Validation.validateDouble(carrying, amount, engine)
                     || !Validation.namberCarIsCorrect(namber) || !Validation.statusCarIsCorrect(status)
                     || !Validation.typeCarIsCorrect(type)) {
-                session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
                 LOG.info("Данные не коректны");
             } else {
 
@@ -88,7 +88,7 @@ public class UpdateCarCommand implements ActionCommand {
 
                 if (car != null && car.getId() != id) {
                     LOG.info("Такой норем машины уже есть");
-                    session.setAttribute("Message", MessageManager.getProperty("message.namberCarExists"));
+                    session.setAttribute("Message", MessageManager.getProperty("message.car.number.exists"));
                 } else {
                     // запись данных в бд и сесию
                     List<Car> list = (List<Car>) session.getAttribute("cars");
@@ -106,9 +106,9 @@ public class UpdateCarCommand implements ActionCommand {
                     }
 
                     car = dao.update(car);
-                    LOG.info("Перезапись данных о машинне.");
                     session.setAttribute(ATTRIBUTE_CARS, list);
-                    session.setAttribute("Message", MessageManager.getProperty("message.car.update"));
+                    session.setAttribute("Message", MessageManager.getProperty("message.car.update.successful"));
+                    LOG.info("Обновление данных прошло успешно");
                 }
             }
         }

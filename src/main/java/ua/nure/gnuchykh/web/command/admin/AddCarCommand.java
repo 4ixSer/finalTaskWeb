@@ -45,7 +45,7 @@ public class AddCarCommand implements ActionCommand {
         String statusS = request.getParameter(PARAM_NAME_CAR_STATUS);
 
         if (!Validation.parameterStringIsCorrect(namber, typeS, carryingS, amountS, engineS, statusS)) {
-            session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("Данные не коректны");
 
         } else {
@@ -64,8 +64,8 @@ public class AddCarCommand implements ActionCommand {
                 engine = Double.parseDouble(engineS);
                 status = Integer.parseInt(statusS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
@@ -73,7 +73,7 @@ public class AddCarCommand implements ActionCommand {
             if (!Validation.comentIsCorrect(comments) || !Validation.validateDouble(carrying, amount, engine)
                     || !Validation.namberCarIsCorrect(namber) || !Validation.statusCarIsCorrect(status)
                     || !Validation.typeCarIsCorrect(type)) {
-                session.setAttribute("Message", MessageManager.getProperty("message.paramIncorrect"));
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
                 LOG.info("Данные не коректны");
 
             } else {
@@ -84,13 +84,13 @@ public class AddCarCommand implements ActionCommand {
 
                 if (car != null) {
                     LOG.info("Такой номер машины уже есть");
-                    session.setAttribute("Message", MessageManager.getProperty("message.namberCarExists"));
+                    session.setAttribute("Message", MessageManager.getProperty("message.car.number.exists"));
                     return Path.PAGE_ADMIN;
                 } else {
                     car = new Car(namber, TYPE.fromValue(type), carrying, amount, engine, Status.fromValue(status),
                             comments);
                     dao.create(car);
-                    session.setAttribute("Message", MessageManager.getProperty("message.regitation.successfully"));
+                    session.setAttribute("Message", MessageManager.getProperty("message.car.registration.successful"));
 
                     LOG.info("Регистрация car прошла успещно");
                 }

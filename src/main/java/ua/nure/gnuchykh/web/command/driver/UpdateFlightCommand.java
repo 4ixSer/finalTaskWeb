@@ -38,7 +38,7 @@ public class UpdateFlightCommand implements ActionCommand {
         if (!Validation.parameterStringIsCorrect(statusCarS, idFlightS, comments)
                 || !Validation.comentIsCorrect(comments)) {
             LOG.info("Ошибка валидации");
-            session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+            session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
             Integer idFlight = null;
             Integer statusCar = null;
@@ -48,8 +48,8 @@ public class UpdateFlightCommand implements ActionCommand {
                 statusCar = Integer.parseInt(statusCarS);
 
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
-                session.setAttribute("Message", MessageManager.getProperty("message.incorrectNumberFormat"));
+                LOG.info("Ошибка парсинга");
+                session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_DRIVER;
             }
 
@@ -66,7 +66,8 @@ public class UpdateFlightCommand implements ActionCommand {
             flightDAO.update(flight, flight.getCar(), Status.fromValue(statusCar),comments);
 
             session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
-            session.setAttribute("Message", MessageManager.getProperty("message.flight.close.successfully"));
+            session.setAttribute("Message", MessageManager.getProperty("message.flight.close.successful"));
+            LOG.info("Успешное зекрытие рейса.");
 
         }
         return Path.PAGE_DRIVER;

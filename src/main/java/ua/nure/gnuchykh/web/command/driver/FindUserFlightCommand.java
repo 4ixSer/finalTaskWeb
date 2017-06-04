@@ -34,10 +34,10 @@ public class FindUserFlightCommand implements ActionCommand {
         FlightDAO dao = new FlightDAO();
         List<Flight> list = dao.findEntityByDriverId(idUser);
 
-        LOG.debug("Нашли все рейсы водителя");
-        session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
-        session.setAttribute("Message", MessageManager.getProperty("message.findUserFlight"));
 
+        session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
+        session.setAttribute("Message", MessageManager.getProperty("message.search.all.flights"));
+        LOG.debug("Нашли все рейсы водителя");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

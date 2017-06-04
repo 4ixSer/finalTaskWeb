@@ -23,7 +23,9 @@ public class PageRedirectSecurityFilter implements Filter {
 
     @Override
     public void init(FilterConfig fConfig) throws ServletException {
+
         indexPath = fConfig.getInitParameter("INDEX_PATH");
+        LOG.info("init INDEX_PATH "+ indexPath);
     }
 
     @Override
@@ -32,7 +34,6 @@ public class PageRedirectSecurityFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-        System.err.println(httpRequest.getRequestURI());
         if (httpRequest.getRequestURI().equals("/WEB/jsp/error/error.jsp")) {
 
             LOG.info("переход на " + httpRequest.getContextPath() + indexPath);

@@ -130,12 +130,12 @@ public class Request implements Serializable {
 
      public String toStringDateRequest() {
 
-         return dateRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
+         return dateRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
      }
 
      public String toStringDateDeparture() {
 
-         return dateDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
+         return dateDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
      }
 
 

@@ -36,11 +36,12 @@ public class DenyRequestCommand implements ActionCommand {
         requestUser.setStatus(Status.REJEJECTED);
         // обновить статут в бд
         dao.update(requestUser);
-        LOG.info("Отказано в заявке");
+
         //удалить атрибуты с сесии
         session.removeAttribute(ATTRIBUTE_USER_REQUEST);
         session.removeAttribute(ATTRIBUTE_REQUESTS_CAR);
-        session.setAttribute("Message", MessageManager.getProperty("message.flight.refuse"));
+        session.setAttribute("Message", MessageManager.getProperty("message.request.cancel"));
+        LOG.info("Заявка на рейс отклонена.");
 
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
 

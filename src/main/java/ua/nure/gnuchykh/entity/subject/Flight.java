@@ -124,7 +124,7 @@ public class Flight implements Serializable {
 
     public String toStringDate() {
 
-        return date.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss"));
+        return date.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
     }
 
     public static LocalDateTime fromValueDate(String time) {
