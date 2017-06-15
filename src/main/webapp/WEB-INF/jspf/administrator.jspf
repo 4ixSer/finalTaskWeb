@@ -1,0 +1,137 @@
+<div class="container">
+				<div class="row">
+					<div>
+						<!--Take an Request.-->
+						<form align="center" name="findRequest" method="POST"
+							action="/WEB/controller">
+							<input type="hidden" name="command" value="FINDREQUEST" />
+							<button class="btn btn-primary" type="submit">
+								<i class="fa fa-tag" aria-hidden="true"></i> <fmt:message key="button.get.request" bundle="${rb}" />
+							</button>
+						</form>
+						<br />
+					</div>
+					<div>
+						<c:if test="${not empty requestUser}">
+							<table class="table table-bordered">
+								<tr>
+									<th><fmt:message key="placeholder.id" bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.request.date.request"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.request.date.departure"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.car.type" bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.car.carrying"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.car.amount"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.car.power"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.comment" bundle="${rb}" />
+									</th>
+								</tr>
+								<tr align="center">
+									<td><c:out value="${ requestUser.namberRequest }" /></td>
+									<td><c:out value="${ requestUser.dateRequest }" /></td>
+									<td><c:out value="${ requestUser.dateDeparture }" /></td>
+									<td><c:out value="${ requestUser.type }" /></td>
+									<td><c:out value="${ requestUser.carryingCar }" /></td>
+									<td><c:out value="${ requestUser.amountCar }" /></td>
+									<td><c:out value="${ requestUser.enginePower }" /></td>
+									<td><c:out value="${ requestUser.note }" /></td>
+									<td><a class="btn btn-warning"
+										href="/WEB/controller?command=DENYREQUEST"> <fmt:message
+												key="button.request.reject" bundle="${rb}" /></a></td>
+								</tr>
+							</table>
+							<c:if test="${not empty requestCar}">
+
+								<form name="formRequest" method="POST" action="/WEB/controller">
+									<input type="hidden" name="command" value="ADDFLIGHT" />
+									<div class="form-group row">
+										<div class="col-xs-7">
+											<select class="form-control" name="selectedCar" required>
+												<c:forEach var="elem" items="${requestCar}">
+													<option value="${elem.id}">TYPE_____${elem.type}_____carrying_____${elem.carryingCar}_____amount_____${elem.amountCar}_____engine_____${elem.enginePower}
+													</option>
+												</c:forEach>
+											</select>
+										</div>
+										<div class="col-xs-4">
+											<input class="form-control" type="text" name="comments"
+												placeholder="<fmt:message key="placeholder.comment" bundle="${rb}" />" />
+										</div>
+										<button type="submit" class="btn btn-primary">
+											<fmt:message key="button.add.flight" bundle="${rb}" />
+										</button>
+
+									</div>
+								</form>
+							</c:if>
+						</c:if>
+					</div>
+				</div>
+
+			</div>
+
+			<hr />
+
+			<div class="container">
+				<div class="row">
+					<!--Search all flights.-->
+					<div>
+						<form align="center" name="findFlight" method="POST"
+							action="/WEB/controller">
+							<input type="hidden" name="command" value="FINDALLFLIGHT" />
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-search" aria-hidden="true"></i> <fmt:message key="button.find.flight" bundle="${rb}" />
+							</button>
+						</form>
+					</div>
+
+					<div class="container">
+						<c:if test="${not empty allFlight}">
+							<div align="right">
+								<a class="btn btn-warning"
+									href="/WEB/controller?command=CLOSE&table=allFlight"> <i
+									class="fa fa-times" aria-hidden="true"> </i></a>
+							</div>
+							<table class="table table-bordered">
+								<tr>
+
+									<th><fmt:message key="placeholder.id" bundle="${rb}" /> <a
+										href="/WEB/controller?command=SORT&typeSort=SORTBYID&object=allFlight">&#11015</a></th>
+									<th><fmt:message key="placeholder.request.date.departure"
+											bundle="${rb}" /> <a
+										href="/WEB/controller?command=SORT&typeSort=SORTBYSTATUS&object=allFlight">&#11015</a></th>
+									<th><fmt:message key="placeholder.request.status"
+											bundle="${rb}" /><a
+										href="/WEB/controller?command=SORT&typeSort=SORTBYDATE&object=allFlight">&#11015</a></th>
+									<th><fmt:message key="placeholder.driver" bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.dispatcher"
+											bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.car" bundle="${rb}" /></th>
+									<th><fmt:message key="placeholder.comment" bundle="${rb}" /></th>
+									<th></th>
+								</tr>
+								<c:forEach var="elem" items="${allFlight}">
+									<tr align="center">
+										<td><c:out value="${ elem.namberFlight }" /></td>
+										<td><c:out value="${ elem.date }" /></td>
+										<td><c:out value="${ elem.status }" /></td>
+										<td><c:out value="${ elem.driver }" /></td>
+										<td><c:out value="${ elem.dispatcher }" /></td>
+										<td><c:out value="${ elem.car }" /></td>
+										<td><c:out value="${ elem.note }" /></td>
+										<td><a class="btn btn-warning"
+											href="/WEB/controller?command=DELETEFLIGHT&id=${elem.namberFlight }">
+												<i class="fa fa-trash-o" aria-hidden="true"></i> <fmt:message key="button.delete" bundle="${rb}" />
+										</a></td>
+									</tr>
+								</c:forEach>
+							</table>
+						</c:if>
+					</div>
+				</div>
+			</div>
+			<hr />

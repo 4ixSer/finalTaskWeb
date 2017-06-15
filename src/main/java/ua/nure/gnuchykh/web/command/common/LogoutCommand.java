@@ -7,7 +7,13 @@ import org.apache.log4j.Logger;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class LogoutCommand implements ActionCommand {
+/**
+ * Command to exit.
+ *
+ * @author qny4ix
+ *
+ */
+public final class LogoutCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(LogoutCommand.class);
 

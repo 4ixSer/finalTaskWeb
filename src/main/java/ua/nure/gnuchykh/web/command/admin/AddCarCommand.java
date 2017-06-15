@@ -23,10 +23,15 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class AddCarCommand implements ActionCommand {
+/**
+ * The commands for adding a machine to the database.
+ *
+ * @author qny4ix
+ *
+ */
+public final class AddCarCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(AddCarCommand.class);
-
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
@@ -34,7 +39,7 @@ public class AddCarCommand implements ActionCommand {
         LOG.info("НАчало работы ");
 
         HttpSession session = request.getSession();
-        // извлечение данных
+        // извлечение данных из request
         String namber = request.getParameter(PARAM_NAME_CAR_NAMBER);
         String comments = request.getParameter(PARAM_NAME_COMMENTS);
 
@@ -44,9 +49,11 @@ public class AddCarCommand implements ActionCommand {
         String engineS = request.getParameter(PARAM_NAME_CAR_ENGINE);
         String statusS = request.getParameter(PARAM_NAME_CAR_STATUS);
 
+        //проверка на null
         if (!Validation.parameterStringIsCorrect(namber, typeS, carryingS, amountS, engineS, statusS)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-            LOG.info("Данные не коректны");
+            LOG.info("Данные не коректны: namber " + namber + "; comments " + comments + "; typeS " + typeS
+                    + "; carryingS" + carryingS + "; amountS " + amountS + "; engineS " + engineS + "; statusS " + statusS);
 
         } else {
 
@@ -64,7 +71,7 @@ public class AddCarCommand implements ActionCommand {
                 engine = Double.parseDouble(engineS);
                 status = Integer.parseInt(statusS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка парсинга");
+                LOG.info("Ошибка парсинга : type " + typeS + "; carrying" + carryingS + "; amount " + amountS + "; engine " + engineS + "; status " + statusS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
@@ -74,7 +81,8 @@ public class AddCarCommand implements ActionCommand {
                     || !Validation.namberCarIsCorrect(namber) || !Validation.statusCarIsCorrect(status)
                     || !Validation.typeCarIsCorrect(type)) {
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-                LOG.info("Данные не коректны");
+                LOG.info("Данные не коректны: namber " + namber + "; comments " + comments + "; typeS " + typeS + "; carryingS" + carryingS
+                        + "; amountS " + amountS + "; engineS " + engineS + "; statusS " + statusS);
 
             } else {
 
@@ -83,7 +91,7 @@ public class AddCarCommand implements ActionCommand {
                 Car car = dao.findEntityByNamber(namber);
 
                 if (car != null) {
-                    LOG.info("Такой номер машины уже есть");
+                    LOG.info("Такой номер машины уже есть namber " + namber);
                     session.setAttribute("Message", MessageManager.getProperty("message.car.number.exists"));
                     return Path.PAGE_ADMIN;
                 } else {
@@ -91,8 +99,8 @@ public class AddCarCommand implements ActionCommand {
                             comments);
                     dao.create(car);
                     session.setAttribute("Message", MessageManager.getProperty("message.car.registration.successful"));
+                    LOG.info("Регистрация car прошла успещно " + car);
 
-                    LOG.info("Регистрация car прошла успещно");
                 }
             }
         }

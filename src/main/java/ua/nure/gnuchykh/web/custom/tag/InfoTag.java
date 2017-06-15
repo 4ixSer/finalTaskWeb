@@ -1,14 +1,17 @@
 package ua.nure.gnuchykh.web.custom.tag;
 
 import java.io.IOException;
-import java.util.GregorianCalendar;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
 import org.apache.log4j.Logger;
-
+/**
+ * JSTL  custom tag. Prints a footer of a page.
+ * @author qny4i
+ *
+ */
 @SuppressWarnings("serial")
 public class InfoTag extends TagSupport {
 
@@ -16,8 +19,7 @@ public class InfoTag extends TagSupport {
 
     @Override
     public int doStartTag() throws JspException {
-        GregorianCalendar gc = new GregorianCalendar();
-        String info = "<hr /> <p align=\"right\">&copy;Autobase (Gny4ix, summaryTask, EPAM-KhPI Java Training), 2017</p>" ;
+        String info = "<p align=\"right\">&copy;Autobase (Gny4ix, summaryTask, EPAM-KhPI Java Training), 2017</p>";
 
         try {
             JspWriter out = pageContext.getOut();

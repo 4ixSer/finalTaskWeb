@@ -33,13 +33,12 @@ public class SortCommand implements ActionCommand {
         String typeSort = request.getParameter("typeSort");
         String object = request.getParameter("object");
 
-        if (typeSort == null || typeSort.isEmpty() || object == null || object.isEmpty()
+        if (!Validation.parameterStringIsCorrect(typeSort, object)
                 || !Validation.validateString(typeSort, object)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
             LOG.info("ƒанные не коректны");
 
         } else {
-            // TODO подумать как красивей сделать
             if (object.equals("cars")) {
                 List<Car> list = (List<Car>) session.getAttribute("cars");
                 if (list != null) {
@@ -56,9 +55,7 @@ public class SortCommand implements ActionCommand {
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }
             } else if (object.equals("allRequest")) {
-                System.err.println(1);
                 List<Request> list = (List<Request>) session.getAttribute("allRequest");
-                System.err.println(list);
                 if (list != null) {
                     Collections.sort(list, SortFactory.getRequestComparator(typeSort));
                     session.setAttribute("allRequest", list);
@@ -66,10 +63,9 @@ public class SortCommand implements ActionCommand {
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }
             } else if (object.equals("allFlight")) {
-                @SuppressWarnings("unchecked")
                 List<Flight> list = (List<Flight>) session.getAttribute("allFlight");
-                Collections.sort(list, SortFactory.getFlightComparator(typeSort));
                 if (list != null) {
+                    Collections.sort(list, SortFactory.getFlightComparator(typeSort));
                     session.setAttribute("allFlight", list);
                     session.setAttribute("Message", MessageManager.getProperty("message.sort") + " " + typeSort);
                 }

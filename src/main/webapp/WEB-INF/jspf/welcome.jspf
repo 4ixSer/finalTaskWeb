@@ -1,10 +1,16 @@
 <!--User greeting  -->
 <h2>
 	<p align="center">
-		<fmt:message key="label.welcome" bundle="${rb}" />
-		, ${name}.
+		<fmt:message key="label.welcome" bundle="${rb}" />, ${name}.
 	</p>
 </h2>
-<!--Error or message from servlets  -->
-${Message}
-<br>
+</br>
+
+
+<c:if test="${not empty Message}">
+	<div class="alert alert-warning alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert"
+			aria-hidden="true">&times;</button>
+		${Message}
+	</div>
+</c:if>

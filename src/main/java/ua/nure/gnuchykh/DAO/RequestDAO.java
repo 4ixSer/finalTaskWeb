@@ -18,6 +18,12 @@ import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
+/**
+ * DAO for entity Ñar.
+ *
+ * @author qny4ix
+ *
+ */
 public class RequestDAO {
     private static final String SQL_INSERT_REQUEST = "INSERT INTO request (ownerRequest, dateRequest, dateDeparture, car_type, carrying_car, amount_car, enginePower, status, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_SELECT_All_REQUEST = "SELECT * FROM request";
@@ -26,8 +32,12 @@ public class RequestDAO {
     private static final String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
     private static final String SQL_UPDETE_REQUEST = "UPDATE request SET ownerRequest=?, dateRequest=?, dateDeparture=?, car_type=?, carrying_car=?, amount_car=?, enginePower=?, status=?, note=? WHERE id=?";
     private static final String SQL_SELECT_FIRST_REQUEST = "SELECT * FROM request where dateDeparture > ? and status  >= 6  LIMIT 1";
+
     private Connection connector;
 
+    /**
+     * Method for searching all entities in the database.
+     */
     public List<Request> findAll() throws DBException {
         connector = null;
         List<Request> requests = new ArrayList<Request>();
@@ -51,7 +61,11 @@ public class RequestDAO {
         return requests;
     }
 
-    private Request createRequest(ResultSet resultSet) throws SQLException, DBException {
+    /**
+     * A method for creating an entity using the data retrieved from the
+     * ResultSet query.
+     */
+    private Request createRequest(final ResultSet resultSet) throws SQLException, DBException {
         Request request = new Request();
 
         request.setNamberRequest(resultSet.getInt("id"));
@@ -75,7 +89,10 @@ public class RequestDAO {
         return request;
     }
 
-    public Request findEntityById(int id) throws DBException {
+    /**
+     * A method for searching for an entity by its indifier.
+     */
+    public Request findEntityById(final int id) throws DBException {
         connector = null;
         Request request = null;
         PreparedStatement ps = null;
@@ -98,7 +115,10 @@ public class RequestDAO {
         return request;
     }
 
-    public List<Request> findEntityByUserId(int id) throws DBException {
+    /**
+     * Search Request by id user.
+     */
+    public List<Request> findEntityByUserId(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -123,7 +143,10 @@ public class RequestDAO {
         return requests;
     }
 
-    public boolean delete(int id) throws DBException {
+    /**
+     * The method for removing the entity by its indifier.
+     */
+    public boolean delete(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
@@ -140,11 +163,17 @@ public class RequestDAO {
         return true;
     }
 
-    public boolean delete(Request entity) throws DBException {
+    /**
+     * Method for removing an entity from a database by its instance.
+     */
+    public boolean delete(final Request entity) throws DBException {
         return delete(entity.getNamberRequest());
     }
 
-    public boolean create(Request entity) throws DBException {
+    /**
+     * The method creates an entity in the database.
+     */
+    public boolean create(final Request entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
@@ -173,7 +202,11 @@ public class RequestDAO {
         return true;
     }
 
-    public Request update(Request entity) throws DBException {
+    /**
+     * Method for updating entity data in a database by an instance of the
+     * entity.
+     */
+    public Request update(final Request entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -205,7 +238,12 @@ public class RequestDAO {
         return entity;
     }
 
-    public Request findFirstRequest(LocalDateTime time) throws DBException {
+    /**
+     *
+     * Method for receiving an application. And changes in the status of the application for PROCESSED.
+     *
+     */
+    public Request findFirstRequest(final LocalDateTime time) throws DBException {
         connector = null;
         Request request = null;
         PreparedStatement ps = null;
@@ -215,7 +253,7 @@ public class RequestDAO {
             connector.setAutoCommit(false);
             ps = connector.prepareStatement(SQL_SELECT_FIRST_REQUEST);
 
-            ps.setString(1, time.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d hh:mm:ss")));
+            ps.setString(1, time.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss")));
 
             ResultSet resultSet = ps.executeQuery();
             if (resultSet.next()) {
@@ -241,8 +279,6 @@ public class RequestDAO {
                 ps.setInt(10, request.getNamberRequest());
                 ps.executeUpdate();
             }
-
-
 
             connector.commit();
         } catch (SQLException e) {

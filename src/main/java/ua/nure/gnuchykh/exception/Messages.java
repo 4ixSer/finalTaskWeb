@@ -2,8 +2,7 @@ package ua.nure.gnuchykh.exception;
 
 /**
  * Holder for messages of exceptions.
- *
- *
+ * @author qny4ix
  */
 public class Messages {
 
@@ -78,6 +77,8 @@ public class Messages {
     public static final String ERR_CANNOT_UPDATE_CAR = "Cannot update the car";
 
     public static final String ERR_CANNOT_FIND_CAR_BY_NAMBER = "Cannot find the car by namber";
+
+    public static final String ERR_CANNOT_FIND_AVG = "Cannot find AVG";
 
     public static final String ERR_CANNOT_FIND_CAR_BY_CHARACTERISTICS = "Cannot find the car by characteristics";
 

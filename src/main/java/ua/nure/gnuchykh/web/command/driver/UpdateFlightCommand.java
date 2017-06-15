@@ -21,7 +21,14 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class UpdateFlightCommand implements ActionCommand {
+/**
+ * The command to close the flight driver.
+ *
+ * @author qny4ix
+ *
+ */
+
+public final class UpdateFlightCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(UpdateFlightCommand.class);
 
@@ -37,7 +44,8 @@ public class UpdateFlightCommand implements ActionCommand {
 
         if (!Validation.parameterStringIsCorrect(statusCarS, idFlightS, comments)
                 || !Validation.comentIsCorrect(comments)) {
-            LOG.info("Ошибка валидации");
+            LOG.info(
+                    "Ошибка валидации comments " + comments + "; idFlightS " + idFlightS + "; statusCarS" + statusCarS);
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
             Integer idFlight = null;
@@ -48,13 +56,13 @@ public class UpdateFlightCommand implements ActionCommand {
                 statusCar = Integer.parseInt(statusCarS);
 
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка парсинга");
+                LOG.info("Ошибка парсинга idFlight " + idFlightS + "; statusCar " + statusCar);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_DRIVER;
             }
 
             Flight flight = null;
-            List<Flight> list = (List<Flight>) session.getAttribute("allFlight");
+            List<Flight> list = (List<Flight>) session.getAttribute(ATTRIBUTE_ALL_FLIGHT);
             for (Flight flight2 : list) {
                 if (flight2.getNamberFlight() == idFlight) {
                     flight2.setStatus(ua.nure.gnuchykh.entity.subject.Status.CLOSED);
@@ -63,11 +71,11 @@ public class UpdateFlightCommand implements ActionCommand {
             }
 
             FlightDAO flightDAO = new FlightDAO();
-            flightDAO.update(flight, flight.getCar(), Status.fromValue(statusCar),comments);
+            flightDAO.update(flight, flight.getCar(), Status.fromValue(statusCar), comments);
 
             session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
             session.setAttribute("Message", MessageManager.getProperty("message.flight.close.successful"));
-            LOG.info("Успешное зекрытие рейса.");
+            LOG.info("Успешное зекрытие рейса idFlight " + idFlight);
 
         }
         return Path.PAGE_DRIVER;

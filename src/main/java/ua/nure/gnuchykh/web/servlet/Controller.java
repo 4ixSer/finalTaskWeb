@@ -15,7 +15,11 @@ import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.factory.ActionFactory;
-
+/**
+ * The main servlet that manages all command.
+ * @author qny4ix
+ *
+ */
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
 
@@ -39,8 +43,6 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         LOG.info("Начало работы");
-
-
         String page = null;
         // определение команды, пришедшей из JSP
         ActionFactory client = new ActionFactory();
@@ -51,25 +53,15 @@ public class Controller extends HttpServlet {
          */
         try {
             page = command.execute(request);
+            LOG.trace("Перход на станицу: " + page);
+            response.sendRedirect(page);
         } catch (DBException e) {
             HttpSession session = request.getSession();
             session.setAttribute("errorMessage", e.getMessage());
             LOG.info(e.getMessage());
             response.sendRedirect(Path.PAGE_ERROR);
         }
-        // метод возвращает страницу ответа
 
-//        if (page != null) {
-            LOG.trace("Перход на станицу: " + page);
-            response.sendRedirect(page);
-//        }
-//        } else {
-//            LOG.trace("ветка ошибки");
-//            // установка страницы c cообщением об ошибке
-//            page = ConfigurationManager.getProperty("path.page.index");
-//            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage"));
-////            response.sendRedirect(Path.PAGE_ERROR);
-//        }
     }
 
 

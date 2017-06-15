@@ -4,8 +4,16 @@ import java.util.Comparator;
 
 import ua.nure.gnuchykh.entity.cars.Car;
 
+/**
+ * Holder for messages of sort command Car.
+ *
+ * @author qny4ix
+ *
+ */
 public enum CarComparatorEnum {
-
+    /**
+     * Sort by type.
+     */
     SORTBYTYPE {
         {
             this.command = new Comparator<Car>() {
@@ -16,6 +24,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sorting Carrying capacity of the machine.
+     */
     SORTBYCARRYING {
         {
             this.command = new Comparator<Car>() {
@@ -26,6 +37,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by ID.
+     */
     SORTBYID {
         {
             this.command = new Comparator<Car>() {
@@ -36,6 +50,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by volume.
+     */
     SORTBYAMOUNT {
         {
             this.command = new Comparator<Car>() {
@@ -46,6 +63,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by engine power.
+     */
     SORTBYENGINE {
         {
             this.command = new Comparator<Car>() {
@@ -56,6 +76,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by status.
+     */
     SORTBYSTATUS {
         {
             this.command = new Comparator<Car>() {
@@ -66,6 +89,9 @@ public enum CarComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by machine number.
+     */
     SORTBYNAMBER {
         {
             this.command = new Comparator<Car>() {
@@ -77,7 +103,7 @@ public enum CarComparatorEnum {
         }
     };
 
-    Comparator<Car> command;
+    protected Comparator<Car> command;
 
     public Comparator<Car> getComparator() {
         return command;

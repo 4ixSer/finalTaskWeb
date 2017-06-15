@@ -2,8 +2,9 @@ package ua.nure.gnuchykh.entity.cars;
 
 
 /**
- * “ип √рузовиков. ¬ќзможна€ у€звимость конечного продукта иза невозможности добавить другой тип
- * @author qny4i
+ * Enumeration of machine types.
+ *
+ * @author qny4ix
  *
  */
 public enum TYPE {
@@ -23,6 +24,9 @@ public enum TYPE {
      */
     PLATFORM(1), VAN(2), TANK(3), TIPPER(4), SORTEMENT(5), CONTAINER(6), BOARD(7), GASOLINE(8), TENT(9), TRUCK(10), REFRIGERATOR(11), OTHERS(12);
 
+    /**
+     * Unique indicators of types.
+     */
     private Integer value;
 
     /**

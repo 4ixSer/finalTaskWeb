@@ -3,8 +3,9 @@ package ua.nure.gnuchykh.entity.users;
 import java.io.Serializable;
 
 /**
- * Класс родитель для пользователей данного сервиса.
- * @author qny4i
+ * The class is the entity of the user.
+ *
+ * @author qny4ix
  *
  */
 public class User implements Serializable  {
@@ -12,31 +13,37 @@ public class User implements Serializable  {
     private static final long serialVersionUID = 8466252310808346236L;
 
     /**
-     * Айди юзера. Для записи его БД. Будет генериться автоматом в таблице.
+     * User ID. To write his database.
+     * It will be generated automatically in the table.
      *
      */
     private Integer id;
 
     /**
-     * Login юзера. Для записи в бД. Будет унекален в БД.
+     * User ID. To write his database.
+     * It will be generated automatically in the table.
      */
     private String login;
 
     /**
-     * password Юзера. Хешированый пароля с помощью алгоритма хеширования (другие алгоритмы - SHA-256; SHA-512 и пр.)
+     * Password User. Hashing the password using a hash algorithm (SHA-256)
      */
     private String password;
 
     /**
-     * Имя пользователя.
+     *Username.
      */
     private String name;
 
     /**
-     * Email пользователя.
+     * Email of the user.
      */
     private String email;
 
+    /**
+     * Specifies the type of user.
+     * {@link #ClientType}.
+     */
     private ClientType type;
 
 
@@ -44,15 +51,15 @@ public class User implements Serializable  {
         return type;
     }
 
-    public void setType(ClientType type) {
+    public void setType(final ClientType type) {
         this.type = type;
     }
 
-    public Integer getId() {
+    public final Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -60,7 +67,7 @@ public class User implements Serializable  {
         return login;
     }
 
-    public void setLogin(String login) {
+    public void setLogin(final String login) {
         this.login = login;
     }
 
@@ -69,7 +76,7 @@ public class User implements Serializable  {
     }
 
 
-    public void setPassword(String password) {
+    public void setPassword(final String password) {
         this.password = password;
     }
 
@@ -78,7 +85,7 @@ public class User implements Serializable  {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -86,7 +93,7 @@ public class User implements Serializable  {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
     }
 
@@ -95,12 +102,12 @@ public class User implements Serializable  {
     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         return "User [id=" + id + ", login=" + login + ", password=" + password + ", name=" + name + ", email=" + email
                 + ", type=" + type + "]";
     }
 
-    public User(String login, String password, String name, String email, ClientType type) {
+    public User(final String login, final String password, final String name, final String email, final ClientType type) {
         super();
         this.login = login;
         this.password = password;

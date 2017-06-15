@@ -19,7 +19,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindRequestByUserId implements ActionCommand {
+/**
+ * A command for finding user requests.
+ *
+ * @author qny4ix
+ *
+ */
+public final class FindRequestByUserId implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindRequestByUserId.class);
 
@@ -30,12 +36,17 @@ public class FindRequestByUserId implements ActionCommand {
         HttpSession session = request.getSession();
         Integer idUser = (Integer) session.getAttribute(ATTRIBUTE_USERS_ID);
 
-        RequestDAO dao = new  RequestDAO();
+        RequestDAO dao = new RequestDAO();
         List<Request> userReques = dao.findEntityByUserId(idUser);
+        if (userReques.isEmpty()) {
+            session.setAttribute("Message", MessageManager.getProperty("message.request.null"));
+            LOG.debug("Заявок больше нет.");
+        } else {
+            session.setAttribute(ATTRIBUTE_ALL_REQUEST, userReques);
+            session.setAttribute("Message", MessageManager.getProperty("message.search.all.request"));
+            LOG.debug("Нашли все заявки водителя");
+        }
 
-        session.setAttribute(ATTRIBUTE_ALL_REQUEST, userReques);
-        session.setAttribute("Message", MessageManager.getProperty("message.search.all.request"));
-        LOG.debug("Нашли все заявки водителя");
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

@@ -21,20 +21,25 @@ import org.apache.log4j.Logger;
 
 import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.util.MessageManager;
-
-public class AccessFilter implements Filter {
+/**
+ * Filter for filtering access to commands.
+ * @author qny4ix
+ *
+ */
+public final class AccessFilter implements Filter {
     private static final Logger LOG = Logger.getLogger(AccessFilter.class);
 
     /**
-     * ћапа дл€ хранени€ клиентского типа и его возможных команд.
+     * MAP for storing the client type and its possible commands.
      */
     private static Map<ClientType, List<String>> accessMap = new HashMap<ClientType, List<String>>();
+
     /**
-     * —писок команд.
+     * List of commands.
      */
     private static List<String> commons = new ArrayList<String>();
     /**
-     * —писок команд которые не нужно контролировать.
+     * List of commands that do not need to be monitored.
      */
     private static List<String> outOfControl = new ArrayList<String>();
 
@@ -46,7 +51,6 @@ public class AccessFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        LOG.debug("Filter starts");
 
         if (accessAllowed(request)) {
             LOG.debug("Filter finished");
@@ -68,7 +72,7 @@ public class AccessFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         String commandName = request.getParameter("command");
-        LOG.trace("Command name --> " + commandName);
+        LOG.trace("Command name " + commandName);
         if (commandName == null || commandName.isEmpty()) {
             return false;
         }
@@ -114,7 +118,7 @@ public class AccessFilter implements Filter {
      *            parameter values string.
      * @return list of parameter values.
      */
-    private List<String> asList(String str) {
+    private List<String> asList(final String str) {
         List<String> list = new ArrayList<String>();
         StringTokenizer st = new StringTokenizer(str);
         while (st.hasMoreTokens()) {

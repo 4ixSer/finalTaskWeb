@@ -7,7 +7,7 @@ import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.client.CommandEnum;
 import ua.nure.gnuchykh.web.command.common.EmptyCommand;
 
-public class ActionFactory {
+public final class ActionFactory {
     public ActionCommand defineCommand(HttpServletRequest request) {
         ActionCommand current = new EmptyCommand();
         // извлечение имени команды из запроса
@@ -21,7 +21,7 @@ public class ActionFactory {
             CommandEnum currentEnum = CommandEnum.valueOf(action.toUpperCase());
             current = currentEnum.getCurrentCommand();
         } catch (IllegalArgumentException e) {
-            request.setAttribute("wrongAction", action + MessageManager.getProperty("message.wrongaction"));
+            request.setAttribute("Message", action + MessageManager.getProperty("message.parameter.incorrect.format"));
         }
         return current;
     }

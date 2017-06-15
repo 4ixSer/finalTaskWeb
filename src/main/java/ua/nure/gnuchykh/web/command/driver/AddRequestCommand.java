@@ -25,7 +25,13 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class AddRequestCommand implements ActionCommand {
+/**
+ * The command to send the application for the flight.
+ *
+ * @author qny4ix
+ *
+ */
+public final class AddRequestCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(AddRequestCommand.class);
 
@@ -36,25 +42,25 @@ public class AddRequestCommand implements ActionCommand {
         HttpSession session = request.getSession();
 
         // извлечение данных
-
         String comments = request.getParameter(PARAM_NAME_COMMENTS);
-        String dateDepartureS =request.getParameter(PARAM_NAME_DATE);
+        String dateDepartureS = request.getParameter(PARAM_NAME_DATE);
 
         String typeS = request.getParameter(PARAM_NAME_CAR_TYPE);
         String carryingS = request.getParameter(PARAM_NAME_CAR_CARRYING);
         String amountS = request.getParameter(PARAM_NAME_CAR_AMOUNT);
         String engineS = request.getParameter(PARAM_NAME_CAR_ENGINE);
 
-        if (!Validation.parameterStringIsCorrect(typeS, carryingS, amountS, engineS,dateDepartureS )) {
+        if (!Validation.parameterStringIsCorrect(typeS, carryingS, amountS, engineS, dateDepartureS)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-            LOG.info("Данные не коректны");
+            LOG.info("Данные не коректны: comments " + comments + "; typeS " + typeS
+                    + "; carryingS" + carryingS + "; amountS " + amountS + "; engineS " + engineS);
+
         } else {
             LocalDateTime dateDeparture = null;
             Integer type = null;
             Double carrying = null;
             Double amount = null;
             Double engine = null;
-
             // дата подачи заявки
             LocalDateTime localDateNow = LocalDateTime.now();
 
@@ -66,26 +72,23 @@ public class AddRequestCommand implements ActionCommand {
                 amount = Double.parseDouble(amountS);
                 engine = Double.parseDouble(engineS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка парсинга");
+                LOG.info("Ошибка парсинга : type " + typeS + "; carrying" + carryingS + "; amount " + amountS + "; engine " + engineS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_DRIVER;
             }
-
             // Валидация данных
             if (!Validation.validateDouble(carrying, amount, engine) || !Validation.typeCarIsCorrect(type)
-                    || !Validation.comentIsCorrect(comments)||!Validation.localDateTimeIsCorrect(dateDeparture)) {
+                    || !Validation.comentIsCorrect(comments) || !Validation.localDateTimeIsCorrect(dateDeparture)) {
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-                LOG.info("Данные не коректны");
-
+                LOG.info("Данные не коректны: comments " + comments + "; typeS " + typeS
+                        + "; carryingS" + carryingS + "; amountS " + amountS + "; engineS " + engineS);
             } else {
-
                 RequestDAO dao = new RequestDAO();
                 Request userRequest = new Request((Integer) session.getAttribute(ATTRIBUTE_USERS_ID), localDateNow, dateDeparture,
                         TYPE.fromValue(type), carrying, amount, engine, Status.SUBMITTED, comments);
-
                 dao.create(userRequest);
                 session.setAttribute("Message", MessageManager.getProperty("message.request.registration.successful"));
-                LOG.info("Регистрация заявки прошла успешно");
+                LOG.info("Регистрация заявки прошла успешно userRequest " + userRequest);
             }
         }
         return Path.PAGE_DRIVER;

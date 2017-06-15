@@ -7,8 +7,6 @@ import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_USER_LOGIN;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_USER_NAME;
 import static ua.nure.gnuchykh.util.ParamName.PARAM_NAME_USER_PASSWORD;
 
-import java.util.Locale;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -17,15 +15,21 @@ import org.apache.log4j.Logger;
 import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.util.HexUtil;
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class LoginCommand implements ActionCommand {
+/**
+ * The command for logging.
+ *
+ * @author qny4ix
+ *
+ */
+public final class LoginCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(LoginCommand.class);
-
 
     @Override
     public String execute(HttpServletRequest request) throws DBException {
@@ -38,16 +42,17 @@ public class LoginCommand implements ActionCommand {
         String login = request.getParameter(PARAM_NAME_USER_LOGIN);
         String pass = request.getParameter(PARAM_NAME_USER_PASSWORD);
         //Проверить входяшие параметры
-        if (!Validation.parameterStringIsCorrect(login, pass)||
-                !Validation.loginIsCorrect(login)||!Validation.passwordIsCorrect(pass)) {
+        if (!Validation.parameterStringIsCorrect(login, pass)
+                || !Validation.loginIsCorrect(login) || !Validation.passwordIsCorrect(pass)) {
             session.setAttribute("errorMessage", MessageManager.getProperty("message.login.emty"));
-            LOG.info("Начальные данные не правильны");
+            LOG.info("Начальные данные неправильны: login" + login + "; pass " + pass);
             page = Path.PAGE_INDEX;
         } else {
             // получение юзера
             User user = new UserDAO().findEntityByLogin(login);
+            String passHex = HexUtil.toHex(pass);
             //проверить сосответсвтие пароля и логина с базой данных
-            if (user == null || !pass.equals(user.getPassword())) {
+            if (user == null || !passHex.equals(user.getPassword())) {
                 LOG.info("Запрашиваемого юзера не сушествует или неправильный пароль");
                 session.setAttribute("errorMessage",
                         MessageManager.getProperty("message.login.incorrect"));
@@ -58,14 +63,8 @@ public class LoginCommand implements ActionCommand {
                 session.setAttribute(PARAM_NAME_USER_NAME, user.getName());
                 session.setAttribute(ATTRIBUTE_USERS_ID, user.getId());
 
-                // проверка на установленный язык;
-                if (session.getAttribute(ATTRIBUTE_lANGUAGE) == null) {
-                    session.setAttribute(ATTRIBUTE_lANGUAGE, Locale.getDefault());
-                }
-
                 LOG.debug("Открытие сесии для " + user.getType() + "; login= " + user.getLogin() + "; idSession= "
                         + session.getId() + "; language= " + session.getAttribute(ATTRIBUTE_lANGUAGE));
-
                 page = Path.getPage(user.getType());
             }
         }

@@ -1,38 +1,40 @@
-<select name="type" required >
-	<option selected value="1">
-		<fmt:message key="placeholder.car.type.PLATFORM" bundle="${rb}" />
-	</option>
-	<option value="2">
-		<fmt:message key="placeholder.car.type.VAN" bundle="${rb}" />
-	</option>
-	<option value="3">
-		<fmt:message key="placeholder.car.type.TANK" bundle="${rb}" />
-	</option>
-	<option value="4">
-		<fmt:message key="placeholder.car.type.TIPPER" bundle="${rb}" />
-	</option>
-	<option value="5">
-		<fmt:message key="placeholder.car.type.SORTEMENT" bundle="${rb}" />
-	</option>
-	<option value="7">
-		<fmt:message key="placeholder.car.type.BOARD" bundle="${rb}" />
-	</option>
-	<option value="6">
-		<fmt:message key="placeholder.car.type.CONTAINER" bundle="${rb}" />
-	</option>
-	<option value="8">
-		<fmt:message key="placeholder.car.type.GASOLINE" bundle="${rb}" />
-	</option>
-	<option value="9">
-		<fmt:message key="placeholder.car.type.TENT" bundle="${rb}" />
-	</option>
-	<option value="10">
-		<fmt:message key="placeholder.car.type.TRUCK" bundle="${rb}" />
-	</option>
-	<option value="11">
-		<fmt:message key="placeholder.car.type.REFRIGERATOR" bundle="${rb}" />
-	</option>
-	<option value="12">
-		<fmt:message key="placeholder.car.type.OTHERS" bundle="${rb}" />
-	</option>
-</select>
+<div class="col-xs-2">
+	<select class="form-control" name="type" required>
+		<option selected value="1">
+			<fmt:message key="placeholder.car.type.PLATFORM" bundle="${rb}" />
+		</option>
+		<option value="2">
+			<fmt:message key="placeholder.car.type.VAN" bundle="${rb}" />
+		</option>
+		<option value="3">
+			<fmt:message key="placeholder.car.type.TANK" bundle="${rb}" />
+		</option>
+		<option value="4">
+			<fmt:message key="placeholder.car.type.TIPPER" bundle="${rb}" />
+		</option>
+		<option value="5">
+			<fmt:message key="placeholder.car.type.SORTEMENT" bundle="${rb}" />
+		</option>
+		<option value="7">
+			<fmt:message key="placeholder.car.type.BOARD" bundle="${rb}" />
+		</option>
+		<option value="6">
+			<fmt:message key="placeholder.car.type.CONTAINER" bundle="${rb}" />
+		</option>
+		<option value="8">
+			<fmt:message key="placeholder.car.type.GASOLINE" bundle="${rb}" />
+		</option>
+		<option value="9">
+			<fmt:message key="placeholder.car.type.TENT" bundle="${rb}" />
+		</option>
+		<option value="10">
+			<fmt:message key="placeholder.car.type.TRUCK" bundle="${rb}" />
+		</option>
+		<option value="11">
+			<fmt:message key="placeholder.car.type.REFRIGERATOR" bundle="${rb}" />
+		</option>
+		<option value="12">
+			<fmt:message key="placeholder.car.type.OTHERS" bundle="${rb}" />
+		</option>
+	</select>
+</div>

@@ -1,4 +1,16 @@
-<input type="number" name="carrying" step="0.1"	placeholder="<fmt:message key="placeholder.car.carrying" bundle="${rb}" />" />
-<input type="number" name="amount" step="0.1" placeholder="<fmt:message key="placeholder.car.amount" bundle="${rb}" />" />
-<input type="number" name="engine" step="0.1" placeholder="<fmt:message key="placeholder.car.power" bundle="${rb}" />" />
-<input type="text"	name="comments" placeholder="<fmt:message key="placeholder.comment" bundle="${rb}" />" />
+<div class="col-xs-2">
+	<input class="form-control" type="number" name="carrying" step="0.1"
+		placeholder="<fmt:message key="placeholder.car.carrying" bundle="${rb}" />" required/>
+</div>
+<div class="col-xs-2">
+	<input class="form-control" type="number" name="amount" step="0.1"
+		placeholder="<fmt:message key="placeholder.car.amount" bundle="${rb}" />" required />
+</div>
+<div class="col-xs-2">
+	<input class="form-control" type="number" name="engine" step="0.1"
+		placeholder="<fmt:message key="placeholder.car.power" bundle="${rb}" />"  required/>
+</div>
+<div class="col-xs-2">
+	<input class="form-control" type="text" name="comments"
+		placeholder="<fmt:message key="placeholder.comment" bundle="${rb}" />" />
+</div>

@@ -4,8 +4,16 @@ import java.util.Comparator;
 
 import ua.nure.gnuchykh.entity.subject.Flight;
 
+/**
+ * Holder for messages of sort command Flight.
+ *
+ * @author qny4ix
+ *
+ */
 public enum FlightComparatorEnum {
-
+    /**
+     * Sort by ID.
+     */
     SORTBYID {
         {
             this.command = new Comparator<Flight>() {
@@ -16,6 +24,9 @@ public enum FlightComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by status.
+     */
     SORTBYSTATUS {
         {
             this.command = new Comparator<Flight>() {
@@ -26,6 +37,9 @@ public enum FlightComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by DATE.
+     */
     SORTBYDATE {
         {
             this.command = new Comparator<Flight>() {
@@ -37,7 +51,7 @@ public enum FlightComparatorEnum {
         }
     };
 
-    Comparator<Flight> command;
+    protected Comparator<Flight> command;
 
     public Comparator<Flight> getComparator() {
         return command;

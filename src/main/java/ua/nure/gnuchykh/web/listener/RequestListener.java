@@ -8,21 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 
 @WebListener
-public class RequestListener implements ServletRequestListener {
+public final class RequestListener implements ServletRequestListener {
 
     private static final Logger LOG = Logger.getLogger(RequestListener.class);
 
     @Override
     public void requestInitialized(ServletRequestEvent ev) {
 
-
         HttpServletRequest req = (HttpServletRequest) ev.getServletRequest();
-        req.getCharacterEncoding();
-        req.getAttributeNames();
-
-
-        LOG.info("Request Initialized for "+req.getRequestURI());
-
+       LOG.info("Request Initialized for " + req.getRequestURI());
 
     }
 

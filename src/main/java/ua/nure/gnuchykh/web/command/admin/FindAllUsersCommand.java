@@ -18,7 +18,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindAllUsersCommand implements ActionCommand {
+/**
+ * A command to search for all users in the database.
+ *
+ * @author qny4ix
+ *
+ */
+public final class FindAllUsersCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindAllUsersCommand.class);
 
@@ -29,7 +35,6 @@ public class FindAllUsersCommand implements ActionCommand {
 
         UserDAO dao = new UserDAO();
         List<User> users = dao.findAll();
-
         session.setAttribute(ATTRIBUTE_USERS, users);
         session.setAttribute("Message", MessageManager.getProperty("message.search.all.users"));
         LOG.info("Успешный поиск всех людей.");

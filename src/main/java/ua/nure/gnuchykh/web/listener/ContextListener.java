@@ -7,7 +7,12 @@ import javax.servlet.ServletContextListener;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-public class ContextListener implements ServletContextListener {
+/**
+ * Listener for initialization logi4
+ * @author qny4ix
+ *
+ */
+public final class ContextListener implements ServletContextListener {
 
     private static final Logger LOG = Logger.getLogger(ContextListener.class);
 
@@ -34,10 +39,8 @@ public class ContextListener implements ServletContextListener {
             PropertyConfigurator.configure(servletContext.getRealPath("WEB-INF/log4j.properties"));
             LOG.trace("Log4j has been initialized");
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.err.println("error log4j initialized " + ex);
         }
     }
-
-
 
 }

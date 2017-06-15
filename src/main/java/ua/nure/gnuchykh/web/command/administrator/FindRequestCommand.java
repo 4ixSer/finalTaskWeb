@@ -23,7 +23,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindRequestCommand implements ActionCommand {
+/**
+ *
+ *
+ * @author qny4ix
+ *
+ */
+public final class FindRequestCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindRequestCommand.class);
 
@@ -52,7 +58,7 @@ public class FindRequestCommand implements ActionCommand {
             } else {
                 session.setAttribute(ATTRIBUTE_REQUESTS_CAR, list);
                 session.setAttribute("Message", MessageManager.getProperty("message.request.find"));
-                LOG.info("Получена новая заявка.");
+                LOG.info("Получена новая заявка list " + list);
             }
         }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));

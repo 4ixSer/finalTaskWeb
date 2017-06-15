@@ -2,6 +2,7 @@ package ua.nure.gnuchykh.web.command.client;
 
 import ua.nure.gnuchykh.web.command.ActionCommand;
 import ua.nure.gnuchykh.web.command.admin.AddCarCommand;
+import ua.nure.gnuchykh.web.command.admin.AvgCarCommand;
 import ua.nure.gnuchykh.web.command.admin.DeleteCarCommand;
 import ua.nure.gnuchykh.web.command.admin.DeleteUserCommand;
 import ua.nure.gnuchykh.web.command.admin.FindAllCarsCommand;
@@ -10,9 +11,9 @@ import ua.nure.gnuchykh.web.command.admin.RegisteringUserCommand;
 import ua.nure.gnuchykh.web.command.admin.UpdateCarCommand;
 import ua.nure.gnuchykh.web.command.admin.UpdateUserCommand;
 import ua.nure.gnuchykh.web.command.administrator.AddFlightCommand;
+import ua.nure.gnuchykh.web.command.administrator.DeleteFlightCommand;
 import ua.nure.gnuchykh.web.command.administrator.DenyRequestCommand;
 import ua.nure.gnuchykh.web.command.administrator.FindAllFlightCommand;
-import ua.nure.gnuchykh.web.command.administrator.FindCarByCharacteristicsCommand;
 import ua.nure.gnuchykh.web.command.administrator.FindRequestCommand;
 import ua.nure.gnuchykh.web.command.common.CloseCommand;
 import ua.nure.gnuchykh.web.command.common.LoginCommand;
@@ -25,146 +26,204 @@ import ua.nure.gnuchykh.web.command.driver.FindUserFlightCommand;
 import ua.nure.gnuchykh.web.command.driver.UpdateFlightCommand;
 import ua.nure.gnuchykh.web.command.sort.SortCommand;
 
+/**
+ * Holder for messages of command.
+ *
+ * @author qny4ix
+ *
+ */
+
 public enum CommandEnum {
-    // логин
+    /**
+     *  логин.
+     */
     LOGIN {
         {
             this.command = new LoginCommand();
         }
     },
-    // Выход
+    /**
+     *  Выход.
+     */
     LOGOUT {
         {
             this.command = new LogoutCommand();
         }
     },
-    // Смена языка
+    /**
+     *  Смена языка.
+     */
     CHANGELANGUAGE {
         {
             this.command = new СhangeLanguageCommand();
         }
     },
-    // регистрация пользователся
+    /**
+     * регистрация пользователся.
+     */
     REGISTERINGUSER {
         {
             this.command = new RegisteringUserCommand();
         }
     },
-    //Добавить автомобиль
+    /**
+     * Добавить автомобиль.
+     */
     ADDCAR {
         {
             this.command = new AddCarCommand();
         }
     },
-    //Удалить машину
+    /**
+     * Удалить машину.
+     */
     DELETECAR {
         {
             this.command = new DeleteCarCommand();
         }
     },
-    //удалить юзера
+    /**
+     * удалить юзера.
+     */
     DELETEUSER {
         {
             this.command = new DeleteUserCommand();
         }
     },
-    //найти всех пользователей
+    /**
+     * найти всех пользователей.
+     */
     FINDALLUSERS {
         {
             this.command = new FindAllUsersCommand();
         }
     },
-    //найти все машины
+    /**
+     * найти все машины.
+     */
     FINDALLCARS {
         {
             this.command = new FindAllCarsCommand();
         }
     },
-    //обновить характеристики юзера
+    /**
+     * обновить характеристики юзера.
+     */
     UPDATEUSER {
         {
             this.command = new UpdateUserCommand();
         }
     },
-    //Обноить характеристики машины
+    /**
+     * Обноить характеристики машины.
+     */
     UPDATECAR {
         {
             this.command = new UpdateCarCommand();
         }
     },
-    //вспомогательная команда для закрытия окон таблиц (удаления данных с сессии)
+    /**
+     * вспомогательная команда для закрытия окон таблиц (удаления данных с сессии).
+     */
     CLOSE {
         {
             this.command = new CloseCommand();
         }
     },
-    //вспомогательная команда для сортировки таблиц
+    /**
+     * вспомогательная команда для сортировки таблиц.
+     */
     SORT {
         {
             this.command = new SortCommand();
         }
     },
-    // Просмотреть список своих заявок
+    /**
+     *  Просмотреть список своих заявок.
+     */
     FINDREQUESTBYUSERID {
         {
             this.command = new FindRequestByUserId();
         }
     },
-    //подать заяку может только юзер
+    /**
+     * подать заяку может только юзер.
+     */
     ADDREQUEST {
         {
             this.command = new AddRequestCommand();
         }
     },
-    //отменить заявку может только юзер
-    //TODO возможно обьеденить с отказом у диспечера
+    /**
+     * отменить заявку может только юзер.
+     */
     CANCELREQUEST {
         {
             this.command = new CancelRequestCommand();
         }
     },
-    //найти все рейсы водителя
+    /**
+     * найти все рейсы водителя.
+     */
     FINDUSERFLIGHT {
         {
             this.command = new FindUserFlightCommand();
         }
     },
 
-    //Диспечер
-    //команда для взятия заявки диспечером
+    /**
+     * Диспечер команда для взятия заявки диспечером.
+     */
+
     FINDREQUEST {
         {
             this.command = new FindRequestCommand();
         }
     },
-    //Команда для поска машин подходяших для заявки
-    //обьеденил обьеденить с бвзятием заявки
-    FINDCARBYCHARACTERISTICS {
-        {
-            this.command = new FindCarByCharacteristicsCommand();
-        }
-    },
-    // отказать в заявке
+
+    /**
+     *  отказать в заявке.
+     */
     DENYREQUEST {
         {
             this.command = new DenyRequestCommand();
         }
     },
-    //создать рейс
+    /**
+     * создать рейс.
+     */
     ADDFLIGHT {
         {
             this.command = new AddFlightCommand();
         }
     },
-    // найти все рейсы
+    /**
+     * найти все рейсы.
+     */
     FINDALLFLIGHT {
         {
             this.command = new FindAllFlightCommand();
         }
     },
-
-
-    //водитель оставляет коментарии об рейсе и закрывает рейс
+    /**
+     * AVG
+     */
+    AVG {
+        {
+            this.command = new AvgCarCommand();
+        }
+    },
+    /**
+     * удалить рейс
+     */
+    DELETEFLIGHT {
+        {
+            this.command = new DeleteFlightCommand();
+        }
+    },
+    /**
+     * водитель оставляет коментарии об рейсе и закрывает рейс.
+     */
     UPDATEFLIGHT {
         {
             this.command = new UpdateFlightCommand();
@@ -172,7 +231,7 @@ public enum CommandEnum {
     };
 
 
-    ActionCommand command;
+    protected ActionCommand command;
 
     public ActionCommand getCurrentCommand() {
         return command;

@@ -20,9 +20,14 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
+/**
+ * A command to update the user information.
+ *
+ * @author qny4ix
+ *
+ */
 
-
-public class UpdateUserCommand implements ActionCommand {
+public final class UpdateUserCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(UpdateUserCommand.class);
 
@@ -35,18 +40,17 @@ public class UpdateUserCommand implements ActionCommand {
         String name = request.getParameter(PARAM_NAME_USER_NAME);
         String email = request.getParameter(PARAM_NAME_USER_EMAIL);
         //Начальная валидация
-        if (!Validation.parameterStringIsCorrect(idS, name, email)||!Validation.mailIsCorrect(email)||
-                !Validation.validateString(name)) {
+        if (!Validation.parameterStringIsCorrect(idS, name, email) || !Validation.mailIsCorrect(email)
+                || !Validation.validateString(name)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-            System.out.println(idS+" "+name+" "+email);
-            LOG.info("Данные не коректны");
+            LOG.info("Данные не коректны:  email " + email + "; name " + name);
         } else {
             //парсинг
             Integer id = null;
             try {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка парсинга");
+                LOG.info("Ошибка парсинга id" + idS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
@@ -54,7 +58,7 @@ public class UpdateUserCommand implements ActionCommand {
             UserDAO dao = new UserDAO();
             User user = null;
 
-            List<User> list = (List<User>) session.getAttribute("users");
+            List<User> list = (List<User>) session.getAttribute(ATTRIBUTE_USERS);
 
             for (User users : list) {
                 if (users.getId() == id) {
@@ -63,10 +67,11 @@ public class UpdateUserCommand implements ActionCommand {
                     user = users;
                 }
             }
+
             user = dao.update(user);
             session.setAttribute(ATTRIBUTE_USERS, list);
             session.setAttribute("Message", MessageManager.getProperty("message.user.update.successful"));
-            LOG.info("Изминения успешно внесены в базу данных");
+            LOG.info("Изминения успешно внесены в базу данных " + user);
         }
 
         return Path.PAGE_ADMIN;

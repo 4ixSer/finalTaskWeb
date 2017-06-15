@@ -1,4 +1,8 @@
 <!-- logout -->
-	<p align="right">
-		<a href="/WEB/controller?command=LOGOUT"><fmt:message key="label.logout" bundle="${rb}" /></a>
-	</p>
+<div class ="col-xs-12">
+	<div align="right">
+		<a class="btn btn-success"  href="/WEB/controller?command=LOGOUT"> <i
+							class="fa fa-sign-out" aria-hidden="true"> </i><fmt:message key="label.logout" bundle="${rb}" /></a>
+	</div>
+	<hr/>
+</div>

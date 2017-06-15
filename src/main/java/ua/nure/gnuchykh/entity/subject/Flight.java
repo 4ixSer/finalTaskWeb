@@ -5,48 +5,53 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Сушьность реализуюшая поведение рейса.
+ * Entity for Flight.
  *
  * @author qny4ix
  *
  */
 public class Flight implements Serializable {
     /**
-     * Номер рейса. Он же и ID.
+     *
+     */
+    private static final long serialVersionUID = 7059452558861612583L;
+
+    /**
+     * Flight number. He is also ID.
      */
     private Integer namberFlight;
 
     /**
-     * Дате создания рейса.
+     * Date of creation of the flight.
      */
     private LocalDateTime date;
 
     /**
-     * Статус рейса.
+     * Flight Status.
      */
     private Status status;
 
     /**
-     * Кто находится в данном рейсе.
+     * The driver on this flight.
      */
     private Integer driver;
 
     /**
-     * Кто расматривал данный рейс.
+     * Who saw this flight.
      */
     private Integer dispatcher;
 
     /**
-     * Cылка на машину в рейсе.
+     * ID of the car in flight.
      */
     private Integer car;
 
     /**
-     * примечание.
+     * Note.
      */
     private String note;
 
-    public Flight(LocalDateTime date, Status status, Integer driver, Integer dispatcher, Integer car, String note) {
+    public Flight(final LocalDateTime date,final Status status,final Integer driver,final Integer dispatcher,final Integer car,final String note) {
         super();
         this.date = date;
         this.status = status;
@@ -64,7 +69,7 @@ public class Flight implements Serializable {
         return namberFlight;
     }
 
-    public void setNamberFlight(Integer namberFlight) {
+    public void setNamberFlight(final Integer namberFlight) {
         this.namberFlight = namberFlight;
     }
 
@@ -72,7 +77,7 @@ public class Flight implements Serializable {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(final LocalDateTime date) {
         this.date = date;
     }
 
@@ -80,7 +85,7 @@ public class Flight implements Serializable {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(final Status status) {
         this.status = status;
     }
 
@@ -88,7 +93,7 @@ public class Flight implements Serializable {
         return driver;
     }
 
-    public void setDriver(Integer driver) {
+    public void setDriver(final Integer driver) {
         this.driver = driver;
     }
 
@@ -96,7 +101,7 @@ public class Flight implements Serializable {
         return dispatcher;
     }
 
-    public void setDispatcher(Integer dispatcher) {
+    public void setDispatcher(final Integer dispatcher) {
         this.dispatcher = dispatcher;
     }
 
@@ -104,7 +109,7 @@ public class Flight implements Serializable {
         return car;
     }
 
-    public void setCar(Integer car) {
+    public void setCar(final Integer car) {
         this.car = car;
     }
 
@@ -112,7 +117,7 @@ public class Flight implements Serializable {
         return note;
     }
 
-    public void setNote(String note) {
+    public void setNote(final String note) {
         this.note = note;
     }
 
@@ -121,13 +126,17 @@ public class Flight implements Serializable {
         return "Flight [namberFlight=" + namberFlight + ", date=" + date + ", status=" + status + ", driver=" + driver
                 + ", dispatcher=" + dispatcher + ", car=" + car + ", note=" + note + "]";
     }
-
+    /**
+     * The method of converting a date into a string of a staged format."yyyy'-'MM'-'d HH:mm:ss"
+     */
     public String toStringDate() {
 
         return date.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
     }
-
-    public static LocalDateTime fromValueDate(String time) {
+    /**
+     * The method of converting a string in a certain format to a DateTimeFormatter.
+     */
+    public static LocalDateTime fromValueDate(final String time) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
         return LocalDateTime.parse(time, formatter);
     }

@@ -1,5 +1,10 @@
 package ua.nure.gnuchykh.entity.cars;
-
+/**
+ * Enumeration of machine states.
+ *
+ * @author qny4ix
+ *
+ */
 public enum Status {
     /**
      * СВободна
@@ -8,7 +13,9 @@ public enum Status {
 
      */
     FREE(1), USED(2), BROKEN(3);
-
+    /**
+     * Unique indicators of Status.
+     */
     private Integer value;
 
     /**

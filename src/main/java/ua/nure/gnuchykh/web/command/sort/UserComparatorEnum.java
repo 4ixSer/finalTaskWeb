@@ -4,8 +4,16 @@ import java.util.Comparator;
 
 import ua.nure.gnuchykh.entity.users.User;
 
+/**
+ * Holder for messages of sort User.
+ *
+ * @author qny4ix
+ *
+ */
 public enum UserComparatorEnum {
-
+    /**
+     * Sort by LOGIN.
+     */
     SORTBYLOGIN {
         {
             this.command = new Comparator<User>() {
@@ -16,6 +24,9 @@ public enum UserComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by NAME.
+     */
     SORTBYNAME {
         {
             this.command = new Comparator<User>() {
@@ -26,6 +37,9 @@ public enum UserComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by EMAIL.
+     */
     SORTBYEMAIL {
         {
             this.command = new Comparator<User>() {
@@ -36,6 +50,9 @@ public enum UserComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by ROLE.
+     */
     SORTBYROLE {
         {
             this.command = new Comparator<User>() {
@@ -46,6 +63,9 @@ public enum UserComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by ID.
+     */
     SORTBYID {
         {
             this.command = new Comparator<User>() {
@@ -57,7 +77,7 @@ public enum UserComparatorEnum {
         }
     };
 
-    Comparator<User> command;
+    protected Comparator<User> command;
 
     public Comparator<User> getComparator() {
         return command;

@@ -15,19 +15,26 @@ import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
-
+/**
+ * DAO for entity ÔøΩar.
+ *
+ * @author qny4ix
+ *
+ */
 public class CarDAO {
     private static final String SQL_SELECT_ALL_CAR = "SELECT * FROM car";
     private static final String SQL_INSERT_CAR = "INSERT INTO car (namber, type, carryingCar, amountCar, enginePower, statusCar, comments) VALUES (?, ?, ?, ?, ?, ?, ?)";
     private static final String SQL_DELETE_CAR = "DELETE FROM car WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_NAMBER = "SELECT * FROM car WHERE namber=?";
-    private static final String SQL_UPDETE_CAR ="UPDATE car SET namber=?, type=?, carryingCar=?, amountCar=?, enginePower=?, statusCar=?, comments=? WHERE id=?";
+    private static final String SQL_UPDETE_CAR = "UPDATE car SET namber=?, type=?, carryingCar=?, amountCar=?, enginePower=?, statusCar=?, comments=? WHERE id=?";
     private static final String SQL_SELECT_CAR_BY_CHARACTERISTICS = "SELECT * FROM car where type = ? and statusCar = ? and carryingCar >= ? and amountCar >= ? and  enginePower >=?";
-
+    private static final String SQL_SELECT_AVG_CAR = "SELECT  AVG(amountCar) avg_car FROM car where  statusCar = 3";
     private Connection connector;
 
-
+    /**
+     * Method for searching all entities in the database.
+     */
     public List<Car> findAll() throws DBException {
         connector = null;
         List<Car> cars = new ArrayList<Car>();
@@ -38,8 +45,8 @@ public class CarDAO {
             statement = connector.createStatement();
 
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL_CAR);
-            while(resultSet.next()) {
-                Car car =createCar(resultSet);
+            while (resultSet.next()) {
+                Car car = createCar(resultSet);
                 cars.add(car);
             }
         } catch (SQLException e) {
@@ -51,8 +58,10 @@ public class CarDAO {
         return cars;
     }
 
-
-    public Car findEntityById(int id) throws DBException {
+    /**
+     * A method for searching for an entity by its indifier.
+     */
+    public Car findEntityById(final int id) throws DBException {
         connector = null;
         Car car = null;
         PreparedStatement ps = null;
@@ -74,8 +83,10 @@ public class CarDAO {
         return car;
     }
 
-
-    public boolean delete(int id) throws DBException {
+    /**
+     * The method for removing the entity by its indifier.
+     */
+    public boolean delete(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
@@ -94,21 +105,17 @@ public class CarDAO {
     }
 
     /**
-     * ÃÂÚÓ‰ ‰Îˇ Û‰‡ÎÂÌËˇ Ï‡¯ËÌ˚ Ò ¡ƒ.
-     * @throws DBException
+     * Method for removing an entity from a database by its instance.
      */
-
-    public boolean delete(Car entity) throws DBException {
+    public boolean delete(final Car entity) throws DBException {
         return delete(entity.getId());
 
     }
 
     /**
-     * ÃÂÚÓ‰ ÒÓÁ‰‡ÂÚ Ï‡¯ËÌÛ.
-     * @throws DBException
+     * The method creates an entity in the database.
      */
-
-    public boolean create(Car entity) throws DBException {
+    public boolean create(final Car entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -134,7 +141,11 @@ public class CarDAO {
         return true;
     }
 
-    private Car createCar(ResultSet resultSet) throws SQLException {
+    /**
+     * A method for creating an entity using the data retrieved from the
+     * ResultSet query.
+     */
+    private Car createCar(final ResultSet resultSet) throws SQLException {
         Car car = new Car();
 
         car.setId(resultSet.getInt("id"));
@@ -149,8 +160,11 @@ public class CarDAO {
         return car;
     }
 
-
-    public Car update(Car entity) throws DBException {
+    /**
+     * Method for updating entity data in a database by an instance of the
+     * entity.
+     */
+    public Car update(final Car entity) throws DBException {
         PreparedStatement ps = null;
         connector = null;
         try {
@@ -176,7 +190,10 @@ public class CarDAO {
         return entity;
     }
 
-    public Car findEntityByNamber(String namber) throws DBException {
+    /**
+     * Search for the car by number.
+     */
+    public Car findEntityByNamber(final String namber) throws DBException {
 
         Car car = null;
         PreparedStatement ps = null;
@@ -200,7 +217,11 @@ public class CarDAO {
         return car;
     }
 
-    public List<Car> findCarBy—haracteristics(TYPE type, Status statusCar,Double carryingCar, Double amountCar, Double enginePower) throws DBException {
+    /**
+     * Search for suitable machines by their characteristics.
+     */
+    public List<Car> findCarBy—Åharacteristics(final TYPE type, final Status statusCar, final Double carryingCar, final Double amountCar,
+            final Double enginePower) throws DBException {
         connector = null;
         List<Car> cars = new ArrayList<Car>();
         PreparedStatement ps = null;
@@ -209,7 +230,6 @@ public class CarDAO {
             connector = ConnectionPool.getInstance().getConnection();
             ps = connector.prepareStatement(SQL_SELECT_CAR_BY_CHARACTERISTICS);
 
-
             ps.setInt(1, type.value());
             ps.setInt(2, statusCar.value());
             ps.setDouble(3, carryingCar);
@@ -217,8 +237,8 @@ public class CarDAO {
             ps.setDouble(5, enginePower);
 
             ResultSet resultSet = ps.executeQuery();
-            while(resultSet.next()) {
-                Car car =createCar(resultSet);
+            while (resultSet.next()) {
+                Car car = createCar(resultSet);
                 cars.add(car);
             }
         } catch (SQLException e) {
@@ -232,5 +252,27 @@ public class CarDAO {
 
 
 
+ //   "SELECT  AVG(amountCar) avg_car FROM car where  statusCar = 3";
+    public Double avgAmountCar() throws DBException {
 
+        connector = null;
+        List<Car> cars = new ArrayList<Car>();
+        Statement statement = null;
+        Double avg = null;
+        try {
+            connector = ConnectionPool.getInstance().getConnection();
+            statement = connector.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL_SELECT_AVG_CAR);
+            while (resultSet.next()) {
+                avg= resultSet.getDouble(1);
+
+            }
+        } catch (SQLException e) {
+            throw new DBException(Messages.ERR_CANNOT_FIND_AVG, e);
+        } finally {
+            ConnectionPool.close(statement);
+            ConnectionPool.close(connector);
+        }
+        return avg;
+    }
 }

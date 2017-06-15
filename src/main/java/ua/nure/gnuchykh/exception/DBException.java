@@ -2,7 +2,7 @@ package ua.nure.gnuchykh.exception;
 
 /**
  * An exception that provides information on a database access error.
- *
+ * @author qny4ix
  */
 public class DBException extends Exception {
 

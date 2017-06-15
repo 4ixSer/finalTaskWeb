@@ -1,0 +1,21 @@
+
+<div class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+
+			<img src="img/logo.png"  height="50" >
+		</div>
+		<div class="collapse navbar-collapse" id="responsive-menu">
+
+
+				<a class="btn btn-success navbar-btn navbar-right"
+					href="http://localhost:8080/WEB/controller?command=CHANGELANGUAGE&language=<fmt:message key="label.language" bundle="${rb}" />">
+				<i class="fa fa-language" aria-hidden="true"></i>
+				</a>
+
+		</div>
+
+
+	</div>
+</div>
+

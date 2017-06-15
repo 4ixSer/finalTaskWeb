@@ -10,9 +10,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-/**
- * При уделении машины администратором удаляется все рейсы. Может удалить не сушествуюший id.
- */
 import ua.nure.gnuchykh.DAO.CarDAO;
 import ua.nure.gnuchykh.DAO.FlightDAO;
 import ua.nure.gnuchykh.entity.cars.Car;
@@ -23,7 +20,13 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class DeleteCarCommand implements ActionCommand {
+/**
+ * Command to remove the machine in the database.
+ *
+ * @author qny4ix
+ *
+ */
+public final class DeleteCarCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindAllUsersCommand.class);
 
@@ -36,7 +39,7 @@ public class DeleteCarCommand implements ActionCommand {
 
         // Валилация
         if (!Validation.parameterStringIsCorrect(idS)) {
-            LOG.info("Ошибка валидации");
+            LOG.info("Ошибка валидации idS " + idS);
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
 
@@ -45,15 +48,16 @@ public class DeleteCarCommand implements ActionCommand {
             try {
                 id = Integer.parseInt(idS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
+                LOG.info("Ошибка парсинга id" + idS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
+
             //проверка используется эта машина или нет
             FlightDAO flightDAO = new FlightDAO();
             List<Flight> flights = flightDAO.findEntityByCarId(id);
             if (!flights.isEmpty()) {
-                LOG.info("Нужно закрыть или удалить рейсы связанные с этой машиной");
+                LOG.info("Нужно закрыть или удалить рейсы связанные с этой машиной id " + id);
                 session.setAttribute("Message", MessageManager.getProperty("message.car.close.flights"));
             } else {
 
@@ -62,7 +66,7 @@ public class DeleteCarCommand implements ActionCommand {
                 List<Car> cars = dao.findAll();
                 session.setAttribute(ATTRIBUTE_CARS, cars);
                 session.setAttribute("Message", MessageManager.getProperty("message.car.delete.successful"));
-                LOG.debug("Successfully removed the car.");
+                LOG.debug("Successfully removed the car id " + id);
             }
         }
         return Path.PAGE_ADMIN;

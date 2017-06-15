@@ -9,7 +9,7 @@
 <title><fmt:message key="label.title.admin" bundle="${rb}" /></title>
 </head>
 <body>
-	<%@ include file="/jsp/head.jspf"%>
+	<%@ include file="/WEB-INF/jspf/head.jspf"%>
 	<h2>
 		<p align="center">
 			<fmt:message key="label.welcome" bundle="${rb}" />, ${name}.
@@ -159,6 +159,6 @@
 	<p align="right">
 		<a href="http://localhost:8080/WEB/controller?command=logout"><fmt:message key="label.logout" bundle="${rb}" /></a>
 	</p>
-	<%@ include file="/jsp/footer.jspf"%>
+	<%@ include file="/WEB-INF/jspf/footer.jspf"%>
 </body>
 </html>

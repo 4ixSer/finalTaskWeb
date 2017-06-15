@@ -3,51 +3,54 @@ package ua.nure.gnuchykh.entity.cars;
 import java.io.Serializable;
 
 /**
- * Класс реализуюший описание поведение машины.
+ * Entity for car.
+ *
  * @author qny4ix
  *
  */
 public class Car implements Serializable {
-
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1632407514475212381L;
 
     /**
-     * ID машины для хранения в базе.
+     * ID of the machine for storage in the database.
      */
     private Integer id;
     /**
-     * Номер машины. Уникален в базе данных
+     * Number of the car. Unique in the database
      */
     private String namber;
 
     /**
-     * Тип машыны.
+     * Type of machine.
      */
     private TYPE type;
 
     /**
-     * Грузоподьемность машыны.
+     * Load capacity of the machine.
      */
     private Double carryingCar;
 
     /**
-     * Объем машины.
+     * The volume of the machine.
      */
     private Double amountCar;
 
     /**
-     * Мошьность двигателся
+     * Engine power.
      */
     private Double enginePower;
 
     /**
-     * Исправность машины.
+     * Serviceability of the machine.
      */
     private Status statusCar;
 
     /**
-     * Коментарии.
+     * Comments.
      */
-
     private String comments;
 
     public Integer getId() {
@@ -62,7 +65,7 @@ public class Car implements Serializable {
         return namber;
     }
 
-    public void setNamber(String namber) {
+    public void setNamber(final String namber) {
         this.namber = namber;
     }
 
@@ -70,7 +73,7 @@ public class Car implements Serializable {
         return type;
     }
 
-    public void setType(TYPE type) {
+    public void setType(final TYPE type) {
         this.type = type;
     }
 
@@ -78,7 +81,7 @@ public class Car implements Serializable {
         return carryingCar;
     }
 
-    public void setCarryingCar(Double carryingCar) {
+    public void setCarryingCar(final Double carryingCar) {
         this.carryingCar = carryingCar;
     }
 
@@ -86,7 +89,7 @@ public class Car implements Serializable {
         return amountCar;
     }
 
-    public void setAmountCar(Double amountCar) {
+    public void setAmountCar(final Double amountCar) {
         this.amountCar = amountCar;
     }
 
@@ -94,7 +97,7 @@ public class Car implements Serializable {
         return comments;
     }
 
-    public void setComments(String comments) {
+    public void setComments(final String comments) {
         this.comments = comments;
     }
 
@@ -104,7 +107,7 @@ public class Car implements Serializable {
         return enginePower;
     }
 
-    public void setEnginePower(Double enginePower) {
+    public void setEnginePower(final Double enginePower) {
         this.enginePower = enginePower;
     }
 
@@ -116,7 +119,7 @@ public class Car implements Serializable {
         return statusCar;
     }
 
-    public void setStatusCar(Status statusCar) {
+    public void setStatusCar(final Status statusCar) {
         this.statusCar = statusCar;
     }
 
@@ -127,8 +130,8 @@ public class Car implements Serializable {
                 + ", comments=" + comments + "]";
     }
 
-    public Car(String namber, TYPE type, Double carryingCar, Double amountCar, Double enginePower, Status statusCar,
-            String comments) {
+    public Car(final String namber, final TYPE type, final Double carryingCar, final Double amountCar, final Double enginePower, final Status statusCar,
+            final String comments) {
         super();
         this.namber = namber;
         this.type = type;
@@ -139,8 +142,8 @@ public class Car implements Serializable {
         this.comments = comments;
     }
 
-    public Car( TYPE type, Double carryingCar, Double amountCar, Double enginePower,
-            String comments) {
+    public Car(final TYPE type, final Double carryingCar, final Double amountCar, final Double enginePower,
+            final String comments) {
         super();
         this.type = type;
         this.carryingCar = carryingCar;

@@ -6,64 +6,63 @@ import java.time.format.DateTimeFormatter;
 
 import ua.nure.gnuchykh.entity.cars.TYPE;
 
-
 /**
- * СУшьность реализуюшее поведние Заявки.
+ * The entity of the Request.
  *
  * @author qny4ix
  *
  */
 public class Request implements Serializable {
+
+    private static final long serialVersionUID = -2442250265543236498L;
+
     /**
-     * номер заявки. уникальный он же и ID для базы данных.
+     * Number. It is unique and the ID for the database.
      */
     private Integer namberRequest;
 
     /**
-     * Владелец заяки.
+     * The owner of the Request.
      */
     private Integer ownerRequest;
 
     /**
-     * Дата подачи заявки.
+     * Request date.
      */
     private LocalDateTime dateRequest;
 
     /**
-     * Дата предпологаемого выезда.
+     * Date of departure.
      */
     private LocalDateTime dateDeparture;
 
     /**
-     * Характеристики предполагаемой машыны.
-     */
-    /**
-     * Тип машыны.
+     * Characteristics of the proposed machine. Type of machine.
      */
     private TYPE type;
 
     /**
-     * Грузоподьемность машыны.
+     * Load capacity of the machine.
      */
     private Double carryingCar;
 
     /**
-     * Обьем машыны.
+     * The volume of the machine.
      */
     private Double amountCar;
 
     /**
-     * Мошьность двигателся
+     * Engine power.
      */
     private Double enginePower;
 
     /**
-     * Статус
+     * Status.
      */
     private Status status;
 
     /**
-     * примечание.
+     * Note.
      */
     private String note;
 
@@ -71,7 +70,7 @@ public class Request implements Serializable {
         return note;
     }
 
-    public void setNote(String note) {
+    public void setNote(final String note) {
         this.note = note;
     }
 
@@ -79,7 +78,7 @@ public class Request implements Serializable {
         return namberRequest;
     }
 
-    public void setNamberRequest(Integer namberRequest) {
+    public void setNamberRequest(final Integer namberRequest) {
         this.namberRequest = namberRequest;
     }
 
@@ -87,27 +86,15 @@ public class Request implements Serializable {
         return ownerRequest;
     }
 
-    public void setOwnerRequest(Integer ownerRequest) {
+    public void setOwnerRequest(final Integer ownerRequest) {
         this.ownerRequest = ownerRequest;
     }
 
     public LocalDateTime getDateRequest() {
         return dateRequest;
     }
-    // TODO тиуи чет еше поменять
-    /*
-     * LocalDateTime curDateTime = LocalDateTime.now(); LocalDateTime
-     * curDateFuche = LocalDateTime.parse("2017-05-18T10:53:15");
-     *
-     * System.out.println("Сейчас = "+curDateTime.format(DateTimeFormatter.
-     * ofPattern("yyyy'-'MM'-'d hh:mm:ss")));
-     *
-     * System.out.println("Прошлое = "+curDateFuche.format(DateTimeFormatter.
-     * ofPattern("yyyy'-'MM'-'d hh:mm:ss")));
-     *
-     */
 
-    public void setDateRequest(LocalDateTime dateRequest) {
+    public void setDateRequest(final LocalDateTime dateRequest) {
 
         this.dateRequest = dateRequest;
     }
@@ -116,7 +103,7 @@ public class Request implements Serializable {
         return dateDeparture;
     }
 
-    public void setDateDeparture(LocalDateTime dateDeparture) {
+    public void setDateDeparture(final LocalDateTime dateDeparture) {
         this.dateDeparture = dateDeparture;
     }
 
@@ -124,31 +111,46 @@ public class Request implements Serializable {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(final Status status) {
         this.status = status;
     }
 
-     public String toStringDateRequest() {
+    /**
+     * The method of converting a string in a certain format to a
+     * DateTimeFormatter. "yyyy'-'MM'-'d HH:mm:ss"
+     */
+    public String toStringDateRequest() {
 
-         return dateRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
-     }
+        return dateRequest.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
+    }
 
-     public String toStringDateDeparture() {
+    /**
+     * The method of converting a string in a certain format to a
+     * DateTimeFormatter. "yyyy'-'MM'-'d HH:mm:ss"
+     */
+    public String toStringDateDeparture() {
 
-         return dateDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
-     }
+        return dateDeparture.format(DateTimeFormatter.ofPattern("yyyy'-'MM'-'d HH:mm:ss"));
+    }
 
+    /**
+     * The method of converting a date into a string of a staged format.
+     *
+     */
+    public static LocalDateTime fromValueDateRequest(final String time) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
+        return LocalDateTime.parse(time, formatter);
+    }
 
-     public static LocalDateTime fromValueDateRequest(String time){
-         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
-         return LocalDateTime.parse(time, formatter);
-     }
+    /**
+     * The method of converting a date into a string of a staged format.
+     *
+     */
+    public static LocalDateTime fromValueDateDeparture(final String time) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
+        return LocalDateTime.parse(time, formatter);
 
-     public static LocalDateTime fromValueDateDeparture(String time){
-         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.n");
-         return LocalDateTime.parse(time, formatter);
-
-     }
+    }
 
     public Request() {
         super();
@@ -162,8 +164,8 @@ public class Request implements Serializable {
                 + "]";
     }
 
-    public Request(Integer ownerRequest, LocalDateTime dateRequest, LocalDateTime dateDeparture, TYPE type,
-            Double carryingCar, Double amountCar, Double enginePower, Status status, String note) {
+    public Request(final Integer ownerRequest, final  LocalDateTime dateRequest, final LocalDateTime dateDeparture, final TYPE type,
+            final Double carryingCar, final Double amountCar, final Double enginePower, final Status status, final String note) {
         super();
         this.ownerRequest = ownerRequest;
         this.dateRequest = dateRequest;
@@ -180,7 +182,7 @@ public class Request implements Serializable {
         return type;
     }
 
-    public void setType(TYPE type) {
+    public void setType(final TYPE type) {
         this.type = type;
     }
 
@@ -188,7 +190,7 @@ public class Request implements Serializable {
         return carryingCar;
     }
 
-    public void setCarryingCar(Double carryingCar) {
+    public void setCarryingCar(final Double carryingCar) {
         this.carryingCar = carryingCar;
     }
 
@@ -196,7 +198,7 @@ public class Request implements Serializable {
         return amountCar;
     }
 
-    public void setAmountCar(Double amountCar) {
+    public void setAmountCar(final Double amountCar) {
         this.amountCar = amountCar;
     }
 
@@ -204,10 +206,8 @@ public class Request implements Serializable {
         return enginePower;
     }
 
-    public void setEnginePower(Double enginePower) {
+    public void setEnginePower(final Double enginePower) {
         this.enginePower = enginePower;
     }
-
-
 
 }

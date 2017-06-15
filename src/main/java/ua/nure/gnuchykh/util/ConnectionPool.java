@@ -13,7 +13,8 @@ import javax.sql.DataSource;
 import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.exception.Messages;
 
-public class ConnectionPool {
+public final class ConnectionPool {
+
 
     private static final String DATASOURCE_NAME = "jdbc/autobase";
     private DataSource dataSource;
@@ -35,6 +36,11 @@ public class ConnectionPool {
         } catch (NamingException e) {
             throw new DBException(Messages.ERR_CANNOT_OBTAIN_DATA_SOURCE, e);
         }
+    }
+
+    public ConnectionPool(DataSource newDataSource) {
+        dataSource = newDataSource;
+        instance = this;
     }
 
     public Connection getConnection() throws DBException {

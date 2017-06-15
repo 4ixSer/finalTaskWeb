@@ -14,6 +14,12 @@ import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
+/**
+ * DAO for entity Сar.
+ *
+ * @author qny4ix
+ *
+ */
 public class UserDAO {
     private static final String SQL_SELECT_All_USER = "SELECT * FROM user";
     private static final String SQL_SELECT_USER_BY_id = "SELECT * FROM user WHERE id=?";
@@ -25,9 +31,7 @@ public class UserDAO {
     private Connection connector;
 
     /**
-     * Метод для получения списка всех пользователй.
-     *
-     * @throws DBException
+     * Method for searching all entities in the database.
      */
     public List<User> findAll() throws DBException {
         connector = null;
@@ -54,14 +58,9 @@ public class UserDAO {
     }
 
     /**
-     * Метод создает сушьность юзер из параметров которые приходят в resultSetе.
-     *
-     * @param resultSet
-     * @return
-     * @throws SQLException
+     * A method for creating an entity using the data retrieved from the ResultSet query.
      */
-
-    private User createUser(ResultSet resultSet) throws SQLException {
+    private User createUser(final ResultSet resultSet) throws SQLException {
 
         User user = new User();
 
@@ -76,11 +75,9 @@ public class UserDAO {
     }
 
     /**
-     * Метод для получения юзера по его ID
-     * @throws DBException
+     * A method for searching for an entity by its indifier.
      */
-
-    public User findEntityById(int id) throws DBException {
+    public User findEntityById(final int id) throws DBException {
         connector = null;
         User user = null;
         PreparedStatement ps = null;
@@ -102,7 +99,10 @@ public class UserDAO {
         return user;
     }
 
-    public boolean delete(int id) throws DBException {
+    /**
+     * The method for removing the entity by its indifier.
+     */
+    public boolean delete(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         try {
@@ -121,20 +121,16 @@ public class UserDAO {
     }
 
     /**
-     * Метод удаляет юзера с базы данных.
-     * @throws DBException
+     * Method for removing an entity from a database by its instance.
      */
-
-    public boolean delete(User entity) throws DBException {
+    public boolean delete(final User entity) throws DBException {
         return delete(entity.getId());
     }
 
     /**
-     * Метод создает сушьность User в базе данных.
-     * @throws DBException
+     * The method creates an entity in the database.
      */
-
-    public boolean create(User entity) throws DBException {
+    public boolean create(final User entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -157,8 +153,10 @@ public class UserDAO {
         return true;
     }
 
-
-    public User update(User entity) throws DBException {
+    /**
+     * Method for updating entity data in a database by an instance of the entity.
+     */
+    public User update(final User entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -185,13 +183,13 @@ public class UserDAO {
     }
 
     /**
-     * Метод вызывает с базы данных нужного человека по его логину.
+* The method calls from the database the right person by his login.
      *
      * @param login
      * @return
      * @throws DBException
      */
-    public User findEntityByLogin(String login) throws DBException {
+    public User findEntityByLogin(final String login) throws DBException {
         connector = null;
         User user = null;
         PreparedStatement ps = null;

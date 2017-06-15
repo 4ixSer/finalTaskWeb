@@ -24,8 +24,14 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
+/**
+ * The command to add a flight.
+ *
+ * @author qny4ix
+ *
+ */
 
-public class AddFlightCommand implements ActionCommand {
+public final class AddFlightCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(AddFlightCommand.class);
 
@@ -36,35 +42,33 @@ public class AddFlightCommand implements ActionCommand {
         LOG.info("Начало работы ");
         HttpSession session = request.getSession();
 
-        String idCarS  =request.getParameter(PARAM_NAME_SELECTED_CAR);
+        String idCarS  = request.getParameter(PARAM_NAME_SELECTED_CAR);
         String node = request.getParameter(PARAM_NAME_COMMENTS);
 
         //проверили валидацию
-        if(!Validation.parameterStringIsCorrect(idCarS)) {
-            LOG.info("Ошибка валидации");
+        if (!Validation.parameterStringIsCorrect(idCarS)) {
+            LOG.info("Ошибка валидации: idCarS " + idCarS + "; node " + node);
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
         } else {
 
-            Integer idCar= null;
-            //отпарсили
+            Integer idCar = null;
+            //парсинг
             try {
                 idCar = Integer.parseInt(idCarS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка валидации");
+                LOG.info("Ошибка парсинга: idCar " + idCarS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
 
-
             //получили запрос
             Request userRequest =  (Request) session.getAttribute(ATTRIBUTE_USER_REQUEST);
             //id  водителя
-            Integer idDriver =userRequest.getOwnerRequest();
+            Integer idDriver = userRequest.getOwnerRequest();
             //id заявки
-            Integer idRequest =userRequest.getNamberRequest();
+            Integer idRequest = userRequest.getNamberRequest();
             //время отезда
-            LocalDateTime date= userRequest.getDateDeparture();
-
+            LocalDateTime date = userRequest.getDateDeparture();
 
             //взяли айди диспечера
             Integer idDispatcher = (Integer) session.getAttribute(ATTRIBUTE_USERS_ID);
@@ -77,7 +81,7 @@ public class AddFlightCommand implements ActionCommand {
             session.removeAttribute(ATTRIBUTE_USER_REQUEST);
             session.removeAttribute(ATTRIBUTE_REQUESTS_CAR);
             session.setAttribute("Message", MessageManager.getProperty("message.flight.registration.successful"));
-            LOG.info("Запись заявки прошла успешно");
+            LOG.info("Запись заявки прошла успешно flight " + flight);
         }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }

@@ -14,6 +14,12 @@ import ua.nure.gnuchykh.exception.DBException;
 import ua.nure.gnuchykh.exception.Messages;
 import ua.nure.gnuchykh.util.ConnectionPool;
 
+/**
+ * DAO for entity Flight.
+ *
+ * @author qny4ix
+ *
+ */
 public class FlightDAO {
 
     private static final String SQL_SELECT_All_FLIGHT = "SELECT * FROM flight";
@@ -26,6 +32,9 @@ public class FlightDAO {
 
     private Connection connector;
 
+    /**
+     * Method for searching all entities in the database.
+     */
     public List<Flight> findAll() throws DBException {
 
         List<Flight> flights = new ArrayList<Flight>();
@@ -49,32 +58,33 @@ public class FlightDAO {
         return flights;
     }
 
-    private Flight createFlight(ResultSet resultSet) throws SQLException {
+    /**
+     * A method for creating an entity using the data retrieved from the ResultSet query.
+     */
+    private Flight createFlight(final ResultSet resultSet) throws SQLException {
         Flight flight = new Flight();
 
         flight.setNamberFlight(resultSet.getInt("id"));
         flight.setDate(Flight.fromValueDate(resultSet.getString("date")));
         flight.setStatus(Status.fromValue(resultSet.getInt("status")));
 
-        // получение драйвера по id
-        // User driver = new
-        // UserDAO().findEntityById(resultSet.getInt("driver"));
+        // получение драйвера  id
         flight.setDriver(resultSet.getInt("driver"));
 
-        // получение диспечера по id
-        // User dispatcher = new
-        // UserDAO().findEntityById(resultSet.getInt("dispatcher"));
+        // получение диспечера  id
         flight.setDispatcher(resultSet.getInt("dispatcher"));
 
-        // полученеи выбраной машыны
-        // Car car = new CarDAO().findEntityById(resultSet.getInt("car"));
+        // полученеи выбраной машины
         flight.setCar(resultSet.getInt("car"));
 
         flight.setNote(resultSet.getString("note"));
         return flight;
     }
 
-    public Flight findEntityById(int id) throws DBException {
+    /**
+     * A method for searching for an entity by its indifier.
+     */
+    public Flight findEntityById(final int id) throws DBException {
         connector = null;
         Flight flight = null;
         PreparedStatement ps = null;
@@ -98,7 +108,10 @@ public class FlightDAO {
         return flight;
     }
 
-    public boolean delete(int id) throws DBException {
+    /**
+     * The method for removing the entity by its indifier.
+     */
+    public boolean delete(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -117,11 +130,17 @@ public class FlightDAO {
         return true;
     }
 
-    public boolean delete(Flight entity) throws DBException {
+    /**
+     * Method for removing an entity from a database by its instance.
+     */
+    public boolean delete(final Flight entity) throws DBException {
         return delete(entity.getNamberFlight());
     }
 
-    public boolean create(Flight entity) throws DBException {
+    /**
+     * The method creates an entity in the database.
+     */
+    public boolean create(final Flight entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -145,7 +164,10 @@ public class FlightDAO {
         return true;
     }
 
-    public Flight update(Flight entity) throws DBException {
+    /**
+     * Method for updating entity data in a database by an instance of the entity.
+     */
+    public Flight update(final Flight entity) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -170,7 +192,10 @@ public class FlightDAO {
         return entity;
     }
 
-    public List<Flight> findEntityByDriverId(int id) throws DBException {
+    /**
+     * Search for flights by user ID.
+     */
+    public List<Flight> findEntityByDriverId(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -197,7 +222,10 @@ public class FlightDAO {
         return flights;
     }
 
-    public List<Flight> findEntityByCarId(int id) throws DBException {
+    /**
+     *  Flight search by ID machines.
+     */
+    public List<Flight> findEntityByCarId(final int id) throws DBException {
         connector = null;
         PreparedStatement ps = null;
 
@@ -224,13 +252,16 @@ public class FlightDAO {
         return flights;
     }
 
-
-    public boolean create(Flight entity,Integer idCar,Integer idRequest) throws DBException {
+    /**
+     * Method for creating a voyage.
+     * At the same time, the status of the machine is checked and changed. And the application is deleted.
+     * If one of these operations does not pass, then all roll back.
+     */
+    public boolean create(final Flight entity, final Integer idCar, final Integer idRequest) throws DBException {
         connector = null;
         PreparedStatement ps = null;
         String SQL_DELETE_REQUEST = "DELETE FROM request WHERE id=?";
-        String SQL_UPDETE_CAR ="UPDATE car SET statusCar=? WHERE id=?";
-
+        String SQL_UPDETE_CAR = "UPDATE car SET statusCar=? WHERE id=?";
         String SQL_SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id=?";
 
 
@@ -242,15 +273,11 @@ public class FlightDAO {
             ps.setInt(1, idRequest);
             ps.execute();
 
-
-
-
-
             ps = connector.prepareStatement(SQL_SELECT_CAR_BY_ID);
             ps.setInt(1, idCar);
             ResultSet resultSet = ps.executeQuery();
             if (resultSet.next()) {
-                if(resultSet.getInt("statusCar")==2) {
+                if (resultSet.getInt("statusCar") == 2) {
                     throw new SQLException();
                 }
             }
@@ -259,7 +286,6 @@ public class FlightDAO {
             ps.setInt(1, ua.nure.gnuchykh.entity.cars.Status.USED.value());
             ps.setInt(2, idCar);
             ps.execute();
-
 
             ps = connector.prepareStatement(SQL_INSERT_FLIGHT);
             ps.setString(1, entity.toStringDate());
@@ -281,11 +307,14 @@ public class FlightDAO {
         return true;
     }
 
-
-    public Flight update(Flight entity, Integer idCar, ua.nure.gnuchykh.entity.cars.Status status, String comments) throws DBException {
+    /**
+     * Method for updating the status of the application and freeing the machine.
+     * If one of these operations does not pass, then all roll back.
+     */
+    public Flight update(final Flight entity, final Integer idCar, final ua.nure.gnuchykh.entity.cars.Status status, final String comments) throws DBException {
         connector = null;
         PreparedStatement ps = null;
-        String SQL_UPDETE_CAR ="UPDATE car SET statusCar=?, comments=? WHERE id=?";
+        String SQL_UPDETE_CAR = "UPDATE car SET statusCar=?, comments=? WHERE id=?";
         String SQL_UPDARE_STATUS_FLIGHT = "UPDATE flight SET status=? , note=? WHERE id=?";
 
         try {

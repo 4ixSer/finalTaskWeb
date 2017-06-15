@@ -11,11 +11,18 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
-
-public class EncodingFilter implements Filter {
+/**
+ * Filter to set the encoding.
+ * @author qny4ix
+ *
+ */
+public final class EncodingFilter implements Filter {
 
     private static final Logger LOG = Logger.getLogger(EncodingFilter.class);
 
+    /**
+     * encoding page unf-8.
+     */
     private String encoding;
 
     @Override
@@ -26,6 +33,7 @@ public class EncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
+
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
@@ -39,7 +47,7 @@ public class EncodingFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig fConfig) throws ServletException {
+    public void init(final FilterConfig fConfig) throws ServletException {
         LOG.info("Init encoding " + encoding);
         encoding = fConfig.getInitParameter("encoding");
 

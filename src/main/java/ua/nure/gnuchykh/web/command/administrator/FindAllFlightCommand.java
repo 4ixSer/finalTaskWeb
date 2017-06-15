@@ -18,7 +18,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindAllFlightCommand implements ActionCommand {
+/**
+ * A command to search for all flights.
+ *
+ * @author qny4ix
+ *
+ */
+public final class FindAllFlightCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindAllFlightCommand.class);
 
@@ -30,9 +36,15 @@ public class FindAllFlightCommand implements ActionCommand {
         FlightDAO dao = new FlightDAO();
         List<Flight> list = dao.findAll();
 
-        session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
-        session.setAttribute("Message", MessageManager.getProperty("message.search.all.flights"));
-        LOG.debug("Нашли все рейсы.");
+        if (list.isEmpty()) {
+            session.setAttribute("Message", MessageManager.getProperty("message.flight.search.empty"));
+            LOG.debug("Рейсы в БД не найдены.");
+        } else {
+            session.setAttribute(ATTRIBUTE_ALL_FLIGHT, list);
+            session.setAttribute("Message", MessageManager.getProperty("message.search.all.flights"));
+            LOG.debug("Нашли все рейсы.");
+        }
+
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

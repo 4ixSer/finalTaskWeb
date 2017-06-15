@@ -1,7 +1,7 @@
 package ua.nure.gnuchykh.entity.subject;
 
 /**
- * Перечисление показываюшее статус заявки или рейса
+ * Enumeration showing the status of the request or flight.
  *
  * @author qny4ix
  *
@@ -9,12 +9,17 @@ package ua.nure.gnuchykh.entity.subject;
 public enum Status {
 
     /**
-     * открыт, отклонен, отменен, в прогрессе, закрыт, обрабатываеться, отправлен
+     * открыт, отклонен, отменен.
+     * в прогрессе, закрыт, обрабатываеться,
+     * отправлен
      *
      */
 
-    OPEN(1), REJEJECTED(2), CANCELED(3), INPROGRESS(4), CLOSED(5), PROCESSED(6) ,SUBMITTED(7);
+    OPEN(1), REJECTED(2), CANCELED(3), INPROGRESS(4), CLOSED(5), PROCESSED(6), SUBMITTED(7);
 
+    /**
+     * Getting Status by its unique indicator.
+     */
     private Integer value;
 
     /**
@@ -27,18 +32,8 @@ public enum Status {
         this.value = values;
     }
 
-    /**
-     * A method for comparing String values with an ENUM element. внутренности
-     *
-     * @param name
-     *            значение String
-     * @return True if matched, false if not matched
-     */
-    public boolean equalsTo(final Integer name) {
-        return value.equals(name);
-    }
 
-    /**
+   /**
      * A method to obtain a String from an ENUM element.
      *
      * @return значение String
@@ -48,18 +43,18 @@ public enum Status {
     }
 
     /**
-    * Method for searching for a value by Int.
-    *
-    * @param i
-    *            The required String element
-    * @return
-    */
-   public static Status fromValue(final int i) {
-       for (Status c : Status.values()) {
-           if (c.value.equals(i)) {
-               return c;
-           }
-       }
-       throw new IllegalArgumentException();
-   }
+     * Method for searching for a value by Int.
+     *
+     * @param i
+     *            The required String element
+     * @return
+     */
+    public static Status fromValue(final int i) {
+        for (Status c : Status.values()) {
+            if (c.value.equals(i)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException();
+    }
 }

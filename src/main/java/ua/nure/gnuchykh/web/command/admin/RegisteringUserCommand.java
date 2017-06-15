@@ -15,13 +15,19 @@ import ua.nure.gnuchykh.DAO.UserDAO;
 import ua.nure.gnuchykh.entity.users.ClientType;
 import ua.nure.gnuchykh.entity.users.User;
 import ua.nure.gnuchykh.exception.DBException;
+import ua.nure.gnuchykh.util.HexUtil;
 import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-
-public class RegisteringUserCommand implements ActionCommand {
+/**
+ * A command for registering new users.
+ *
+ * @author qny4ix
+ *
+ */
+public final class RegisteringUserCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(RegisteringUserCommand.class);
 
@@ -39,15 +45,14 @@ public class RegisteringUserCommand implements ActionCommand {
         // валидация параметров
         if (!Validation.parameterStringIsCorrect(login, pass, email, name, roleS)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-            LOG.info("Данные не коректны");
+            LOG.info("Данные не коректны: login" + login + "; pass " + pass + "; email " + email + "; name " + name + "; roleS" + roleS);
         } else {
-
             Integer role = null;
             // парсинг роли
             try {
                 role = Integer.parseInt(roleS);
             } catch (NumberFormatException e) {
-                LOG.info("Ошибка парсинга");
+                LOG.info("Ошибка парсинга role " + roleS);
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect.format"));
                 return Path.PAGE_ADMIN;
             }
@@ -55,22 +60,22 @@ public class RegisteringUserCommand implements ActionCommand {
             if (!Validation.roleIsCorrect(role) || !Validation.loginIsCorrect(login) || !Validation.mailIsCorrect(email)
                     || !Validation.passwordIsCorrect(pass)) {
                 session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-                LOG.info("Данные не коректны");
+                LOG.info("Данные не коректны: login" + login + "; pass " + pass + "; email " + email + "; name " + name + "; roleS" + roleS);
             } else {
-
+                String passHex = HexUtil.toHex(pass);
                 UserDAO dao = new UserDAO();
                 // посмотрели юзера
                 User user = dao.findEntityByLogin(login);
                 if (user != null) {
                     // логин занят
                     session.setAttribute("Message", MessageManager.getProperty("message.user.login.exists"));
-                    LOG.info("Такой логин уже используеться.");
+                    LOG.info("Такой логин уже используеться login " + login);
                 } else {
                     // регистарция успешна
-                    user = new User(login, pass, name, email, ClientType.fromValue(role));
+                    user = new User(login, passHex, name, email, ClientType.fromValue(role));
                     dao.create(user);
                     session.setAttribute("Message", MessageManager.getProperty("message.user.registration.successful"));
-                    LOG.info("Регистрация пользователся прошла успешо.");
+                    LOG.info("Регистрация пользователся прошла успешо user " + user);
                 }
             }
         }

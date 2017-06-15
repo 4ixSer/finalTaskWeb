@@ -18,7 +18,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class FindAllCarsCommand implements ActionCommand {
+/**
+ * Command to search for all car.
+ *
+ * @author qny4ix
+ *
+ */
+public final class FindAllCarsCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(FindAllCarsCommand.class);
 
@@ -29,9 +35,13 @@ public class FindAllCarsCommand implements ActionCommand {
 
         CarDAO dao = new CarDAO();
         List<Car> cars = dao.findAll();
-        session.setAttribute(ATTRIBUTE_CARS, cars);
-        session.setAttribute("Message", MessageManager.getProperty("message.search.all.cars"));
-        LOG.info("Successfully removed the user.");
+        if (cars.isEmpty()) {
+            session.setAttribute("Message", MessageManager.getProperty("message.car.null.bd"));
+        } else {
+            session.setAttribute(ATTRIBUTE_CARS, cars);
+            session.setAttribute("Message", MessageManager.getProperty("message.search.all.cars"));
+            LOG.info("Successfully search all cars.");
+        }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

@@ -4,7 +4,16 @@ import java.util.Comparator;
 
 import ua.nure.gnuchykh.entity.subject.Request;
 
+/**
+ * Holder for messages of sort command Request.
+ *
+ * @author qny4ix
+ *
+ */
 public enum RequestComparatorEnum {
+    /**
+     * Sort by ID.
+     */
     SORTBYID {
         {
             this.command = new Comparator<Request>() {
@@ -15,6 +24,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by DATEREQUEST.
+     */
     SORTBYDATEREQUEST {
         {
             this.command = new Comparator<Request>() {
@@ -25,6 +37,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by DEPARTURE.
+     */
     SORTBYDATEDEPARTURE {
         {
             this.command = new Comparator<Request>() {
@@ -35,6 +50,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by type.
+     */
     SORTBYTYPE {
         {
             this.command = new Comparator<Request>() {
@@ -45,6 +63,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sorting Carrying capacity of the machine.
+     */
     SORTBYCARRYING {
         {
             this.command = new Comparator<Request>() {
@@ -55,6 +76,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by engine power.
+     */
     SORTBYENGINEPOWER {
         {
             this.command = new Comparator<Request>() {
@@ -65,6 +89,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by status.
+     */
     SORTBYSTATUS {
         {
             this.command = new Comparator<Request>() {
@@ -75,6 +102,9 @@ public enum RequestComparatorEnum {
             };
         }
     },
+    /**
+     * Sort by volume.
+     */
     SORTBYAMOUNT {
         {
             this.command = new Comparator<Request>() {
@@ -86,7 +116,7 @@ public enum RequestComparatorEnum {
         }
     };
 
-    Comparator<Request> command;
+    protected Comparator<Request> command;
 
     public Comparator<Request> getComparator() {
         return command;

@@ -18,7 +18,13 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class DenyRequestCommand implements ActionCommand {
+/**
+ * Command to cancel the request for a flight.
+ *
+ * @author qny4ix
+ *
+ */
+public final class DenyRequestCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(DenyRequestCommand.class);
 
@@ -33,7 +39,7 @@ public class DenyRequestCommand implements ActionCommand {
         Request requestUser = (Request) session.getAttribute(ATTRIBUTE_USER_REQUEST);
 
         //помен€ть статут на отказать
-        requestUser.setStatus(Status.REJEJECTED);
+        requestUser.setStatus(Status.REJECTED);
         // обновить статут в бд
         dao.update(requestUser);
 
@@ -44,6 +50,5 @@ public class DenyRequestCommand implements ActionCommand {
         LOG.info("«а€вка на рейс отклонена.");
 
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
-
     }
 }

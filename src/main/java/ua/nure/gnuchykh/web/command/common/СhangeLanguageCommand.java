@@ -16,7 +16,13 @@ import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
 
-public class ÑhangeLanguageCommand implements ActionCommand {
+/**
+ * Command for changing the language.
+ *
+ * @author qny4ix
+ *
+ */
+public final class ÑhangeLanguageCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(ÑhangeLanguageCommand.class);
 
@@ -25,18 +31,17 @@ public class ÑhangeLanguageCommand implements ActionCommand {
 
         LOG.info("ÍÀ÷àëî ğàáîòû ");
         HttpSession session = request.getSession();
-        String languageS =request.getParameter(ATTRIBUTE_lANGUAGE);
-        if(!Validation.parameterStringIsCorrect(languageS)||!Validation.languageIsCorrect(languageS)) {
-            LOG.info("Ôîğìàò ÿçûêà íå êîğåêòåí");
+        String languageS = request.getParameter(ATTRIBUTE_lANGUAGE);
+        //Âàëèäàöèÿ äàííûõ.
+        if (!Validation.parameterStringIsCorrect(languageS) || !Validation.languageIsCorrect(languageS)) {
+            LOG.info("Ôîğìàò ÿçûêà íå êîğåêòåí languageS" + languageS);
             session.setAttribute("errorMessage", MessageManager.getProperty("message.language.incorrect"));
         } else {
             String[] language = languageS.split("_");
-
             session.setAttribute(ATTRIBUTE_lANGUAGE, request.getParameter(ATTRIBUTE_lANGUAGE));
             Locale.setDefault(new Locale(language[0], language[1]));
-            LOG.info("ñìàíà language " + language);
+            LOG.info("Ñìåíà language " + language);
         }
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
-
     }
 }

@@ -12,7 +12,14 @@ import ua.nure.gnuchykh.util.MessageManager;
 import ua.nure.gnuchykh.util.Path;
 import ua.nure.gnuchykh.util.Validation;
 import ua.nure.gnuchykh.web.command.ActionCommand;
-public class CloseCommand  implements ActionCommand {
+
+/**
+ * Command to close the table.
+ *
+ * @author qny4ix
+ *
+ */
+public final class CloseCommand implements ActionCommand {
 
     private static final Logger LOG = Logger.getLogger(CloseCommand.class);
 
@@ -20,19 +27,17 @@ public class CloseCommand  implements ActionCommand {
     public String execute(HttpServletRequest request) {
 
         LOG.info("НАчало работы ");
-
         HttpSession session = request.getSession();
         String table = request.getParameter("table");
 
-        if(!Validation.parameterStringIsCorrect(table)||!Validation.validateString(table)) {
+        if (!Validation.parameterStringIsCorrect(table) || !Validation.validateString(table)) {
             session.setAttribute("Message", MessageManager.getProperty("message.parameter.incorrect"));
-            LOG.info("Данные не коректны");
-            return Path.PAGE_ADMIN;
+            LOG.info("Данные не коректны table " + table);
+        } else {
+            session.removeAttribute(table);
+            session.setAttribute("Message", MessageManager.getProperty("message.close"));
+            LOG.info("Закрытие таблицы " + table);
         }
-
-        session.removeAttribute(table);
-        session.setAttribute("Message", MessageManager.getProperty("message.close"));
-        LOG.info("Закрытие таблицы " +table);
         return Path.getPage((ClientType) session.getAttribute(ATTRIBUTE_USER_TYPE));
     }
 }

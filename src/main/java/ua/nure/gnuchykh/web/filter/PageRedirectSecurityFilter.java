@@ -14,9 +14,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-
+/**
+ * Filter denying access to files.
+ * @author qny4ix
+ *
+ */
 @WebFilter(urlPatterns = { "/jsp/*" }, initParams = { @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
-public class PageRedirectSecurityFilter implements Filter {
+public final class PageRedirectSecurityFilter implements Filter {
 
     private static final Logger LOG = Logger.getLogger(PageRedirectSecurityFilter.class);
     private String indexPath;
@@ -25,7 +29,7 @@ public class PageRedirectSecurityFilter implements Filter {
     public void init(FilterConfig fConfig) throws ServletException {
 
         indexPath = fConfig.getInitParameter("INDEX_PATH");
-        LOG.info("init INDEX_PATH "+ indexPath);
+        LOG.info("init INDEX_PATH " + indexPath);
     }
 
     @Override
@@ -34,11 +38,11 @@ public class PageRedirectSecurityFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
+        //позволить доступ для  error.jsp
         if (httpRequest.getRequestURI().equals("/WEB/jsp/error/error.jsp")) {
-
-            LOG.info("переход на " + httpRequest.getContextPath() + indexPath);
-
+            LOG.info("переход на error.jsp");
         } else {
+            LOG.info("переход на " + httpRequest.getContextPath() + indexPath);
             httpResponse.sendRedirect(httpRequest.getContextPath() + indexPath);
         }
 
